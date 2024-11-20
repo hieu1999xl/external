@@ -1,0 +1,4401 @@
+/*----------------------
+共通
+-----------------------*/
+main {
+  position: relative;
+}
+
+div.prepaid-giga-overseas-extension .table-mini,
+div.prepaid-giga-overseas-change .table-mini {
+  width: 100%;
+}
+
+header.mypage-header p.header-logo.header-logo-prepaid a img {
+  height: 45px;
+}
+
+.form-control-disabled {
+  cursor: default;
+  pointer-events: none;
+}
+
+.form-control {
+  border-radius: 10px;
+}
+
+@media screen and (max-width: 767px) {
+  header.mypage-header {
+    padding-top: 5px;
+  }
+
+  div.header-logout {
+    top: 10px;
+  }
+}
+
+/*----------------------
+トップ
+-----------------------*/
+.mypage-prepaid-main .button.left.nav-flex {
+  gap: 0 20px;
+  justify-content: left;
+  flex-wrap: wrap;
+}
+
+.mypage-prepaid-main .button.left.nav-flex .button-text {
+  width: calc(50% - 10px);
+}
+
+.mypage-prepaid-main .button.left.nav-flex .menu-focus:focus-visible {
+  border-radius: 15px;
+}
+
+.mypage-prepaid-main .nav-flex a.button-text:nth-child(2),
+.mypage-prepaid-main .nav-flex a.button-text:last-child {
+  margin: 0;
+  margin-top: 35px;
+}
+
+.mypage-prepaid-main .nav-flex .button-body {
+  flex-direction: row;
+  width: 100%;
+  height: 100px;
+  border-radius: 15px;
+  margin: 0 auto;
+  box-shadow: 3px 3px 6px #202020;
+  box-sizing: border-box;
+}
+
+.mypage-prepaid-main .button-next {
+  margin-right: 0;
+  height: 58px;
+  vertical-align: middle;
+  display: flex;
+}
+
+.mypage-prepaid-main .button-next img {
+  height: auto;
+  position: relative;
+  bottom: unset;
+  width: 45px;
+  margin: auto;
+}
+
+.mypage-prepaid-main .button-next.button-payment-history img {
+  width: 65px;
+}
+
+.mypage-prepaid-main .button-next-adjust img {
+  height: auto;
+  width: 60px;
+  margin: auto;
+}
+
+.mypage-prepaid-main .button-next-adjust.button-prepaid img {
+  width: 80px;
+  margin: auto;
+}
+
+.mypage-prepaid-main .button-next.button-faq img {
+  padding-left: 10px;
+  width: 45px;
+}
+
+.mypage-prepaid-main .button-next-adjust.button-data-charge img {
+  width: 32px;
+}
+
+div.mypage-user-container a.button-text p {
+  right: unset;
+  position: relative;
+  padding-left: 15px;
+  text-align: left;
+  font-size: 1.8rem;
+  font-weight: bold;
+  line-height: 1.3;
+}
+
+.mypage-prepaid-main div.mypage-user-container a.button-text div span {
+  font-size: 1.3rem;
+  font-weight: 400;
+  padding-left: 15px;
+  display: inline-block;
+  margin-top: 10px;
+  line-height: 18px;
+}
+
+.mypage-prepaid-main span.button-triangle.tab-open {
+  position: absolute;
+  right: unset;
+  top: calc(50% - 14px);
+  transform: translateY(-50%);
+  margin: 0;
+  width: 15px;
+  height: 20px;
+  left: 150px;
+}
+
+.mypage-prepaid-main div.mypage-user-container a.button-text div span.tab-open {
+  padding-left: 0;
+}
+
+.prepaid-mypage-top .button-body {
+  background-color: #666666;
+}
+
+/* お申し込み情報用CSS start */
+.prepaid-contract-button-caution {
+  color: #FFFFFF;
+  width: 316.83px;
+  margin: 10px 0 0 auto;
+  text-align: center;
+}
+
+.prepaid-contact-charge {
+  flex-direction: row;
+  justify-content: center;
+}
+
+.prepaid-contact-charge .prepaid-contact-charge-box:nth-child(2) {
+  margin-right: 0;
+  margin-left: 120px;
+}
+
+.prepaid-contact-charge-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.prepaid-contact-charge-box p.prepaid-contact-charge-attention {
+  color: #FFFFFF;
+  margin-top: 10px;
+}
+
+.sorting-history-tab-area {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 380px;
+}
+
+.sorting-history-tab {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 120px;
+  background-color: #282828;
+  height: 55px;
+  text-align: center;
+  line-height: 1.5;
+  font-weight: bold;
+  transition: .3s;
+  cursor: pointer;
+  box-shadow: 3px 3px 3px #282828;
+}
+
+.sorting-history-tab.select-sort {
+  background-color: #FFEB00;
+  color: #000000;
+}
+
+div.contract-history-box {
+  margin: 6px auto;
+  width: min-content;
+  border-bottom: 1px solid #FFFFFF;
+}
+
+/* お申し込み情報用CSS end */
+
+div.mypage-nav a.overseas-edit-popup.prepaid-edit-popup::after {
+  background: #FFEB00;
+}
+
+/* ポップアップ（プラン変更・追加・期間延長） */
+#popup-overseas-edit.popup-prepaid-block .button-body {
+  background-color: #282828;
+  box-shadow: 3px 3px 3px #ddd;
+  border-radius: 10px;
+}
+
+#popup-overseas-edit.popup-prepaid-block span.button-triangle {
+  color: #fff;
+}
+
+#popup-overseas-edit.popup-prepaid-block .button-body p {
+  color: #fff;
+}
+
+#popup-overseas-edit.popup-prepaid-block .button-next-adjust img {
+  height: 40px;
+}
+
+#popup-overseas-edit.popup-prepaid-block .button-next-adjust.button-next-charge img {
+  height: 45px;
+}
+
+#popup-overseas-edit.popup-prepaid-block .entry-option-popup .popup-contents {
+  padding: 45px 65px 45px 75px;
+}
+
+.prepaid-contact-charge .button-body {
+  margin-top: 50px;
+}
+
+.sorting-history {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 739px;
+  font-size: 1.6rem;
+  padding: 20px 25px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  cursor: pointer;
+  border-top: 1px solid #FFFFFF;
+  color: #FFFFFF;
+  transition: .3s;
+  letter-spacing: 1px;
+}
+
+.sorting-history.tab-open {
+  background-color: #FFFFFF;
+  color: #000000;
+}
+
+.sorting-history-right {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 110px;
+}
+
+div.mypage-content-box-title.sorting-history-title {
+  padding: 30px 0 36px;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+table.table-overseas-add tr:not(:first-of-type) td.add-price {
+  text-align: center;
+}
+
+.sorting-history-table::after {
+  content: unset;
+}
+
+div.plan-table-base-history {
+  margin: 20px auto;
+}
+
+table.table-overseas-add.giga-charge tr:last-of-type td:nth-child(3) {
+  background-color: #FFFFFF;
+}
+
+@media screen and (min-width: 768px) {
+  table.table-overseas-add tr:first-of-type td:nth-child(3) {
+    background-color: #FFFFFF;
+  }
+
+  table.table-overseas-add tr:nth-child(2) td:last-child {
+    text-align: center;
+  }
+
+  table.table-overseas-add.giga-charge tr:nth-child(2) td:last-child {
+    text-align: right;
+  }
+
+  .add-plan-days {
+    font-weight: normal;
+  }
+
+  .sorting-history-tab:hover {
+    background-color: #FFEB00;
+    color: #000000;
+  }
+
+  .sorting-history:hover {
+    background-color: #FFFFFF;
+    color: #000000;
+  }
+
+  div.mypage-title-area+div.error-message {
+    margin-top: 25px;
+    bottom: -20px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .mypage-prepaid-main .button.left.nav-flex {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0 15px;
+  }
+
+  .mypage-prepaid-main .nav-flex .button-body {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    box-sizing: border-box;
+    flex-direction: column;
+    padding: 10px 10px 0;
+    min-height: 185px;
+  }
+
+  .mypage-prepaid-main div.mypage-user-container a.button-text p {
+    margin-top: 10px;
+    font-size: 1.3rem;
+    padding: 0;
+    text-align: center;
+    line-height: 1.2;
+  }
+
+  .mypage-prepaid-main div.mypage-user-container a.button-text div span {
+    padding-left: 0;
+    margin-top: 10px;
+    line-height: 1.4;
+  }
+
+  .mypage-prepaid-main .button-next {
+    min-height: 40px;
+  }
+
+  .mypage-prepaid-main .button-next img {
+    width: 40px;
+  }
+
+  .mypage-prepaid-main .button-next-adjust img {
+    height: auto;
+    width: 50px;
+  }
+
+  .mypage-prepaid-main .button-next-adjust.button-prepaid img {
+    width: 70px;
+    margin: 0 auto;
+  }
+
+  .mypage-prepaid-main .button-next.button-faq img {
+    width: 40px;
+  }
+
+  #popup-overseas-edit.popup-prepaid-block .entry-option-popup .popup-contents {
+    padding: 30px 15px;
+  }
+
+  .mypage-prepaid-main span.button-triangle.tab-open {
+    right: 0px;
+    left: unset;
+    width: 15px;
+    height: 20px;
+    top: -5px;
+  }
+
+  .prepaid-contact-charge .button-text {
+    width: 100%;
+  }
+
+  .prepaid-contact-charge .button-body {
+    width: auto;
+    margin: 35px auto 0;
+  }
+
+  .prepaid-contact-charge .prepaid-contact-charge-box:nth-child(2) {
+    margin-left: 0;
+  }
+
+  .prepaid-contract-button-caution {
+    margin: 10px auto;
+  }
+
+  div.mypage-content-box-title.sorting-history-title {
+    padding: 20px 0;
+    display: block;
+  }
+
+  div.contract-history-box {
+    margin: 6px;
+    width: auto;
+  }
+
+  .sorting-history {
+    width: 100%;
+    font-size: 1.35rem;
+    padding: 17px 10px;
+  }
+
+  .sorting-history-right {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    font-size: 1.2rem;
+    width: auto;
+  }
+
+  .sorting-history-right .check {
+    margin-bottom: 5px;
+  }
+
+  .sorting-history-tab-area {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-top: 26px;
+  }
+
+  .sorting-history-tab {
+    width: 31%;
+  }
+
+  div.prepaid-contact-separate {
+    margin-top: 70px;
+  }
+}
+
+/*----------------------
+ヘッダー
+-----------------------*/
+
+@media screen and (max-width: 767px) {
+  div.mypage-nav.mypage-nav-prepaid {
+    width: 200vw;
+  }
+
+  div.mypage-nav-center-moved {
+    margin-left: -100%;
+  }
+}
+
+/*チャージ　同意ボタン*/
+label.agree-area {
+  display: inline-block;
+  width: 200px;
+}
+
+/*----------------------
+海外ギガチャージ　追加
+-----------------------*/
+.prepaid-content-area div.mypage-title-area-icon {
+  margin: 0 15px;
+  width: 90px;
+  padding-bottom: 5px;
+}
+
+.prepaid-content-area div.mypage-title-area-icon img {
+  position: relative;
+  bottom: -20px;
+}
+
+.prepaid-maypage-top-img .prepaid-content-area div.mypage-title-area-icon img {
+  bottom: 0px;
+}
+
+.overseas-top-img .prepaid-content-area div.mypage-title-area-icon img {
+  bottom: -15px;
+}
+
+.prepaid-content-area p.mypage-titile-area-title {
+  padding-bottom: 0px;
+  padding-left: 10px;
+}
+
+.prepaid-content-area div.mypage-description {
+  top: 0px;
+}
+
+.giga-menu-area {
+  width: auto;
+  margin: 0;
+  position: relative;
+  margin-bottom: 50px;
+}
+
+.giga-menu-area .prepaid-charge-btn {
+  position: absolute;
+  right: 0;
+  top: -80px;
+}
+
+.giga-menu-area .giga-menu ul {
+  display: flex;
+}
+
+.giga-menu-area .giga-menu ul li {
+  width: 50%;
+}
+
+.giga-menu ul {
+  display: flex;
+  padding: 0;
+}
+
+.giga-menu ul li {
+  width: 50%;
+}
+
+.giga-menu ul li .giga-menu-btn {
+  background-color: #707070;
+  color: #fff;
+  display: inline-block;
+  line-height: 65px;
+  height: 65px;
+  position: relative;
+  width: 100%;
+  padding-left: 120px;
+  box-sizing: border-box;
+  font-size: 2.4rem;
+  font-weight: bold;
+  transition: .3s;
+}
+
+.giga-menu ul li .giga-menu-btn::before {
+  content: "";
+  position: absolute;
+  right: 30px;
+  top: 50%;
+  transform: translateY(-50%);
+  border-top: 14px solid #fff;
+  border-left: 12px solid transparent;
+  border-right: 12px solid transparent;
+}
+
+.giga-menu ul li .giga-menu-btn.giga-selected {
+  background-color: #FFEB00;
+  color: #000;
+  pointer-events: none;
+  outline: 3px solid #fff;
+  outline-offset: -3px;
+}
+
+.giga-menu ul li .giga-menu-btn.giga-selected::before {
+  border-top: 14px solid #000;
+}
+
+.giga-menu ul li .giga-menu-btn:hover {
+  background-color: #FFEB00;
+  color: #000;
+}
+
+.giga-menu ul li .giga-menu-btn:hover::before {
+  border-top: 14px solid #000;
+}
+
+.giga-menu ul li .giga-menu-btn.giga-selected:hover {
+  background-color: #FFEB00;
+}
+
+.giga-menu ul li .giga-menu-btn img {
+  width: 60px;
+  height: auto;
+  position: absolute;
+  left: 30px;
+  top: 10px;
+}
+
+.giga-plan-menu {
+  padding: 0 180px;
+  margin: 40px auto;
+}
+
+.giga-plan-menu .giga-menu-container {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.giga-plan-menu .giga-menu-container .content-btn {
+  min-width: 300px;
+}
+
+.giga-plan-menu .giga-menu-container .content-btn .giga-plan-btn {
+  background-color: #707070;
+  color: #fff;
+  display: inline-block;
+  line-height: 1.3;
+  height: 65px;
+  position: relative;
+  width: 100%;
+  padding-left: 120px;
+  box-sizing: border-box;
+  font-size: 1.6rem;
+  font-weight: bold;
+  transition: .3s;
+  padding-top: 12px;
+}
+
+.giga-plan-menu .giga-menu-container .content-btn .giga-plan-btn:hover {
+  background-color: #FFEB00;
+  color: #000;
+}
+
+.giga-plan-menu .giga-menu-container .content-btn .giga-plan-btn:hover::before {
+  border-left: 12px solid #000;
+}
+
+.giga-plan-menu .giga-menu-container .content-btn .giga-plan-btn img {
+  width: 60px;
+  height: auto;
+  position: absolute;
+  left: 25px;
+  top: 15px;
+}
+
+.giga-plan-menu .giga-menu-container .content-btn .giga-plan-btn::before {
+  content: "";
+  position: absolute;
+  right: 30px;
+  top: 24px;
+  border-left: 12px solid #fff;
+  border-top: 8px solid transparent;
+  border-bottom: 8px solid transparent;
+}
+
+.giga-plan-menu .giga-menu-container .content-desc {
+  width: 100%;
+}
+
+.giga-plan-menu .giga-menu-container .content-desc p {
+  color: #fff;
+  height: 100%;
+  padding-left: 20px;
+  display: flex;
+  align-items: center;
+  font-size: 1.4rem;
+}
+
+div.mypage-content-box.prepaid-giga-overseas-add {
+  margin-top: 0;
+  padding: 25px;
+  box-sizing: border-box;
+}
+
+div.mypage-content-box.prepaid-giga-overseas-add .overseas-area {
+  margin-top: 0;
+  height: auto;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.prepaid-giga-overseas-add .overseas-contain {
+  display: flex;
+  justify-content: flex-start;
+  gap: 20px;
+}
+
+.prepaid-giga-overseas-add .country {
+  width: auto;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  font-size: 1.3rem;
+  font-weight: bold;
+  border-radius: 1.25em;
+}
+
+.prepaid-giga-overseas-add .country label.custom-check-box-v2 {
+  height: 29px;
+  display: inline-block;
+  margin: 0;
+}
+
+.prepaid-giga-overseas-add label.custom-check-box-v2.option input[type="radio"]+span::before {
+  content: '';
+  position: absolute;
+  display: inline-block;
+  box-sizing: border-box;
+  top: -2px;
+  left: 0px;
+  margin-left: 0;
+  border-radius: 0;
+  z-index: 0;
+  background-color: #fff;
+  width: 32px;
+  height: 32px;
+}
+
+.prepaid-giga-overseas-add label.custom-check-box-v2 input[type="radio"]:checked+span::after {
+  content: '';
+  top: -3px;
+  left: -1px;
+  -ms-transform: translate(-50%, 25%) rotate(45deg);
+  transform: translate(-50%, 25%) rotate(45deg);
+  border: 1.5px solid #000;
+  border-width: 0 1.5px 1.5px 0;
+  position: absolute;
+  display: inline-block;
+  box-sizing: border-box;
+  z-index: 1;
+  margin: 1px 17px;
+  width: 10px;
+  height: 18px;
+}
+
+.prepaid-giga-overseas-add div.mypage-content-box-inner p.custom-check-box-v2-select-text {
+  word-break: unset;
+  border: none;
+  padding: 5px 30px;
+  background-color: unset;
+  font-size: 24px;
+}
+
+.prepaid-giga-overseas-add .focus-decoration {
+  padding: 2px 0;
+  border-radius: 0;
+}
+
+.prepaid-giga-overseas-add .popular {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 0px;
+  gap: 20px 10px;
+}
+
+.prepaid-giga-overseas-add .popular>div {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: calc((100% / 6) - 10px);
+  border-radius: 1.25em;
+  padding: 0em;
+  box-shadow: 0px 2px 4px rgb(0 0 0 / 40%);
+  cursor: pointer;
+  transition: .2s all;
+  background-color: #707070;
+  border: 1px solid #fff;
+  box-sizing: border-box;
+}
+
+.prepaid-giga-overseas-add .popular>div:hover {
+  background-color: #fff;
+  outline: 3px solid #FFEB00;
+  outline-offset: -3px;
+}
+
+.prepaid-giga-overseas-add .popular>div:hover .country-plan p {
+  color: #000;
+}
+
+.prepaid-giga-overseas-add .popular input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+  margin: 0;
+}
+
+.prepaid-giga-overseas-add .country-plan {
+  height: 140px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  padding-top: 0.5em;
+  cursor: pointer;
+  width: 100%;
+}
+
+.prepaid-giga-overseas-add .country-plan img {
+  width: 60%;
+  margin-bottom: 10px;
+}
+
+.prepaid-giga-overseas-add .country-plan p {
+  font-size: 1.3rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.popular>div:hover,
+.popular>div:has(input[type="radio"]:checked) {
+  background-color: #fff;
+  outline: 3px solid #FFEB00;
+  outline-offset: -3px;
+}
+
+.popular>div:hover p,
+.popular input[type="radio"]:checked+label p,
+.popular>div:hover .country-plan,
+.popular input[type="radio"]:checked+label p,
+.popular input[type="radio"]:checked+label.country-plan {
+  color: #000000;
+}
+
+.prepaid-giga-overseas-add .select-container {
+  display: flex;
+  gap: 20px 10px;
+}
+
+.prepaid-giga-overseas-add .select-container .select-item p {
+  font-size: 1.6rem;
+  padding: 0 0 3px 10px;
+}
+
+.prepaid-giga-overseas-add .select-container .select-area {
+  width: 30%;
+}
+
+.prepaid-giga-overseas-add .select-container .select-country {
+  width: 40%;
+}
+
+.prepaid-giga-overseas-add .select-container .select-plan {
+  width: 30%;
+}
+
+main.mypage-contents .prepaid-giga-overseas-add select {
+  height: 45px;
+  width: 100%;
+  font-size: 1.5rem;
+  padding: 5px 2px 5px 5px;
+  border: 2px solid #fff;
+  border-radius: 10px;
+}
+
+.prepaid-giga-overseas-add div.mypage-content-box-title {
+  padding: 25px 0;
+}
+
+.prepaid-giga-overseas-add div.mypage-content-box-inner {
+  margin: auto 0px;
+  padding-top: 0px;
+  margin-top: 0px;
+}
+
+.prepaid-giga-overseas-add div.mypage-content-box-title p {
+  border-bottom: 1px solid #fff;
+  padding: 0 0 20px 10px;
+}
+
+.prepaid-giga-overseas-add .add-data-table th {
+  width: 200px;
+  text-align: left;
+  line-height: 1.4;
+  padding: 15px 0;
+  font-size: 2rem;
+}
+
+.prepaid-giga-overseas-add .add-data-table th.date-ttl {
+  padding: 0 0 28px;
+}
+
+.prepaid-giga-overseas-add .add-data-table th.align-top {
+  vertical-align: top;
+}
+
+.prepaid-giga-overseas-add .add-data-table th.align-top .square {
+  top: 15px;
+}
+
+.prepaid-giga-overseas-add .add-data-table th .square {
+  font-size: 1.8rem;
+  padding-left: 1em;
+  position: relative;
+  padding-left: 1em;
+  display: inline-block;
+}
+
+.prepaid-giga-overseas-add .add-data-table th .square::before {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 0px;
+  border-left: 10px solid #fff;
+  border-bottom: 7px solid transparent;
+  border-top: 7px solid transparent;
+}
+
+.prepaid-giga-overseas-add .add-data-table td {
+  padding: 15px 0;
+}
+
+.prepaid-giga-overseas-add #select-country-plan {
+  padding-top: 37px;
+}
+
+.prepaid-giga-overseas-add #select-continent-plan {
+  display: none;
+  padding-top: 37px;
+}
+
+.prepaid-giga-overseas-add #select-continent-plan .country-plan .group {
+  width: 100%;
+}
+
+.prepaid-giga-overseas-add .popular.continent>div {
+  width: calc((100% / 3) - 10px);
+}
+
+.popular.continent .country-plan {
+  height: auto;
+}
+
+.popular.continent .country-plan p {
+  font-size: 1.8rem;
+  line-height: 1.3;
+}
+
+.country-plan .overseas-plan1-price,
+.country-plan .overseas-plan-price-tour {
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.country-plan .group {
+  text-align: center;
+  line-height: 1.5;
+  color: #fff;
+}
+
+.country-plan .group .price {
+  width: auto;
+}
+
+#select-continent-plan .country-plan {
+  padding: 25px 0;
+  width: -webkit-fill-available;
+  cursor: pointer;
+}
+
+.prepaid-giga-overseas-add div.usage-days-select>span {
+  padding-top: 14px;
+  color: #fff;
+}
+
+.prepaid-giga-overseas-add div.usage-period div.form-control {
+  background: #FFEB00;
+  width: 100%;
+  color: #000;
+  height: 34px;
+  min-width: 190px;
+}
+
+.prepaid-giga-overseas-add div.usage-period {
+  margin-left: 36px;
+}
+
+.prepaid-giga-overseas-add .input-daterange input:last-child {
+  width: 190px;
+}
+
+.prepaid-giga-overseas-add .input-daterange .attention {
+  width: 100%;
+  color: #bbb;
+  font-size: 1.2rem;
+  text-align: right;
+  margin-top: 10px;
+}
+
+.prepaid-giga-overseas-add .add-data-table th.another-ttl {
+  padding: 22px 0 0;
+}
+
+/* 内訳表 */
+.prepaid-giga-overseas-add-detail div.plan-summary-area-table.contract {
+  padding: 0;
+  filter: none;
+}
+
+.prepaid-giga-overseas-add-detail .detail-more {
+  background: #FFFFFF;
+  padding: 20px 0 20px;
+}
+
+.prepaid-giga-overseas-add-detail div.plan-summary-area-table.contract {
+  padding: 0 15px;
+  filter: none;
+}
+
+.prepaid-giga-overseas-add-detail div.plan-summary-table-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  border-bottom: 1px solid #909090;
+  margin: 0 auto;
+  padding: 8px 2%;
+  box-sizing: border-box;
+}
+
+.prepaid-giga-overseas-add-detail div.plan-summary-table-row:first-child {
+  border-top: 1px solid #909090;
+}
+
+div.mypage-content-box.prepaid-giga-overseas-add-detail {
+  width: fit-content;
+  z-index: 1;
+  margin: 30px auto 0;
+  padding: 10px;
+}
+
+.prepaid-giga-overseas-add-detail div.mypage-user-container {
+  width: 80%;
+  margin: 0 auto;
+  min-width: 750px;
+  padding: 0;
+}
+
+.prepaid-giga-overseas-add-detail .add-ttl {
+  width: 100%;
+  background-color: #000;
+  text-align: center;
+  color: #fff;
+  padding: 14px;
+  font-size: 1.4rem;
+  box-sizing: border-box;
+  letter-spacing: 3px;
+  font-weight: bold;
+  border-radius: 15px 15px 0 0;
+}
+
+div.summary-table-column {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.prepaid-giga-overseas-add-detail div.plan-summary-table-row-wide div.summary-table-column-left {
+  width: 20%;
+}
+
+.prepaid-giga-overseas-add-detail div.summary-table-column-left p {
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.prepaid-giga-overseas-add-detail div.your-plan-area div.summary-table-row {
+  line-height: 1.6;
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.prepaid-giga-overseas-add-detail span.summary-text-device-option-price {
+  font-weight: bold;
+  font-size: 1.35em;
+}
+
+.prepaid-giga-overseas-add-detail .summary-group-countries-dataplans span:first-child {
+  margin-right: 15px;
+}
+
+.prepaid-giga-overseas-add-detail .total {
+  display: flex;
+  justify-content: right;
+  padding: 15px calc(2% + 15px) 10px;
+  background-color: #FFEB00;
+  border-radius: 0 0 15px 15px;
+  border-top: 2px solid #000;
+  justify-content: space-between;
+}
+
+.prepaid-giga-overseas-add-detail .total .overseas-your-all-price span {
+  font-size: 2.2rem;
+  font-weight: 900;
+  margin: 0 10px;
+}
+
+.prepaid-giga-overseas-add-detail .total .big-num {
+  display: inline-block;
+  font-weight: bold;
+  padding-left: 20px;
+}
+
+.add-overseas-btn .button-body:nth-child(2) {
+  margin: 35px 0 0;
+}
+
+.add-overseas-btn .button-body.button-body-area-left {
+  margin-top: 0;
+}
+
+/* 内訳表new */
+.form-user-background.prepaid-detail {
+  margin-top: 50px;
+}
+
+.form-user-background.prepaid-detail .plan-summary-area-title p {
+  background-color: #000;
+  padding: 15px 0;
+  text-align: center;
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+.form-user-background.prepaid-detail div.plan-summary-area-title {
+  filter: none;
+}
+
+.form-user-background.prepaid-detail .plan-summary-area-table {
+  background-color: #fff;
+  padding: 0 20px;
+}
+
+/* ポップアップ */
+.ui-dialog .ui-dialog-titlebar-close {
+  display: none;
+}
+
+.ui-dialog .ui-dialog-buttonpane button {
+  font-family: "Montserrat", "Noto Sans JP", sans-serif;
+}
+
+@media screen and (min-width: 768px) {
+  div.domestic-edit-detail table.table-overseas-add tr.overseas-add-country td.add-price-show {
+    padding-right: 68px;
+    width: 110px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .giga-menu-area .prepaid-charge-btn {
+    position: static;
+  }
+
+  .giga-menu ul li .giga-menu-btn.giga-selected {
+    outline: 2px solid #fff;
+    outline-offset: -2px;
+  }
+
+  .giga-menu ul li .giga-menu-btn::before {
+    right: 6px;
+    border-top: 8px solid #fff;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+  }
+
+  .giga-menu ul li .giga-menu-btn.giga-selected::before {
+    border-top: 8px solid #000;
+  }
+
+  .giga-menu ul li .giga-menu-btn:hover::before {
+    border-top: 8px solid #000;
+  }
+
+  .prepaid-content-area div.mypage-title-area-icon {
+    margin: 0 10px;
+    width: 55px;
+    height: auto;
+  }
+
+  .prepaid-content-area div.mypage-title-area {
+    padding: 25px 0 0px;
+  }
+
+  .giga-menu-area .giga-menu ul {
+    padding: 0;
+  }
+
+  .giga-menu ul li .giga-menu-btn {
+    line-height: 1.2;
+    height: 45px;
+    font-size: 1.3rem;
+    padding: 7px 0 0px 60px;
+  }
+
+  .giga-menu ul li .giga-menu-btn img {
+    width: 40px;
+    left: 10px;
+    top: 10px;
+  }
+
+  .giga-menu ul li:first-child a {
+    padding: 15px 0 0px 60px;
+  }
+
+  .giga-plan-menu {
+    padding: 0;
+  }
+
+  .giga-plan-menu .giga-menu-container .content-btn {
+    min-width: unset;
+    width: 50%;
+  }
+
+  .giga-plan-menu .giga-menu-container .content-desc {
+    width: 50%;
+  }
+
+  .giga-plan-menu .giga-menu-container .content-btn .giga-plan-btn {
+    height: 55px;
+    font-size: 1.35rem;
+    padding: 10px 0 0 60px;
+  }
+
+  .giga-plan-menu .giga-menu-container .content-btn .giga-plan-btn img {
+    width: 40px;
+    left: 10px;
+  }
+
+  .giga-plan-menu .giga-menu-container .content-btn .giga-plan-btn::before {
+    right: 8px;
+    top: 21px;
+    border-left: 9px solid #fff;
+    border-top: 6px solid transparent;
+    border-bottom: 6px solid transparent;
+  }
+
+  .giga-plan-menu .giga-menu-container .content-desc p {
+    padding-left: 10px;
+    font-size: 1.2rem;
+  }
+
+  div.mypage-content-box.prepaid-giga-overseas-add {
+    padding: 10px;
+  }
+
+  .prepaid-giga-overseas-add .overseas-contain {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .popular.continent .country-plan p {
+    font-size: 1.6rem;
+  }
+
+  .country-plan .price,
+  .country-plan .title {
+    font-feature-settings: "palt";
+  }
+
+  .prepaid-giga-overseas-add div.mypage-content-box-title {
+    padding: 15px 0 0;
+  }
+
+  .prepaid-giga-overseas-add div.mypage-content-box-title p {
+    padding: 0 0 10px 10px;
+  }
+
+  .prepaid-giga-overseas-add .add-data-table th {
+    width: 100%;
+    display: block;
+    font-size: 1.7rem;
+  }
+
+  .prepaid-giga-overseas-add .add-data-table td {
+    display: block;
+    padding: 0 0 30px;
+  }
+
+  .prepaid-giga-overseas-add div.usage-days-select {
+    flex-wrap: wrap;
+    margin-top: 0;
+  }
+
+  .prepaid-giga-overseas-add div.usage-days-select-in {
+    display: flex;
+  }
+
+  .prepaid-giga-overseas-add div.usage-days-select .usage-start {
+    width: 45%;
+  }
+
+  .prepaid-giga-overseas-add div.usage-days-select .usage-start-create {
+    width: 70%;
+  }
+
+  .prepaid-giga-overseas-add div.usage-days-select span:first-of-type {
+    width: 10%;
+    margin: 0;
+    text-align: center;
+  }
+
+  .prepaid-giga-overseas-add div.usage-days-select .usage-end {
+    width: 45%;
+    padding: 0;
+  }
+
+  .prepaid-giga-overseas-add div#datepicker div.usage-end {
+    padding-top: 0px;
+  }
+
+  .prepaid-giga-overseas-add div.usage-period {
+    margin: 0;
+    display: flex;
+    justify-content: right;
+    width: 100%;
+  }
+
+  .prepaid-giga-overseas-add div.usage-period div.form-control {
+    width: 100%;
+    min-width: 180px;
+    margin: 20px 0 0;
+    font-size: 2.6rem;
+  }
+
+  .prepaid-giga-overseas-add div.usage-period div.form-control span {
+    width: auto;
+    font-size: 1.4rem;
+    padding-top: 6px;
+  }
+
+  .prepaid-giga-overseas-add div.mypage-content-box-inner p.custom-check-box-v2-select-text {
+    font-size: 1.8rem;
+  }
+
+  .prepaid-giga-overseas-add label.custom-check-box-v2.option input[type="radio"]+span::before {
+    width: 28px;
+    height: 28px;
+    top: 0.5px;
+  }
+
+  .prepaid-giga-overseas-add label.custom-check-box-v2 input[type="radio"]:checked+span::after {
+    top: 0px;
+    left: -2.5px;
+    width: 8px;
+    height: 16px;
+  }
+
+  .prepaid-giga-overseas-add .popular>div {
+    width: calc((100% / 3) - 10px);
+    height: 100px;
+    justify-content: center;
+  }
+
+  .prepaid-giga-overseas-add #select-country-plan,
+  .prepaid-giga-overseas-add #select-continent-plan {
+    padding-top: 20px;
+  }
+
+  .prepaid-giga-overseas-add #select-continent-plan .popular>div {
+    height: auto;
+  }
+
+  .prepaid-giga-overseas-add .add-data-table th .square {
+    font-size: 1.7rem;
+  }
+
+  .prepaid-giga-overseas-add .country-plan img {
+    width: 50%;
+    margin-bottom: 0;
+  }
+
+  .prepaid-giga-overseas-add .popular {
+    margin-bottom: 0px;
+  }
+
+  .prepaid-giga-overseas-add .select-container {
+    flex-wrap: wrap;
+  }
+
+  .prepaid-giga-overseas-add .select-container .select-item {
+    width: 100%;
+    max-width: 320px;
+  }
+
+  div.mypage-content-box.prepaid-giga-overseas-add-detail {
+    width: 100%;
+    margin: 20px auto 0;
+    box-sizing: border-box;
+  }
+
+  .prepaid-giga-overseas-add-detail div.mypage-user-container {
+    width: 100%;
+    min-width: unset;
+  }
+
+  .prepaid-giga-overseas-add-detail div.plan-summary-table-row {
+    padding: 8px 0 4px;
+    flex-wrap: wrap;
+    border-bottom: none;
+  }
+
+  .prepaid-giga-overseas-add-detail div.plan-summary-table-row-wide div.summary-table-column-left {
+    width: 100%;
+    border-bottom: 1px solid #909090;
+    padding-bottom: 3px;
+  }
+
+  .prepaid-giga-overseas-add-detail .summary-table-column-left.adjust.sp-line p::after {
+    display: none;
+  }
+
+  .prepaid-giga-overseas-add-detail div.your-plan-area div.summary-table-row {
+    width: 100%;
+    padding-top: 8px;
+  }
+
+  .prepaid-giga-overseas-add-detail .summary-group-countries-dataplans {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 9px;
+    box-sizing: border-box;
+  }
+
+  .prepaid-giga-overseas-add-detail div.plan-summary-table-row:first-child {
+    border-top: none;
+  }
+
+  .prepaid-giga-overseas-add-detail .summary-group-countries-dataplans span:first-child {
+    margin-right: 0;
+  }
+
+  .prepaid-giga-overseas-add-detail div.your-plan-area div.summary-table-row.opt-service-sp {
+    flex-direction: column;
+  }
+
+  .prepaid-giga-overseas-add-detail div.your-plan-area #your_plan div.summary-table-row.opt-service-sp .summary-table-column-center {
+    width: 100%;
+  }
+
+  .prepaid-giga-overseas-add-detail div.your-plan-area #your_plan div.summary-table-row.opt-service-sp .summary-table-column-right {
+    width: 100%;
+    text-align: right;
+    padding-top: 5px;
+  }
+
+  .prepaid-giga-overseas-add-detail .total {
+    padding: 10px 0;
+  }
+
+  .prepaid-giga-overseas-add-detail .total .big-num {
+    padding-left: 40px;
+  }
+
+  .prepaid-giga-overseas-add-detail .detail-more {
+    padding: 10px 0;
+  }
+
+  .prepaid-giga-overseas-add-detail .total .overseas-your-all-price span {
+    font-size: 2rem;
+  }
+
+  .prepaid-giga-overseas-add-detail div.plan-summary-area-table.contract {
+    margin-bottom: 0px;
+    font-size: 1.2rem;
+  }
+
+  .prepaid-giga-overseas-add-terms p.leave-checkbox-box-title {
+    font-size: 1.5rem;
+    padding: 13px 9% 0;
+    text-align: left;
+  }
+
+  .prepaid-giga-overseas-add-terms p.terms-agree {
+    padding-left: 0;
+  }
+
+  .prepaid-giga-overseas-add-terms p.terms-agree.text-indent {
+    padding-left: 1em;
+    text-indent: -1em;
+  }
+
+  .prepaid-giga-overseas-add-terms div.leave-checkbox-box-desciption {
+    padding: 0 15px;
+  }
+
+  .prepaid-giga-overseas-add-terms div.leave-checkbox-box-entry {
+    margin-top: 20px;
+  }
+
+  .prepaid-giga-overseas-add-terms div.mypage-user-container {
+    margin: 20px auto 0;
+  }
+
+  div.mypage-content-box.prepaid-giga-overseas-add-terms {
+    margin-top: 20px;
+  }
+
+  .prepaid-giga-overseas-add-terms div.mandatory.agree-check {
+    left: 30%;
+    top: 41px;
+    transform: translateX(-30%);
+  }
+
+  .button.add-overseas-btn {
+    width: 100%;
+    padding: 0 0px;
+  }
+
+  .button.add-overseas-btn .button-body {
+    padding: 20px;
+  }
+
+  .button.add-overseas-btn .button-body .button-next-adjust img {
+    width: 60px;
+    height: auto;
+  }
+
+  .form-user-background.prepaid-detail .plan-summary-area-table {
+    padding: 16px;
+  }
+
+  .form-user-background.prepaid-detail .plan-summary-area-table .table-overseas-title td:nth-child(1) {
+    font-weight: bold;
+    font-size: 1.6rem;
+  }
+
+  .form-user-background.prepaid-detail .plan-summary-area-table .overseas-add-days.table-overseas-title td:nth-child(1) {
+    text-align: left;
+  }
+
+  .form-user-background.prepaid-detail .plan-summary-area-table .table-overseas-title td:nth-child(2) {
+    text-align: center;
+  }
+
+  .prepaid-content-area div.mypage-description {
+    top: 5px;
+  }
+
+  .giga-menu-area {
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 25px;
+  }
+
+  .form-user-background.prepaid-detail {
+    margin-top: 50px;
+  }
+
+  .prepaid-giga-overseas-add .input-daterange input:last-child {
+    width: 100%;
+  }
+
+  .prepaid-giga-overseas-add .add-data-table th.date-ttl {
+    padding: 25px 0 15px;
+  }
+
+  .prepaid-giga-overseas-add .add-data-table th.another-ttl {
+    padding: 20px 0 15px;
+  }
+
+  .prepaid-giga-overseas-add .add-data-table th .square::before {
+    top: 2px;
+  }
+}
+
+/* カレンダー start */
+@media (prefers-reduced-motion:reduce) {
+  .form-control {
+    transition: none
+  }
+}
+
+.form-control::-ms-expand {
+  background-color: transparent;
+  border: 0
+}
+
+.form-control:-moz-focusring {
+  color: transparent;
+  text-shadow: 0 0 0 #495057
+}
+
+.form-control:focus {
+  color: #495057;
+  background-color: #fff;
+  border-color: #80bdff;
+  outline: 0;
+  box-shadow: 0 0 0 .2rem rgba(0, 123, 255, .25)
+}
+
+.form-control::-webkit-input-placeholder {
+  color: #6c757d;
+  opacity: 1
+}
+
+.form-control::-moz-placeholder {
+  color: #6c757d;
+  opacity: 1
+}
+
+.form-control:-ms-input-placeholder {
+  color: #6c757d;
+  opacity: 1
+}
+
+.form-control::-ms-input-placeholder {
+  color: #6c757d;
+  opacity: 1
+}
+
+.form-control::placeholder {
+  color: #6c757d;
+  opacity: 1
+}
+
+input[type=date].form-control,
+input[type=datetime-local].form-control,
+input[type=month].form-control,
+input[type=time].form-control {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none
+}
+
+select.form-control:focus::-ms-value {
+  color: #495057;
+  background-color: #fff
+}
+
+select.form-control[multiple],
+select.form-control[size] {
+  height: auto
+}
+
+textarea.form-control {
+  height: auto
+}
+
+.form-control.is-valid,
+.was-validated .form-control:valid {
+  border-color: #28a745;
+  padding-right: calc(1.5em + .75rem);
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8' viewBox='0 0 8 8'%3e%3cpath fill='%2328a745' d='M2.3 6.73L.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z'/%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right calc(.375em + .1875rem) center;
+  background-size: calc(.75em + .375rem) calc(.75em + .375rem)
+}
+
+.form-control.is-valid:focus,
+.was-validated .form-control:valid:focus {
+  border-color: #28a745;
+  box-shadow: 0 0 0 .2rem rgba(40, 167, 69, .25)
+}
+
+.was-validated textarea.form-control:valid,
+textarea.form-control.is-valid {
+  padding-right: calc(1.5em + .75rem);
+  background-position: top calc(.375em + .1875rem) right calc(.375em + .1875rem)
+}
+
+.form-control.is-invalid,
+.was-validated .form-control:invalid {
+  border-color: #dc3545;
+  padding-right: calc(1.5em + .75rem);
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='none' stroke='%23dc3545' viewBox='0 0 12 12'%3e%3ccircle cx='6' cy='6' r='4.5'/%3e%3cpath stroke-linejoin='round' d='M5.8 3.6h.4L6 6.5z'/%3e%3ccircle cx='6' cy='8.2' r='.6' fill='%23dc3545' stroke='none'/%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right calc(.375em + .1875rem) center;
+  background-size: calc(.75em + .375rem) calc(.75em + .375rem)
+}
+
+.form-control.is-invalid:focus,
+.was-validated .form-control:invalid:focus {
+  border-color: #dc3545;
+  box-shadow: 0 0 0 .2rem rgba(220, 53, 69, .25)
+}
+
+.was-validated textarea.form-control:invalid,
+textarea.form-control.is-invalid {
+  padding-right: calc(1.5em + .75rem);
+  background-position: top calc(.375em + .1875rem) right calc(.375em + .1875rem)
+}
+
+@media (min-width:576px) {
+  .form-inline .form-control {
+    display: inline-block;
+    width: auto;
+    vertical-align: middle
+  }
+
+  .form-inline .form-control-plaintext {
+    display: inline-block
+  }
+
+  .form-inline .custom-select,
+  .form-inline .input-group {
+    width: auto
+  }
+}
+
+.btn-toolbar .input-group {
+  width: auto
+}
+
+.input-group {
+  position: relative;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -ms-flex-align: stretch;
+  align-items: center;
+  width: 100%
+}
+
+.input-group>.custom-file,
+.input-group>.custom-select,
+.input-group>.form-control,
+.input-group>.form-control-plaintext {
+  position: relative;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  width: 1%;
+  min-width: 0;
+  margin-bottom: 0
+}
+
+.input-group>.custom-file+.custom-file,
+.input-group>.custom-file+.custom-select,
+.input-group>.custom-file+.form-control,
+.input-group>.custom-select+.custom-file,
+.input-group>.custom-select+.custom-select,
+.input-group>.custom-select+.form-control,
+.input-group>.form-control+.custom-file,
+.input-group>.form-control+.custom-select,
+.input-group>.form-control+.form-control,
+.input-group>.form-control-plaintext+.custom-file,
+.input-group>.form-control-plaintext+.custom-select,
+.input-group>.form-control-plaintext+.form-control {
+  margin-left: -1px
+}
+
+.input-group>.custom-file .custom-file-input:focus~.custom-file-label,
+.input-group>.custom-select:focus,
+.input-group>.form-control:focus {
+  z-index: 3
+}
+
+.input-group>.custom-file .custom-file-input:focus {
+  z-index: 4
+}
+
+.input-group>.custom-select:not(:last-child),
+.input-group>.form-control:not(:last-child) {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0
+}
+
+.input-group>.custom-select:not(:first-child),
+.input-group>.form-control:not(:first-child) {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0
+}
+
+.input-group>.custom-file {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center
+}
+
+.input-group>.custom-file:not(:last-child) .custom-file-label,
+.input-group>.custom-file:not(:last-child) .custom-file-label::after {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0
+}
+
+.input-group>.custom-file:not(:first-child) .custom-file-label {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0
+}
+
+.input-group-append,
+.input-group-prepend,
+.input-group-range {
+  display: -ms-flexbox;
+  display: flex
+}
+
+.input-group-append .btn,
+.input-group-prepend .btn {
+  position: relative;
+  z-index: 2
+}
+
+.input-group-append .btn:focus,
+.input-group-prepend .btn:focus {
+  z-index: 3
+}
+
+.input-group-lg>.custom-select,
+.input-group-lg>.form-control:not(textarea) {
+  height: calc(1.5em + 1rem + 2px)
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1000;
+  display: none;
+  float: left;
+  min-width: 10rem;
+  padding: .5rem 0;
+  margin: .125rem 0 0;
+  font-size: 1rem;
+  color: #212529;
+  text-align: left;
+  list-style: none;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid rgba(0, 0, 0, .15);
+  border-radius: .25rem
+}
+
+.datepicker-days th.dow:first-child,
+.datepicker-days td:first-child {
+  color: #ff0000;
+}
+
+.datepicker-days th.dow:last-child,
+.datepicker-days td:last-child {
+  color: #0000ff;
+}
+
+.datepicker-days thead {
+  border-bottom: 1px solid #cccccc;
+}
+
+.datepicker-days .holiday {
+  color: #ff0000;
+}
+
+.calendar-caution {
+  color: #ff003c;
+  font-weight: bold;
+  line-height: 1.4em;
+  font-size: 1.4rem;
+  margin-top: 20px;
+}
+
+.input-group-range-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+div#short_term_calendar {
+  width: 100%;
+}
+
+div#datepicker div.usage-start,
+div#datepicker div.usage-end {
+  margin-right: 20px;
+}
+
+div#datepicker>span,
+div.usage-days-select>span {
+  font-size: 2rem;
+  margin-right: 20px;
+  padding-top: 25px;
+}
+
+div.usage-days-select>span {
+  padding-top: 38px;
+}
+
+.input-daterange input:last-child:hover,
+input#search_btn:hover {
+  cursor: pointer;
+}
+
+div.usage-period div.form-control {
+  padding-left: .75rem;
+  padding-left: 0.75rem;
+  border: none;
+  background: #ff003c;
+  width: 100px;
+  color: #fff;
+  font-weight: 900;
+  font-size: 2.5rem;
+  height: 32px;
+}
+
+div.usage-period div.form-control span {
+  font-size: 1.8rem;
+  margin: 3px 6px 0 1px;
+}
+
+div.usage-period div.form-control span:last-child {
+  margin-right: 0;
+}
+
+span.require_mark {
+  font-size: 1.3rem;
+  color: #fff;
+  background-color: #ff003c;
+  padding: .3rem .75rem;
+  line-height: 1;
+  border-radius: 10px;
+  width: 3rem;
+  text-align: center;
+}
+
+div.usage-days-select {
+  display: flex;
+}
+
+.input-group-range-text-hidden {
+  display: none;
+}
+
+#usage_period_block {
+  margin-top: 0px;
+}
+
+html body .datepicker {
+  top: 600px;
+}
+
+.datepicker-dropdown {
+  transform: unset;
+}
+
+@media screen and (max-width: 767px) {
+  .input-group {
+    display: block;
+  }
+
+  .input-group-range {
+    display: none;
+  }
+
+  .input-group-prepend {
+    display: block;
+  }
+
+  .input-daterange input:last-child {
+    width: 100%;
+  }
+
+  .input-daterange input:last-child {
+    width: 150px;
+  }
+
+
+
+  div#datepicker div.usage-end {
+    padding-top: 27px;
+  }
+
+  div.usage-days-select>span {
+    padding-top: 78px;
+    margin: 0 10px;
+  }
+
+  div.usage-days-select {
+    margin-top: 20px;
+  }
+
+  div.usage-period div.form-control {
+    width: 100%;
+    height: 42px;
+    font-size: 3.2rem;
+    margin: 20px auto 0;
+  }
+
+  div.usage-period div.form-control span {
+    margin: 9px 8px 0 3px;
+  }
+
+  .form-control {
+    box-sizing: border-box;
+    padding: 15px .75rem 15px 1.5rem;
+    height: 39px;
+  }
+
+  div#datepicker div.usage-start,
+  div#datepicker div.usage-end {
+    margin-right: 0;
+  }
+}
+
+/* カレンダー end */
+
+/*----------------------
+海外ギガチャージ　期間延長
+-----------------------*/
+div.mypage-content-box.prepaid-giga-overseas-extension {
+  margin-top: 50px;
+}
+
+div.mypage-content-box.prepaid-giga-overseas-extension.first-content {
+  margin-top: 70px;
+  padding: 0 25px 35px;
+  box-sizing: border-box;
+}
+
+.prepaid-giga-overseas-extension.first-content div.mypage-content-box-title {
+  padding: 30px 0 10px;
+}
+
+.prepaid-giga-overseas-extension .table-base thead th {
+  text-align: center;
+}
+
+.prepaid-giga-overseas-extension div.mypage-content-box-title p {
+  border-bottom: none;
+  padding: 0 0 20px 0;
+}
+
+.prepaid-giga-overseas-extension div.mypage-content-box-title p.desc {
+  font-size: 1.6rem;
+}
+
+.prepaid-giga-overseas-extension div.mypage-content-box-inner {
+  margin: 0 50px;
+}
+
+.prepaid-giga-overseas-extension .extension-ttl-radio th {
+  border-top: 1px solid #fff;
+}
+
+.prepaid-giga-overseas-extension .extension-ttl-radio th:first-child {
+  min-width: 150px;
+  position: relative;
+}
+
+.prepaid-giga-overseas-extension table.add-data-table {
+  border-collapse: collapse;
+  width: 100%;
+  border-bottom: 1px solid #fff;
+}
+
+.prepaid-giga-overseas-extension .extension-select-area {
+  padding-left: 50px;
+}
+
+.prepaid-giga-overseas-extension .input-daterange input:last-child {
+  width: 160px;
+}
+
+.prepaid-giga-overseas-extension div.usage-period div.form-control {
+  min-width: 140px;
+}
+
+.prepaid-giga-overseas-extension .add-data-table td {
+  padding: 20px 0 40px;
+}
+
+.prepaid-giga-overseas-extension .add-data-table th.extension-ttl {
+  padding: 20px 0 40px;
+  width: auto;
+  min-width: 150px;
+  font-weight: 500;
+}
+
+.prepaid-giga-overseas-extension div.usage-period {
+  margin-left: 5px;
+}
+
+.prepaid-giga-overseas-extension div.usage-days-select>span {
+  padding-top: 12px;
+}
+
+.prepaid-giga-overseas-extension .attention {
+  text-align: right;
+  margin: 10px 0 0;
+  color: #bbb;
+}
+
+.prepaid-giga-overseas-extension .extension-ttl-radio input {
+  appearance: none;
+  position: absolute;
+}
+
+.prepaid-giga-overseas-extension .extension-ttl-radio input::before {
+  content: '';
+  display: block;
+  width: 26px;
+  height: 26px;
+  position: absolute;
+  left: -45px;
+  top: -2px;
+  background-color: #fff;
+}
+
+.prepaid-giga-overseas-add .focus-decoration.focused-before::before {
+  box-shadow: 0 0 0 2.5px #fff;
+  outline: #000 solid 2px;
+}
+
+.prepaid-giga-overseas-extension .extension-ttl-radio input:checked::after {
+  content: '';
+  display: block;
+  width: 15px;
+  height: 7px;
+  border-bottom: 4px solid #202020;
+  border-left: 4px solid #202020;
+  transform: rotate(-45deg);
+  position: absolute;
+  left: -41px;
+  top: 3px;
+}
+
+@media screen and (min-width: 768px) {}
+
+@media screen and (max-width: 767px) {
+  .prepaid-giga-overseas-extension div.mypage-content-box-inner {
+    margin: 0;
+  }
+
+  div.mypage-content-box.prepaid-giga-overseas-extension.first-content {
+    margin-top: 50px;
+    padding: 0 10px 15px;
+  }
+
+  .prepaid-giga-overseas-extension div.mypage-content-box-title {
+    padding: 20px 0 0;
+  }
+
+  .prepaid-giga-overseas-extension div.mypage-content-box-title p {
+    padding: 0 0 10px 0;
+  }
+
+  .prepaid-giga-overseas-extension div.mypage-content-box-title p.desc {
+    font-size: 1.3rem;
+    padding: 0px 0 15px;
+    letter-spacing: 0;
+  }
+
+  .prepaid-giga-overseas-extension .add-data-table th {
+    width: auto;
+    display: table-cell;
+    font-size: 1.3rem;
+  }
+
+  .prepaid-giga-overseas-extension .extension-ttl-radio th:first-child {
+    min-width: 140px;
+    width: 50%;
+    box-sizing: border-box;
+    font-size: 1.4rem;
+    padding: 30px 0 6px 40px;
+  }
+
+  .prepaid-giga-overseas-extension .extension-ttl-radio th:nth-child(2) {
+    font-size: 1.6rem;
+    padding: 30px 0 5px;
+  }
+
+  .prepaid-giga-overseas-extension .extension-select-area {
+    padding-left: 0;
+  }
+
+  .prepaid-giga-overseas-extension .add-data-table td {
+    display: table-cell;
+    padding: 15px 0 25px;
+  }
+
+  .prepaid-giga-overseas-extension .input-daterange input:last-child {
+    width: 100%;
+  }
+
+  .prepaid-giga-overseas-extension .input-daterange input:last-child {
+    width: 150px;
+  }
+
+  .prepaid-giga-overseas-extension div.usage-period {
+    margin-left: 0px;
+  }
+
+  .prepaid-giga-overseas-extension .extension-ttl-radio input::before {
+    top: -7.5px;
+  }
+
+  .prepaid-giga-overseas-extension .extension-ttl-radio input:checked::after {
+    top: -2.5px;
+  }
+
+  .prepaid-giga-overseas-extension .attention {
+    margin: 0 0 10px;
+  }
+
+  .prepaid-giga-overseas-extension .extension-ttl-radio:first-child th {
+    border-top: 1px solid #fff;
+  }
+}
+
+/*----------------------
+海外ギガチャージ　容量変更
+-----------------------*/
+.prepaid-giga-overseas-change .extension-ttl-radio th:first-child {
+  min-width: 250px;
+}
+
+.prepaid-giga-overseas-change .extension-ttl-radio th:nth-child(2) {
+  width: 100%;
+}
+
+.prepaid-giga-overseas-change .extension-ttl-radio th {
+  font-size: 2rem;
+}
+
+/* .prepaid-giga-overseas-change .extension-ttl-radio input::before {
+    top: -3px;
+}
+.prepaid-giga-overseas-change .extension-ttl-radio input:checked::after {
+    top: 0px;
+} */
+.prepaid-giga-overseas-change .change-plan-date th {
+  padding: 35px 0 15px;
+  font-weight: 500;
+}
+
+.prepaid-giga-overseas-change .change-plan-date td {
+  padding: 35px 0 15px;
+  color: #fff;
+  font-size: 1.5rem;
+}
+
+.prepaid-giga-overseas-change .change-plan-type th {
+  padding: 0 0 15px;
+}
+
+.prepaid-giga-overseas-change .change-plan-type td {
+  padding: 0 0 15px;
+}
+
+.prepaid-giga-overseas-change .change-plan-type td .plan-name-box {
+  padding: 15px 35px;
+  background-color: #707070;
+  border-radius: 10px;
+  color: #000;
+  text-align: center;
+  display: inline-block;
+  font-size: 1.5rem;
+}
+
+.prepaid-giga-overseas-change .change-plan-type td.plan-bg-white .plan-name-box {
+  background-color: #fff;
+}
+
+.prepaid-giga-overseas-change .change-plan-type td select {
+  width: 150px;
+  height: 30px;
+  border-radius: 10px;
+  color: #000;
+  text-align: center;
+  display: inline-block;
+  font-size: 1.5rem;
+}
+
+.prepaid-giga-overseas-change .change-plan-type td select:disabled {
+  cursor: auto;
+}
+
+.prepaid-giga-overseas-change .add-data-table th,
+.prepaid-giga-overseas-change .add-data-table td {
+  letter-spacing: 1px;
+}
+
+@media screen and (max-width: 767px) {
+  .prepaid-content-area .overseas-calc-all {
+    padding: 16px 21px;
+  }
+
+  .prepaid-giga-overseas-change .extension-ttl-radio th:first-child {
+    min-width: 140px;
+  }
+
+  .prepaid-giga-overseas-change .change-plan-date th {
+    padding: 15px 0 5px 10px;
+  }
+
+  .prepaid-giga-overseas-change .change-plan-date td {
+    padding: 10px 0 15px 10px;
+    font-size: 1.3rem;
+  }
+
+  .prepaid-giga-overseas-change .change-plan-type th {
+    padding: 15px 0 5px 10px;
+  }
+
+  .prepaid-giga-overseas-change .change-plan-type td {
+    padding: 0 0 25px;
+    text-align: center;
+    border-bottom: 1px solid #fff;
+  }
+
+  .prepaid-giga-overseas-change .extension-ttl-radio input::before {
+    top: -7px;
+  }
+
+  .prepaid-giga-overseas-change .extension-ttl-radio input:checked::after {
+    top: -2px;
+  }
+
+  .prepaid-giga-overseas-change .attention {
+    margin: 15px 0 10px;
+  }
+}
+
+/*----------------------
+国内ギガチャージ　追加購入
+-----------------------*/
+.form-capacity-selects-prepaid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: left;
+}
+
+.form-capacity-selects-prepaid div.form-capacity-select {
+  width: calc(100% / 3);
+  position: relative;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.form-capacity-selects-prepaid div.form-capacity-select-area.active,
+.form-capacity-selects-prepaid div.form-capacity-select-area.selected {
+  box-sizing: border-box;
+  border: none;
+  outline: 5px solid #FFEB00;
+  transition: border 0.1s;
+}
+
+.form-capacity-selects-prepaid div.form-capacity-select-area.datacharge {
+  position: relative;
+  background-color: #ededed;
+  margin: 0;
+  height: 250px;
+  padding: 40px 20px 0;
+}
+
+.form-capacity-selects-prepaid div.form-capacity-select-area.datacharge::before {
+  content: "";
+  border-right: 50px solid #D400A0;
+  border-bottom: 50px solid transparent;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.form-capacity-selects-prepaid div.form-capacity-select-checkbox-area {
+  position: absolute;
+  top: 120px;
+  left: 10px;
+  transform: unset;
+}
+
+.form-capacity-selects-prepaid .capacity-price {
+  padding-left: 20px;
+  margin-bottom: 40px;
+}
+
+.form-capacity-selects-prepaid .plan-capacity {
+  color: #D400A0;
+  font-size: 5rem;
+  font-weight: bold;
+  margin: 0;
+  line-height: 1;
+  text-align: center;
+}
+
+.form-capacity-selects-prepaid .plan-capacity span {
+  font-size: 3.4rem;
+}
+
+.form-capacity-selects-prepaid .plan-price {
+  color: #D400A0;
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin: 0;
+  line-height: 1;
+  text-align: center;
+}
+
+.form-capacity-selects-prepaid .plan-price span {
+  font-size: 1.4rem;
+  color: #000;
+  font-weight: 400;
+}
+
+.form-capacity-selects-prepaid .datacharge-1gb-price {
+  text-align: center;
+  color: #000;
+  font-size: 1.5rem;
+}
+
+.form-capacity-selects-prepaid .datacharge-1gb-price span {
+  padding-left: 5px;
+}
+
+.form-capacity-selects-prepaid label.custom-check-box-v2 p {
+  position: relative;
+  display: inline-block;
+  color: #000;
+  font-size: 1rem;
+}
+
+.form-capacity-selects-prepaid label.custom-check-box-v2 p::before {
+  content: "";
+  z-index: 0;
+  background-color: #fff;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  display: inline-block;
+  box-sizing: border-box;
+  top: -30px;
+  left: 4px;
+}
+
+.form-capacity-selects-prepaid .datacharge.selected label.custom-check-box-v2 p::after {
+  content: "";
+  z-index: 1;
+  margin: 1px 17px;
+  width: 8px;
+  height: 16px;
+  position: absolute;
+  display: inline-block;
+  box-sizing: border-box;
+  border: 1.5px solid #000;
+  border-width: 0 1.5px 1.5px 0;
+  top: -30px;
+  left: 3px;
+  -ms-transform: translate(-50%, 25%) rotate(45deg);
+  transform: translate(-50%, 25%) rotate(45deg);
+}
+
+.form-capacity-selects-prepaid p.custom-check-box-v2-select-text.datacharge {
+  text-align: center;
+  background-color: #505050;
+}
+
+.form-capacity-selects-prepaid .datacharge.selected p.custom-check-box-v2-select-text.datacharge,
+.form-capacity-selects-prepaid .datacharge.active p.custom-check-box-v2-select-text.datacharge {
+  background-color: #D400A0;
+  border: 1px solid #D400A0;
+}
+
+.form-capacity-selects-prepaid p.custom-check-box-v2-select-text.datacharge label {
+  color: #fff;
+}
+
+.form-capacity-selects-prepaid div.form-capacity-select-area.datacharge.selected {
+  background-color: #fff;
+}
+
+.form-capacity-selects-prepaid div.form-capacity-select-area.datacharge.active {
+  background-color: #fff;
+}
+
+.form-capacity-selects-prepaid .datacharge.active label.custom-check-box-v2 p::before {
+  background-color: lightgray;
+}
+
+.form-capacity-selects-prepaid .datacharge.selected label.custom-check-box-v2 p::before {
+  background-color: lightgray;
+}
+
+/*各プランの色変更*/
+.form-capacity-selects-prepaid label[for="charge_50gb"] div.form-capacity-select-area.datacharge::before {
+  border-right: 50px solid #FF2F00;
+}
+
+.form-capacity-selects-prepaid label[for="charge_50gb"] .plan-capacity,
+.form-capacity-selects-prepaid label[for="charge_50gb"] .plan-price {
+  color: #FF2F00;
+}
+
+.form-capacity-selects-prepaid label[for="charge_50gb"] .datacharge.selected p.custom-check-box-v2-select-text.datacharge,
+.form-capacity-selects-prepaid label[for="charge_50gb"] .datacharge.active p.custom-check-box-v2-select-text.datacharge {
+  background-color: #FF2F00;
+  border: 1px solid #FF2F00;
+}
+
+.form-capacity-selects-prepaid label[for="charge_20gb"] div.form-capacity-select-area.datacharge::before {
+  border-right: 50px solid #FF5500;
+}
+
+.form-capacity-selects-prepaid label[for="charge_20gb"] .plan-capacity,
+.form-capacity-selects-prepaid label[for="charge_20gb"] .plan-price {
+  color: #F25000;
+}
+
+.form-capacity-selects-prepaid label[for="charge_20gb"] .datacharge.selected p.custom-check-box-v2-select-text.datacharge,
+.form-capacity-selects-prepaid label[for="charge_20gb"] .datacharge.active p.custom-check-box-v2-select-text.datacharge {
+  background-color: #FF5500;
+  border: 1px solid #FF5500;
+}
+
+.form-capacity-selects-prepaid label[for="charge_10gb"] div.form-capacity-select-area.datacharge::before {
+  border-right: 50px solid #CA6800;
+}
+
+.form-capacity-selects-prepaid label[for="charge_10gb"] .plan-capacity,
+.form-capacity-selects-prepaid label[for="charge_10gb"] .plan-price {
+  color: #CA6800;
+}
+
+.form-capacity-selects-prepaid label[for="charge_10gb"] .datacharge.selected p.custom-check-box-v2-select-text.datacharge,
+.form-capacity-selects-prepaid label[for="charge_10gb"] .datacharge.active p.custom-check-box-v2-select-text.datacharge {
+  background-color: #CA6800;
+  border: 1px solid #CA6800;
+}
+
+.form-capacity-selects-prepaid label[for="charge_5gb"] div.form-capacity-select-area.datacharge::before {
+  border-right: 50px solid #D2BE00;
+}
+
+.form-capacity-selects-prepaid label[for="charge_5gb"] .plan-capacity,
+.form-capacity-selects-prepaid label[for="charge_5gb"] .plan-price {
+  color: #D2BE00;
+}
+
+.form-capacity-selects-prepaid label[for="charge_5gb"] .datacharge.selected p.custom-check-box-v2-select-text.datacharge,
+.form-capacity-selects-prepaid label[for="charge_5gb"] .datacharge.active p.custom-check-box-v2-select-text.datacharge {
+  background-color: #D2BE00;
+  border: 1px solid #D2BE00;
+}
+
+@media screen and (min-width: 768px) {
+  div.mypage-content-box-inner.inner-prepaid {
+    margin: auto 100px;
+    padding-top: 45px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .form-capacity-selects-prepaid {
+    max-width: 400px;
+    margin: 0 auto;
+  }
+
+  div.mypage-content-box.datacharge.domestic {
+    padding: 20px 0;
+  }
+
+  div.mypage-content-box-inner.inner-prepaid {
+    margin: auto 0;
+  }
+
+  .form-capacity-selects-prepaid div.form-capacity-select {
+    width: calc(100% / 2);
+    padding: 10px;
+    margin: 0;
+  }
+
+  .form-capacity-selects-prepaid div.form-capacity-select:nth-child(even) {
+    padding-left: 0;
+  }
+
+  .form-capacity-selects-prepaid div.form-capacity-select-area.datacharge {
+    height: 190px;
+    padding: 20px 10px 0;
+  }
+
+  .form-capacity-selects-prepaid .plan-capacity {
+    font-size: 3.5rem;
+  }
+
+  .form-capacity-selects-prepaid .plan-capacity span {
+    font-size: 2.2rem;
+  }
+
+  .form-capacity-selects-prepaid .capacity-price {
+    padding-left: 20px;
+    margin-bottom: 10px;
+  }
+
+  .form-capacity-selects-prepaid .plan-price {
+    font-size: 1.7rem;
+  }
+
+  .form-capacity-selects-prepaid .plan-price span {
+    font-size: 1.1rem;
+  }
+
+  .form-capacity-selects-prepaid div.form-capacity-select-area.datacharge::before {
+    border-right: 30px solid #D400A0;
+    border-bottom: 30px solid transparent;
+  }
+
+  .form-capacity-selects-prepaid .datacharge-1gb-price {
+    font-size: 1.1rem;
+    padding-left: 32px;
+    text-align: left;
+    line-height: 1.5;
+    margin-bottom: 20px;
+  }
+
+  .form-capacity-selects-prepaid div.form-capacity-select-checkbox-area {
+    top: 110px;
+    left: 5px;
+  }
+
+  .form-capacity-selects-prepaid label.custom-check-box-v2 p {
+    font-size: 0.9rem;
+  }
+
+  .form-capacity-selects-prepaid label.custom-check-box-v2 p::before {
+    width: 25px;
+    height: 25px;
+    top: -25px;
+    left: 4px;
+  }
+
+  .form-capacity-selects-prepaid .datacharge.selected label.custom-check-box-v2 p::after {
+    width: 7px;
+    height: 14px;
+    top: -26px;
+    left: 0px;
+  }
+
+  .form-capacity-selects-prepaid .datacharge-1gb-price span {
+    padding-left: 0px;
+  }
+
+  .form-capacity-selects-prepaid p.custom-check-box-v2-select-text.datacharge {
+    margin: 0;
+    font-size: 1.2rem;
+    line-height: 1.4;
+  }
+
+  .prepaid-content-area .overseas-calc-all {
+    padding: 16px 21px;
+  }
+
+  .prepaid-giga-overseas-extension .add-data-table th.extension-ttl {
+    padding: 20px 0 0 10px;
+  }
+
+  .form-capacity-selects-prepaid label[for="charge_50gb"] div.form-capacity-select-area.datacharge::before {
+    border-right: 30px solid #FF2F00;
+  }
+
+  .form-capacity-selects-prepaid label[for="charge_20gb"] div.form-capacity-select-area.datacharge::before {
+    border-right: 30px solid #FF5500;
+  }
+
+  .form-capacity-selects-prepaid label[for="charge_10gb"] div.form-capacity-select-area.datacharge::before {
+    border-right: 30px solid #FA8200;
+  }
+
+  .form-capacity-selects-prepaid label[for="charge_5gb"] div.form-capacity-select-area.datacharge::before {
+    border-right: 30px solid #D2BE00;
+  }
+
+  .detail-extension .space-tax {
+    font-size: 1.1rem;
+  }
+
+  .detail-extension table.table-overseas-add td:last-child {
+    width: 50%;
+    padding: 16px 11px 16px 5px;
+  }
+
+  .detail-extension table.table-overseas-add td.space-bg {
+    padding: 16px 5px;
+  }
+
+  .detail-extension .overseas-existing-terms {
+    min-width: 16px;
+    display: inline-block;
+  }
+
+  .prepaid-content-area .detail-extension .overseas-calc-all {
+    padding: 16px 70px 16px 21px;
+  }
+
+  .prepaid-giga-overseas-change .change-plan-type td .plan-name-box {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .prepaid-giga-overseas-extension .add-data-table .extension-ttl-radio th {
+    border-bottom: none;
+  }
+
+  .prepaid-change.prepaid-detail .table-overseas-add .space-tax {
+    font-size: 1.1rem;
+  }
+
+  .prepaid-change table.table-overseas-add td:last-child {
+    width: 45%;
+  }
+
+  .prepaid-change table.table-overseas-add td.space-td {
+    padding: 16px 8px 16px 5px;
+  }
+
+  .prepaid-content-area .prepaid-change .overseas-calc-all {
+    padding: 16px 65px 16px 21px;
+  }
+}
+
+/*----------------------
+オプション追加
+-----------------------*/
+.prepaid-option-area .entry-option-select {
+  line-height: 1.2em;
+  text-align: left;
+}
+
+div.prepaid-option-area .entry-option-tanmatsu-anshin .entry-option-select.mypage-prepaid {
+  width: auto;
+}
+
+.prepaid-option-area div.relief-item-select-area-box {
+  width: 470px;
+  box-sizing: border-box;
+  filter: none;
+  line-height: 1;
+  padding: 20px 0 20px 75px;
+  margin-bottom: 0;
+  background-color: #fff;
+  border-radius: 1.25em;
+  cursor: pointer;
+  position: relative;
+}
+
+.prepaid-option-area div.relief-item-select-area.selected {
+  border: solid 5px #00B79C;
+  transition: border 0.1s;
+  margin: 10px auto;
+  cursor: default;
+}
+
+.prepaid-option-area .group {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+}
+
+.prepaid-option-area .group .title {
+  font-size: 2.1rem;
+  line-height: 1.3;
+  font-weight: bold;
+}
+
+.prepaid-option-area .group .sub-title {
+  margin-top: 10px;
+}
+
+.prepaid-option-area .group .price {
+  font-size: 4rem;
+  line-height: 1;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 10px;
+  width: 100%;
+}
+
+.mypage-prepaid-option .entry-option-tanmatsu-anshin .relief-option-ckeckbox {
+  top: calc(50% - 15px);
+}
+
+.prepaid-option-area .group .price .yen {
+  margin-left: 0.2em;
+  font-size: 0.5em;
+}
+
+.prepaid-option-area .group .price .tax-included {
+  font-size: 0.5em;
+}
+
+.prepaid-option-area .relief-option-ckeckbox {
+  position: absolute;
+  top: calc(50% - 19px);
+  bottom: auto;
+  z-index: 2;
+  cursor: pointer;
+  pointer-events: none;
+  left: calc(50% - 250px);
+}
+
+.prepaid-option-area label.custom-check-box-v2 {
+  position: relative;
+  margin: 0 15.5px 10px 2.5px;
+  left: 45px;
+}
+
+.prepaid-option-area p.custom-check-box-v2-select-text {
+  font-weight: 600;
+  margin: 5px 5px 0 0;
+  padding: 4px 18px 4px 0;
+}
+
+.prepaid-option-area label.custom-check-box-v2 p {
+  display: inline-block;
+}
+
+.prepaid-option-area label.custom-check-box-v2 p::before {
+  content: '';
+  position: absolute;
+  top: -8px;
+  left: -6px;
+  display: inline-block;
+  box-sizing: border-box;
+  z-index: 0;
+  background-color: lightgray;
+  width: 28px;
+  height: 28px;
+  margin-left: 35%;
+}
+
+.prepaid-option-area label.custom-check-box-v2 p::after {
+  content: '';
+  border: 1.5px solid #000;
+  border-width: 0 1.5px 1.5px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+  top: -4px;
+  left: -12px;
+  position: absolute;
+  display: inline-block;
+  box-sizing: border-box;
+  z-index: 1;
+  margin: 1px 17px;
+  width: 8px;
+  height: 13px;
+}
+
+.prepaid-option-area .custom-check-box-v2-select-text label {
+  color: #000;
+  font-size: 1.3rem;
+}
+
+.prepaid-giga-overseas-add div.mypage-content-box-inner .prepaid-option-area p.custom-check-box-v2-select-text {
+  padding: 0 30px;
+}
+
+div.mypage-content-box.prepaid-giga-overseas-add.prepaid-option-content {
+  margin-top: 50px;
+  padding: 35px 25px;
+}
+
+.prepaid-option-area .first-title {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+.prepaid-option-area .js-option-popup {
+  font-family: "Montserrat", "Noto Sans JP", sans-serif;
+  font-size: 1.5rem;
+  border: 1px solid transparent;
+  background-color: transparent;
+  cursor: pointer;
+  color: #e6006b;
+}
+
+.prepaid-option-area .prepaid-popup-area {
+  border-bottom: 1px solid #e6006b;
+  width: fit-content;
+  margin: 25px auto 0;
+  cursor: pointer;
+}
+
+div.prepaid-option-area .prepaid-popup-area.mypage-prepaid {
+  margin: 15px auto 0;
+}
+
+#form-edit-prepaid-option .overseas-calc-all {
+  padding: 15px 20px;
+}
+
+#form-edit-prepaid-option .prepaid-detail .space {
+  display: inline-block;
+  width: 3.9em;
+}
+
+#form-edit-prepaid-option .prepaid-detail table.table-overseas-add tr:not(:first-of-type) td:last-child {
+  padding: 15px 0;
+  text-align: right;
+}
+
+#form-edit-prepaid-option .leave-checkbox-box label {
+  width: fit-content;
+  display: block;
+  margin: auto;
+}
+
+/* ポップアップ */
+#popup-tanmatsu-anshin.option-popup-block .popup-body h3 {
+  font-size: 2.4rem;
+  margin: 0px auto 10px;
+  width: 100%;
+  padding-left: 15px;
+}
+
+#popup-tanmatsu-anshin.option-popup-block .popup-body .desc {
+  width: 100%;
+  margin: 0 auto;
+  font-size: 2.2rem;
+  padding-left: 15px;
+  font-weight: bold;
+  line-height: 1.5;
+}
+
+.entry-option-popup .popup-header .group {
+  margin: 10px auto 0;
+}
+
+.mypage-prepaid-option div.mypage-contract-description {
+  margin-top: 20px;
+}
+
+.mypage-prepaid-option .prepaid-content-area div.mypage-title-area-icon {
+  width: 90px;
+}
+
+@media screen and (min-width: 768px) {}
+
+@media screen and (max-width: 767px) {
+  div.mypage-content-box.prepaid-giga-overseas-add.prepaid-option-content {
+    margin-top: 30px;
+    padding: 30px 10px;
+  }
+
+  .mypage-prepaid-option div.mypage-contract-description {
+    margin-top: 0px;
+  }
+
+  div.prepaid-option-area .entry-option-select div.relief-item-select-area-box {
+    width: 100%;
+  }
+
+  .mypage-prepaid-option div.prepaid-option-area .entry-option-select div.relief-item-select-area-box {
+    width: 100%;
+    padding: 15px 0 15px 60px;
+  }
+
+  .prepaid-option-area .custom-check-box-v2-select-text label {
+    font-size: 1.1rem;
+    font-weight: 400;
+  }
+
+  .prepaid-giga-overseas-add div.mypage-content-box-inner .prepaid-option-area p.custom-check-box-v2-select-text {
+    padding: 0;
+    margin: 0;
+  }
+
+  .prepaid-option-area .entry-option-tanmatsu-anshin .relief-option-ckeckbox {
+    left: 6%;
+    top: calc(50% - 9px);
+  }
+
+  .prepaid-option-area label.custom-check-box-v2 p::before {
+    top: -12px;
+    left: -40px;
+  }
+
+  .prepaid-option-area label.custom-check-box-v2 p::after {
+    top: -7px;
+    left: -46px;
+  }
+
+  .mypage-prepaid-option .prepaid-content-area div.mypage-title-area-icon {
+    width: 70px;
+  }
+
+  .mypage-prepaid-option div.mypage-title-area {
+    padding: 25px 0 15px;
+  }
+
+  #form-edit-prepaid-option .overseas-calc-all {
+    padding: 15px;
+  }
+
+  #form-edit-prepaid-option .prepaid-detail table.table-overseas-add tr:not(:first-of-type) td:last-child {
+    font-size: 1.2rem;
+  }
+
+  #form-edit-prepaid-option .overseas-calc-all-area p {
+    font-size: 1.2rem;
+  }
+}
+
+/*----------------------
+ご利用明細
+-----------------------*/
+.prepaid-paymenthistory table.table-payment.table-overseas-add td:last-child {
+  padding: 15px;
+}
+
+.prepaid-paymenthistory .prepaid-tax {
+  font-size: 1.3rem;
+  display: inline-block;
+  min-width: 65px;
+  text-align: left;
+}
+
+.prepaid-paymenthistory .payment-total .overseas-calc-all {
+  width: 200px;
+  box-sizing: content-box;
+}
+
+.prepaid-paymenthistory .payment-total .overseas-calc-all-title {
+  width: 147px;
+  box-sizing: border-box;
+}
+
+.prepaid-paymenthistory table.table-global td {
+  padding: 15px;
+}
+
+.prepaid-paymenthistory table.table-global td.sm-total {
+  text-align: right;
+}
+
+.prepaid-paymenthistory table.table-global td.sm-total .bold {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.prepaid-paymenthistory table.table-global td.sm-total .prepaid-tax {
+  font-size: 1.3rem;
+  display: inline-block;
+  min-width: 65px;
+  text-align: left;
+}
+
+table.table-global td.plan-b-total {
+  font-size: 2.2rem;
+}
+
+table.table-global td.plan-b-total .prepaid-tax {
+  font-weight: bold;
+}
+
+.prepaid-paymenthistory table.table-overseas-add tr td:nth-child(3) {
+  background-color: #fff;
+}
+
+.prepaid-paymenthistory table.table-overseas-add tr td.bg-gray {
+  background-color: #dcdcdc;
+  text-align: center;
+}
+
+.prepaid-paymenthistory table.table-global td.bg-gray {
+  text-align: center;
+}
+
+.prepaid-paymenthistory table.table-overseas-add tr td.table-sub-ttl {
+  font-weight: 400;
+}
+
+.prepaid-paymenthistory table.table-overseas-add tr td.color-red {
+  color: red;
+}
+
+.prepaid-paymenthistory table.table-overseas-add tr td.price-about {
+  width: 150px;
+}
+
+.prepaid-paymenthistory table.table-overseas-add tr td.price-small {
+  width: 185px;
+}
+
+table.table-payment.table-overseas-add tr:nth-of-type(2) td.price-small {
+  text-align: center;
+}
+
+.prepaid-paymenthistory table.table-payment.table-overseas-add tr td.sm-total {
+  text-align: right;
+}
+
+td.payment-history-change,
+table.table-global td.payment-history-change {
+  color: red;
+}
+
+.prepaid-paymenthistory table.table-payment.table-overseas-add td.plan-ttl.extension-ttl {
+  text-align: left;
+}
+
+@media screen and (max-width: 767px) {
+  .prepaid-paymenthistory .mypage-global-content-box .dropdown-title {
+    font-size: 1.35rem;
+  }
+
+  .prepaid-paymenthistory table.table-global {
+    margin-bottom: 0px;
+  }
+
+  .prepaid-paymenthistory .mypage-global-payment-box .table-payment-date {
+    margin-bottom: 15px;
+  }
+
+  .prepaid-paymenthistory .mypage-global-content-box .dropdown-title span {
+    top: 8px;
+  }
+}
+
+/*----------------------
+会員情報
+-----------------------*/
+.prepaid-content-area .prepaid-user-edit-btn {
+  margin-top: 20px;
+}
+
+.prepaid-content-area p.attention {
+  font-size: 1.3rem;
+  text-align: right;
+  padding-right: 6.5em;
+}
+
+.prepaid-content-area p.attention a {
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 767px) {
+  .prepaid-content-area p.attention {
+    text-align: left;
+    padding-right: 0;
+    padding-left: 8px;
+  }
+}
+
+/*----------------------
+マイページ
+-----------------------*/
+
+#mypage-nav-wrapper.fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+}
+
+.mypage-btn-container {
+  margin-top: 35px;
+  display: flex;
+  justify-content: space-between;
+}
+.mypage-btn-container .button {
+  margin-top: 0;
+}
+
+.mypage-btn-container .button-back {
+  height: 50px;
+  width: 240px;
+  /* margin-top: 55px; */
+}
+
+.prepaid-content-area div.mypage-content-box-title {
+  padding: 30px 7em;
+  box-sizing: border-box;
+}
+
+.prepaid-content-area #contract-cancel-form div.mypage-content-box-title {
+  padding: 30px 0;
+}
+
+.prepaid-content-area #contract-cancel-form p.mypage-content-box-title-inner>span {
+  font-size: 1.4rem;
+}
+
+.prepaid-content-area #contract-cancel-form p.mypage-content-box-lead {
+  font-size: 1.3rem;
+  margin-top: 5px;
+}
+
+.prepaid-content-area #contract-cancel-form .leave-survey-wrapper:first-child {
+  padding-top: 0;
+}
+
+.prepaid-content-area #contract-cancel-form.contract-cancel-form-prepaid .validator-error,
+.prepaid-content-area #contract-cancel-form .validator-error-data-charge {
+  color: #ffeb00;
+  margin: 5px 0 0;
+  font-size: 1.2rem;
+  display: block;
+}
+
+.prepaid-content-area #contract-cancel-form .validator-error-data-charge.text {
+  display: inline;
+  margin: 0;
+  margin-left: 10px;
+}
+
+.prepaid-content-area #contract-cancel-form .validator-error-data-charge.password {
+  transform: translateX(170px);
+  margin: 0;
+}
+
+.prepaid-content-area div.mypage-description.prepaid-discription {
+  top: 0px;
+  padding-left: 6.5em;
+}
+
+.prepaid-content-area div.mypage-description.prepaid-discription div.form-capacity-notice.payment-select-caution {
+  margin: 0px auto 30px;
+}
+
+div.payment-edit-caution table.td-input.prepaid-maypage-table tr:last-child th,
+div.payment-edit-caution table.td-input.prepaid-maypage-table tr:last-child td {
+  border-bottom: 1px solid #ddd;
+}
+
+.prepaid-content-area .prepaid-maypage-table-default {
+  border-collapse: collapse;
+}
+
+.prepaid-content-area .prepaid-maypage-table-default th,
+.prepaid-content-area .prepaid-maypage-table-default td {
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  background-color: transparent;
+  color: #fff;
+  font-size: 1.5rem;
+}
+
+.prepaid-content-area .prepaid-maypage-table-default th::before {
+  display: none;
+}
+
+.prepaid-content-area .prepaid-maypage-table {
+  border-collapse: collapse;
+  border-spacing: 0px;
+}
+
+.prepaid-content-area .prepaid-maypage-table tr th,
+.prepaid-content-area .prepaid-maypage-table tr td {
+  border: none;
+  padding: 10px 15px;
+}
+
+/* .prepaid-content-area .prepaid-maypage-table tr td.password-td {
+    padding-right: 20%;
+} */
+.prepaid-content-area .prepaid-maypage-table.prepaid-edit-customer-table tr th,
+.prepaid-content-area .prepaid-maypage-table.prepaid-edit-customer-table tr td {
+  border: none;
+}
+
+.prepaid-content-area .prepaid-maypage-table.prepaid-edit-customer-table tr:first-child th,
+.prepaid-content-area .prepaid-maypage-table.prepaid-edit-customer-table tr:first-child td {
+  border-bottom: 1px solid #DDDDDD;
+}
+
+.prepaid-content-area .prepaid-maypage-table.prepaid-edit-customer-table tr:last-child th,
+.prepaid-content-area .prepaid-maypage-table.prepaid-edit-customer-table tr:last-child td {
+  border-bottom: 1px solid #ddd;
+}
+
+.prepaid-content-area .prepaid-maypage-table tr:first-child th,
+.prepaid-content-area .prepaid-maypage-table tr:first-child td {
+  border-top: 1px solid #DDDDDD;
+  border-color: #ddd;
+}
+
+.prepaid-content-area .prepaid-maypage-table tr th:before {
+  display: none;
+}
+
+.prepaid-content-area .prepaid-maypage-table tr td input.mypage-input-border {
+  margin: 0;
+  padding: 20px 10px;
+  background-color: #f5f5f5;
+  border: none;
+  border-radius: 8px;
+  box-sizing: border-box;
+  letter-spacing: 1px;
+  height: 40px;
+  font-size: 1.6rem;
+}
+
+.prepaid-content-area .prepaid-maypage-table tr td select {
+  background-color: #f5f5f5;
+  border: none;
+  height: 40px;
+  margin: 0;
+  border-radius: 8px;
+  font-size: 1.6rem;
+  padding: 5px;
+}
+
+.mypage-attention-address-btn {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.mypage-attention-address-btn::before {
+  content: "";
+  border-top: 10px solid #ddd;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-bottom: none;
+  position: absolute;
+  right: -30px;
+  top: 4px;
+}
+
+.mypage-attention-address-btn.open::before {
+  border-top: none;
+  border-bottom: 10px solid #ddd;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+}
+
+.mypage-attention-address {
+  padding: 15px 0;
+}
+
+td.password-td span.field-icon {
+  right: 35%;
+  top: 15px;
+}
+
+#user-payment-edit-form div.form-capacity-notice.payment span.strong {
+  color: #FFEB00;
+}
+
+#user-payment-edit-form a.color-yellow {
+  color: #FFEB00;
+  text-decoration: underline;
+}
+
+.prepaid-user-edit-container-wrap {
+  display: flex;
+  margin: 0 6.5em;
+  padding-top: 40px;
+  flex-direction: row-reverse;
+}
+
+.prepaid-user-edit-btn-container {
+  display: flex;
+}
+
+.prepaid-user-edit-btn-container .prepaid-user-edit-btn {
+  margin-top: 0px;
+}
+
+.prepaid-user-edit-btn-container p.attention {
+  font-size: 1.1rem;
+  text-align: right;
+  padding-right: 0;
+}
+
+.prepaid-user-edit-btn-container p.attention a {
+  color: #FFEB00;
+}
+
+.mypage-prepaid-main .prepaid-user-edit-btn-container .button-next {
+  width: 90px;
+}
+
+.mypage-prepaid-main .prepaid-user-edit-btn-container .prepaid-user-edit-btn .prepaid-user-edit-link {
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+.mypage-prepaid-main .prepaid-user-edit-btn-container .prepaid-user-edit-btn .prepaid-user-edit-link.one-line {
+  padding-top: 20px;
+}
+
+.mypage-prepaid-main .prepaid-user-edit-btn-container .prepaid-user-edit-btn .prepaid-user-edit-link a {
+  color: #FFEB00;
+  line-height: 1.6;
+  text-decoration: underline;
+}
+
+.mypage-prepaid-main .prepaid-user-edit-btn-container .prepaid-user-edit-btn .prepaid-user-edit-link a:first-child {
+  margin-bottom: 7px;
+}
+
+.mypage-prepaid-main .prepaid-user-edit-btn-container .prepaid-user-edit-btn .prepaid-user-edit-link a:nth-child(2) {
+  margin: 0;
+}
+
+.prepaid-btn-container {
+  display: flex;
+  flex-direction: row-reverse;
+  margin: 0 7em;
+}
+
+.prepaid-btn-container .button-body {
+  background-color: #666666;
+  border-radius: 10px;
+  padding: 15px;
+  margin-top: 15px;
+  width: 300px;
+  transition: .3s;
+  position: relative;
+  z-index: 10;
+  box-shadow: 3px 3px 3px #1E1E1E;
+  justify-content: space-between;
+}
+
+.prepaid-btn-container .data-create-button-text {
+  margin-top: 15px;
+}
+
+.prepaid-btn-container .data-create-button-text .button-body {
+  margin: 0;
+}
+
+.prepaid-btn-container .button-body.light-shadow {
+  box-shadow: 3px 3px 3px #353535;
+}
+
+.prepaid-btn-container span.button-triangle {
+  margin-left: 0;
+}
+
+.prepaid-btn-container .button-body.prepaid-contract-btn {
+  margin-top: 0;
+}
+
+.prepaid-btn-container .button-radius {
+  margin-top: 15px;
+}
+
+.prepaid-btn-container .button-radius-next {
+  margin-top: 5px;
+}
+
+.mypage-prepaid-main .prepaid-btn-container .button-body .button-next {
+  width: 80px;
+}
+
+.mypage-prepaid-main .prepaid-btn-container .button-body .button-next img {
+  width: 60px;
+}
+
+.prepaid-btn-container .button-body p {
+  width: 100%;
+  right: 0;
+  text-align: left;
+  font-size: 1.6rem;
+  font-weight: bold;
+  margin-bottom: 6px;
+}
+
+.prepaid-btn-container .button-body span {
+  line-height: 1.4;
+}
+
+.prepaid-btn-container-wrap {
+  margin-top: 20px;
+}
+
+.prepaid-btn-container-wrap .desc {
+  color: #fff;
+  padding-left: calc(7em + 50px);
+  margin-top: 50px;
+}
+
+.prepaid-btn-container-wrap p.desc-reset {
+  margin-top: -5px;
+}
+
+.prepaid-btn-container-wrap .desc a {
+  color: #FFEB00;
+  text-decoration: underline;
+}
+
+.prepaid-btn-container-left {
+  flex-direction: row;
+  margin: 0 calc(7em + 50px);
+}
+
+div.button-reset-right {
+  flex-direction: row-reverse;
+}
+
+.mypage-prepaid-main .button-prepaid-back {
+  padding-left: calc(7em + 50px);
+}
+
+.mypage-prepaid-main div.button-reset {
+  padding: 0;
+  margin: 0;
+}
+
+.mypage-prepaid-main .prepaid-btn-container-wrap .prepaid-btn-container .button-body .button-next img {
+  width: 40px;
+}
+
+.prepaid-payment-ago table.prepaid-payment-table {
+  padding: 0px 15px;
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+.prepaid-payment-ago table.prepaid-payment-table .table-overseas-add-top td {
+  border-bottom: none;
+}
+
+.prepaid-payment-ago table.prepaid-payment-table tr:nth-child(1) td {
+  border-top: none;
+}
+
+.payment-history-printing-button-wrap {
+  position: relative;
+  display: inline-block;
+  margin: 6px auto;
+}
+
+.payment-history-printing-button-wrap::before {
+  content: "";
+  background-image: url(https://d1q08lkutgkcx2.cloudfront.net/image/download_black.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  right: 10px;
+  top: 11px;
+  transition: .5s;
+}
+
+.payment-history-printing-button-wrap:hover::before {
+  background-image: url(https://d1q08lkutgkcx2.cloudfront.net/image/download_white.svg);
+}
+
+.payment-history-printing-button {
+  margin: 0px auto;
+}
+
+.prepaid-paymenthistory .prepaid-content-area div.mypage-content-box-title {
+  padding: 30px 0;
+  box-sizing: border-box;
+}
+
+.prepaid-paymenthistory .prepaid-content-area div.mypage-content-box-title.mypage-content-box-title-prepaid {
+  padding: 15px 0;
+}
+
+.prepaid-content-area .data-usage-month table.data-usage-table.data-table-td th {
+  text-align: left;
+  padding-left: 30px;
+  box-sizing: border-box;
+}
+
+.prepaid-content-area .mypage-dataflow-prepaid div.mypage-content-box-title {
+  padding: 30px 10px;
+}
+
+.prepaid-content-area .prepaid-giga-overseas-extension div.mypage-content-box-title {
+  padding: 30px 0em;
+}
+
+.js-building-room {
+  display: none;
+}
+
+div.mypage-user-container.prepaid-mypage-top {
+  margin-top: 40px;
+}
+
+div.mypage-content-box.mypage-global-content-box.contract-box-ago .mypage-content-box-inner {
+  margin-top: 0px;
+  max-height: 500px;
+}
+
+div.mypage-content-box {
+  margin-top: 50px;
+}
+
+div.mypage-content-box.prepaid-giga-overseas-add.mypage-content-box {
+  margin-top: 70px;
+}
+
+div.mypage-content-box.mypage-prepaid-member,
+div.mypage-content-box.mypage-prepaid-member .mypage-content-box-inner {
+  margin-top: 40px;
+}
+
+div.mypage-title-area {
+  margin-top: 50px;
+}
+
+.prepaid-content-main div.mypage-title-area+div.error-message .error-message-value {
+  margin: 70px 0 0;
+}
+
+div.mypage-message .mypage-description {
+  margin-top: 20px;
+}
+
+.overseas-top-img div.mypage-message .mypage-description {
+  top: 10px;
+}
+
+.error-message-value p#error-token-message-title {
+  font-size: 2.6rem;
+  font-weight: bold;
+}
+
+.error-message-value p#error-token-message-body {
+  color: #000;
+  font-size: 2rem;
+  line-height: 1.4;
+  margin-top: 15px;
+}
+
+.error-message-value p#error-token-message-body small {
+  display: block;
+  margin-top: 15px;
+}
+
+table.table-base.user-input.prepaid-maypage-table tr:first-child th {
+  border-top: 1px solid #ddd;
+}
+
+.prepaid-content-area .prepaid-maypage-table tr td.password-td {
+  border: none;
+}
+
+.prepaid-content-area table.table-base.user-input.prepaid-maypage-table-default tr:first-child th {
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+}
+
+.prepaid-maypage-table tr th.new-pass-ttl {
+  padding-bottom: 55px;
+}
+
+.prepaid-content-area .prepaid-maypage-table tr th,
+.prepaid-content-area .prepaid-maypage-table tr td {
+  border-bottom: 1px solid #ddd;
+}
+
+table.table-base.user-input.prepaid-maypage-table tr:first-child th {
+  border-color: #ddd;
+}
+
+table.table-base.user-input.prepaid-maypage-table.prepaid-password-table tr:first-child th {
+  border: none;
+}
+
+.prepaid-content-area .prepaid-maypage-table.prepaid-password-table tr th,
+.prepaid-content-area .prepaid-maypage-table.prepaid-password-table tr td {
+  border: none;
+}
+
+.prepaid-content-area div.mypage-description {
+  padding-left: 130px;
+}
+
+div.contract-box-ago .js-dropdown-content {
+  padding-top: 0px;
+}
+
+.payment-history-printing-button {
+  width: 200px;
+  padding-right: 20px;
+}
+
+.prepaid-content-area div.mypage-content-box-title.prepaid-no-under-title {
+  padding: 30px 0;
+}
+
+.prepaid-content-area div.mypage-content-box-title.prepaid-no-under-title p {
+  border-bottom: none;
+  padding: 0;
+  font-size: 2.1rem;
+}
+
+.prepaid-giga-overseas-extension .extension-ttl-radio th {
+  border-top: none;
+}
+
+.prepaid-giga-overseas-extension table.add-data-table {
+  border-bottom: none;
+}
+
+.prepaid-giga-overseas-add .add-data-table.prepaid-extention-table .extension-ttl-radio th,
+.prepaid-giga-overseas-add .add-data-table.prepaid-extention-table .extension-ttl-radio td {
+  padding: 15px 0 5px;
+}
+
+.prepaid-giga-overseas-add .add-data-table.prepaid-extention-table th,
+.prepaid-giga-overseas-add .add-data-table.prepaid-extention-table td {
+  width: 170px;
+  padding: 5px 0 45px;
+}
+
+.prepaid-giga-overseas-add .add-data-table.prepaid-change-table .extension-ttl-radio th,
+.prepaid-giga-overseas-add .add-data-table.prepaid-change-table .extension-ttl-radio td {
+  padding: 15px 0 5px;
+}
+
+.prepaid-giga-overseas-add .add-data-table.prepaid-change-table .extension-ttl-radio th:focus {
+  outline: none;
+}
+
+.prepaid-giga-overseas-add .add-data-table.prepaid-change-table .extension-ttl-radio th:focus input::before {
+  outline: 2px solid #FFEB00;
+}
+
+.prepaid-giga-overseas-change .change-plan-date th,
+.prepaid-giga-overseas-change .change-plan-date td {
+  padding: 5px 0 5px;
+}
+
+.prepaid-giga-overseas-change .change-plan-type td,
+.prepaid-giga-overseas-change .change-plan-type th {
+  padding: 0 0 45px;
+}
+
+.prepaid-giga-overseas-add .country-plan {
+  height: 45px;
+  flex-direction: row;
+  padding-top: 0;
+  justify-content: left;
+  padding-left: 10px;
+}
+
+.prepaid-giga-overseas-add .country-plan.country-plan-create {
+  padding-left: 0;
+  border-radius: 15px;
+}
+
+.prepaid-giga-overseas-add .country-plan img {
+  width: 20px;
+  margin-bottom: 0;
+}
+
+.prepaid-giga-overseas-add .country-plan.country-plan-create img {
+  margin-left: 10px;
+}
+
+.prepaid-giga-overseas-add .country-plan p {
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: center;
+  width: 100%;
+  padding-right: 10px;
+}
+
+.prepaid-giga-overseas-add .country-plan.country-plan-create p {
+  padding-right: 0;
+}
+
+.prepaid-giga-overseas-add .popular {
+  gap: 15px 5px;
+}
+
+.prepaid-giga-overseas-add .popular>div {
+  width: calc((100% / 6) - 5px);
+}
+
+.prepaid-in-btn .button-body {
+  background-color: #666666;
+  border-radius: 10px;
+  padding: 15px;
+  margin-top: 25px;
+  width: 300px;
+  transition: .3s;
+  position: relative;
+  z-index: 10;
+  box-shadow: 3px 3px 3px #1E1E1E;
+  justify-content: space-between;
+}
+
+a.button-text div.button-margin-create {
+  margin-top: 0;
+}
+
+div.mypage-content-box-inner .prepaid-in-btn .button-body p {
+  width: 100%;
+  right: 0;
+  text-align: left;
+  font-size: 1.6rem;
+  font-weight: bold;
+  margin-bottom: 6px;
+}
+
+.prepaid-in-btn .button-body.light-shadow {
+  box-shadow: 3px 3px 3px #353535;
+}
+
+.mypage-prepaid-main .prepaid-in-btn .button-next {
+  width: 80px;
+}
+
+.mypage-prepaid-main .prepaid-in-btn .button-body .button-next img {
+  width: 60px;
+}
+
+.prepaid-in-btn .button-body span.button-triangle {
+  margin-left: 0;
+}
+
+.customer-edit-top-img .prepaid-content-area div.mypage-title-area-icon {
+  width: 60px;
+}
+
+.customer-edit-top-img .prepaid-content-area div.mypage-title-area-icon img {
+  position: relative;
+  bottom: 0px;
+}
+
+.prepaid-content-area p.attention.text-right {
+  padding-right: 0;
+  text-align: right;
+}
+
+.mypage-contract-prepaid div.mypage-error-message .error-message p {
+  padding-top: 60px;
+}
+
+@media screen and (min-width: 767px) {
+  .mypage-content-box-inner.prepaid-mypage-narrow {
+    margin: auto 120px;
+  }
+
+  .mypage-global-content-box div.mypage-content-box-inner.prepaid-mypage-narrow .dropdown-title {
+    padding: 18px 45px;
+  }
+
+  .prepaid-paymenthistory table.table-payment.table-overseas-add td:last-child {
+    min-width: 170px;
+  }
+
+  .mypage-prepaid-main .button-next.charge-japan-title img {
+    width: 65px;
+  }
+
+  .prepaid-content-area .prepaid-maypage-table tr td input.mypage-input-border.password-mid-input {
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .mypage-btn-container {
+    flex-direction: column;
+  }
+
+  .mypage-btn-container .button-back {
+    margin: 20px auto 0;
+  }
+
+  .mypage-btn-container div.button-back-edit{
+    width: calc(100% - 42px);
+  }
+
+  .prepaid-content-area .prepaid-maypage-table tr th,
+  .prepaid-content-area .prepaid-maypage-table tr td {
+    padding: 10px 0px;
+  }
+
+  .prepaid-content-area .prepaid-maypage-table-default tr th {
+    border-bottom: none;
+  }
+
+  .prepaid-content-area .prepaid-maypage-table tr td {
+    height: auto;
+    padding: 5px 0px 10px;
+    margin: 0;
+    width: 100%;
+    border-top: none;
+  }
+
+  .prepaid-content-area table.prepaid-maypage-create.prepaid-maypage-table tr td,
+  .prepaid-content-area table.prepaid-maypage-create.prepaid-maypage-table tr th {
+    width: 95%;
+    margin: 0 auto;
+  }
+
+  table.table-base.user-input.prepaid-maypage-create tr td {
+    padding: 5px 0 10px;
+  }
+
+  .prepaid-content-area .prepaid-maypage-table tr th.pc {
+    display: none;
+  }
+
+  .prepaid-content-area .prepaid-maypage-table tr th {
+    padding: 5px 10px 0;
+    margin: 0;
+    width: 100%;
+    border-bottom: none;
+  }
+
+  .prepaid-content-area .prepaid-maypage-table tr td.td-input {
+    padding-top: 0;
+  }
+
+  .prepaid-content-area table.prepaid-maypage-table tr:first-child th {
+    border-top: 1px solid #ddd;
+    border-bottom: none;
+  }
+
+  .prepaid-content-area table.prepaid-maypage-table tr:first-child td {
+    border-top: none;
+  }
+
+  .prepaid-content-area table.prepaid-maypage-table tr:last-child th {
+    border-bottom: none;
+  }
+
+  .prepaid-content-area table.prepaid-maypage-table.prepaid-edit-customer-table tr:first-child th {
+    border-bottom: none;
+    border-top: 1px solid #ddd;
+  }
+
+  .prepaid-content-area table.prepaid-maypage-table.prepaid-edit-customer-table tr:first-child td {
+    border-top: none;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .prepaid-content-area div.mypage-description.prepaid-discription {
+    padding-left: 0em;
+  }
+
+  div.payment-edit-caution table.td-input.prepaid-maypage-table.prepaid-payment-edit tr:last-child th {
+    border-bottom: none;
+  }
+
+  .prepaid-content-area div.mypage-content-box-title {
+    padding: 30px 0 15px;
+  }
+
+  .prepaid-content-area div.mypage-content-box {
+    margin-top: 25px;
+    padding-bottom: 20px;
+  }
+
+  .prepaid-content-area table.table-base.user-input.prepaid-maypage-table-default th,
+  .prepaid-content-area table.table-base.user-input.prepaid-maypage-table-default td {
+    height: auto;
+    display: table-cell;
+    padding: 10px;
+  }
+
+  .prepaid-content-area table.table-base.user-input.prepaid-maypage-table-default tr:first-child th {
+    border-top: 1px solid #ddd;
+  }
+
+  .prepaid-content-area table.table-base.user-input.prepaid-maypage-table-default tr:last-child th {
+    border-bottom: 1px solid #ddd;
+  }
+
+  .prepaid-content-area table.table-base.user-input.prepaid-maypage-table-default th {
+    width: 35%;
+  }
+
+  .prepaid-content-area table.table-base.user-input.prepaid-maypage-table-default td {
+    width: 65%;
+  }
+
+  .prepaid-user-edit-container-wrap {
+    margin: 0;
+    padding-top: 20px;
+  }
+
+  .mypage-prepaid-main .prepaid-user-edit-btn-container .prepaid-user-edit-btn .prepaid-user-edit-link a {
+    font-size: 1.3rem;
+  }
+
+  .prepaid-user-edit-btn-container p.attention {
+    font-size: 1.1rem;
+    text-align: left;
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+  .prepaid-btn-container {
+    margin: 0;
+  }
+
+  .prepaid-btn-container .button-body {
+    width: calc(100% - 10px);
+    box-sizing: border-box;
+    margin: 15px auto 0;
+    height: auto;
+  }
+
+  .prepaid-btn-container .data-create-button-text {
+    margin: 15px auto 0;
+  }
+
+  .prepaid-btn-container div.prepaid-contract {
+    width: 100%;
+  }
+
+  .prepaid-btn-container-wrap .desc {
+    padding: 0 15px;
+    margin-top: 25px;
+  }
+
+  .prepaid-btn-container-left {
+    display: block;
+  }
+
+  .mypage-global-payment-box .payment-history-printing-button-padding input {
+    padding: 12px 35px 12px 15px;
+  }
+
+  .payment-history-printing-button-wrap::before {
+    right: 5px;
+    top: 14px;
+  }
+
+  .prepaid-content-area .data-usage-month table.data-usage-table.data-table-td th {
+    padding-left: 20px;
+  }
+
+  .mypage-prepaid-main .button-prepaid-back {
+    padding-left: 0;
+  }
+
+  div.mypage-user-container.prepaid-mypage-top {
+    margin-top: 0px;
+  }
+
+  div.mypage-user-container.prepaid-mypage-top .nav-flex .button-body {
+    padding: 12px 12px 0;
+  }
+
+  div.mypage-user-container.prepaid-mypage-top a.button-text p {
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  div.mypage-content-box.prepaid-giga-overseas-add.mypage-content-box {
+    margin-top: 25px;
+  }
+
+  div.mypage-content-box.mypage-prepaid-member .mypage-content-box-inner,
+  .mypage-contract div.mypage-content-box .mypage-content-box-inner {
+    margin-top: 0px;
+  }
+
+  div.mypage-title-area {
+    margin-top: 30px;
+  }
+
+  div.mypage-error-message .error-message {
+    padding-top: 20px;
+  }
+
+  .mypage-contract-prepaid div.mypage-error-message .error-message {
+    padding-top: 0;
+  }
+
+  .mypage-contract-prepaid div.mypage-error-message .error-message p {
+    padding-top: 60px;
+  }
+
+  .prepaid-content-main div.mypage-title-area+div.error-message .error-message-value {
+    margin: 20px 0 0;
+  }
+
+  .prepaid-content-area .prepaid-maypage-table-default th,
+  .prepaid-content-area .prepaid-maypage-table-default td {
+    font-size: 1.3rem;
+  }
+
+  .prepaid-content-area .prepaid-maypage-table tr td.password-td {
+    padding-right: 0;
+  }
+
+  table.td-input span.field-icon.field-icon-mypage {
+    top: 12px;
+  }
+
+  .prepaid-content-area div.mypage-description {
+    padding-left: 85px;
+  }
+
+  .mypage-prepaid-main .button-next.charge-japan-title img {
+    width: 60px;
+  }
+
+  div.contract-box-ago.mypage-global-payment-box .js-dropdown-content {
+    padding-top: 2px;
+  }
+
+  .mypage-global-payment-box .payment-history-printing-button-padding input {
+    font-size: 1.3rem;
+  }
+
+  .payment-history-printing-button {
+    width: 195px;
+  }
+
+  .prepaid-giga-overseas-extension .add-data-table th.extension-ttl {
+    padding: 5px 0;
+  }
+
+  .prepaid-giga-overseas-change .prepaid-change-table .change-plan-type td {
+    border-bottom: none;
+  }
+
+  .prepaid-giga-overseas-extension .prepaid-change-table .extension-ttl-radio:first-child th {
+    border-top: none;
+  }
+
+  .prepaid-giga-overseas-change .prepaid-change-table .change-plan-type th:first-child {
+    padding: 0 0 5px;
+  }
+
+  .prepaid-giga-overseas-add .add-data-table.prepaid-change-table .extension-ttl-radio th:first-child {
+    padding-left: 40px;
+  }
+
+  .prepaid-giga-overseas-add .add-data-table.prepaid-extention-table .extension-ttl-radio th:first-child {
+    padding-left: 40px;
+  }
+
+  .prepaid-giga-overseas-extension .prepaid-extention-table .extension-ttl-radio:first-child th {
+    border-top: none;
+  }
+
+  .prepaid-giga-overseas-add .add-data-table.prepaid-extention-table th,
+  .prepaid-giga-overseas-add .add-data-table.prepaid-extention-table td {
+    width: 100%;
+  }
+
+  .prepaid-giga-overseas-add div.usage-days-select span.usage-span-white {
+    color: #fff;
+    margin: auto;
+    font-size: 2rem;
+  }
+
+  .prepaid-giga-overseas-add .popular {
+    gap: 10px 5px;
+  }
+
+  .prepaid-giga-overseas-add .popular>div {
+    width: calc((100% / 2) - 4px);
+    height: 45px;
+  }
+
+  .prepaid-giga-overseas-add .country-plan {
+    padding-left: 20px;
+  }
+
+  .prepaid-giga-overseas-add .country-plan img {
+    width: 25px;
+  }
+
+  .prepaid-in-btn .button-body {
+    width: 85%;
+    margin: 25px auto 0;
+    max-width: 300px;
+  }
+
+  .prepaid-content-area div.mypage-title-area-icon img {
+    bottom: 0px;
+  }
+
+  .overseas-top-img .prepaid-content-area div.mypage-title-area-icon {
+    width: 65px;
+  }
+
+  p.mypage-titile-area-title-sub {
+    padding-left: 10px;
+  }
+
+  .overseas-top-img .prepaid-content-area div.mypage-description {
+    padding-left: 95px;
+  }
+
+  .customer-edit-top-img .prepaid-content-area div.mypage-title-area-icon {
+    width: 50px;
+  }
+
+  div.mypage-message .mypage-description {
+    top: 15px;
+  }
+
+  .overseas-top-img div.mypage-message .mypage-description {
+    top: 20px;
+  }
+
+  .mypage-prepaid-main .prepaid-in-btn .button-body .button-next img {
+    width: 55px;
+    margin: 0;
+  }
+
+  .prepaid-content-area #contract-cancel-form td.password-td span.field-icon {
+    top: 8px;
+    right: 10px;
+  }
+
+  .error-message-value p#error-token-message-title {
+    font-size: 2rem;
+  }
+
+  .error-message-value p#error-token-message-body {
+    font-size: 1.5rem;
+    margin-top: 10px;
+  }
+
+  .error-message-value p#error-token-message-body small {
+    font-size: 1.2rem;
+    margin-top: 10px;
+  }
+
+  .prepaid-content-area #contract-cancel-form div.mypage-user-container {
+    margin-top: 15px;
+  }
+
+  .prepaid-content-area #contract-cancel-form p.mypage-content-box-title-inner>span {
+    font-size: 1.2rem;
+  }
+
+  .prepaid-content-area #contract-cancel-form .validator-error-data-charge.text,
+  .prepaid-content-area #contract-cancel-form .validator-error-data-charge.password {
+    transform: none;
+  }
+
+  .prepaid-content-area .prepaid-maypage-table tr td input.mypage-input-border.password-mid-input {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  #option_cancel_area table.table-base td:has(.option-active) {
+    padding: 0px;
+    text-align: center;
+  }
+
+  #option_cancel_area table.table-base td .option-active {
+    width: 155px;
+  }
+
+  .option-cancel-caution .option-cancel-button {
+    width: 175px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  table.table-base.table-in-button tr.cancel-option-column td .table-button.option-disabled {
+    padding: 1.4rem 0;
+  }
+}
+
+tbody .under-att {
+  display: none !important;
+}
+
+tbody .under-att:last-of-type {
+  display: contents !important;
+}
+
+.dl-button-01,
+.dl-button-02 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 10px;
+}
+
+.dl-button-01 p,
+.dl-button-02 p {
+  font-size: 2.2rem;
+}
+
+.dl-button-01 .settlement-text,
+.dl-button-02 .settlement-text {
+  font-weight: bold;
+}
+
+span.settlement-day {
+  margin: 0 0 0 40px;
+}
+
+.dl-button-01 .payment-history-printing-button,
+.dl-button-02 .payment-history-printing-button {
+  font-size: 1.5rem;
+  width: 257.5px;
+  padding-right: 25px;
+}
+
+.dl-button-01 .payment-history-printing-button-wrap::before,
+.dl-button-02 .payment-history-printing-button-wrap::before {
+  width: 20px;
+  height: 20px;
+  right: 20px;
+  top: 8px;
+}
+
+@media screen and (max-width: 767px) {
+
+  .dl-button-01 .payment-history-printing-button,
+  .dl-button-02 .payment-history-printing-button {
+    font-size: 1.3rem;
+    padding: 10px 20px 10px 0;
+    margin: 0 auto 5px;
+    max-width: 100%;
+    width: 220px;
+  }
+
+  .dl-button-01,
+  .dl-button-02 {
+    display: block;
+  }
+
+  .dl-button-01 p,
+  .dl-button-02 p {
+    font-size: 1.6rem;
+  }
+
+  .dl-button-01 .payment-history-printing-button-wrap::before,
+  .dl-button-02 .payment-history-printing-button-wrap::before {
+    right: 15px;
+    top: 15px;
+  }
+
+  span.settlement-day {
+    float: inline-end;
+    margin: 0 140px 0 0;
+  }
+}
+
+.mypage-prepaid-main .prepaid-in-btn .button-body .button-next.okawari-left img {
+  width: 32px;
+}
+
+.okawari-button-text {
+  text-align: center;
+}
+
+.cancell-icon-head {
+  width: 100px;
+  height: 100px;
+}
+
+.scroll-hint {
+  position: absolute;
+  top: 50%;
+  right: 0px;
+  transform: translate(0, -50%);
+  color: #FFEB00;
+  font-weight: 700;
+  line-height: 1;
+  display: none;
+  animation: scroll-hint-animation 2s infinite ease;
+}
+
+.scroll-hint-text {
+  position: absolute;
+  top: 0px;
+  right: 5px;
+  color: #818183;
+  z-index: 10;
+  font-size: 1.2rem;
+}
+
+@keyframes scroll-hint-animation {
+  0% {
+    transform: translate(-50%, -50%);
+  }
+
+  50% {
+    transform: translate(-40%, -50%);
+  }
+
+  100% {
+    transform: translate(-50%, -50%);
+  }
+}
+
+.scroll-hint--show {
+  display: none;
+}
+
+@media screen and (max-width: 767px) {
+  .scroll-hint--show {
+    display: block;
+  }
+}

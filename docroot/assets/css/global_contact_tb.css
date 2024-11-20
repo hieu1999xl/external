@@ -1,0 +1,401 @@
+/* 海外レンタル問い合わせフォーム タブレット用 */
+@media (min-width: 768px) and (max-width: 1280px) {
+/* 共通---------------------------------------------------------- */
+  body {
+    min-width: 768px;
+    overflow-x: hidden;
+  }
+  .inner {
+    max-width: 680px;
+  }
+  div.section-container {
+    max-width: 680px;
+  }
+  div.section-container.section-chatbot {
+    max-width: 680px;
+  }
+  /* ヘッダー */
+  header:not(.exclusion) .inner {
+    max-width: 740px;
+  }
+  header ul.pc_nav.menu-container {
+    display: none;
+  }
+  header.global-lp-header .logo-lp {
+    padding: 18px 0 0 15px;
+  }
+  header.global-lp-header p.header-description.pc {
+    width: 330px;
+  }
+  .sp-nav-btn {
+    width: 50px;
+    height: 50px;
+    position: relative;
+    margin-top: 0px;
+    cursor: pointer;
+    top: 15px;
+    right: -5px;
+  }
+  .sp-nav-btn span {
+    width: 35px;
+    height: 1px;
+    background-color: #fff;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .sp-nav-btn span:nth-child(1) {
+    top: calc(50% + 15px);
+  }
+  .sp-nav-btn span:nth-child(2) {
+    top: 50%;
+  }
+  .sp-nav-btn span:nth-child(3) {
+    top: calc(50% - 15px);
+  }
+  .hum-nav {
+    width: 100%;
+    height: 100vh;
+    background: #1e1e1e;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 80px 1.5rem 1.5rem;
+    box-sizing: border-box;
+    z-index: 10000;
+    opacity: 0;
+    transition: opacity .5s;
+    visibility: hidden;
+    overflow-y: scroll;
+  }
+  .hum-nav.open {
+    width: 100vw;
+    height: 100vh;
+    opacity: 1;
+    visibility: visible;
+  }
+  .hum-nav .close-btn {
+    position: absolute;
+    top: 20px;
+    right: 1.5rem;
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    margin: 0;
+    background: none;
+  }
+  .hum-nav .close-btn span {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+  }
+  .hum-nav .close-btn span::before, 
+  .hum-nav .close-btn span::after {
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 1px;
+    background: #fff;
+    top: 50%;
+    left: 50%;
+    z-index: 1000;
+  }
+  .hum-nav .close-btn span::before {
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+  .hum-nav .close-btn span::after {
+    transform: translate(-50%, -50%) rotate(-45deg);
+  }
+  .hum-nav nav {
+    width: 500px;
+    margin: 10vh auto 0;
+  }
+  .hum-nav .btn-type1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    margin-bottom: 40px;
+  }
+  .hum-nav .btn-type1 a {
+    width: 142px;
+    height: 60px;
+    box-sizing: border-box;
+    border-radius: 8px;
+    color: #fff;
+    padding: 8px 0;
+    margin: 5px 0;
+    font-size: 1.5rem;
+    line-height: 1.4;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    letter-spacing: 2px;
+    text-align: center;
+  }
+  header.global-lp-header ul li.nav_type03 a {
+    margin: 18px 5px 0;
+  }
+  .hum-nav .btn-type1 a.business {
+    background-color: #FFDC00;
+    color: #000;
+    gap: 10px;
+  }
+  .hum-nav .btn-type1 a.nav_type03.business img {
+    width: 15px;
+  }
+  .hum-nav .btn-type1 a.request {
+    border: solid 1px #FF008A;
+    color: #FFF;
+    background: #FF008A;
+    position: relative;
+    font-size: 1.4rem;
+    flex-direction: column;
+    gap: 0;
+    margin: 0px 3px 0;
+    padding: 3px 0 0;
+  }
+  .hum-nav .btn-type1 a.request.nav_type03.global-request img {
+    width: 23px;
+    padding-top: 0px;
+    margin: 0 auto;
+    height: auto;
+  }
+  .hum-nav ul.hum-nav-list {
+    position: static;
+    z-index: unset;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px 20px;
+    margin-bottom: 55px;
+  }
+  .hum-nav ul.hum-nav-list li {
+    text-align: left;
+    padding: 10px 0 10px 10px;
+    border-bottom: 1px solid #fff;
+    width: calc(50% - 10px);
+    box-sizing: border-box;
+  }
+  header ul li a {
+    color: #fff;
+    font-weight: 500;
+  }
+  .hum-logo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+  }
+  .hum-logo p {
+    text-align: center;
+    color: #FFF;
+    font-size: 1.4rem;
+  }
+  .hum-logo img {
+    width: 70%;
+    min-width: 280px;
+    margin: auto;
+  }
+  .global-rental .default-btn.kv-btn a::before {
+    width: 10vw;
+    height: 10vw;
+  }
+  .global-rental .default-btn.kv-btn {
+    bottom: 20px;
+    width: 45%;
+  }
+  .global-rental .default-btn.kv-btn a {
+    min-height: 50px;
+    min-width: 300px;
+    font-size: 2.1vw;
+    padding: 5px 20px 0;
+    width: 100%;
+    height: 6.8vw;
+    max-height: 105px;
+  }
+  /* ポップアップ */
+  body div.white-content-box-guidance-notion {
+    margin: 0 auto;
+    max-width: 720px 
+  }
+  body .modal-box-popular {
+    justify-content: left;
+  }
+  .pop-up {
+    min-width: 720px;
+  }
+  table.usage-500mb th.useage-infinity::after {
+    right: 15px;
+    width: 60px;
+    height: 60px;
+  }
+  /* サイドボタン */
+  #price_sim.side-fixed-banner {
+    width: 40px;
+  }
+  #price_sim.side-fixed-banner .btns .btn-base .body::before {
+    width: 30px;
+    height: 25px;
+  }
+  #price_sim.side-fixed-banner .btns .btn-base .body {
+    font-size: 1.4rem;
+    height: 210px;
+  }
+  /* スクロールトップ */
+  #page_top {
+    bottom: 20px;
+    right: 8px;
+  }
+  #page_top a {
+    width: 42px;
+    height: 42px;
+  }
+  /* フッター */
+  footer .inner {
+    flex-direction: column;
+  }
+  footer.global-lp-footer .inner{
+    gap: 0;
+  }
+  .ft_popular-list.-pc{
+    width: auto;
+  }
+  footer.global-lp-footer .ft_popular-list .ft_nav ul {
+    justify-content: flex-start;
+  }
+  .ft_nav ul li {
+    padding-left: 4rem;
+    width: 35%;
+  }
+  .global-contact-body footer.global-lp-footer .inner {
+    gap: 0px;
+  }
+  .global-contact-body .ft_nav ul li {
+    width: 35%;
+  }
+  .global-contact-body footer.global-lp-footer .ft_nav ul li:nth-of-type(1){
+    width: calc(100% / 3);
+    margin: 0;
+  }
+  footer.global-lp-footer .ft_nav ul li:nth-of-type(odd),
+  footer.global-lp-footer .ft_nav ul li:nth-of-type(even){
+    width: calc(100% / 3);
+    margin: 0;
+  }
+  .ft_popular-list .ft-popular-list-col {
+    justify-content: space-between;
+  }
+  footer:not(.exclusion) #copy {
+    padding: 60px 0 30px;
+    margin: auto 0 0 0;
+    line-height: 6;
+    line-height: 1;
+  }
+  footer:not(.exclusion).footer-menu #copy span{
+    width: 100%;
+    max-width: initial;
+    text-align: right;
+    font-size: 1.1rem;
+    color: #FFFFFF;
+    margin-right: 20px;
+    text-align: center;
+    letter-spacing: 0.06em;
+    
+  }
+  footer:not(.exclusion).footer-menu .privacy-mark{
+    right: 70px;
+    bottom: 40px;
+  }
+/* 共通ここまで---------------------------------------------------------- */
+
+  div.question-mark img {
+    right: 360px;
+  }
+
+.global-support-contact-inner .attention-remark .entry-rental-device-title {
+  margin: 5px auto 10px 205px;
+}
+
+p.remark-text {
+  margin-left: 210px;
+}
+
+  #faq-chatbot-content .content-box-title .text {
+    font-size: 2rem;
+  }
+  #faq-chatbot-content .faq-chatbot {
+    max-width: 680px;
+  }
+  #faq-chatbot-content .faq-chatbot-main-categories, .support .faq-chatbot-main-categories {
+    justify-content: left;
+    width: 680px;
+    margin: 40px auto 60px;
+  }
+  .support .faq-chatbot-main-categories {
+    width: 90%;
+  }
+  .support .faq-chatbot-main-categories .category-btn{
+    width: 47%;
+    margin: auto;
+  }
+  #faq-chatbot-content .faq-chatbot-main-categories .category-btn a, 
+  .support .faq-chatbot-main-categories .category-btn a {
+    width: 330px;
+  }
+  .support .faq-chatbot-main-categories .category-btn a {
+    width: 100%;
+    min-width: 250px;
+  }
+  #faq-chatbot-content .faq-chatbot-body .heading h2 {
+    font-size: 3.2rem;
+  }
+  #faq-chatbot-content .faq-chatbot-body .heading .text {
+    font-size: 1.8rem;
+  }
+  #faq-chatbot-content .faq-chatbot-include-chat #ulAiWidget {
+    max-width: 620px;
+  }
+  #_ul-chat-widget #_ul-chat-widget-chat-log .chat-log .chat-bot {
+    max-width: calc(100% - 124px);
+  }
+  #faq-chatbot-content .faq-chatbot-include-faq {
+    padding: 40px 30px 0;
+  }
+  .inquiries .category-faqlist .category-item .category-header {
+    width: calc(100% - 0.5em);
+  }
+  .main.support .attention-remark .entry-rental-device-title.global-device-title {
+    margin: 5px auto 10px 200px;
+  }
+  .main.support .contact-display p.remark-text {
+    margin-left: 200px;
+  }
+}
+
+@media screen and (min-width: 1281px) {
+  /* pc共通 */
+  .tb {
+    display: none;
+  }
+}
+@media screen and (max-width: 767px) {
+  /* sp共通 */
+  .tb {
+    display: none;
+  }
+  .sp {
+    display: block;
+  }
+}
+@media (min-width: 768px) and (max-width: 1280px) {
+  /* tb共通 */
+  .tb {
+    display: block;
+  }
+  .hide-tb.pc {
+    display: none;
+  }
+}

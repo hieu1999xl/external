@@ -1,0 +1,37 @@
+<footer class="mypage-footer" id="new-footer">
+    <div class="wrapper">
+        <ul>
+            <li>
+                <a href="
+                {% if is_wimax %}{{ wimax_url }}
+                {% elseif "rental" in current_url %}https://zeuswifi-global.jp/
+                {% elseif "prepaid" in current_url %}{{ prepaid_lp_url }}
+                {% else %}{{ top_url }}{% endif %}" target="_blank">TOP</a>
+            </li>
+            <li>
+                <a href="
+                {% if is_openhouse_user == true %}{{ pdf_contract_openhouse_url }}
+                {% elseif is_wimax %}{{ wimax_terms_url }}
+                {% elseif is_bank_transfer_plan_user %}{{ pdf_contract_bulk_url }}
+                {% elseif is_atobarai_user %}{{ terms_url }}
+                {% elseif "rental" in current_url %}https://zeuswifi-global.jp/terms/
+                {% elseif "prepaid" in current_url %}{{ terms_prepaid_url }}
+                {% else %}{{ pdf_contract_url }}{% endif %}" target="_blank">利用規約</a>
+            </li>
+            {% if is_plan_change == true %}
+            <li><a href="{{ pdf_contract_plan_change_url }}" target="_blank">利用規約(プラン変更)</a></li>
+            {% endif %}
+            <li><a href="{{ pdf_privacy_url }}" target="_blank">プライバシーポリシー</a></li>
+            <li>
+                <a href="
+                {% if is_openhouse_user == true %}{{ company_openhouse_url }}
+                {% elseif "rental" in current_url %}https://zeuswifi-global.jp/company/
+                {% elseif "prepaid" in current_url %}{{ terms_prepaid_url }}
+                {% else %}{{ company_url }}{% endif %}" target="_blank">特定商取引法に基づく表記</a></li>
+        </ul>
+        <small class="mypage-footer-copyright">&copy; 2020 ZEUS WiFi</small>
+    </div>
+    <div class="privacy-mark">
+        <a href="https://privacymark.jp/" target="_blank">{{ asset_cdn_img('logo-privacy-wh.png',{ 'width': 200, 'height' :200, 'alt':'プライバシーマーク'}) }}</a>
+    </div>
+</footer>

@@ -1,0 +1,18 @@
+<div class="error-message">
+    {% for message in messages %}
+        <p>{{ message }}</p>
+    {% endfor %}
+{% if errors|length > 0 %}
+  <div class="error-message-value">
+    {% if is_allow_html_tag %}
+      {% for error in errors %}
+          <p>{{ error|replace({'&lt;':'<', '&gt;':'>'}) }}<p>
+      {% endfor %}
+    {% else %}
+      {% for error in errors %}
+          <p>{{ error|raw }}</p>
+      {% endfor %}
+    {% endif %}
+  </div>
+{% endif %}
+</div>

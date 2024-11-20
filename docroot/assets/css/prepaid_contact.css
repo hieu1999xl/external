@@ -1,0 +1,760 @@
+/*-------------------------------------------
+    Common
+-------------------------------------------*/
+
+*{
+  padding: 0;
+  margin: 0;
+}
+body{
+  background: none;
+}
+div.main{
+  margin-top: 92px;
+}
+.inner {
+  max-width: 980px;
+  padding: 80px 0;
+}
+
+@media screen and (min-width: 767px){
+  .sp{
+    display: none;
+  }
+}
+@media screen and (max-width: 767px){
+  .inner{
+    padding: 50px 4vw;
+    max-width: 325px;
+  } 
+  div.main{
+    margin-top: 108px;
+  }
+  .pc{
+    display: none;
+  }
+  .brand-color-line {
+    position: static;
+  }
+}
+/*-------------------------------------------
+    パンくずリスト
+-------------------------------------------*/
+.List-Item {
+  display: inline-block;
+  font-size: 1.0rem;
+}
+.List-Item-Link {
+  display: inline-block;
+  text-decoration: none;
+  color: inherit;
+  vertical-align: middle;
+}
+ul.List li a span {
+  top: -5px;
+}
+ul.List li a span img {
+  image-rendering: -webkit-optimize-contrast;
+  width: 15px;
+  height: 15px;
+}
+/*-------------------------------------------
+    Header
+-------------------------------------------*/
+.brand-color-line {
+  background-color: #9F00FF;
+  height: 10px;
+}
+header.prepaid-lp-header {
+  height: 95px;
+}
+header.prepaid-lp-header .logo-lp {
+  display: flex;
+  width: auto;
+  padding: 17px 0 17px 15px;
+}
+header.prepaid-lp-header .logo-lp img {
+  width: 170px;
+}
+header.prepaid-lp-header .header-description {
+  color: #fff;
+  padding-top: 19px;
+  margin-left: 15px;
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+header.prepaid-lp-header .inner {
+  max-width: 1200px;
+  padding: 0;
+}
+header.prepaid-lp-header ul li.nav_type03 {
+  width: 147px;
+}
+header.prepaid-lp-header ul li.nav_type03 a {
+  display: flex;
+  min-height: 39px;
+  margin: 17px 5px 0;
+}
+header.prepaid-lp-header ul li.nav_type03.faq a {
+  padding: 7px 0 5px;
+  line-height: 1.4;
+  color: #FFFFFF;
+  background-color: #969696;
+}
+header.prepaid-lp-header ul li.nav_type03.faq a img {
+  width: 22px;
+  height: auto;
+  margin: 0 5px 0 10px;
+  padding-top: 7px;
+}
+header.prepaid-lp-header ul li.nav_type03.faq a:hover {
+  background-color: #FF008A;
+}
+header.prepaid-lp-header ul li.nav_type03.faq a span {
+  padding-top: 10px;
+  padding-left: 0px;
+  font-size: 1.2rem;
+}
+header.prepaid-lp-header ul li.nav_type03.mypage a {
+  padding: 6px 0;
+  line-height: 1.4;
+  color: #FFFFFF;
+  background-color: #FFEB00;
+}
+header.prepaid-lp-header ul li.nav_type03.mypage a img {
+  width: 12px;
+  height: auto;
+  margin: 0 15px;
+}
+header.prepaid-lp-header ul li.nav_type03.mypage a:hover {
+  background-color: #FF008A;
+}
+header.prepaid-lp-header ul li.nav_type03.mypage a:hover span {
+  color: #fff;
+}
+header.prepaid-lp-header ul li.nav_type03.mypage a span {
+  color: #000;
+  padding-top: 10px;
+  padding-left: 2px;
+  font-size: 1.4rem;
+}
+header.prepaid-lp-header ul li.nav_type03.global-request a {
+  padding: 6px 0;
+  line-height: 1.4;
+  color: #FFFFFF;
+  background-color: #FF008A;
+}
+header.prepaid-lp-header ul li.nav_type03.global-request a:hover {
+  background-color: #FFEB00;
+  color: #000;
+}
+header.prepaid-lp-header ul li.nav_type03 a img {
+  max-width: 32px;
+  margin: 0 6px 0 12px;
+  width: 32px;
+  height: auto;
+}
+@media screen and (max-width: 767px) {
+  .brand-color-line {
+    height: 100%;
+    width: 20px;
+  }
+  header.prepaid-lp-header {
+    height: 85px;
+    display: flex;
+  }
+  main.prepaid-main .main {
+    margin-top: 85px;
+  }
+  header.prepaid-lp-header .inner {
+    flex-wrap: wrap;
+    padding: 0 2%;
+    min-width: 325px;
+  }
+  header.prepaid-lp-header .inner .header-description {
+    width: 100%;
+    padding: 10px 0 0;
+    margin: 0;
+    font-size: 1.3rem;
+    text-align: center;
+    line-height: 1;
+  }
+  header.prepaid-lp-header .inner .header-description.sp {
+    display: block;
+  }
+  header.prepaid-lp-header .logo-lp {
+    padding: 0;
+  }
+  header.prepaid-lp-header .logo-lp img {
+    width: 155px;
+    padding-top: 3px;
+  }
+  header ul.pc_nav {
+    display: flex;
+    position: inherit;
+    background: none;
+    padding: 0;
+    width: 170px;
+  }
+  header.prepaid-lp-header ul li.nav_type03 a {
+    flex-direction: column;
+  }
+  header.prepaid-lp-header ul li.nav_type03.mypage a {
+    padding: 6px 0;
+    height: 44px;
+    box-sizing: border-box;
+  }
+  header.prepaid-lp-header ul li.nav_type03.mypage a img {
+    width: 10px;
+    margin: 0 auto;
+  }
+  header.prepaid-lp-header ul li.nav_type03.mypage a span {
+    font-size: 1rem;
+    padding: 3px 0 0;
+  }
+  header.prepaid-lp-header ul li.nav_type03.mypage {
+    width: 90px;
+  }
+  header.prepaid-lp-header ul li.nav_type03.global-request {
+    width: 95px;
+  }
+  header.prepaid-lp-header ul li.nav_type03.global-request a span {
+    font-size: 1rem;
+    padding-top: 5px;
+    padding-left: 0px;
+    text-align: center;
+    line-height: 1.1;
+  }
+  header.prepaid-lp-header ul li.nav_type03 a {
+    min-height: 32px;
+    margin: 6px 3px 0;
+    width: 80px;
+  }
+  header.prepaid-lp-header ul li.nav_type03.global-request a {
+    padding: 6px 0 5px;
+    height: 44px;
+    box-sizing: border-box;
+  }
+  header.prepaid-lp-header ul li.nav_type03.global-request a img {
+    width: 36px;
+    padding-top: 0px;
+    margin: 0 auto;
+    height: auto;
+  }
+  header.prepaid-lp-header ul li.nav_type03 a img {
+    max-width: 36px;
+  }
+}
+@media screen and (max-width: 374px) {
+  header.prepaid-lp-header .inner .header-description {
+    font-size: 1.3rem;
+  }
+  header.prepaid-lp-header ul li.nav_type03 a {
+    width: 75px;
+  }
+  header .inner {
+    padding: 0 2%;
+  }
+}
+/*お知らせ帯バナー余白調整*/
+div.content-box-title p.callcenter-section-title-short.prepaid-news-marginadjust {
+  margin: 0px;
+  line-height: 1.4;
+  text-align: left;
+}
+/*-------------------------------------------
+    Footer
+-------------------------------------------*/
+footer.global-lp-footer .ft_nav ul:first-child {
+  margin-bottom: 0;
+}
+footer.global-lp-footer .ft_nav ul:last-child {
+  margin-top: 0;
+}
+@media screen and (max-width: 767px) {
+  footer .inner .ft_logo a img{
+    max-width: 60%;
+  }
+  div.content-box-title p.callcenter-section-title-short.prepaid-news-marginadjust {
+    text-align: center;
+  }
+  footer.global-lp-footer .ft_nav ul li:first-child {
+    width: 100%;
+  }
+  footer.global-lp-footer .ft_nav ul:last-child {
+    margin-bottom: 15px;
+  }
+}
+/*-------------------------------------------
+    Main
+-------------------------------------------*/
+div.section-container{
+  max-width: 980px;
+}
+section.other-first {
+  background-image: none;
+}
+section.other-first.prepaid-news-marginadjust {
+  padding: 0 30px;
+  background-color: #fff;
+}
+/* FAQ */
+.prepaid-contact > .content-box-inner.prepaid-faq,
+div.content-box-inner.prepaid-faq {
+  max-width: 980px;
+}
+.prepaid-faq-inner {
+  padding: 40px;
+}
+div.content-box-inner.prepaid-faq.category {
+  background-color: #fff;
+  border: #00bbab 5px solid;
+  border-radius: 2.5vw;
+  margin-bottom: 50px;
+}
+.prepaid-contact div.content-box-title p {
+  text-align: center;
+  line-height: 1em;
+}
+div.content-box-inner.callcenter-caution {
+  margin-top: 60px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  max-width: 700px;
+}
+div.callcenter-caution-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+div.callcenter-caution-title p {
+  font-weight: bold;
+  font-size: 3rem;
+  letter-spacing: 0.02em;
+  position: relative;
+  margin: 0 0 0 10px;
+}
+img.pink-callcenter-notion-icon {
+  width: 6rem;
+  height: auto;
+}
+div.callcenter-caution .callcenter-form-icon {
+  width: 150px;
+}
+@media screen and (max-width: 767px) {
+  /*お知らせ帯バナー余白調整*/
+  section.other-first.prepaid-news-marginadjust{
+    padding: 0 0 30px;
+  }
+  .prepaid-faq-inner {
+    padding: 0;
+  }
+  .section-container .content-box-inner.empty-top.prepaid-faq.category {
+    border: none;
+    background-color: #f3f3f3;
+    margin-bottom: 0px;
+  }
+  div.content-box-inner.prepaid-faq.category {
+    background-color: initial;
+  }
+  img.pink-callcenter-notion-icon {
+    width: 3rem;
+  }
+  div.callcenter-caution-title p {
+    font-size: 2.2rem;
+    position: unset;
+    margin: 5px;
+  }
+  div.callcenter-box-text {
+    margin: 0;
+  }
+  div.content-box-inner.callcenter-caution {
+    margin-top: 30px;
+  }
+  div.section-container{
+    padding: 0 4%;
+  }
+  div.section-chatbot {
+    padding-bottom: 60px;
+  }
+}
+div.callcenter-caution-explanation {
+  margin-top: 20px;
+}
+div.callcenter-caution-explanation p {
+  text-align: left;
+  max-width: 480px;
+  margin: auto;
+}
+div.callcenter-caution-explanation-center {
+  margin: 10px 0 20px;
+}
+div.callcenter-caution-explanation-center p {
+  letter-spacing: 0.05em;
+  text-align: left;
+  font-weight: bold;
+}
+span.under-line-blue{
+  background: linear-gradient(transparent 66%, #e6006b 0%);
+}
+div.content-box-title p.callcenter-section-title,
+div.content-box-title p.callcenter-section-title-short {
+  font-size: 3rem;
+  font-weight: bold;
+  letter-spacing: 0.1rem;
+}
+div.content-box-title p.callcenter-section-title {
+  margin: 0;
+}
+span.required,
+table.contact-display span.required {
+  color: #e6006b;
+  border: 1px solid;
+  border-radius: 5px;
+  padding: 2px 5px;
+  font-size: 12px;
+  margin: 0 5px 0 0;
+  font-weight: bold;
+  margin-right: 5px;
+}
+table.contact-display span.anynote-mark {
+  color: #020202;
+  font-weight: normal;
+}
+span.blank {
+  display: inline-block;
+  content: '';
+  height: 1px;
+  width: 5.66px;
+}
+table.form-table td {
+  width: 100%;
+}
+p.remark-text {
+  margin-left: 228px;
+}
+@media screen and (max-width: 767px) {
+  div.content-box-title p.callcenter-section-title,
+  div.content-box-title p.callcenter-section-title-short {
+    margin: 60px 0 0 0;
+  }
+
+  div.content-box-title p.callcenter-section-title,
+  div.content-box-title p.callcenter-section-title-short,
+  div.content-box-title p.callcenter-section-title-short.contract {
+    font-size: 2.2rem;
+    text-align: center;
+  }
+  div.content-box-title p.callcenter-section-title {
+    margin: 0;
+    letter-spacing: 0.1rem;
+  }
+  div.callcenter-caution-explanation-center {
+    margin: 10px 0;
+  }
+  div.row.login-decoration-row-width{
+    margin: 30px 0 20px;
+  }
+  p.remark-text {
+    margin-left: 0;
+  }
+}
+/* Form */
+.other-first div.gender-label-box label.label-input {
+  margin-right: 43px;
+  margin-left: 28px;
+  margin-top: 17px;
+}
+div.white-content-box-form.support-contact.prepaid-support-contact {
+  background-color: #f3f3f3;
+  padding: 20px;
+}
+.prepaid-support-contact-inner {
+  background-color: #fff;
+  padding: 30px;
+}
+.prepaid-support-contact-inner + .prepaid-support-contact-inner {
+  margin-top: 30px;
+}
+div.login-decoration-row-width .form-next-button span {
+  text-align: center;
+}
+div.question-mark img {
+  right: 428px;
+  top: 16px;
+}
+div.content-box-inner.empty-top.prepaid-faq.category {
+  margin-top: 45px;
+}
+div.section-chatbot p.callcenter-caution-explanation {
+  text-align: center;
+}
+.content-container section:nth-of-type(even) {
+  background-color: #f3f3f3;
+}
+.main.support .support-contact .attention-remark .entry-rental-device-title {
+  color: #757575;
+  border-bottom: 1px solid #757575;
+  margin: 5px auto 10px 230px;
+}
+@media (min-width: 768px) and (max-width: 1280px) {
+  .main.support .support-contact .attention-remark .entry-rental-device-title {
+    margin: 5px auto 10px 200px;
+  }
+}
+@media screen and (min-width: 768px) {
+  div.content-box-inner.empty-top.prepaid-faq {
+    margin-bottom: 60px;
+  }
+  .content-container section:nth-of-type(even) {
+    padding: 35px 40px 50px;
+    overflow: hidden;
+  }
+}
+.prepaid-support-contact-inner .attention-remark .entry-rental-device-title {
+  margin: 5px auto 10px 230px;
+  width: 155px;
+  font-size: 1rem;
+  color: #909090;
+  border-bottom: 1px solid #909090;
+  position: relative;
+}
+.prepaid-support-contact-inner .attention-remark .entry-rental-device-title .not-address {
+  transform: translateX(-7px);
+}
+.content-box-inner.empty-top.prepaid-faq{
+  margin-top: 0;
+}
+.other-first.prepaid-contact.prepaid-news .callcenter-icon{
+  margin-top: 10px;
+}
+@media screen and (max-width: 767px) {
+  div.white-content-box-form.support-contact.prepaid-support-contact,
+  .prepaid-support-contact-inner {
+    padding: 0;
+    margin-top: 10px;
+  }
+  .prepaid-support-contact-inner {
+    padding: 20px;
+  }
+  div.content-box-inner {
+    margin-top: 0px;
+  }
+  .prepaid-support-contact-inner h2.form-h2 {
+    margin-bottom: 0;
+  }
+  div.question-mark img {
+    left: 190px;
+    top: -82px;
+  }
+  .prepaid-support-contact-inner .attention-remark .entry-rental-device-title {
+    margin-left: 0;
+  }
+  .callcenter-area .prepaid-contact div.content-box-title h1 p {
+    margin-top: 0;
+  }
+  div.content-box-inner.prepaid-faq.category {
+    margin-bottom: 0;
+  }
+  div.section-chatbot p.callcenter-caution-explanation {
+    text-align: left;
+  }
+  .main.support .support-contact .attention-remark .entry-rental-device-title {
+    margin-left: 0;
+  }
+}
+
+/* AI FAQ | チャットボット - start */
+#faq-chatbot-content .faq-chatbot-main-categories,
+.support .faq-chatbot-main-categories {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 0;
+  list-style: none;
+  width: 850px;
+  gap: 20px;
+  margin: 30px auto 20px;
+}
+#faq-chatbot-content .faq-chatbot-main-categories .category-btn a,
+.support .faq-chatbot-main-categories .category-btn a {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 270px;
+  height: 70px;
+  padding-top: 3px;
+  background-color: #fff;
+  border-radius: 15px;
+  box-sizing: border-box;
+  filter: drop-shadow(0 0 6px rgba(0, 0, 0, .2));
+  transform: translateZ(0);
+}
+#faq-chatbot-content .faq-chatbot-main-categories .category-btn a:hover,
+.support .faq-chatbot-main-categories .category-btn a:hover {
+  background-color: #C466FF;
+  transition: all .3s;
+}
+#faq-chatbot-content .faq-chatbot-main-categories .category-btn a:hover .title,
+.support .faq-chatbot-main-categories .category-btn a:hover .title {
+  color: #fff;
+}
+#faq-chatbot-content .faq-chatbot-main-categories .icon,
+.support .faq-chatbot-main-categories .icon {
+  display: block;
+  position: relative;
+  left: 15px;
+  width: 32px;
+  height: 32px;
+}
+#faq-chatbot-content .faq-chatbot-main-categories .icon img,
+.support .faq-chatbot-main-categories .icon img {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+}
+#faq-chatbot-content .faq-chatbot-main-categories .icon .normal,
+.support .faq-chatbot-main-categories .icon .normal {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 1;
+  transition: all .3s;
+}
+#faq-chatbot-content .faq-chatbot-main-categories a:hover .icon .normal,
+.support .faq-chatbot-main-categories a:hover .icon .normal {
+  opacity: 0;
+}
+#faq-chatbot-content .faq-chatbot-main-categories .title,
+.support .faq-chatbot-main-categories .title {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #1e1e1e;
+  font-size: 1.8rem;
+  font-weight: 700;
+  line-height: 1.3;
+  text-align: center;
+  margin-left: 17px;
+}
+@keyframes Heading {
+  0% {
+    opacity: 0;
+    display: none;
+  }
+
+  99% {
+    opacity: 0;
+    display: block;
+  }
+
+  100% {
+    opacity: 1;
+    display: block;
+  }
+}
+@media (max-width: 767px) {
+  #faq-chatbot-content .faq-chatbot-main-categories,
+  .support .faq-chatbot-main-categories {
+    width: 100%;
+    gap: 10px;
+  }
+  #faq-chatbot-content .faq-chatbot-main-categories .category-btn,
+  .support .faq-chatbot-main-categories .category-btn {
+    width: calc(50% - 10px / 2);
+  }
+  #faq-chatbot-content .faq-chatbot-main-categories .category-btn a,
+  .support .faq-chatbot-main-categories .category-btn a {
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    border-radius: 10px;
+  }
+  #faq-chatbot-content .faq-chatbot-main-categories .title,
+  .support .faq-chatbot-main-categories .title {
+    font-size: 1.42rem;
+    line-height: 1.2;
+    margin-left: 0;
+  }
+  #faq-chatbot-content .faq-chatbot-main-categories .icon,
+  .support .faq-chatbot-main-categories .icon {
+    left: 0;
+    margin: -2px 0 8px;
+    width: 20px;
+    height: 20px;
+    order: 1;
+  }
+  section.prepaid-news .content-box-inner.empty-top{
+    margin-top: 60px !important;
+  }
+}
+/* AI FAQ | チャットボット - end */
+.content-box-inner.empty-top.prepaid-faq.category{
+    background-color: #fff;
+    border: #C466FF 5px solid;
+    border-radius: 2.5vw;
+    margin-bottom: 50px;
+}
+@media (max-width: 767px){
+  .content-box-inner.empty-top, .section-container.empty-top{
+    margin-top: 0px;
+  }
+  table.contact div.gender-label-box label.label-input{
+    margin: 10px 41px 0 25px;
+  }
+  .content-container:has(.prepaid-contact-complete){
+    min-height: calc(100vh - 362px);
+  }
+}
+@media (min-width: 768px) and (max-width: 1280px){
+  header.prepaid-lp-header .header-description{
+    transform: none;  
+  }
+  .content-container:has(.prepaid-contact-complete){
+    min-height: calc(100vh - 355px);
+  }
+}
+@media (min-width: 1281px){
+  .content-container:has(.prepaid-contact-complete){
+    min-height: calc(100vh - 357px);
+  }
+}
+.footer-menu .inner{
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+@media (min-width: 768px){
+  footer.global-lp-footer .ft_nav ul{
+    margin: 13px 0;
+  }
+}
+.prepaid-support-contact-inner .attention-remark .entry-rental-device-title::after {
+  display: block;
+  content: "▼";
+  color: rgb(144, 144, 144);
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  right: 0px;
+  margin: auto;
+}
+.prepaid-support-contact-inner .attention-remark .entry-rental-device-title.transform::after {
+  transform: rotate(180deg) translateY(7px);
+}
+#prepaid-contact-form-area .validation-contact-text {
+  color: red;
+  line-height: 1.6;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+#prepaid-contact-form-area .disabled {
+  opacity: .5;
+  pointer-events: none;
+}

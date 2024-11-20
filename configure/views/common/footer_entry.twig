@@ -1,0 +1,53 @@
+
+<footer class="entry-footer" id="new-footer">
+    <div class="wrapper">
+    {% if is_openhouse %}
+        {# オープンハウス専用フッター start #}
+        <ul class="openhouse-footer">
+            <ul class="nest-list">
+                <li>利用規約</li>
+                <li><a href="{{ pdf_contract_url }}" target="_blank">ZEUS WiFi利用規約（重要事項説明書）</a></li>
+                <li><a href="{{ pdf_contract_home_attachment_url }}" target="_blank">ZEUS WiFi利用規約（重要事項説明書）別紙</a></li>
+                <li><a href="{{ pdf_contract_device_insurance_url }}" target="_blank">ZEUS WiFi端末あんしんオプション規約</a></li>
+            </ul>
+            <li><a href="{{ pdf_privacy_url }}" target="_blank">プライバシーポリシー</a></li>
+        <small class="mypage-footer-copyright">&copy; 2020 ZEUS WiFi</small>
+        </ul>
+        {# オープンハウス専用フッター end #}
+    {% else %}
+        <ul>
+            <li>
+                <a href="
+                {% if "wimax" in current_url %}https://wimax-zeuswifi.jp/
+                {% elseif "overseas" in current_url %}https://zeuswifi-global.jp/
+                {% elseif "prepaid/sub" in current_url %}https://zeuswifi-charge.jp/sub
+                {% elseif "prepaid" in current_url %}https://zeuswifi-charge.jp
+                {% else %}{{ top_url }}{% endif %}" target="_blank">TOP</a>
+            </li>
+            <li>
+                <a href="
+                {% if "wimax" in current_url %}{{ wimax_terms_url }}
+                {% elseif "overseas" in current_url %}https://zeuswifi-global.jp/terms
+                {% elseif "prepaid/sub" in current_url %}https://zeuswifi-charge.jp/terms_sub
+                {% elseif "prepaid" in current_url %}{{ terms_prepaid_url }}
+                {% else %}{{ terms_url }}{% endif %}" target="_blank">利用規約</a>
+            </li>
+            <li><a href="{{ pdf_privacy_url }}" target="_blank">プライバシーポリシー</a></li>
+            <li>
+                <a href="
+                {% if "wimax" in current_url %}https://wimax-zeuswifi.jp/company/
+                {% elseif "overseas" in current_url %}https://zeuswifi-global.jp/company/
+                {% elseif "prepaid/sub" in current_url %}https://zeuswifi-charge.jp/company_sub/
+                {% elseif "prepaid" in current_url %}https://zeuswifi-charge.jp/company/
+                {% else %}{{ company_url }}{% endif %}" target="_blank">特定商取引法に基づく表記</a>
+            </li>
+        </ul>
+        <small class="mypage-footer-copyright">&copy; {% if "wimax" in current_url %}2022 ZEUS WiMAX{% else %}2020 ZEUS WiFi{% endif %}</small> 
+    {% endif %}
+    </div>
+    <div class="privacy-mark">
+        <a href="https://privacymark.jp/" target="_blank">{{ asset_cdn_img('logo-privacy-wh.png',{ 'width': 65, 'height' : 65, 'alt': 'プライバシーマーク'}) }}</a>
+    </div>
+</footer>
+
+

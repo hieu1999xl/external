@@ -1,0 +1,138 @@
+/* プリペイドプラン トップLPページ（/prepaid_lp）　タブレット用 */
+@media (min-width: 768px) and (max-width: 1280px) {
+	.default-ttl h2 {
+		font-size: 3.6rem;
+	}
+	.step-sub-ttl h3 {
+		font-size: 3.6rem;
+	}
+	.step-giga .giga-charge100 img.giga-charge100-icon, 
+	.step-giga .giga-charge10 img.giga-charge10-icon {
+		right: -25px;
+		top: -15px;
+		width: 70px;
+	}
+	.step-info {
+		padding: 0;
+	}
+	.step-info .item-voice {
+		padding: 40px 20px 0 0;
+	}
+	.tanmatsu-mr1 {
+		padding: 30px 40px 30px;
+	}
+	.product-area {
+		gap: 20px;
+		height: 219px;
+	}
+	.tanmatsu-detail-container {
+		gap: 0 20px;
+	}
+	.tanmatsu-detail-container .detail-item {
+		width: calc(100% / 4 - 15px);
+	}
+	.price-table tbody td.country-icon {
+		padding-left: 30px;
+	}
+	.price-table thead th.unlimited-th img {
+		width: 70px;
+		top: -50px;
+		right: -20px;
+	}
+	.option-tokusapo {
+		padding: 40px 30px;
+	}
+	.opt-container.content-top .item-left p:nth-child(2) {
+		font-size: 2.3rem;
+	}
+	.opt-container.content-top .item-left p:nth-child(2) span {
+		font-size: 1.8rem;
+	}
+	.opt-container.content-top .item-left p:nth-child(3) span {
+		font-size: 4.5rem;
+	}
+	.opt-container.content-top .item-left p:nth-child(4) {
+		font-size: 1.8rem;
+	}
+	.opt-container .item-right {
+		padding-left: 10px;
+	}
+	.opt-container .opt-sub-ttl span {
+		font-size: 1.6rem;
+		line-height: 1.5;
+	}
+	.opt-container.content-top .opt-sub-ttl .sub-ttl-box {
+		height: 20px;
+		margin-top: 12px;
+		font-size: 1.4rem;
+		padding: 6px 15px;
+	}
+	.opt-container .opt-in-container .item-in-right p {
+		font-size: 1.5rem;
+	}
+	.opt-container .opt-in-container .item-in-left {
+		width: 23%;
+	}
+	.opt-container .opt-in-container .item-in-right {
+		width: 75%;
+		padding-left: 20px;
+	}
+	.opt-container .opt-in-container-bottom {
+		padding-left: 50px;
+	}
+	.case-container {
+		gap: 0 20px;
+		margin-top: 30px;
+	}
+	.case-container .case-desc h4 {
+		font-size: 1.8rem;
+	}
+	.case-container .case-desc p {
+		min-height: 115px;
+	}
+	.flow-container {
+		gap: 0 30px;
+	}
+	.flow-container .flow-about h4 {
+		font-size: 2rem;
+		margin: 0 0 20px;
+		display: grid;
+		height: 50px;
+		align-items: center;
+	}
+	.flow-container .flow-about p {
+		min-height: 90px;
+	}
+	.prepaid-step .spec-content table {
+		width: 100%;
+	}
+	.entry-btn a {
+		height: 80px;
+		line-height: 80px;
+		min-width: 420px;
+		font-size: 2.4rem;
+	}
+	.entry-btn a .entry-icon {
+		left: 15px;
+		width: 100px;
+		border-radius: 0 0 0 25px;
+	}
+	.entry-btn a::before {
+		right: 35px;
+	}
+	/* キービジュアル */
+	#first_view.prepaid-lp h1 div.top-kv {
+		max-width: 100vw;
+		height: auto;
+		text-align: center;
+		aspect-ratio: 1501/450;
+	}
+	#top #first_view img {
+		width: 100%;
+		max-width: 760px;
+		margin: 0 auto;
+	}
+	#pay .pay-box {
+		width: calc(50% - 18px);
+	}
+}

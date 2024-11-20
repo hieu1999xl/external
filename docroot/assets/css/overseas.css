@@ -1,0 +1,83 @@
+.kv-inner-banner{
+  position: absolute;
+  max-width: 1300px;
+  width: 100%;
+  margin: auto;
+  height: auto;
+  top: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: flex-end;
+}
+
+.kv-inner-banner img{
+  width: auto;
+  height: 100%;
+  max-height: 350px;
+}
+
+.kv-inner-banner .btn_box02{
+  position: absolute;
+  bottom: 40px;
+  right: 30px;
+}
+.kv-inner-banner .btn_box02 a{
+  width: 200px;
+}
+.btn_box02 a{
+  font-size: 1.25rem;
+}
+
+.kv-inner-banner .btn_box02 a span{
+  background: url(https://d1q08lkutgkcx2.cloudfront.net/image/icon-new-tab.svg) no-repeat 175px center;
+  padding: 13px 26px 13px 0;
+  background-size: 14px;
+}
+
+.kv-inner-banner .btn_box02 a::after{
+  width: 40px;
+}
+
+.kv-inner-banner .btn_box02 a:hover::after{
+  width: 100%;
+}
+
+@media screen and (max-width: 767px) {
+  .kv-inner-banner{
+    top: 50%;
+  }
+  div.main div.key-visual.ove_use img {
+    width: 100%;
+  }
+  .ove_use .kv-inner-banner .btn_box02{
+    width: 40%;
+    top: 0%;
+    left: 50%;
+  }
+  .kv-inner-banner .btn_box02 {
+    position: absolute;
+    bottom: -10px;
+    right: 90px;
+  }
+  .kv-inner-banner .btn_box02 a {
+    width: 100%;
+  }
+  .kv-inner-banner .btn_box02 a span {
+    background: url(https://d1q08lkutgkcx2.cloudfront.net/image/icon-new-tab.svg) no-repeat 93% center;
+    padding: 0.5em 32px 0.5em 0.3em;
+    background-size: 10px;
+    font-size: 1.1rem;
+  }
+  .kv-inner-banner .btn_box02 a::after {
+    width: 30px;
+  }
+  area.gb-banner{
+    position: absolute;
+    top: 15px;
+    left: 5%;
+    width: 90%;
+    height: 60%;
+  }
+
+}

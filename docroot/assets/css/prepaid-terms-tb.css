@@ -1,0 +1,7 @@
+/* プリペイドプラン 利用規約ページ（/prepaid/terms）　タブレット用 */
+@media (min-width: 768px) and (max-width: 1280px) {
+	.prepaid-main div.content-box-inner.empty-top div.terms-content-box {
+    max-width: 680px;
+    width: 100%;
+	}
+}

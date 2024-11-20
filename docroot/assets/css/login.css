@@ -1,0 +1,498 @@
+
+/* 202303 呼減対策 ログイン・パスワードを忘れた方 レイアウト改修 */
+
+div.mypage-title-area-icon {
+  margin: 0 15px 0 0;
+  width: 130px;
+}
+div.mypage-title-area-icon img {
+  width: 80%;
+}
+p.mypage-titile-area-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: white;
+  padding-bottom: 30px;
+  text-align: left;
+  margin-left: -50px;
+  letter-spacing: 0.1rem;
+}
+h1.mypage-titile-area-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: white;
+  padding-bottom: 30px;
+  text-align: left;
+  margin-left: -50px;
+  letter-spacing: 0.1rem;
+}
+@media screen and (max-width: 767px){
+  div.mypage-title-area-icon {
+    margin: 0;
+    width: 90px;
+    height: 70px;
+  }
+  div.mypage-title-area-icon img {
+    width: 100%;
+  }
+  p.mypage-titile-area-title {
+    font-size: 2.2rem;
+    color: white;
+    position: relative;
+    line-height: 30px;
+    padding-bottom: 0;
+    margin-left: 0;
+  }
+  h1.mypage-titile-area-title {
+    font-size: 2.2rem;
+    color: white;
+    position: relative;
+    line-height: 30px;
+    padding-bottom: 0;
+    margin-left: 0;
+  }
+}
+div.mypage-section-container {
+  max-width: 580px;
+  margin: 60px auto 0;
+}
+@media screen and (max-width: 767px) {
+  div.mypage-section-container {
+    max-width: 90%;
+    margin: 40px auto 0;
+  }
+}
+div.mypage-content-box {
+  background-color: transparent;
+  width: 100%;
+  height: auto;
+  position: relative;
+  z-index: 1;
+  margin: 70px 0;
+}
+p.input-gap {
+  margin-top: 20px;
+}
+div.password-forget-button {
+  text-align: right;
+  color:#c3c3c3;
+  letter-spacing: 0.05rem;
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+}
+@media (min-width: 768px) {
+  div.mypage-content-box-inner {
+    height: auto;
+    margin: 30px 0 0;
+    padding: 0;
+  }
+  .mypage-content-box div.center-mailaction{
+    margin: auto 50px;
+  }
+}
+div.mypage-content-box-inner.password-mail-send {
+  margin-top: -90px;
+  margin-bottom: -55px;
+
+}
+
+div.mypage-content-box-inner p.password-forget-explanation {
+  margin-top: 15px;
+  font-size: 1.175rem;
+  color:#c3c3c3;
+}
+div.mypage-content-box-inner p.password-forget-explanation a {
+  text-decoration: underline;
+}
+input.mypage-login-input-border {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0.3em 1.5rem;
+  margin: 0;
+  letter-spacing: 1px;
+  border: none;
+  height: 50px;
+  font-size: 1.5rem;
+  border-radius: 0;
+  -webkit-appearance: none;
+}
+div.mypage-description-flex-left {
+  text-align: left;
+  color: white;
+  font-size: 1.8rem;
+}
+span.field-icon.field-icon-mypage.input-eye {
+  position: relative;
+  left: 93%;
+  bottom: 37px;
+}
+
+span.field-icon {
+  color: #000000;
+}
+.button-body p {
+  width: 100%;
+  color: #ffeb00;
+  position: relative;
+  right: -5px;
+  text-align: center;
+  font-size: 1.4rem;
+  letter-spacing: 0.1rem;
+}
+div.mypage-description-flex-left p {
+  font-size: 1.4rem;
+  letter-spacing: 0.08rem;
+  line-height: 1.6;
+  margin: 30px 0 40px;
+}
+.button-next-adjust img {
+  height: 22px;
+  position: relative;
+}
+@media screen and (max-width: 768px) {
+  div.mypage-content-box-inner.password-mail-send {
+    margin-top: -70px;
+  }
+
+  div.mypage-content-box-inner {
+    letter-spacing: 0.02em;
+  }
+  input.mypage-login-input-border {
+    height: 50px;
+  }
+  div.mypage-description-flex-left p {
+    font-size: 1.4rem;
+    margin: 20px 0 0px;
+  }
+  .login-new div.mypage-description-flex-left p{
+    font-size: 1.2rem;
+  }
+  div.mypage-description-flex-left p.password-forget {
+    font-size: 1.2rem;
+  }
+  span.field-icon.field-icon-mypage {
+    position: relative;
+    left: 90%;
+    bottom: 41px;
+  }
+  div.mypage-content-box-inner {
+    height: auto;
+    margin: 20px 0 20px;
+    padding: 0;
+  }
+  .button-body p {
+    font-size: 1.4rem;
+    letter-spacing: 0.1rem;
+    right: 0px;
+  }
+  .button-next-adjust img {
+    width: 32px;
+    height: 32px;
+    position: relative;
+  }
+  div.password-forget-button{
+    margin-bottom: 30px;
+  }
+}
+.button:last-of-type {
+  flex-direction: column-reverse;
+  align-items: center;
+}
+@media screen and (max-width: 767px){
+  .button:last-of-type {
+    flex-direction: column-reverse;
+    align-items: normal;
+  }
+}
+.button-body {
+  border: 2px solid #fff;
+  width: calc((1100px - 250px - 20em) / 3);
+  padding: 20px 30px;
+  display: flex;
+  align-items: center;
+  margin-top: 0;
+  height: 30px;
+  background-color: #3c3c3c;
+  z-index: 2;
+  cursor: pointer;
+}
+.button-next img {
+  height: 35px;
+  position: relative;
+  bottom: 0px;
+}
+.button-next img.mypage-icon {
+  height: 31px;
+  position: relative;
+  bottom: 0px;
+}
+div.bg-login{
+  min-height: calc(100vh - 65px - 70px - 40px);
+  overflow: hidden;
+}
+.bg-login.login-top-content{
+  height: calc(70vh - 56px - 70px);
+  min-height: 550px;
+  overflow: hidden;
+  padding: 0;
+}
+div.login-bottom-content {
+  height: 30vh;
+  min-height: 200px;
+  background-color: #3c3c3c;
+  padding-top: 50px;
+  box-sizing: border-box;
+}
+div.login-bottom-content div.mypage-section-container {
+  margin: 0 auto;
+}
+div.login-bottom-content div.mypage-description-flex-left p.another-plan-text {
+  margin: 0;
+}
+
+@media screen and (max-width: 767px) {
+  .button-body,
+  .button-body:nth-child(2) {
+    width: 100%;
+    height: 50px;
+    margin: 15px auto 0;
+    max-width: 200px;
+  }
+  .button-body {
+    padding: 10px 30px;
+  }
+  div.bg-login.login-top-content{
+    min-height: 530px;
+  }
+  div.mypage-title-area {
+    display: flex;
+    align-items: flex-start;
+    padding: 0;
+  }
+  div.mypage-content-box-title p{
+    margin-left: 0;
+  }
+  div.bg-login{
+    min-height: calc(100vh - 202px);
+  }
+  div.login-bottom-content {
+    min-height: 300px;
+    padding-top: 30px;
+  }
+  div.login-bottom-content.login-new {
+    min-height: auto;
+    height: auto;
+    padding-bottom: 30px;
+  }
+}
+@media screen and (max-width: 360px) {
+  div.bg-login{
+    min-height: calc(100vh - 202px);
+  }
+
+}
+.error-message{
+  bottom: 0px;
+}
+.error-message-value {
+  font-size: 1.4rem;
+  padding: 15px;
+  background: #FFEEEE;
+  margin-bottom: 20px;
+  margin-top: 15px;
+}
+.error-message-value p {
+  text-align: left;
+}
+.error-message-value p a {
+  text-decoration: underline;
+  color: red;
+}
+
+/* パスワードを忘れた方 */
+div.mypage-content-box.password-forget-area {
+  background-color: transparent;
+  width: 100%;
+  height: auto;
+  position: relative;
+  z-index: 1;
+  margin: 20px 0 15px;
+  padding: 0;
+}
+
+/* 海外レンタルプランログインページ */
+.another-plan-login {
+  display: flex;
+  justify-content: center;
+}
+.another-plan-login .another-plan-btn {
+  margin-left: 20px;
+}
+.another-plan-login .another-plan-btn:first-child {
+  margin-left: 0;
+}
+.another-plan-btn .button-body {
+  margin-top: 0;
+  padding: 20px 10px;
+  width: 240px;
+  background-color: #202020;
+  border: 2px solid #202020;
+  border: 2px solid #fff;
+}
+.another-plan-btn .button-body p {
+  color: #fff;
+}
+.another-plan-btn .button-body:hover p {
+  color:#ffeb00;
+}
+div.mypage-description-flex-left p.another-plan-text {
+  margin: 90px 0 25px;
+}
+div.mypage-description-flex-left.global-login p.another-plan-text {
+  margin: 90px 0 0px;
+}
+.global-login .login-another-link-bg {
+  font-size: 1.4rem;
+  background-color: #fff;
+  padding: 10px 20px;
+}
+.another-plan-btn .button-logo {
+  height: 35px;
+}
+.another-plan-btn .button-logo img {
+  height: 40px;
+  position: relative;
+  bottom: 4px;
+}
+.another-plan-btn .button-logo.global img {
+  height: 50px;
+  position: relative;
+  bottom: 8px;
+}
+.another-plan-btn .button-next {
+  height: 20px;
+  margin-right: 0;
+}
+.another-plan-btn .button-next img {
+  height: 15px;
+}
+
+@media screen and (max-width: 767px){
+  .another-plan-login {
+    flex-direction: column;
+  }
+  .another-plan-login .another-plan-btn {
+    margin-left: 0px;
+  }
+  .another-plan-login .another-plan-btn:first-child {
+    margin-bottom: 20px;
+  }
+  .another-plan-btn .button-body {
+    padding: 10px 10px;
+    width: 240px;
+    max-width: initial;
+  }
+}
+
+/* 海外レンタルプラン再申し込みログインフォーム */
+.login-repeat-main div.bg-repeat-lightgray {
+  background-color: #f3f3f3;
+}
+.login-repeat-main p.mypage-titile-area-title {
+  color: #000;
+}
+.login-repeat-main .login-repeat-content {
+  border: 2px solid #fff;
+  margin-top: 50px;
+  padding: 20px 30px;
+  box-sizing: border-box;
+  background-color: #fff;
+}
+.login-repeat-main div.mypage-description-flex-left p {
+  margin: 15px 0 40px;
+  color: #000;
+}
+.login-repeat-main .repeat-login-btn-container {
+  display: flex;
+  justify-content: center;
+}
+.login-repeat-main .repeat-login-btn-container .another-plan-login {
+  margin-top: 35px;
+  margin-right: 20px;
+}
+.login-repeat-main input.mypage-login-input-border {
+  background-color: rgb(217, 217, 217);
+  border-radius: 8px;
+}
+.login-repeat-main div.password-forget-button {
+  color: #000;
+}
+.login-repeat-main div.password-forget-button a {
+  text-decoration: underline;
+}
+.login-repeat-main .another-plan-btn .button-body p {
+  padding-right: 15px;
+}
+.login-repeat-main div.mypage-section-container {
+  max-width: 750px;
+}
+.login-repeat-main div.mypage-content-box-inner .repeat-login-form th {
+  width: 160px;
+}
+.login-repeat-main .form-step-title {
+  position: relative;
+  height: 45px;
+}
+.login-repeat-main .form-step-title p {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 20px auto 0;
+  width: 90px;
+  padding: 0.5em 0.25em;
+  line-height: 1em;
+  letter-spacing: 0.1em;
+  text-align: center;
+  color: #000000;
+  background: #FFDE00;
+  border-radius: 20px;
+}
+.login-repeat-main div.form-step-footer-area {
+  width: 412px;
+  margin: 60px auto 20px;
+}
+.login-repeat-main div.mypage-title-area {
+  margin-top: 0px;
+}
+
+@media screen and (max-width: 767px){
+  .login-repeat-main .repeat-login-btn-container {
+    flex-direction: column-reverse;
+  }
+  .login-repeat-main .repeat-login-btn-container .button.right {
+    margin-top: 25px;
+  }
+  .login-repeat-main p.mypage-titile-area-title-sub {
+    color: #000;
+  }
+  .login-repeat-main .login-repeat-content {
+    padding: 20px 20px;
+  }
+  .login-repeat-main .repeat-login-btn-container .another-plan-login {
+    margin-right: 0px;
+  }
+  .login-repeat-main div.mypage-section-container {
+    max-width: 90%;
+  }
+  .login-repeat-main .fa-eye:before {
+    top: 3px;
+    right: 10px;
+  }
+  .login-repeat-main .fa-eye-slash:before {
+    top: 3px;
+    right: 10px;
+  }
+  .login-repeat-main div.form-step-footer-area {
+    width: 90%;
+  }
+}
+/* 再申し込みログインフォームここまで */

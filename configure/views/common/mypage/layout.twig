@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ja">
+{% if is_maya_installment_plan %}
+    {% include 'common/mypage/head_prepaid.twig' %}
+{% else %}
+    {% include 'common/mypage/head.twig' %}
+{% endif %}
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WZXDLNM"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NMBMMBV"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MFVGW35"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<header class="mypage-header">
+    <div class="header-wrapper">
+        <nav class="header-item">
+            <div class="div-pc">
+                <p class="header-logo">
+                    <a href="{{ mypage_top_url }}">{% if is_maya_installment_plan %}{{ asset_img('zeus-prepaid-logo.svg',{'width': 40, 'height': 40, 'alt':'ZEUS WiFi'}) }}
+                    {% elseif is_wimax %}{{ asset_cdn_img('wimax-logo.png',{'width': 40, 'height': 40, 'alt':'ZEUS WiFi'}) }}
+                    {% else %}{{ asset_cdn_img('mypage-logo-zeus_t.png',{'width': 40, 'height': 40, 'alt':'ZEUS WiFi'}) }}{% endif %}</a>
+                </p>
+            </div>
+            <div class="div-sp">
+                <p class="header-logo">
+                    <a href="{{ mypage_top_url }}">{% if is_maya_installment_plan %}{{ asset_img('zeus-prepaid-logo.svg',{'width': 40, 'height': 40, 'alt':'ZEUS WiFi'}) }}
+                    {% elseif is_wimax %}{{ asset_cdn_img('wimax-logo.png',{'width': 40, 'height': 40, 'alt':'ZEUS WiFi'}) }}
+                    {% else %}{{ asset_cdn_img('mypage-logo-zeus-sp_t.png',{'width': 40, 'height': 40, 'alt':'ZEUS WiFi'}) }}{% endif %}</a>
+                </p>
+            </div>
+            <div class="header-title">
+                <div class="current-tab-name-box">
+                    <p class="current-tab-name">
+                        {% block current_tab %}
+                        {% endblock %}
+                    </p>
+                </div>
+            </div>
+            {% if is_login %}
+            <div class="mypage-header-logout">
+                <div class="header-logout">
+                    <a href="{{ logout_url }}">
+                        <div class="header-logout-person header-logout-person-black">
+                            {{ asset_cdn_img('mypage-logout-black_t.png',{'aria-hidden':'true', 'width': 40, 'height': 40, 'alt':'LOG OUT'}) }}
+                        </div>
+                        <p>LOG OUT</p>
+                        <div class="header-logout-arrow header-logout-arrow-black">
+                            {{ asset_cdn_img('mypage-arrow-black_t.png',{'aria-hidden':'true', 'width': 20, 'height': 40, 'alt':'矢印'}) }}
+                        </div>
+                    </a>
+                </div>
+            </div>
+            {% endif %}
+        </nav>
+    </div>
+</header>
+    <div class="mypage-nav-wrapper">
+
+        {# マイページのヘッダメニュー #}
+        {% if is_maya_installment_plan %}
+            {% include 'common/mypage/head_menu_prepaid.twig' %}
+        {% else %}
+            {% include 'common/mypage/head_menu.twig' %}
+        {% endif %}
+
+    </div>
+
+    <main class="mypage-main mypage-contents {{ theme_class }} {% if is_maya_installment_plan %}prepaid-content-main{% endif %}" role="main">
+        <div id="container">
+            <div class="mypage-container bg-plain-dark-gray">
+            {% block initial_cancel_process_bar %}{% endblock %}
+                <div class="mypage-section-container {% if is_maya_installment_plan %}prepaid-content-area{% endif %}">
+                    <div class="mypage-title-area {{ title_class }}">
+                        <div class="mypage-title-area-icon">
+                            {% block header_icon %}{% endblock %}
+                        </div>
+                        <div class="mypage-titile-area-text">
+                            <h1 class="mypage-titile-area-title">
+                                {% block title %}{% endblock %}
+                            </h1>
+                            <div class="div-sp">
+                                <p class="mypage-titile-area-title-sub">
+                                    {% block sub_title %}{% endblock %}
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                {% include 'common/message.twig' %}
+                {% block description %}{% endblock %}
+                {% block content %}{% endblock %}
+                </div>
+            </div>
+        </div>
+    </main>
+    {# TODO:フッター差し替え #}
+    {# プリペイドのマイページフッター変更時に分岐削除、includeのみにする #}
+    {% if "prepaid" in current_url %}
+    <footer class="mypage-footer">
+        <div class="mypage-footer-main">
+            <div class="wrapper">
+                <div>
+                    <ul>
+                        <li><a href="{% if is_wimax %}{{ wimax_url }}{% else %}{{ top_url }}{% endif %}" target="_blank">TOP</a></li>
+                        <li><a href="{% if is_openhouse_user == true %}{{ pdf_contract_openhouse_url }}{% elseif is_wimax %}{{ wimax_terms_url }}{% elseif is_bank_transfer_plan_user %}{{ pdf_contract_bulk_url }}{% elseif is_atobarai_user %}{{ terms_url }}{% else %}{{ pdf_contract_url }}{% endif %}" target="_blank">利用規約</a></li>
+                        {% if is_plan_change == true %}<li><a href="{{ pdf_contract_plan_change_url }}" target="_blank">利用規約(プラン変更)</a></li>{% endif %}
+                        <li><a href="{{ pdf_privacy_url }}" target="_blank">プライバシーポリシー</a></li>
+                        <li class="mypage-footer-copyright footer-copy">&copy; 2020 ZEUS WiFi</li>
+                    </ul>
+                </div>
+                <div class="mypage-footer-copyright-sp">
+                    &copy; 2020 ZEUS WiFi
+                </div>
+            </div>
+        </div>
+    </footer>
+    {% else %}
+    {% include 'common/footer_mypage.twig' %}
+    {% endif %}
+
+</body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PQMB32G"
+                    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+</html>

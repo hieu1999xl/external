@@ -1,0 +1,479 @@
+/* リチャージ用CSS start */
+.mypage-title-area .error-message{
+  bottom: 23px;
+}
+
+div.recharge div.data-flow-last-update p{
+  width: fit-content;
+  text-align: left;
+  margin: 0 0 0 auto;
+  color: #a8a8a8;
+}
+div.recharge table.data-usage-table td,
+div.recharge table.table-base td{
+  text-align: left;
+  padding: 11px;
+}
+table.recharge-remaining th{
+  background-color: unset;
+  color: unset;
+  border: unset;
+  width: 74%;
+  text-align: left;
+  font-size: 2.2rem;
+}
+div.recharge table.recharge-remaining td{
+  background-color: unset;
+  text-align: center;
+}
+div.recharge table.recharge-remaining tr.data-flow-1 td,
+div.recharge table.recharge-remaining tr.data-flow-2 td{
+  padding: 0;
+}
+div.recharge table.recharge-remaining tr.data-flow-1 td.data-label{
+  color: #FFFF00;
+  font-weight: bold;
+  position: relative;
+}
+.recharge table.recharge-remaining tr.data-flow-1 td.data-label::before{
+  content: "";
+  position: absolute;
+  width: 13px;
+  height: 13px;
+  top: 50%;
+  left: 15px;
+  transform: translateY(-50%);
+  background-color: #FFFF00;
+  border-radius: 3px;
+}
+
+div.recharge table.recharge-remaining td.data-capacity{
+  font-weight: bold;
+}
+.recharge table.recharge-remaining tr.data-flow-2 td{
+  font-size: 2rem;
+  vertical-align: baseline;
+  font-weight: bold;
+}
+
+div.recharge table.recharge-remaining tr.data-flow-2  td:last-of-type{
+  font-size: 1.5rem;
+  font-weight: normal;
+}
+div.recharge span.remaining,
+div.recharge span.full{
+  margin-right: 2px;
+}
+div.recharge span.remaining{
+  font-size: 3rem;
+  color: #FFFF00;
+}
+
+table.recharge-remaining th,
+table.recharge-remaining td{
+  color: #FFF;
+}
+
+
+table.recharge-remaining td.interval{
+  width: 10px;
+}
+div.recharge-graph{
+  background-color: #5B5B5B;
+  position: relative;
+  width: calc(100% - 10px);
+  height: 45px;
+  margin: 10px 0;
+  padding: 5px;
+}
+
+div.recharge-graph.infinity{
+  background: linear-gradient(90deg, #5B5B5B 80%,#5b5b5b00 100%);
+}
+
+div.recharge-graph .clip-graph,
+div.recharge-graph.infinity .clip-graph{
+  width: 0;
+  height: 45px;
+  clip-path: inset(0% 0% round 0px 5px 5px 0);
+}
+
+div.recharge-graph span.re-remaining-area{
+  background: linear-gradient(90deg, #FFFF00 30%, #FFAC00 85%);
+  position: absolute;
+  left: 1%;
+  top: 5px;
+  width: 100%;
+  height: 45px;
+}
+.recharge-remaining-area{
+  margin: 0 0 20px;
+}
+div.recharge + div.button div.button-body{
+  margin-top: 50px;
+}
+div.button a.button-text div.button-margin-create{
+  margin-top: 0;
+}
+div.recharge + div.button.right div.button-body{
+  margin: 15px 0 35px;
+}
+div.recharge + div.button.right div.button-body.prepaid-overseas {
+  margin: 15px 0 0;
+}
+tbody.recharge-history{
+  display: block;
+  max-height: 356px;
+  overflow-y: scroll;
+}
+div.data-charge tbody.recharge-history{
+  display: flex;
+  flex-direction: column;
+}
+div.data-charge tbody.recharge-history tr:first-child{
+  order: initial;
+}
+tbody.recharge-history tr{
+  display: table;
+  width: 100%;
+  border-spacing: 3px;
+}
+div.recharge table.data-usage-table{
+  border-spacing: 6px;
+}
+form.recharge div.form-capacity-selects{
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+form.recharge div.form-capacity-select{
+  width: 48%;
+}
+form.recharge div.form-capacity-select-area.datacharge{
+  height: unset;
+  border: unset;
+  margin: 10px 0 75px;
+  border: solid 5px #FFF;
+}
+.recharge-return-text{
+  margin-top: 20px;
+}
+.contract-notice {
+  margin: 10px 27px 0 85px;
+}
+form.recharge div.form-capacity-selects {
+  width: 80%;
+  margin: 0 auto;
+}
+form.recharge div.rechage-365:nth-child(1) {
+  order: 4;
+}
+form.recharge div.rechage-365:nth-child(2) {
+  order: 3;
+}
+form.recharge div.rechage-365:nth-child(3) {
+  order: 2;
+}
+form.recharge div.rechage-365:nth-child(4) {
+  order: 1;
+}
+p.recharge-title {
+  width: 80%;
+  margin: 20px auto 10px;
+  font-size: 2rem;
+  font-weight: bold;
+}
+p.recharge-title:last-of-type {
+  margin: 40px auto 10px;
+}
+form.recharge div.form-capacity-select-image img {
+  box-shadow: 0px 0px 10px rgb(0 0 0 / 30%);
+}
+form.recharge div.form-capacity-select-checkbox-area {
+  top: 113%;
+}
+form.recharge p.custom-check-box-v2-select-text.datacharge {
+  padding: 4px 40px;
+  cursor: pointer;
+  pointer-events: all;
+}
+form.recharge p.custom-check-box-v2-select-text.datacharge > label{
+  cursor: pointer;
+
+}
+
+@media screen and (min-width: 768px) {
+  div.recharge table.table-base tr th,
+  div.recharge table.table-base tr td{
+    font-weight: normal;
+    text-align: center;
+    position: relative;
+    padding: 0 10px;
+    color: #000;
+    background-color: #f2f2f2;
+    border: unset;
+  }
+  div.recharge table.table-base tr th{
+    width: 40%;
+  }
+  div.recharge table.table-base tr td:nth-child(2){
+    width: 25%;
+  }
+  div.recharge table.table-base tr td:nth-child(3){
+    width: 35%;
+  }
+  div.recharge table.table-base tr td:nth-child(4){
+    width: 15%;
+  }
+  div.recharge table.table-base tr td:nth-child(5){
+    width: 10%;
+  }
+  div.recharge table.table-base tr:nth-child(1) th,
+  div.recharge table.table-base tr:nth-child(1) td{
+    font-weight: bold;
+    text-align: center;
+    position: relative;
+    padding: 0 10px;
+    color: white;
+    background-color: #000;
+    border: 1px solid #000;
+  }
+}
+
+
+/*渡航期間一覧表*/
+.overseas-travel-period::after{
+  content: "";
+  position: absolute;
+  right: 25px;
+  top: 50%;
+  transform: translateY(-50%);
+  border-bottom: 13px solid #FFF;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+}
+
+.overseas-travel-period.open::after{
+  border-bottom: none;
+  border-top: 13px solid #FFF;
+}
+
+div.recharge .travel-table table{
+  border-collapse: collapse;
+}
+.overseas-travel-period{
+  margin-bottom: 20px;
+}
+div.recharge .travel-table table.data-usage-table th,
+div.recharge .travel-table table.data-usage-table td{
+  padding: 15px 0;
+  border-bottom: 2px solid #FFF;
+  background: none;
+  color: #FFF;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+div.recharge .travel-table .useage-table table.data-usage-table th,
+div.recharge .travel-table .useage-table table.data-usage-table td{
+  border-bottom: 1px solid #fff;
+}
+
+div.recharge .travel-table .useage-table table.data-usage-table tr:last-of-type th,
+div.recharge .travel-table .useage-table table.data-usage-table tr:last-of-type td{
+  border-bottom: none;
+}
+
+
+div.recharge .travel-table table.data-usage-table th{
+  width: 60px;
+}
+div.recharge .travel-table table.data-usage-table td{
+  width: 50px;
+}
+.recharge .travel-table table.data-usage-table tr:not(.caption-area) td:nth-of-type(1),
+.recharge .travel-table table.data-usage-table tr:not(.caption-area) td:nth-of-type(3){
+  font-size: 2rem;
+  letter-spacing: 0.125em;
+}
+
+.recharge .travel-table .overseas-travel-period table.data-usage-table tr:not(.caption-area) td:nth-of-type(1),
+.recharge .travel-table .overseas-travel-period table.data-usage-table tr:not(.caption-area) td:nth-of-type(3){
+  font-size: 2.4rem;
+  font-weight: bold;
+}
+
+div.recharge .travel-table table.data-usage-table td:nth-of-type(2){
+  width: 20px;
+  font-weight: bold;
+  font-size: 2rem;
+}
+div.recharge .travel-table table.data-usage-table tr:not(.caption-area) td:nth-of-type(4){
+  font-weight: normal;
+  font-size: 2rem;
+}
+
+div.recharge .travel-table table.data-usage-table td:last-of-type{
+  width: 20px;
+}
+
+@media screen and (max-width: 767px) {
+  .mypage-title-area .error-message{
+    padding-top: 20px;
+  }
+  table.sp-long th{
+    margin: 3px auto 0px;
+  }
+  table.recharge-remaining th{
+    width: 0;
+  }
+  .data-charge.recharge div.mypage-content-box{
+    padding-bottom: 15px;
+  }
+  div.mypage-content-box-inner p.recharge-plan-sp{
+    font-weight: bold;
+    margin: 0px 0 15px;
+    font-size: 1.3rem;
+    text-align: center;
+  }
+  form.recharge div.form-capacity-select {
+    width: 100%;
+  }
+  form.recharge div.form-capacity-selects {
+    width: 100%;
+  }
+  form.recharge div.form-capacity-select-area.datacharge {
+    margin: 10px 0 50px;
+  }
+  form.recharge p.custom-check-box-v2-select-text.datacharge {
+    padding: 4px 18px;
+  }
+  form.recharge div.form-capacity-select-checkbox-area {
+    transform: translate(-50%,-50%);
+    left: 50%;
+  }
+  form.recharge div.mypage-content-box-data-flow-inner {
+    margin: auto 15px;
+  }
+  tr.recharge-history-separate{
+    height: 45px;
+    margin: 25px 0 20px;
+    position: relative;
+  }
+  tr.recharge-history-separate:after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 50%;
+    display: inline-block;
+    width: 50%;
+    height: 3px;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    background-color: #000;
+  }
+  tr.recharge-history-separate:last-child {
+    display: none;
+  }
+  div.recharge + div.button.right div.button-body {
+    margin: 15px 0 35px;
+  }
+  div.recharge + div.button div.button-body {
+    margin-top: 35px;
+  }
+  .recharge table.recharge-remaining tr.data-flow-1 td.data-label::before{
+    left: 25px;
+  }
+  div.recharge table.recharge-remaining tr.data-flow-1 td.yellow-label::before{
+    left: -5px;
+  }
+
+  div.recharge .travel-table table.data-usage-table th,
+  div.recharge .travel-table table.data-usage-table td{
+    padding: 10px 0;
+    font-size: 1.2rem;
+    font-weight: normal;
+  }
+  div.recharge .travel-table table.data-usage-table th{
+    width: 45px;
+    line-height: 1.3;
+  }
+
+  div.recharge .travel-table table.data-usage-table td{
+    width: 60px;
+  }
+  div.recharge .travel-table .overseas-travel-period table.data-usage-table tr:not(.caption-area) td:nth-of-type(1), div.recharge .travel-table .overseas-travel-period table.data-usage-table tr:not(.caption-area) td:nth-of-type(3){
+    font-size: 1.3rem;
+    text-align: center;
+    letter-spacing: 0.05em;
+  }
+  div.recharge .travel-table table.data-usage-table td:nth-of-type(2) {
+    width: 10px;
+    font-size: 1.1rem;
+    text-align: center;
+  }
+  div.recharge .travel-table table.data-usage-table tr:not(.caption-area) td:nth-of-type(4){
+    width: 60px;
+    text-align: left;
+    font-weight: normal;
+    font-size: 1.3rem;
+    font-feature-settings: "palt";
+  }
+
+  div.recharge .travel-table table.data-usage-table tr.contents-area td:nth-of-type(4){
+    text-align: center;
+    
+  }
+  div.recharge .travel-table table.data-usage-table td:last-of-type{
+    width: 13px;
+  }
+
+  div.recharge .travel-table .useage-table table.data-usage-table td:last-of-type{
+    width: 60px;
+  }
+
+  div.recharge .travel-table table.data-usage-table tr:not(.caption-area) td:nth-of-type(1), div.recharge .travel-table table.data-usage-table tr:not(.caption-area) td:nth-of-type(3){
+    font-size: 1.4rem;
+    letter-spacing: 0;
+  }
+
+  .overseas-travel-period::after{
+    right: 0px;
+    border-bottom: 7px solid #FFF;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+  }
+  .overseas-travel-period.open::after{
+    border-top: 7px solid #FFF;
+  }
+}
+
+.data-usage-month{
+  position: relative;
+}
+
+
+/*prepaid glaf*/
+div.recharge.prepaid-overseas table.recharge-remaining tr.data-flow-1 td.data-label{
+  color: #b947ff;
+}
+div.recharge.prepaid-overseas table.recharge-remaining tr.data-flow-1 td.data-label::before{
+  content: "";
+  background-color: #b947ff;
+}
+
+div.recharge.prepaid-overseas span.remaining{
+  color: #b947ff;
+}
+
+div.prepaid-overseas div.recharge-graph span.re-remaining-area{
+  background: linear-gradient(90deg, #9d00ff 30%, #b947ff 85%);
+}
+
+
+
+
+
+
+/* リチャージ用CSS start */

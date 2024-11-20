@@ -1,0 +1,1169 @@
+/*-------------------------------------------
+   News
+-------------------------------------------*/
+.white-content-box-inner.news p {
+  font-size: 1.3rem;
+}
+
+div.info-content {
+  display: flex;
+  background-color: #FFFFFF;
+  border-radius: 10px;
+  box-shadow: 0 0 7px rgb(0 0 0 / 20%);
+  padding-top: 35px;
+  padding-bottom: 35px;
+  margin-bottom: 10px;
+}
+
+/*ポップアップの背景を暗くする*/
+div.stop-notion-black-background,
+div.raining-notion-black-background,
+div.basicplan-notion-black-background,
+div.taikencampaign-notion-black-background,
+div.summer-notion-black-background,
+div.newplan-notion-black-background,
+div.newyearholiday-notion-black-background,
+div.snowdelay-notion-black-background,
+div.goldenweekholiday-notion-black-background,
+div.extension-notion-black-background,
+div.notion-black-background,
+div.document-notion-black-background,
+div.mypagestop-notion-black-background,
+div.contactstop-notion-black-background,
+div.springcampaign-notion-black-background,
+div.businesscampaign-notion-black-background,
+div.taiken-notion-black-background,
+div.debutcampaign-notion-black-background,
+div.olympic-notion-black-background,
+div.july-notion-black-background,
+div.alart-notion-black-background,
+div.summer2021-notion-black-background,
+div.rainydelay-notion-black-background,
+div.networkfault-notion-black-background,
+div.summercampaign-notion-black-background,
+div.cashbackcampaign-notion-black-background,
+div.leave-private-notion-black-background,
+div.weatherdelay-notion-black-background,
+div.c-extension-notion-black-background,
+div.snowdelay2022-notion-black-background,
+div.st100debut-notion-black-background,
+div.wcampaign-notion-black-background,
+div.salecampaign-notion-black-background,
+div.finish100gb-notion-black-background,
+div.uknetworkfault-notion-black-background,
+div.gwholiday-notion-black-background,
+div.system-maintenance-notion-black-background,
+div.changecompany-notion-black-background,
+div.overseas-price-notion-black-background,
+div.salecp-extension-notion-black-background,
+div.media-link-notion-black-background,
+div.hikari-com-notion-black-background,
+div.sakurajima-notion-black-background,
+div.salecampaign2-notion-black-background,
+div.kamicospacampaign-notion-black-background,
+div.nkamicp-notion-black-background,
+div.condopay-end-notion-black-background,
+div.guidance-notion-black-background {
+  position: fixed;
+  background-color: #000000;
+  opacity: 0.4;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000000000001;
+}
+
+/*ポップアップ全体のサイズ*/
+div.white-content-box-stop-notion,
+div.white-content-box-raining-notion,
+div.white-content-box-basicplan-notion,
+div.white-content-box-taikencampaign-notion,
+div.white-content-box-summer-notion,
+div.white-content-box-newplan-notion,
+div.white-content-box-newyearholiday-notion,
+div.white-content-box-snowdelay-notion,
+div.white-content-box-goldenweekholiday-notion,
+div.white-content-box-mypagestop-notion,
+div.white-content-box-contactstop-notion,
+div.white-content-box-extension-notion,
+div.white-content-box-document-notion,
+div.white-content-box-springcampaign-notion,
+div.white-content-box-businesscampaign-notion,
+div.white-content-box-debutcampaign-notion,
+div.white-content-box-taiken-notion,
+div.white-content-box-olympic-notion,
+div.white-content-box-july-notion,
+div.white-content-box-alart-notion,
+div.white-content-box-summer2021-notion,
+div.white-content-box-rainydelay-notion,
+div.white-content-box-networkfault-notion,
+div.white-content-box-summercampaign-notion,
+div.white-content-box-cashbackcampaign-notion,
+div.white-content-box-leave-private-notion,
+div.white-content-box-weatherdelay-notion,
+div.white-content-box-c-extension-notion,
+div.white-content-box-snowdelay2022-notion,
+div.white-content-box-st100debut-notion,
+div.white-content-box-wcampaign-notion,
+div.white-content-box-salecampaign-notion,
+div.white-content-box-finish100gb-notion,
+div.white-content-box-uknetworkfault-notion,
+div.white-content-box-system-maintenance-notion,
+div.white-content-box-changecompany-notion,
+div.white-content-box-overseas-price-notion,
+div.white-content-box-salecp-extension-notion,
+div.white-content-box-media-link-notion,
+div.white-content-box-hikari-com-notion,
+div.white-content-box-sakurajima-notion,
+div.white-content-box-salecampaign2-notion,
+div.white-content-box-kamicospacampaign-notion,
+div.white-content-box-nkamicp-notion,
+div.white-content-box-condopay-end-notion,
+div.white-content-box-guidance-notion {
+  position: fixed;
+  max-height: calc(100% - 150px - 35px - 200px);
+  max-width: 1100px;
+  top: 50%;
+  left: 0;
+  right: 0;
+  transform: translateY(-50%);
+  padding: 50px 0;
+  margin: auto;
+  z-index: 1000000000002;
+  background-color: #F3F3F3;
+  overflow: auto;
+}
+
+div.white-content-box-gwholiday-notion {
+  position: fixed;
+  max-height: calc(100% - 150px - 35px - 125px);
+  max-width: 1100px;
+  top: 50%;
+  left: 0;
+  right: 0;
+  transform: translateY(-50%);
+  padding: 50px 0;
+  margin: auto;
+  z-index: 1000000000002;
+  background-color: #F3F3F3;
+}
+
+div.white-content-box-olympic-notion-expansion {
+  max-height: calc(100% - 150px - 35px - 100px);
+}
+
+/*申込フォーム 端末あんしんオプションのアラート*/
+div.white-content-box-alart-notion {
+  max-height: auto;
+  max-width: 35%;
+  top: 7%;
+  background-color: transparent;
+  padding: 0;
+  transform: none;
+}
+
+/*スクロール対応*/
+div.white-content-box-raining-notion,
+div.white-content-box-document-notion,
+div.white-content-box-springcampaign-notion,
+div.white-content-box-businesscampaign-notion,
+div.white-content-box-debutcampaign-notion,
+div.white-content-box-taiken-notion,
+div.white-content-box-rainydelay-notion,
+div.white-content-box-cashbackcampaign-notion,
+div.white-content-box-summercampaign-notion,
+div.white-content-box-st100debut-notion,
+div.white-content-box-wcampaign-notion,
+div.white-content-box-salecampaign-notion,
+div.white-content-box-gwholiday-notion,
+div.white-content-box-olympic-notion,
+div.white-content-box-salecampaign2-notion,
+div.white-content-box-kamicospacampaign-notion {
+  height: 70%;
+  max-height: initial;
+}
+
+div.white-content-box-document-notion {
+  height: 65%;
+}
+
+/*表示エリア*/
+div.white-content-box-stop-notion div.white-content-box-inner-stop,
+div.white-content-box-raining-notion div.white-content-box-inner-raining,
+div.white-content-box-basicplan-notion div.white-content-box-inner-basicplan,
+div.white-content-box-taikencampaign-notion div.white-content-box-inner-taikencampaign,
+div.white-content-box-summer-notion div.white-content-box-inner-summer,
+div.white-content-box-newplan-notion div.white-content-box-inner-newplan,
+div.white-content-box-newyearholiday-notion div.white-content-box-inner-newyearholiday,
+div.white-content-box-snowdelay-notion div.white-content-box-inner-snowdelay,
+div.white-content-box-goldenweekholiday-notion div.white-content-box-inner-goldenweekholiday,
+div.white-content-box-mypagestop-notion div.white-content-box-inner-mypagestop,
+div.white-content-box-extension-notion div.white-content-box-inner-extension,
+div.white-content-box-contactstop-notion div.white-content-box-inner-contactstop,
+div.white-content-box-springcampaign-notion div.white-content-box-inner-springcampaign,
+div.white-content-box-businesscampaign-notion div.white-content-box-inner-businesscampaign,
+div.white-content-box-debutcampaign-notion div.white-content-box-inner-debutcampaign,
+div.white-content-box-taiken-notion div.white-content-box-inner-taiken,
+div.white-content-box-document-notion div.white-content-box-inner-document,
+div.white-content-box-olympic-notion div.white-content-box-inner-olympic,
+div.white-content-box-july-notion div.white-content-box-inner-july,
+div.white-content-box-alart-notion div.white-content-box-inner-alart,
+div.white-content-box-summer2021-notion div.white-content-box-inner-summer2021,
+div.white-content-box-rainydelay-notion div.white-content-box-inner-rainydelay,
+div.white-content-box-networkfault-notion div.white-content-box-inner-networkfault,
+div.white-content-box-summercampaign-notion div.white-content-box-inner-summercampaign,
+div.white-content-box-cashbackcampaign-notion div.white-content-box-inner-cashbackcampaign,
+div.white-content-box-leave-private-notion div.white-content-box-inner-leave-private,
+div.white-content-box-weatherdelay-notion div.white-content-box-inner-weatherdelay,
+div.white-content-box-c-extension-notion div.white-content-box-inner-c-extension,
+div.white-content-box-snowdelay2022-notion div.white-content-box-inner-snowdelay2022,
+div.white-content-box-st100debut-notion div.white-content-box-inner-st100debut,
+div.white-content-box-wcampaign-notion div.white-content-box-inner-wcampaign,
+div.white-content-box-salecampaign-notion div.white-content-box-inner-salecampaign,
+div.white-content-box-finish100gb-notion div.white-content-box-inner-finish100gb,
+div.white-content-box-uknetworkfault-notion div.white-content-box-inner-uknetworkfault,
+div.white-content-box-gwholiday-notion div.white-content-box-inner-gwholiday,
+div.white-content-box-system-maintenance-notion div.white-content-box-inner-system-maintenance,
+div.white-content-box-changecompany-notion div.white-content-box-inner-changecompany,
+div.white-content-box-overseas-price-notion div.white-content-box-inner-overseas-price,
+div.white-content-box-salecp-extension-notion div.white-content-box-inner-salecp-extension,
+div.white-content-box-media-link-notion div.white-content-box-inner-media-link,
+div.white-content-box-hikari-com-notion div.white-content-box-inner-hikari-com,
+div.white-content-box-sakurajima-notion div.white-content-box-inner-sakurajima,
+div.white-content-box-salecampaign2-notion div.white-content-box-inner-salecampaign2,
+div.white-content-box-kamicospacampaign-notion div.white-content-box-inner-kamicospacampaign,
+div.white-content-box-nkamicp-notion div.white-content-box-inner-nkamicp,
+div.white-content-box-condopay-end-notion div.white-content-box-inner-condopay-end,
+div.white-content-box-guidance-notion div.white-content-box-inner-guidance {
+  width: 85%;
+  height: 85%;
+  margin: 30px auto 0;
+}
+
+div.white-content-box-changecompany-notion div.white-content-box-inner-changecompany{
+  height: 50vh;
+}
+div.white-content-box-condopay-end-notion div.white-content-box-inner-condopay-end,
+div.white-content-box-guidance-notion div.white-content-box-inner-guidance{
+  height: 50vh;
+}
+
+div.white-content-box-alart-notion div.white-content-box-inner-alart {
+  width: 100%;
+  margin: 0;
+}
+
+/*ポップアップ閉じるボタン*/
+div.popup-close-button,
+div.stop-popup-close-button,
+div.raining-popup-close-button,
+div.basicplan-popup-close-button,
+div.taikencampaign-popup-close-button,
+div.summer-popup-close-button,
+div.newplan-popup-close-button,
+div.newyearholiday-popup-close-button,
+div.snowdelay-popup-close-button,
+div.goldenweekholiday-popup-close-button,
+div.mypagestop-popup-close-button,
+div.campaign-stop-popup-close-button,
+div.extension-popup-close-button,
+div.document-popup-close-button,
+div.springcampaign-popup-close-button,
+div.businesscampaign-popup-close-button,
+div.taiken-popup-close-button,
+div.debutcampaign-popup-close-button,
+div.olympic-popup-close-button,
+div.july-popup-close-button,
+div.alart-popup-close-button,
+div.summer2021-popup-close-button,
+div.rainydelay-popup-close-button,
+div.networkfault-popup-close-button,
+div.summercampaign-popup-close-button,
+div.cashbackcampaign-popup-close-button,
+div.leave-private-popup-close-button,
+div.weatherdelay-popup-close-button,
+div.c-extension-popup-close-button,
+div.snowdelay2022-popup-close-button,
+div.st100debut-popup-close-button,
+div.wcampaign-popup-close-button,
+div.salecampaign-popup-close-button,
+div.finish100gb-popup-close-button,
+div.uknetworkfault-popup-close-button,
+div.gwholiday-popup-close-button,
+div.system-maintenance-popup-close-button,
+div.changecompany-popup-close-button,
+div.overseas-price-popup-close-button,
+div.salecp-extension-popup-close-button,
+div.media-link-popup-close-button,
+div.hikari-com-popup-close-button,
+div.sakurajima-popup-close-button,
+div.salecampaign2-popup-close-button,
+div.kamicospacampaign-popup-close-button,
+div.nkamicp-popup-close-button,
+div.condopay-end-popup-close-button,
+div.guidance-popup-close-button {
+  width: 35px;
+  height: 35px;
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  text-align: center;
+  background-color: #000000;
+  border-radius: 17px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+div.alart-popup-close-button {
+  background-color: #F3F3F3;
+  z-index: 3;
+}
+
+.fa-times {
+  font-size: 2rem;
+}
+
+div.popup-close-button img,
+div.stop-popup-close-button img,
+div.raining-popup-close-button img,
+div.basicplan-popup-close-button img,
+div.taikencampaign-popup-close-button img,
+div.summer-popup-close-button img,
+div.newplan-popup-close-button img,
+div.newyearholiday-popup-close-button img,
+div.snowdelay-popup-close-button img,
+div.goldenweekholiday-popup-close-button img,
+div.mypagestop-popup-close-button img,
+div.campaign-stop-popup-close-button img,
+div.extension-popup-close-button img,
+div.document-popup-close-button img,
+div.springcampaign-popup-close-button img,
+div.businesscampaign-popup-close-button img,
+div.taiken-popup-close-button img,
+div.debutcampaign-popup-close-button img,
+div.olympic-popup-close-button img,
+div.july-popup-close-button img,
+div.alart-popup-close-button img,
+div.summer2021-popup-close-button img,
+div.rainydelay-popup-close-button img,
+div.networkfault-popup-close-button img,
+div.summercampaign-popup-close-button img,
+div.cashbackcampaign-popup-close-button img,
+div.leave-private-popup-close-button img,
+div.weatherdelay-popup-close-button img,
+div.c-extension-popup-close-button img,
+div.snowdelay2022-popup-close-button img,
+div.st100debut-popup-close-button img,
+div.wcampaign-popup-close-button img,
+div.salecampaign-popup-close-button img,
+div.finish100gb-popup-close-button img,
+div.uknetworkfault-popup-close-button img,
+div.gwholiday-popup-close-button img,
+div.system-maintenance-popup-close-button img,
+div.changecompany-popup-close-button img,
+div.overseas-price-popup-close-button img,
+div.salecp-extension-popup-close-button img,
+div.media-link-popup-close-button img,
+div.hikari-com-popup-close-button img,
+div.sakurajima-popup-close-button img,
+div.salecampaign2-popup-close-button img,
+div.kamicospacampaign-popup-close-button img,
+div.nkamicp-popup-close-button img,
+div.condopay-end-popup-close-button img,
+div.guidance-popup-close-button img {
+  width: 50%;
+}
+
+/*ポップアップ内タイトル*/
+div.white-content-box-stop-notion div.white-content-box-title-notion,
+div.white-content-box-raining-notion div.white-content-box-title-notion,
+div.white-content-box-basicplan-notion div.white-content-box-title-notion,
+div.white-content-box-taikencampaign-notion div.white-content-box-title-notion,
+div.white-content-box-summer-notion div.white-content-box-title-notion,
+div.white-content-box-newplan-notion div.white-content-box-title-notion,
+div.white-content-box-newyearholiday-notion div.white-content-box-title-notion,
+div.white-content-box-snowdelay-notion div.white-content-box-title-notion,
+div.white-content-box-goldenweekholiday-notion div.white-content-box-title-notion,
+div.white-content-box-mypagestop-notion div.white-content-box-title-notion,
+div.white-content-box-contactstop-notion div.white-content-box-title-notion,
+div.white-content-box-extension-notion div.white-content-box-title-notion,
+div.white-content-box-springcampaign-notion div.white-content-box-title-notion,
+div.white-content-box-businesscampaign-notion div.white-content-box-title-notion,
+div.white-content-box-debutcampaign-notion div.white-content-box-title-notion,
+div.white-content-box-taiken-notion div.white-content-box-title-notion,
+div.white-content-box-document-notion div.white-content-box-title-notion,
+div.white-content-box-olympic-notion div.white-content-box-title-notion,
+div.white-content-box-july-notion div.white-content-box-title-notion,
+div.white-content-box-alart-notion div.white-content-box-title-notion,
+div.white-content-box-summer2021-notion div.white-content-box-title-notion,
+div.white-content-box-rainydelay-notion div.white-content-box-title-notion,
+div.white-content-box-networkfault-notion div.white-content-box-title-notion,
+div.white-content-box-summercampaign-notion div.white-content-box-title-notion,
+div.white-content-box-cashbackcampaign-notion div.white-content-box-title-notion,
+div.white-content-box-leave-private-notion div.white-content-box-title-leave-private-notion,
+div.white-content-box-weatherdelay-notion div.white-content-box-title-weatherdelay-notion,
+div.white-content-box-c-extension-notion div.white-content-box-title-c-extension-notion,
+div.white-content-box-snowdelay2022-notion div.white-content-box-title-notion,
+div.white-content-box-st100debut-notion div.white-content-box-title-notion,
+div.white-content-box-wcampaign-notion div.white-content-box-title-notion,
+div.white-content-box-salecampaign-notion div.white-content-box-title-notion,
+div.white-content-box-finish100gb-notion div.white-content-box-title-notion,
+div.white-content-box-uknetworkfault-notion div.white-content-box-title-notion,
+div.white-content-box-gwholiday-notion div.white-content-box-title-notion,
+div.white-content-box-system-maintenance-notion div.white-content-box-title-system-maintenance-notion,
+div.white-content-box-changecompany-notion div.white-content-box-title-changecompany-notion,
+div.white-content-box-overseas-price-notion div.white-content-box-title-overseas-price-notion,
+div.white-content-box-salecp-extension-notion div.white-content-box-title-notion,
+div.white-content-box-media-link-notion div.white-content-box-title-notion,
+div.white-content-box-hikari-com-notion div.white-content-box-title-notion,
+div.white-content-box-sakurajima-notion div.white-content-box-title-notion,
+div.white-content-box-salecampaign2-notion div.white-content-box-title-notion,
+div.white-content-box-kamicospacampaign-notion div.white-content-box-title-notion,
+div.white-content-box-nkamicp-notion div.white-content-box-title-notion,
+div.white-content-box-condopay-end-notion div.white-content-box-title-condopay-end-notion,
+div.white-content-box-guidance-notion div.white-content-box-title-guidance-notion {
+  padding: 0;
+  margin-top: 0;
+}
+
+/*ポップアップタイトル文字*/
+div.white-content-box-title-notion p {
+  font-size: 2.8rem;
+  line-height: 1.2em;
+}
+
+/*大雨支援の表*/
+.raining-notion-table {
+  border-collapse: collapse;
+}
+.raining-notion-table td {
+  border: 1px solid black;
+}
+.raining-notion-table-cell-prefecture {
+  width: 10%;
+}
+.july-red-text {
+  color: red;
+}
+p.pop-up-news-red {
+  color: red;
+  font-weight: bold;
+}
+
+/*ポップアップテーブル*/
+td.pop-up-news-bold {
+  font-weight: bold;
+}
+td.pop-up-news-red {
+  color: red;
+  font-weight: bold;
+}
+.pop-up-news table {
+  width: 90%;
+  text-align: center;
+}
+.pop-up-news table th,
+.pop-up-news table td {
+  font-size: 1.5rem;
+}
+.pop-up-news table th {
+  border-bottom: double 4px #000000;
+}
+
+/*20200330ページ、キャンペーンアーカイブの内容*/
+div.debut-description-body-desciption {
+  width: 80%;
+  padding: 0 0 0 30px;
+  margin: 0;
+}
+
+div.special-campaignterms-button-text {
+  box-sizing: border-box;
+  position: absolute;
+  text-align: center;
+  top: 5px;
+  left: 90px;
+  height: 40px;
+  width: 200px;
+  background-color: white;
+  padding-top: 5px;
+  text-decoration: none;
+  color: black;
+}
+@media screen and (max-width: 320px) {
+  div.special-campaignterms-button-text {
+    width: 60%;
+  }
+}
+div.special-campaignterms-button-text p {
+  line-height: 1.2rem;
+}
+
+div.special-campaignterms-button-text.inactive {
+  opacity: 0.5;
+  cursor: default;
+  pointer-events: none;
+}
+
+div.special-campaignterms-button-text.active {
+  opacity: 1.0;
+  cursor: pointer;
+  pointer-events: all;
+}
+
+.callcenter-area div.under-kv-notion {
+  background-color: #BFBFBF;
+}
+
+@media screen and (max-width: 1440px) {
+  /*ポップアップ全体のサイズ*/
+  div.white-content-box-stop-notion,
+  div.white-content-box-raining-notion,
+  div.white-content-box-basicplan-notion,
+  div.white-content-box-taikencampaign-notion,
+  div.white-content-box-summer-notion,
+  div.white-content-box-newplan-notion,
+  div.white-content-box-newyearholiday-notion,
+  div.white-content-box-snowdelay-notion,
+  div.white-content-box-goldenweekholiday-notion,
+  div.white-content-box-mypagestop-notion,
+  div.white-content-box-contactstop-notion,
+  div.white-content-box-extension-notion,
+  div.white-content-box-springcampaign-notion,
+  div.white-content-box-businesscampaign-notion,
+  div.white-content-box-debutcampaign-notion,
+  div.white-content-box-taiken-notion,
+  div.white-content-box-document-notion,
+  div.white-content-box-olympic-notion,
+  div.white-content-box-july-notion,
+  div.white-content-box-summer2021-notion,
+  div.white-content-box-rainydelay-notion,
+  div.white-content-box-networkfault-notion,
+  div.white-content-box-summercampaign-notion,
+  div.white-content-box-cashbackcampaign-notion,
+  div.white-content-box-leave-private-notion,
+  div.white-content-box-weatherdelay-notion,
+  div.white-content-box-c-extension-notion,
+  div.white-content-box-snowdelay2022-notion,
+  div.white-content-box-st100debut-notion,
+  div.white-content-box-wcampaign-notion,
+  div.white-content-box-salecampaign-notion,
+  div.white-content-box-finish100gb-notion,
+  div.white-content-box-uknetworkfault-notion,
+  div.white-content-box-gwholiday-notion,
+  div.white-content-box-system-maintenance-notion,
+  div.white-content-box-changecompany-notion,
+  div.white-content-box-overseas-price-notion,
+  div.white-content-box-salecp-extension-notion,
+  div.white-content-box-media-link-notion,
+  div.white-content-box-hikari-com-notion,
+  div.white-content-box-sakurajima-notion,
+  div.white-content-box-salecampaign2-notion,
+  div.white-content-box-kamicospacampaign-notion,
+  div.white-content-box-nkamicp-notion,
+  div.white-content-box-condopay-end-notion,
+  div.white-content-box-guidance-notion {
+    top: 50%;
+    transform: translateY(-50%);
+    margin: 0 5%;
+    max-width: 90%;
+    max-height: calc(100% - 50px - 40px - 20vh);
+  }
+
+  /*スクロール対応*/
+  div.white-content-box-raining-notion,
+  div.white-content-box-document-notion,
+  div.white-content-box-springcampaign-notion,
+  div.white-content-box-businesscampaign-notion,
+  div.white-content-box-debutcampaign-notion,
+  div.white-content-box-taiken-notion,
+  div.white-content-box-rainydelay-notion,
+  div.white-content-box-cashbackcampaign-notion,
+  div.white-content-box-summercampaign-notion,
+  div.white-content-box-st100debut-notion,
+  div.white-content-box-wcampaign-notion,
+  div.white-content-box-salecampaign-notion,
+  div.white-content-box-gwholiday-notion,
+  div.white-content-box-olympic-notion,
+  div.white-content-box-condopay-end-notion,
+  div.white-content-box-guidance-notion {
+    height: 70%;
+    max-height: initial;
+  }
+
+  div.white-content-box-alart-notion {
+    top: 5%;
+    margin: 0 auto;
+    max-width: auto;
+    max-height: 35%;
+  }
+
+  div.white-content-box-alart-notion div.white-content-box-inner-alart {
+    margin: auto;
+  }
+
+  /*ポップアップサイズ（小）*/
+  div.white-content-box-newplan-notion {
+    height: initial;
+  }
+}
+div.white-content-box-document-notion div.white-content-box-inner-document {
+  margin:10px auto 0;
+}
+
+@media screen and (min-width: 768px) {
+  div.info-date{
+    width: 27%;
+    padding-left: 35px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  /*表示エリア*/
+  div.white-content-box-stop-notion div.white-content-box-inner-stop,
+  div.white-content-box-raining-notion div.white-content-box-inner-raining,
+  div.white-content-box-basicplan-notion div.white-content-box-inner-basicplan,
+  div.white-content-box-taikencampaign-notion div.white-content-box-inner-taikencampaign,
+  div.white-content-box-summer-notion div.white-content-box-inner-summer,
+  div.white-content-box-newplan-notion div.white-content-box-inner-newplan,
+  div.white-content-box-newyearholiday-notion div.white-content-box-inner-newyearholiday,
+  div.white-content-box-snowdelay-notion div.white-content-box-inner-snowdelay,
+  div.white-content-box-goldenweekholiday-notion div.white-content-box-inner-goldenweekholiday,
+  div.white-content-box-mypagestop-notion div.white-content-box-inner-mypagestop,
+  div.white-content-box-extension-notion div.white-content-box-inner-extension,
+  div.white-content-box-contactstop-notion div.white-content-box-inner-contactstop,
+  div.white-content-box-springcampaign-notion div.white-content-box-inner-springcampaign,
+  div.white-content-box-businesscampaign-notion div.white-content-box-inner-businesscampaign,
+  div.white-content-box-debutcampaign-notion div.white-content-box-inner-debutcampaign,
+  div.white-content-box-taiken-notion div.white-content-box-inner-taiken,
+  div.white-content-box-document-notion div.white-content-box-inner-document,
+  div.white-content-box-olympic-notion div.white-content-box-inner-olympic,
+  div.white-content-box-july-notion div.white-content-box-inner-july,
+  div.white-content-box-summer2021-notion div.white-content-box-inner-summer2021,
+  div.white-content-box-rainydelay-notion div.white-content-box-inner-rainydelay,
+  div.white-content-box-networkfault-notion div.white-content-box-inner-networkfault,
+  div.white-content-box-summercampaign-notion div.white-content-box-inner-summercampaign,
+  div.white-content-box-cashbackcampaign-notion div.white-content-box-inner-cashbackcampaign,
+  div.white-content-box-leave-private-notion div.white-content-box-inner-leave-private,
+  div.white-content-box-weatherdelay-notion div.white-content-box-inner-weatherdelay,
+  div.white-content-box-c-extension-notion div.white-content-box-inner-c-extension,
+  div.white-content-box-snowdelay2022-notion div.white-content-box-inner-snowdelay2022,
+  div.white-content-box-st100debut-notion div.white-content-box-inner-st100debut,
+  div.white-content-box-wcampaign-notion div.white-content-box-inner-wcampaign,
+  div.white-content-box-salecampaign-notion div.white-content-box-inner-salecampaign,
+  div.white-content-box-finish100gb-notion div.white-content-box-inner-finish100gb,
+  div.white-content-box-uknetworkfault-notion div.white-content-box-inner-uknetworkfault,
+  div.white-content-box-gwholiday-notion div.white-content-box-inner-gwholiday,
+  div.white-content-box-system-maintenance-notion div.white-content-box-inner-system-maintenance,
+  div.white-content-box-changecompany-notion div.white-content-box-inner-changecompany,
+  div.white-content-box-salecp-extension-notion div.white-content-box-inner-salecp-extension,
+  div.white-content-box-media-link-notion div.white-content-box-inner-media-link,
+  div.white-content-box-hikari-com-notion div.white-content-box-inner-hikari-com,
+  div.white-content-box-sakurajima-notion div.white-content-box-inner-sakurajima,
+  div.white-content-box-salecampaign2-notion div.white-content-box-inner-salecampaign2,
+  div.white-content-box-kamicospacampaign-notion div.white-content-box-inner-kamicospacampaign,
+  div.white-content-box-nkamicp-notion div.white-content-box-inner-nkamicp {
+    width: 90%;
+    height: 75%;
+  }
+
+  div.white-content-box-document-notion div.white-content-box-inner-document {
+    width: 90%;
+    height: 85%;
+  }
+
+  div.white-content-box-finish100gb-notion div.white-content-box-inner-finish100gb,
+  div.white-content-box-system-maintenance-notion div.white-content-box-inner-system-maintenance,
+  div.white-content-box-changecompany-notion div.white-content-box-inner-changecompany,
+  div.white-content-box-olympic-notion div.white-content-box-inner-olympic {
+    height: 65%;
+  }
+
+  div.white-content-box-changecompany-notion div.white-content-box-inner-changecompany {
+    height: 85%;
+  }
+
+  div.white-content-box-gwholiday-notion div.white-content-box-inner-gwholiday {
+    overflow: scroll;
+  }
+
+  div.white-content-box-alart-notion{
+    top: 100px;
+    height: auto;
+    max-width: 90%;
+  }
+
+  div.white-content-box-alart-notion div.white-content-box-inner-alart {
+    width: 100%;
+    height: auto;
+  }
+
+  div.white-content-box-cashbackcampaign-notion div.white-content-box-inner-cashbackcampaign {
+    height: 80%;
+  }
+  
+    /*ポップアップ全体のサイズ*/
+  div.white-content-box-stop-notion,
+  div.white-content-box-raining-notion,
+  div.white-content-box-basicplan-notion,
+  div.white-content-box-taikencampaign-notion,
+  div.white-content-box-summer-notion,
+  div.white-content-box-newplan-notion,
+  div.white-content-box-newyearholiday-notion,
+  div.white-content-box-snowdelay-notion,
+  div.white-content-box-goldenweekholiday-notion,
+  div.white-content-box-mypagestop-notion,
+  div.white-content-box-contactstop-notion,
+  div.white-content-box-extension-notion,
+  div.white-content-box-springcampaign-notion,
+  div.white-content-box-businesscampaign-notion,
+  div.white-content-box-debutcampaign-notion,
+  div.white-content-box-taiken-notion,
+  div.white-content-box-document-notion,
+  div.white-content-box-olympic-notion,
+  div.white-content-box-july-notion,
+  div.white-content-box-summer2021-notion,
+  div.white-content-box-rainydelay-notion,
+  div.white-content-box-networkfault-notion,
+  div.white-content-box-summercampaign-notion,
+  div.white-content-box-cashbackcampaign-notion,
+  div.white-content-box-leave-private-notion,
+  div.white-content-box-weatherdelay-notion,
+  div.white-content-box-c-extension-notion,
+  div.white-content-box-snowdelay2022-notion,
+  div.white-content-box-st100debut-notion,
+  div.white-content-box-wcampaign-notion,
+  div.white-content-box-salecampaign-notion,
+  div.white-content-box-finish100gb-notion,
+  div.white-content-box-uknetworkfault-notion,
+  div.white-content-box-gwholiday-notion,
+  div.white-content-box-system-maintenance-notion,
+  div.white-content-box-changecompany-notion,
+  div.white-content-box-overseas-price-notion,
+  div.white-content-box-salecp-extension-notion,
+  div.white-content-box-media-link-notion,
+  div.white-content-box-hikari-com-notion,
+  div.white-content-box-sakurajima-notion,
+  div.white-content-box-salecampaign2-notion,
+  div.white-content-box-kamicospacampaign-notion,
+  div.white-content-box-nkamicp-notion,
+  div.white-content-box-condopay-end-notion,
+  div.white-content-box-guidance-notion {
+    margin: 0 5%;
+    height: 80%;
+    max-height: initial;
+  }
+
+  /*スクロール対応*/
+  div.white-content-box-raining-notion,
+  div.white-content-box-document-notion,
+  div.white-content-box-springcampaign-notion,
+  div.white-content-box-businesscampaign-notion,
+  div.white-content-box-debutcampaign-notion,
+  div.white-content-box-taiken-notion,
+  div.white-content-box-cashbackcampaign-notion,
+  div.white-content-box-summercampaign-notion,
+  div.white-content-box-st100debut-notion,
+  div.white-content-box-wcampaign-notion,
+  div.white-content-box-salecampaign-notion,
+  div.white-content-box-condopay-end-notion,
+  div.white-content-box-guidance-notion {
+    bottom: 50px;
+  }
+  div.white-content-box-condopay-end-notion div.white-content-box-inner-condopay-end,
+  div.white-content-box-guidance-notion div.white-content-box-inner-guidance{
+    height: 60vh;
+  
+  }
+  
+  
+  /*ポップアップタイトル文字*/
+  div.white-content-box-title-notion p {
+    padding: 0 5%;
+    font-size: 2.0rem;
+  }
+
+  div.white-content-box-title-changecompany-notion p {
+    font-size: 2.6rem;
+  }
+
+  div.info-content {
+    display: block;
+    padding: 15px;
+    margin-bottom: 15px;
+  }
+  div.info-date {
+    margin: 0 0 10px 0;
+  }
+  div.info-title {
+    width: 95%;
+    line-height: 1.6em;
+  }
+
+  div.debut-description-body-desciption {
+    width: 100%;
+    padding: 0;
+  }
+
+  .pop-up-news table th, .pop-up-news table td {
+    font-size: 1.3rem;
+  }
+}
+
+/*-------------------------------------------
+    お知らせ
+-------------------------------------------*/
+.news-box-area {
+  max-width: 980px;
+  margin: 65px auto 95px;
+  border-top: 1px solid #9D9D9D;
+}
+.news-box {
+  font-size: 1.5rem;
+  padding: 30px 0;
+  border-bottom: 1px solid #9D9D9D;
+}
+.news-link {
+  display: flex;
+  align-items: center;
+  color: #000000;
+  position: relative;
+}
+a.news-link img{
+  position: absolute;
+  right: 0;
+}
+.news-link:hover .news-title {
+  color: #d6006b;
+  margin-top: 1px;
+  border-bottom: 1px solid #d6006b;
+}
+.news-day {
+  text-align: left;
+  width: 11%;
+  padding-right: 1.2%;
+}
+.news-category-area {
+  width: 13%;
+}
+.news-category {
+  background-color: #3c3c3c;
+  border-radius: 35px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 7px 0;
+  margin-top: 10px;
+}
+.news-category.yellow {
+  background-color: #FFEB00;
+}
+.news-category.gray {
+  background-color: #646464;
+}
+.news-category:first-child {
+  margin-top: 0;
+}
+.news-category span {
+  color: #fff;
+}
+.news-category.yellow span {
+  color: #000000;
+}
+.news-category.gray span {
+  color: #FFFFFF;
+}
+.each-news-category {
+  width: 13%;
+  margin-top: 0;
+  margin-right: 15px;
+}
+.each-news-category:last-child {
+  margin-right: 0;
+}
+.news-title {
+  width: auto;
+  max-width: 600px;
+  margin: 0 1.5%;
+  word-break: break-all;
+  line-height: 1.4;
+}
+.news-arrow {
+  width: 1%;
+}
+
+@media screen and (max-width: 767px){
+  .news-box-area {
+    margin: 30px auto;
+  }
+  .news-box {
+    padding: 20px 0;
+  }
+  .news-link {
+    display: block;
+    position: relative;
+  }
+  .news-sp-top,
+  .news-sp-bottom {
+    display: flex;
+    align-items: center;
+  }
+  .news-sp-bottom {
+    margin-top: 15px;
+  }
+  .news-day {
+    width: 30%;
+  }
+  .news-category-area {
+    width: 40%;
+  }
+  .news-category {
+    width: 100%;
+    margin-right: 15px;
+    padding: 5px 0;
+  }
+  .news-category span {
+    font-size: 1.4rem;
+  }
+  .news-category:last-child {
+    margin-right: 0;
+  }
+  .each-news-category {
+    width: 40%;
+    margin-right: 4%;
+  }
+  .news-title {
+    width: 90%;
+    padding-left: 0;
+    line-height: 1.4;
+  }
+  .news-arrow {
+    width: 2%;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%) translateX(-50%);
+    -webkit-transform: translateY(-50%) translateX(-50%);
+  }
+}
+
+/*-------------------------------------------
+    お知らせ 各ページ
+-------------------------------------------*/
+
+div.section-container div.each-news-top {
+  margin-top: 100px;
+}
+.each-news-sub-title {
+  display: flex;
+  font-size: 1.5rem;
+  align-items: center;
+  margin-bottom: 20px;
+}
+div.content-box-title h1.each-news-title p {
+  text-align: left;
+  font-size: 3rem;
+  margin-bottom: 40px;
+}
+.each-news-text {
+  margin-bottom: 90px;
+  overflow-wrap: break-word;
+}
+.each-news-text ul, .each-news-text table {
+  font-size: 1.5rem;
+}
+.content-box-title .each-news-text p {
+  text-align: left;
+  font-size: 1.5rem;
+  margin: 0;
+  line-height: 2;
+}
+.content-box-title .each-news-text p a {
+  text-decoration: underline;
+}
+a.news-form-back {
+  display: inline-block;
+  margin-bottom: 60px;
+}
+a.news-form-back:focus {
+  outline: 4px solid #FFE400;
+}
+div.news-form-back-button {
+  background-color: #000;
+  width: 250px;
+  display: block;
+  margin: 0 auto;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #FFF;
+  letter-spacing: 0.02em;
+  position: relative;
+  text-align: center;
+  transition: .3s all;
+  cursor: pointer;
+}
+div.news-form-back-button::before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 60px;
+  background: #1E1E1E;
+}
+div.news-form-back-button span {
+  background: url(https://d1q08lkutgkcx2.cloudfront.net/image/okawari-back-button-arrow.svg) no-repeat 25px center;
+  background-size: 8px;
+  display: block;
+  padding: 25px 0 25px 60px;
+  position: relative;
+  z-index: 10;
+  font-size: 1.5rem;
+  line-height: 2.0rem;
+}
+a.news-form-back .each-news-bottom {
+  margin-bottom: 0;
+}
+
+div.white-content-box-title-sub-dir {
+  font-size: 30px;
+}
+
+@media screen and (max-width: 767px) {
+  div.section-container div.each-news-top {
+    margin-top: 0px;
+  }
+  div.content-box-title h1.each-news-title p {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    line-height: 1.5em;
+  }
+  .each-news-text {
+    margin-bottom: 60px;
+  }
+  .each-news-text ul, .each-news-text table {
+    font-size: 1.4rem;
+  }
+  div.news-form-back-button span {
+    text-align: center;
+  }
+  div.content-box-title p.each-news-bottom {
+    margin-bottom: 0;
+  }
+  .each-news-sub-title {
+    font-size: 1.4rem;
+  }
+  .content-box-title .each-news-text p {
+    font-size: 1.4rem;
+    line-height: 1.7;
+  }
+  div.white-content-box-title-sub-dir {
+    font-size: 25px;
+  }
+}
+
+/* ページネーション start */
+.pagenation_block {
+  margin: 95px auto 60px;
+}
+nav.pagination-container {
+  width: max-content;
+  margin: 0 auto 85px;
+}
+nav.pagination-container ul {
+  border: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  transition: 0.3s;
+  border-radius: 0px;
+  overflow: hidden;
+  list-style:none
+}
+nav.pagination-container .pagination li {
+  margin: 0;
+  cursor: pointer;
+  border: 3px solid #F3F3F3;
+}
+nav.pagination-container ul li a {
+  display: block;
+  border-radius: 0;
+  padding: 15px 18px 13px;
+  background: #D9D9D9;
+  line-height: 1;
+  color: #000;
+  pointer-events: none;
+  text-align: center;
+}
+nav.pagination-container ul li a:focus {
+  outline: none;
+}
+nav.pagination-container ul li:has(a:focus) {
+  border: 3px solid #ffeb00;
+}
+nav.pagination-container li.first {
+  border-radius: 5px 0 0 5px;
+}
+nav.pagination-container li.last {
+  border-radius: 0 5px 5px 0;
+}
+nav.pagination-container li.page.navi-active a {
+  background: #000;
+  color: #FFEB00;
+}
+nav.pagination-container li.last a {
+  border-right: none;
+}
+#news-contents-detail table {
+  width: 80%;
+  border-collapse: collapse;
+}
+#news-contents-detail table th {
+  font-size: 1.5rem;
+  line-height: 1.3;
+  text-align: center;
+  white-space: nowrap;
+  background-color: #fff;
+  border: 1px solid #aaa;
+  border-bottom: 4px double #aaa;
+  padding: 10px 2px;
+}
+#news-contents-detail table td {
+  font-size: 1.5rem;
+  line-height: 1.3;
+  text-align: center;
+  background-color: #fff;
+  border: 1px solid #aaa;
+  padding: 10px 2px;
+}
+#news-contents-detail .red {
+  color: #f00;
+}
+#news-contents-detail .bg-red {
+  background-color: #eed1d1;
+}
+#news-contents-detail table.calendar td {
+  padding: 6px 2px;
+}
+@media screen and (max-width: 767px) {
+  .pagenation_block {
+    margin: 30px auto;
+  }
+  nav.pagination-container {
+    width: max-content;
+    margin: 0 auto 65px;
+  }
+  nav.pagination-container ul li a {
+    padding: 13px 12px 13px;
+  }
+  #news-contents-detail table {
+    width: 100%;
+  }
+}
+/* ページネーション end */

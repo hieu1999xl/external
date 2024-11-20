@@ -1,0 +1,49 @@
+@charset "utf-8";
+
+.headline {
+  position: relative;
+  min-width: 1500px;
+  background: #000;
+  color: #ffffff;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.headline > span.title {
+  height: 18px;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1;
+  vertical-align: middle;
+}
+
+.headline > span.logout {
+  font-size: 12px;
+  float: right;
+  padding: 3px 0px;
+}
+
+.headline > span.logout > a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.headline > span.logout > a:link {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.headline > span.logout > a:visited {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.headline > span.logout > a:hover {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.headline > span.logout > a:active {
+  color: #ffffff;
+  text-decoration: none;
+}

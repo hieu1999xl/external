@@ -1,0 +1,2883 @@
+/*********************/
+/*mypage-overseas*/
+/*********************/
+/* ************** */
+/* Short Rental */
+/* ************** */
+
+input[type="number"]::-webkit-outer-spin-button, 
+input[type="number"]::-webkit-inner-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+} 
+
+input[type="number"] { 
+  -moz-appearance:textfield; 
+} 
+
+/* カレンダー start */
+.form-control {
+  display: block;
+  height: calc(1.5em + .75rem + 2px);
+  padding: .375rem .75rem .375rem 1.5rem;
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #505050 ;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #505050 ;
+  border-radius: 11px;
+  transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+  width: 175px;
+  font-family: "Montserrat", "Noto Sans JP", sans-serif;
+  display: flex;
+  align-items: center;
+}
+
+.form-control-country {
+  font-family: "Montserrat", "Noto Sans JP", sans-serif;
+}
+
+select.form-control-country:focus {
+  outline: 1px solid #fff;
+}
+
+@media (prefers-reduced-motion:reduce) {
+  .form-control {
+    transition: none
+  }
+}
+
+.form-control::-ms-expand {
+  background-color: transparent;
+  border: 0
+}
+
+.form-control:-moz-focusring {
+  color: transparent;
+  text-shadow: 0 0 0 #495057
+}
+
+.form-control:focus {
+  color: #495057;
+  background-color: #fff;
+  border-color: #FFEB00;
+  outline: 0;
+  box-shadow: 0 0 0 .2rem rgba(0, 123, 255, .25)
+}
+
+.form-control::-webkit-input-placeholder {
+  color: #6c757d;
+  opacity: 1
+}
+
+.form-control::-moz-placeholder {
+  color: #6c757d;
+  opacity: 1
+}
+
+.form-control:-ms-input-placeholder {
+  color: #6c757d;
+  opacity: 1
+}
+
+.form-control::-ms-input-placeholder {
+  color: #6c757d;
+  opacity: 1
+}
+
+.form-control::placeholder {
+  color: #6c757d;
+  opacity: 1
+}
+
+input[type=date].form-control, 
+input[type=datetime-local].form-control, 
+input[type=month].form-control, 
+input[type=time].form-control {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none
+}
+
+select.form-control:focus::-ms-value {
+  color: #495057;
+  background-color: #fff
+}
+
+select.form-control[multiple], 
+select.form-control[size] {
+  height: auto
+}
+
+textarea.form-control {
+  height: auto
+}
+
+.form-control.is-valid, 
+.was-validated .form-control:valid {
+  border-color: #28a745;
+  padding-right: calc(1.5em + .75rem);
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8' viewBox='0 0 8 8'%3e%3cpath fill='%2328a745' d='M2.3 6.73L.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z'/%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right calc(.375em + .1875rem) center;
+  background-size: calc(.75em + .375rem) calc(.75em + .375rem)
+}
+
+.form-control.is-valid:focus, 
+.was-validated .form-control:valid:focus {
+  border-color: #28a745;
+  box-shadow: 0 0 0 .2rem rgba(40, 167, 69, .25)
+}
+
+.was-validated textarea.form-control:valid, 
+textarea.form-control.is-valid {
+  padding-right: calc(1.5em + .75rem);
+  background-position: top calc(.375em + .1875rem) right calc(.375em + .1875rem)
+}
+
+.form-control.is-invalid, 
+.was-validated .form-control:invalid {
+  border-color: #dc3545;
+  padding-right: calc(1.5em + .75rem);
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='none' stroke='%23dc3545' viewBox='0 0 12 12'%3e%3ccircle cx='6' cy='6' r='4.5'/%3e%3cpath stroke-linejoin='round' d='M5.8 3.6h.4L6 6.5z'/%3e%3ccircle cx='6' cy='8.2' r='.6' fill='%23dc3545' stroke='none'/%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right calc(.375em + .1875rem) center;
+  background-size: calc(.75em + .375rem) calc(.75em + .375rem)
+}
+
+.form-control.is-invalid:focus, 
+.was-validated .form-control:invalid:focus {
+  border-color: #dc3545;
+  box-shadow: 0 0 0 .2rem rgba(220, 53, 69, .25)
+}
+
+.was-validated textarea.form-control:invalid, 
+textarea.form-control.is-invalid {
+  padding-right: calc(1.5em + .75rem);
+  background-position: top calc(.375em + .1875rem) right calc(.375em + .1875rem)
+}
+
+@media (min-width:576px) {
+  .form-inline .form-control {
+    display: inline-block;
+    width: auto;
+    vertical-align: middle
+  }
+  .form-inline .form-control-plaintext {
+    display: inline-block
+  }
+  .form-inline .custom-select,
+   .form-inline .input-group {
+    width: auto
+  }
+}
+
+.btn-toolbar .input-group {
+  width: auto
+}
+
+.input-group {
+  position: relative;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -ms-flex-align: stretch;
+  align-items: center;
+  width: 100%
+}
+
+.input-group>.custom-file,
+.input-group>.custom-select,
+.input-group>.form-control, 
+.input-group>.form-control-plaintext {
+  position: relative;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  width: 1%;
+  min-width: 0;
+  margin-bottom: 0
+}
+
+.input-group>.custom-file+.custom-file, 
+.input-group>.custom-file+.custom-select, 
+.input-group>.custom-file+.form-control, 
+.input-group>.custom-select+.custom-file, 
+.input-group>.custom-select+.custom-select, 
+.input-group>.custom-select+.form-control, 
+.input-group>.form-control+.custom-file, 
+.input-group>.form-control+.custom-select, 
+.input-group>.form-control+.form-control, 
+.input-group>.form-control-plaintext+.custom-file, 
+.input-group>.form-control-plaintext+.custom-select, 
+.input-group>.form-control-plaintext+.form-control {
+  margin-left: -1px
+}
+
+.input-group>.custom-file .custom-file-input:focus~.custom-file-label, 
+.input-group>.custom-select:focus, 
+.input-group>.form-control:focus {
+  z-index: 3
+}
+
+.input-group>.custom-file .custom-file-input:focus {
+  z-index: 4
+}
+
+.input-group>.custom-select:not(:last-child), 
+.input-group>.form-control:not(:last-child) {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0
+}
+
+.input-group>.custom-select:not(:first-child), 
+.input-group>.form-control:not(:first-child) {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0
+}
+
+.input-group>.custom-file {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center
+}
+
+.input-group>.custom-file:not(:last-child) .custom-file-label, 
+.input-group>.custom-file:not(:last-child) .custom-file-label::after {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0
+}
+
+.input-group>.custom-file:not(:first-child) .custom-file-label {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0
+}
+
+.input-group-append, 
+.input-group-prepend,
+.input-group-range {
+  display: -ms-flexbox;
+  display: flex
+}
+
+.input-group-append .btn, 
+.input-group-prepend .btn {
+  position: relative;
+  z-index: 2
+}
+
+.input-group-append .btn:focus, 
+.input-group-prepend .btn:focus {
+  z-index: 3
+}
+
+.input-group-append .btn+.btn, 
+.input-group-append .btn+.input-group-text, 
+.input-group-append .input-group-text+.btn, 
+.input-group-append .input-group-text+.input-group-text, 
+.input-group-prepend .btn+.btn, 
+.input-group-prepend .btn+.input-group-text, 
+.input-group-prepend .input-group-text+.btn, 
+.input-group-prepend .input-group-text+.input-group-text {
+  margin-left: -1px
+}
+
+.input-group-prepend {
+  margin-right: -1px
+}
+
+.input-group-append,
+.input-group-range {
+  margin-left: -1px
+}
+
+.input-group-text {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: .3rem .75rem;
+  margin-bottom: 0;
+  font-size: 1.3rem;
+  font-weight: 400;
+  line-height: 1;
+  text-align: center;
+  white-space: nowrap;
+  border-radius: .25rem;
+}
+
+.input-group-text input[type=checkbox], 
+.input-group-text input[type=radio] {
+  margin-top: 0
+}
+
+.input-group-lg>.custom-select, 
+.input-group-lg>.form-control:not(textarea) {
+  height: calc(1.5em + 1rem + 2px)
+}
+
+.input-group-lg>.custom-select, 
+.input-group-lg>.form-control, 
+.input-group-lg>.input-group-append>.btn, 
+.input-group-lg>.input-group-append>.input-group-text, 
+.input-group-lg>.input-group-prepend>.btn, 
+.input-group-lg>.input-group-prepend>.input-group-text {
+  padding: .5rem 1rem;
+  font-size: 1.25rem;
+  line-height: 1.5;
+  border-radius: .3rem
+}
+
+.input-group-sm>.custom-select, 
+.input-group-sm>.form-control:not(textarea) {
+  height: calc(1.5em + .5rem + 2px)
+}
+
+.input-group-sm>.custom-select, 
+.input-group-sm>.form-control, 
+.input-group-sm>.input-group-append>.btn, 
+.input-group-sm>.input-group-append>.input-group-text, 
+.input-group-sm>.input-group-prepend>.btn, 
+.input-group-sm>.input-group-prepend>.input-group-text {
+  padding: .25rem .5rem;
+  font-size: .875rem;
+  line-height: 1.5;
+  border-radius: .2rem
+}
+
+.input-group-lg>.custom-select, 
+.input-group-sm>.custom-select {
+  padding-right: 1.75rem
+}
+
+.input-group>.input-group-append:last-child>.btn:not(:last-child):not(.dropdown-toggle), 
+.input-group>.input-group-append:last-child>.input-group-text:not(:last-child), 
+.input-group>.input-group-append:not(:last-child)>.btn, 
+.input-group>.input-group-append:not(:last-child)>.input-group-text, 
+.input-group>.input-group-prepend>.btn, 
+.input-group>.input-group-prepend>.input-group-text {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0
+}
+
+.input-group>.input-group-append>.btn, 
+.input-group>.input-group-append>.input-group-text, 
+.input-group>.input-group-prepend:first-child>.btn:not(:first-child), 
+.input-group>.input-group-prepend:first-child>.input-group-text:not(:first-child), 
+.input-group>.input-group-prepend:not(:first-child)>.btn, 
+.input-group>.input-group-prepend:not(:first-child)>.input-group-text {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1000;
+  display: none;
+  float: left;
+  min-width: 10rem;
+  padding: .5rem 0;
+  margin: .125rem 0 0;
+  font-size: 1rem;
+  color: #212529;
+  text-align: left;
+  list-style: none;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid rgba(0, 0, 0, .15);
+  border-radius: .25rem
+}
+
+.datepicker-days th.dow:first-child, 
+.datepicker-days td:first-child{
+  color: #ff0000;
+}
+
+.datepicker-days th.dow:last-child, 
+.datepicker-days td:last-child{
+  color: #0000ff;
+}
+
+.datepicker-days thead{
+ border-bottom: 1px solid #cccccc;
+}
+
+.datepicker-days .holiday{
+  color: #ff0000;
+}
+
+.calendar-caution {
+  color: #ff003c;
+  font-weight: bold;
+  line-height: 1.4em;
+  font-size: 1.4rem;
+  margin-top: 20px;
+}
+
+.input-group-range-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+div#short_term_calendar {
+  width: 100%;
+}
+div#datepicker div.usage-start,
+div#datepicker div.usage-end {
+  margin-right: 20px;
+}
+div#datepicker > span,
+div.usage-days-select > span {
+  font-size: 2rem;
+  margin-right: 20px;
+  padding-top: 25px;
+}
+div.usage-days-select > span {
+  padding-top: 38px;
+}
+.input-daterange input:last-child {
+  text-align: left;
+  border-radius: 11px !important;
+  background: no-repeat 90% center/24px url(../img/calendar-icon.svg);
+  background-color: #FFFFFF;
+}
+.input-daterange input:last-child:hover,
+input#search_btn:hover {
+  cursor: pointer;
+}
+div.usage-period div.form-control {
+  padding-left: .75rem;
+  padding-left: 0.75rem;
+  border: none;
+  background: #ff003c;
+  width: 100px;
+  color: #fff;
+  font-weight: 900;
+  font-size: 2.5rem;
+  height: 32px;
+}
+div.usage-period div.form-control span {
+  font-size: 1.8rem;
+  margin: 3px 6px 0 1px;
+}
+div.usage-period div.form-control span:last-child {
+  margin-right: 0;
+}
+span.require_mark {
+  font-size: 1.3rem;
+  color: #fff;
+  background-color: #ff003c;
+  padding: .3rem .75rem;
+  line-height: 1;
+  border-radius: 10px;
+  width: 3rem;
+  text-align: center;
+}
+.input-group-text,
+span.require_mark {
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+div#datepicker div.usage-end span.input-group-text,
+div#datepicker div.usage-period span.input-group-text {
+  padding-left: 0;
+}
+div.usage-days-select {
+  display: flex;
+}
+#usage_period_block {
+  margin-top: 65px;
+}
+.input-group-range-text-hidden,
+.input-group-range-text-hidden-1,
+.input-group-range-text-hidden-2,
+.input-group-range-text-hidden-3 {
+  display: none;
+}
+#datepicker_end_1:disabled,
+#datepicker_end_2:disabled,
+#datepicker_end_3:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+@media screen and (max-width: 767px) {
+  .input-group {
+    display: block;
+  }
+  .input-group-range {
+    display: none;
+  }
+  .input-group-prepend {
+    display: block;
+  }
+  .input-group-text {
+    padding: 12px 0 8px 0;
+    margin: 0;
+    font-size: 1.6rem;
+  }
+  .input-daterange input:last-child {
+    width: 100%;
+  }
+  div#datepicker div.usage-end {
+    padding-top: 27px;
+  }
+  div.usage-days-select > span {
+    padding-top: 78px;
+    margin: 0 10px;
+  }
+  div.usage-days-select {
+    margin-top: 20px;
+  }
+  div.usage-period div.form-control {
+    width: 100%;
+    height: 42px;
+    font-size: 3.2rem;
+    margin: 20px auto 0;
+  }
+  div.usage-period div.form-control span {
+    margin: 9px 8px 0 3px;
+  }
+  .form-control {
+    box-sizing: border-box;
+    padding: 15px .75rem 15px 1.5rem;
+    height: 39px;
+    width: 100%;
+  }
+  .usage-end .input-group-text {
+    padding-top: 14px;
+  }
+  div#datepicker div.usage-start,
+  div#datepicker div.usage-end {
+    margin-right: 0;
+  }
+}
+/* カレンダー end */
+
+/* あなたのプランはこちら start */
+.entry-payment div.left-plan-column p {
+  padding: 1.1em 0;
+  text-align: center;
+}
+/* あなたのプランはこちら end */
+
+/* カウントダウン start */
+div#countdownArea {
+  max-width: 750px;
+  margin: 40px auto 0;
+  display: block;
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: bold;
+  padding: 15px 10px;
+  border: 4px solid #ff003c;
+  border-radius: 11px;
+  box-sizing: border-box;
+  line-height: 2.5rem;
+}
+span.time_disp {
+  font-size: 2.5rem;
+  color: #ff003c;
+}
+
+#countdownArea #countdown_day{
+  color: #ff003c;
+  padding: 0 0.1em 0 0.3em;
+}
+
+@media screen and (max-width: 767px) {
+  div#countdownArea{
+    max-width: 90%;
+  }
+}
+/* カウントダウン end */
+
+/* 発送エリアを選ぶ */
+div#zip_result,
+div#zip_result_repeat {
+  color: #ff0000;
+  font-size: 16px;
+  margin-top: 2rem;
+}
+input#zipcode_1.form-control,
+input#zipcode_2.form-control {
+  display: inline-block;
+  width: 180px;
+}
+input#zipcode_1 + input#search_btn,
+input#zipcode_2 + input#search_btn {
+  background-color: #00bfbf;
+  border: none;
+  border-radius: 11px;
+  color: #fff;
+  padding: 9px 15px;
+  margin-left: 0.6rem;
+  vertical-align: top;
+  font-family: 'Roboto', 'Noto Sans JP', "游ゴシック", "メイリオ", sans-serif;
+  box-shadow: 0 0 10px rgb(0 0 0 / 20%);
+  height: 41.5px;
+}
+input#zipcode_1.form-control {
+  width: 50px;
+}
+input#zipcode_1.form-control + span {
+  font-size: 1.5rem;
+  font-weight: 900;
+  margin: 0 0.5rem;
+}
+input#zipcode_2.form-control {
+  width: 70px;
+}
+.rental-zipcode {
+  visibility: hidden;
+  height: 0;
+  width: 0;
+}
+.loading-mark-area {
+  width: 257px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 104px;
+  margin-top: 2rem;
+}
+.loading-mark {
+  width: 50px;
+}
+
+@media screen and (max-width: 767px){
+  input#zipcode_1.form-control,
+  input#zipcode_2.form-control {
+    width: 140px;
+  }
+
+  input#zipcode_1 + input#search_btn,
+  input#zipcode_2 + input#search_btn {
+    height: 39px;
+  }
+  .loading-mark-area {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 104px;
+    margin-top: 2rem;
+  }
+  .loading-mark {
+    width: 16%;
+  }
+}
+/* 発送エリアを選ぶ end */
+
+div.entry-form-title h1,
+div.form-step-title p.first-title {
+  color: #000000;
+  -webkit-text-stroke: unset;
+  font-size: 3.2rem;
+  letter-spacing: 2px;
+}
+.entry-complete div.form-step-title p.first-title {
+  font-size: 4rem;
+}
+div.form-step-title p {
+  padding: 1rem 0;
+  width: 130px;
+  border-radius: 7px;
+}
+div.form-step-image-area {
+  background-color: #ebebeb;
+}
+div.left-plan-column p,
+.entry-payment div.left-plan-column p {
+  padding-left: 1.1em;
+  text-align: left;
+}
+div.form-next-button,
+div.form-next-stop-button {
+  border-radius: 12px;
+  box-shadow: none;
+  background-color: #00bfbf;
+  overflow: hidden;
+}
+div.form-next-stop-button {
+  width: 300px;
+  height: 60px;
+}
+div.form-next-button::before,
+div.form-next-stop-button::before {
+  background-color: #ff003c;
+  border-radius: 12px;
+}
+div.form-next-stop-button::after {
+  background-color: #00bfbf;
+}
+div.form-back-button {
+  box-shadow: none;
+  border-radius: 12px;
+}
+div.form-next-button::after {
+  right: 42px;
+}
+div.form-next-stop-button span {
+  padding: 20px 30px 20px 0;
+}
+div.form-next-stop-button span {
+  background-position-x: 250px;
+}
+table.form-confirm-info-table,
+table.form-confirm-info-table td,
+div.white-content-box-form,
+div.not-inputted-items,
+div.complete-description {
+  background-color: #f2f2f2;
+}
+div.entry-user-link {
+  height: auto;
+}
+div#postage_row .summary-table-row.plan-info {
+  text-align: right;
+  width: auto;
+}
+div.summary-table-row.date-disp {
+  height: 47px;
+  width: 100%;
+  justify-content: flex-end;
+}
+div.your-plan.scheduled.date div.plan-summary-table-row {
+  border-bottom: none;
+}
+.flex-box-select.your-plan.scheduled.date {
+  align-items: center;
+}
+div.your-plan.scheduled.period div.left-plan-column {
+  border-top: 1px solid #fff;
+}
+div.left-plan-column p {
+  background-color: #00bfbf;
+  color: #FFFFFF;
+  padding: 1.1em 0;
+  text-align: center;
+}
+span.summary-text-delivery-date,
+span.summary-text-usage-period {
+  font-weight: bold;
+  font-size: 1.4rem;
+}
+.error-message {
+  margin: 0;
+  bottom: 10px;
+}
+.Prepaid-error-end .error-message {
+  bottom: -20px;
+}
+.error-message-value{
+  margin-top: 2em;
+}
+.overseas-select-inner-box .input-group-contents #zipcode-id-error-message {
+  margin: 0 5px 0;
+}
+.overseas-select-inner-box div#zipcode-id-error-message .validator-error-span {
+  margin-top: 0;
+}
+div#zipcode-id-error-message label,
+div#rental-date-id-error-message label {
+  font-size: 1.6rem;
+}
+.datepicker .datepicker-days td,
+.datepicker .datepicker-days th {
+  width: 26px !important;
+  vertical-align: inherit;
+}
+.datepicker .datepicker-months table tr td span {
+  height: 42px !important;
+  line-height: 42px !important;
+}
+.datepicker table tr td.disabled.day,
+.datepicker table tr td.disabled.day:hover {
+  background-color: #cccccc;
+}
+td.flex-user-area {
+  height: auto;
+}
+table.form-table th.two-select {
+  padding-bottom: 0;
+}
+#entry-payment-form table.form-table tr {
+  height: 4rem;
+}
+.validator-error-span {
+  display: block;
+  margin-top: 3px;
+}
+label.area-ok {
+  color: #000;
+}
+.datepicker-days td:not(.disabled) {
+  border: 1px solid #00bfbf !important;
+}
+span.time_disp span {
+  display: inline-block;
+  width: 30px;
+  text-align: right;
+  margin-right: 2px;
+}
+.area-mark-box {
+  display: flex;
+  color: #000;
+}
+.result-mark {
+  display: block;
+  color: #fff;
+  font-size: 5rem;
+  font-weight: 900;
+  line-height: 6rem;
+}
+.area-mark {
+  width: 100px;
+  text-align: center;
+  padding: 10px;
+}
+.out .area-mark {
+  background-color: #b3b3b3;
+}
+.in .area-mark {
+  background-color: #00bfbf;
+}
+span.selected-prefecture {
+  width: 100%;
+  display: inline-block;
+  padding: 4px 0;
+  background-color: #fff;
+  height: 16px;
+}
+.area-mark-text span {
+  line-height: 2rem;
+}
+.area-mark-text {
+  background-color: #f2f2f2;
+  padding: 15px;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+}
+.in .area-mark .result-mark {
+  width: 50px;
+  height: 50px;
+  border: 8px solid;
+  border-radius: 25px;
+  box-sizing: border-box;
+  margin: 0 auto 10px;
+}
+.area-mark-box.out {
+  margin-bottom: 5rem;
+}
+#anshin_option {
+  margin-top: 70px;
+}
+.input-group + p {
+  margin-top: 10px;
+}
+.white-content-box-form div.plan-summary-table-row-wide {
+  margin: 0 0 0 auto;
+  padding-right: 2%;
+}
+div.plan-summary-area-title {
+  z-index: 0;
+  filter: drop-shadow(0px 0px 5px #B3B3B3);
+  transform: translateZ(0);
+}
+.hidden {
+  display: none;
+}
+.summary-table-row.pay-summary .summary-table-column.summary-table-column-right.adjust {
+  border: 3px solid #00bfbf;
+  padding: 3%;
+  width: 94%;
+  justify-content: flex-end;
+  box-sizing: border-box;
+}
+div.summary-table-row.pay-summary {
+  margin-right: 0;
+}
+span.summary-text-monthly-tax-total {
+  font-size: 1.5em;
+  vertical-align: -5px;
+}
+#form-edit-overseas-add {
+  color: #FFFFFF;
+}
+.overseas-day,
+.overseas-country {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+.overseas-title {
+  width: 250px;
+}
+.overseas-start,
+.overseas-end {
+  width: 200px;
+}
+.overseas-to {
+  width: 35px;
+  text-align: center;
+}
+.overseas-term {
+  margin-left: 35px;
+}
+.overseas-term .form-control {
+  background: #FFEB00;
+  justify-content: center;
+}
+.overseas-area-title {
+  border-bottom: 1px solid #FFFFFF;
+  padding-bottom: 5px;
+  font-size: 1.8rem;
+}
+#overseas-total,
+#overseas-current,
+#overseas-current-1,
+#overseas-current-2 {
+  margin-bottom: 50px;
+}
+#overseas-current-3 {
+  margin-bottom: 35px;
+}
+div.overseas-change-area #overseas-current-1 {
+  margin-top: 20px;
+}
+.overseas-area-add,
+.overseas-country-add,
+.overseas-plan-add {
+  width: 200px;
+}
+.overseas-country-add,
+.overseas-plan-add {
+  margin-left: 35px;
+}
+.overseas-day, 
+.overseas-country {
+  margin-top: 20px;
+}
+main.mypage-contents select.form-control-country {
+  display: block;
+  height: calc(1.5em + 0.75rem + 2px);
+  padding: 0.375rem 0.75rem 0.375rem 1.5rem;
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #505050;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #505050;
+  border-radius: 11px;
+  transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+  width: 175px;
+  box-sizing: content-box;
+}
+#overseas-total .overseas-all-terms,
+.overseas-current-terms {
+  font-size: 2.3rem;
+  font-weight: bold;
+  margin: 0 5px 2px;
+}
+.form-control-disabled {
+  opacity: 0.6;
+}
+.add-name {
+  margin: 0 0 5px 5px;
+  display: block;
+}
+main.mypage-rental-add .form-user-background {
+  overflow: hidden;
+  margin-top: 85px;
+}
+main.mypage-rental-add div.plan-summary-area-title {
+  width: 100%;
+  height: 50px;
+  background-color: #000000;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.0rem;
+  font-weight: bold;
+  padding: 5px 0;
+  position: relative;
+  z-index: 2;
+  filter: none;
+  letter-spacing: 3px;
+}
+main.mypage-rental-add div.plan-summary-area-table {
+  padding: 0 20px;
+  background-color: #FFFFFF;
+}
+table.table-overseas-add, 
+table.table-overseas-add td {
+	border: 1px solid #595959;
+  border-width: 1px 0;
+	border-collapse: collapse;
+  text-align: center;
+  line-height: 1.3;
+}
+table.table-overseas-add td {
+	padding: 15px;
+  vertical-align: middle;
+  border-bottom: none;
+}
+tr.table-overseas-add-top {
+  font-weight: bold;
+}
+table.table-overseas-add {
+  width: 100%;
+  border-top: none;
+  border-bottom: none;
+}
+tr.table-overseas-add-top td {
+  border-top: none;
+  border-bottom: 1px solid #595959;
+}
+tr.table-overseas-add-bottom td {
+  border-bottom: none;
+}
+.plan-summary-area-bottom {
+  display: flex;
+  width: 100%;
+  border-top: 5px solid #282828;
+  justify-content: flex-end;
+}
+.overseas-calc-all-title {
+  width: 145px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #000000;
+  color: #FFEB00;
+  font-size: 1.5rem;
+}
+.overseas-calc-all {
+  width: 220px;
+  box-sizing: border-box;
+  text-align: right;
+  background-color: #FFEB00;
+}
+.overseas-calc-all-title {
+  padding: 15px 20px;
+}
+.overseas-calc-all {
+  padding: 15px 87px 15px 20px;
+}
+.overseas-calc-all-title {
+  font-weight: bold;
+}
+.overseas-calc-all .bold,
+table.table-overseas-add td:last-child .bold {
+  font-weight: bold;
+  font-size: 2rem;
+}
+table.table-overseas-add tr td:nth-child(1) {
+	width: 170px;
+  font-weight: bold;
+	text-align: left;
+}
+table.table-overseas-add tr td:nth-child(2) {
+	text-align: left;
+}
+table.table-overseas-add tr td:nth-child(3) {
+	background-color: #dcdcdc;
+  width: 115px;
+}
+table.table-overseas-add tr.table-overseas-add-bottom td:nth-child(3) {
+  background-color: #fff;
+}
+table.table-overseas-add tr.table-overseas-tax-price td:nth-child(3) {
+  background-color: #fff;
+}
+table.table-overseas-add tr:nth-of-type(10) td:nth-child(3) {
+  /*background-color: #fff;*/
+}
+table.table-overseas-add td:last-child {
+  width: 170px;
+}
+table.table-overseas-add tr:not(:first-of-type) td:last-child{
+  text-align: right;
+}
+table.table-overseas-add tr td.price-about:last-child{
+  text-align: center;
+}
+table.table-overseas-add tr.table-overseas-add-bottom td:last-child {
+  padding-right: 67px;
+  box-sizing: border-box;
+}
+table.table-overseas-add tr.overseas-overdue-detail td:last-child {
+  padding-right: 2px;
+  box-sizing: border-box;
+}
+table.table-overseas-add.change tr.table-overseas-add-bottom td:last-child {
+  padding-right: 15px;
+}
+.overseas-calc-all-area {
+  margin: 0 0 0 auto;
+}
+.overseas-calc-all-title-area p,
+.overseas-calc-all-area p {
+  text-align: center;
+}
+.overseas-calc-all-area p {
+  text-align: right;
+}
+.overseas-calc-all-title-area {
+  width: 200px;
+}
+select._dataplans:disabled {
+  opacity: 0.6;
+}
+div.mypage-nav a.overseas-edit-popup {
+  cursor: pointer;
+}
+div.mypage-nav a.overseas-edit-popup::after {
+  background: #FFFFFF;
+}
+#popup-overseas-edit section {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 35px;
+}
+#popup-overseas-edit section a {
+  margin: 0 25px 0 0;
+}
+#popup-overseas-edit .button-body {
+  background-color: #BAC4C4;
+}
+.overseas-reentry .button-body,
+.overseas-edit-popup .button-body{
+  background-color: #666666;
+  border: 2px solid #666666;
+}
+#popup-overseas-edit .entry-option-popup .popup-contents {
+  max-width: 1000px;
+  padding: 45px 75px;
+}
+#popup-overseas-edit .button-body p {
+  color: #3C3C3C;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+#popup-overseas-edit span.button-triangle {
+  color: #3C3C3C;
+}
+#popup-overseas-edit .button-next-adjust img {
+  height: 45px;
+}
+#popup-overseas-edit .entry-option-popup .popup-header .title {
+  font-size: 2.5rem;
+}
+#popup-overseas-edit .entry-option-popup .popup-header .group .text {
+  font-size: 1.8rem;
+  line-height: 1.5;
+  font-weight: normal;
+}
+main.mypage-rental-add table.table-base.plan-table-base th,
+main.mypage-rental-add table.table-base.plan-table-base td {
+  line-height: 1.8;
+}
+table.table-mini.overseas-table {
+  width: 100%;
+}
+main.mypage-rental-add div.overseas-flex {
+  display: flex;
+  align-items: center;
+}
+div.leave-checkbox-box {
+  background-color: #3C3C3C;
+  color: #FFFFFF;
+}
+.overseas-country-flex {
+  display: flex;
+  align-items: center;
+}
+.overseas-term-disabled {
+  opacity: 0.6;
+}
+.add-price-show.add-hide {
+  visibility:hidden;
+}
+a:has(.decoration-button-area-disabled){
+  pointer-events: none;
+}
+.button-has{
+  margin-left: 385px;
+}
+table.table-overseas-add td.boder-top-none {
+  border-top: none;
+}
+table.table-overseas-add td.boder-bottom-none {
+  border-bottom: none;
+}
+.red-text {
+  color: red;
+}
+.payment-history-printing-button-padding.contract {
+  padding-right: 90px;
+}
+.overseas-add-area p.annotation {
+  width: fit-content;
+  text-align: left;
+  margin: 0 0 0 auto;
+  color: #a6a6a6;
+}
+@media screen and (min-width: 768px) {
+  .flex-box-select.monthly-pay div.left-plan-column p {
+    padding: 1.3em 0;
+  }
+  main.mypage-rental-add table.table-base th {
+    width: 27%;
+  }
+  main.mypage-rental-add table.table-base.plan-table-base th,
+  main.mypage-rental-add table.table-base.plan-table-base td {
+    line-height: 2.5rem;
+  }
+  .overseas-day, 
+  .overseas-country {
+    margin-top: 20px;
+    height: 41.5px;
+  }
+  .overseas-change-content .overseas-country {
+    margin-top: 15px;
+  }
+  .overseas-change-content .overseas-change-top {
+    margin-top: 20px;
+  }
+  #overseas-add .overseas-country {
+    height: 59.5px;
+    margin-bottom: 35px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .overseas-add-area p.annotation {
+    margin-top: 15px;
+  }
+  .payment-history-printing-button-padding.contract {
+    padding-right: 0;
+  }
+  header.mypage-header p.current-tab-name{
+    margin-left: 5px;
+    line-height: 1.3;
+  }
+  div.entry-form-title h1,
+  div.form-step-title p.first-title {
+    font-size: 2.7rem;
+    padding-bottom: 5px;
+  }
+  div.form-step-title p.first-title {
+    margin-bottom: 20px;
+  }
+  div.form-step-title p {
+    padding: 0.5rem 0;
+    width: 90px;
+    border-radius: 7px;
+    font-size: 1.8rem;
+  }
+  div.form-step-title-wrapper {
+    padding-bottom: 40px;
+  }
+  div.usage-period {
+    margin-bottom: 40px;
+  }
+  div.entry-option-description {
+    margin: 0;
+  }
+  div.flex-entry-option {
+    margin-top: 0;
+    margin-bottom: -35px;
+    gap: 15px;
+    align-items: center;
+    height: auto;
+  }
+  div.your-plan.scheduled div.plan-summary-area-table.contract {
+    margin-top: 0;
+  }
+  div.your-plan.scheduled div.plan-summary-area-table.contract div.summary-table-row {
+    margin: 0;
+  }
+  div.your-plan.scheduled div.summary-table-column-right {
+    text-align: left;
+  }
+  div.summary-table-row.date-disp {
+    justify-content: flex-start;
+    padding-left: 1rem;
+  }
+  a.button-has{
+    margin-left: 0;
+  }
+  input#zipcode_1.form-control,
+  input#zipcode_2.form-control {
+    width: 35%;
+  }
+  input#zipcode_1.form-control + span {
+    font-size: 1.5rem;
+    font-weight: 900;
+    margin: 0 0.5rem;
+  }
+  label.validator-error:last-of-type {
+    margin-bottom: 3rem;
+  }
+  div#zipcode-id-error-message label,
+  div#rental-date-id-error-message label {
+    font-size: 1.4rem;
+  }
+  div.summary-table-row.date-disp {
+    height: 15px;
+    padding: 3%;
+  }
+  div#postage_row .summary-table-row.plan-info {
+    justify-content: flex-end;
+  }
+  table.form-confirm-info-table th {
+    background-color: #f2f2f2;
+  }
+  div.mypage-section-container > div.mypage-section-container {
+    max-width: 100%;
+  }
+  div.decoration-button-area-form-v2.m-adjust {
+    margin: 0;
+  }
+  .area-mark-box {
+    justify-content: center;
+  }
+  header.mypage-header p.header-logo a img {
+    padding: 0 5px 0 0;
+    height: 33px;
+  }
+  span.require_mark {
+    margin: 10px 0 0 0;
+    display: inline-block;
+  }
+  div.plan-summary-table-row-wide {
+    margin: 0 auto 0 0;
+    padding-right: 0;
+  }
+  div.your-plan.scheduled div.left-plan-column p{
+    border: none;
+    margin-top: 0;
+    padding: 0.5em;
+    font-size: 1.3rem;
+    position: relative;
+  }
+  div.your-plan.scheduled div.plan-summary-area-table.contract div.summary-table-row {
+    margin: 0;
+    width: 96%;
+    justify-content: flex-end;
+  }
+  .flex-box-select.your-plan.scheduled.date{
+    width: 100%;
+    margin: 0 auto 30px 0;
+    align-items: center;
+  }
+  .white-content-box-form .flex-box-select.your-plan.scheduled.date {
+    margin-bottom: 0;
+  }
+  .flex-box-select.your-plan.scheduled .left-plan-column {
+    min-width: 92px;
+    margin: 0;
+  }
+  .flex-box-select.your-plan.scheduled.date .plan-summary-area-table.contract {
+    margin: 0;
+  }
+  div.your-plan.scheduled.date div.plan-summary-table-row {
+    border: none;
+    width: 100%;
+  }
+  .white-content-box-form div.your-plan.scheduled div.summary-table-column-right {
+    text-align: right;
+  }
+  .flex-box-select.your-plan.scheduled.period .left-plan-column {
+    min-width: 92px;
+  }
+  div.plan-summary-table-row-wide div.summary-table-column-left {
+    width: 60%;
+    position: relative;
+  }
+  .flex-box-select.monthly-pay {
+    display: flex;
+  }
+  .flex-box-select.monthly-pay .left-plan-column {
+    width: 60%;
+  }
+  .monthly-pay div.summary-table-column-left.sp-line {
+    display: none;
+  }
+  .monthly-pay div.plan-summary-table-row.back-white {
+    justify-content: flex-end;
+    height: 43px;
+  }
+  .monthly-pay div.plan-summary-area-table.contract {
+    margin-bottom: 30px;
+  }
+  .plan-summary-table-row.plan-summary-table-row-wide.postage,
+  .plan-table div.plan-summary-table-row.postage {
+    position: relative;
+  }
+  .plan-summary-table-row.plan-summary-table-row-wide.postage .summary-table-row {
+    margin: 0px;
+  }
+  .plan-summary-table-row.plan-summary-table-row-wide.postage .summary-table-column-left {
+    width: 150%;
+  }
+  div.plan-summary-area-table.contract {
+    margin-bottom: 50px;
+  }
+  .flex-box-select.your-plan.scheduled.period {
+    margin: 0 auto 0 0;
+  }
+  .white-content-box-form .flex-box-select.your-plan.scheduled {
+    width: 100%;
+  }
+  .white-content-box-form div.plan-summary-table-row-wide {
+    padding: 0;
+  }
+  .white-content-box-form div.your-plan.scheduled div.plan-summary-area-table.contract {
+    margin: 0;
+  }
+  .plan-table div.summary-table-column-left {
+    width: 60%;
+    position: relative;
+    border: none;
+  }
+  div#postage_row .summary-table-row.plan-info {
+    justify-content: flex-end;
+    margin: 0px;
+    padding-top: 10px;
+    align-items: flex-end;
+  }
+  .monthly-pay .left-plan-column p {
+    height: 30px;
+    line-height: 3rem;
+  }
+  div.summary-table-column p::after,
+  div.your-plan.scheduled div.left-plan-column p::after,
+  .summary-table-column-left.adjust.sp-line p::after,
+  .plan-summary-table-row.plan-summary-table-row-wide.postage .summary-table-column-left p::after {
+    content: "";
+    display: block;
+    height: 1px;
+    width: 167%;
+    position: absolute;
+    background-color: #00bfbf;
+    left: 0;
+    bottom: 4px;
+  }
+  div.summary-table-column p::after,
+  div.your-plan.scheduled div.left-plan-column p::after {
+    width: 100%;
+  }
+  .plan-summary-table-row.plan-summary-table-row-wide.postage .summary-table-column-left p::after {
+    width: 80%;
+  }
+  .your-plan .plan-summary-table-row.plan-summary-table-row-wide.postage .summary-table-column-left p::after {
+    width: 167%;
+    bottom: -2px;
+  }
+  div.summary-table-column-left.sp-line {
+    border: none;
+  }
+  div.summary-table-column p::after {
+    display: none;
+  }
+  .summary-table-column-left.adjust.sp-line p::after {
+    bottom: -2px;
+  }
+  .summary-table-row.pay-summary .summary-table-column.summary-table-column-right.adjust {
+    width: 100%;
+  }
+  div.flex-box-select.total-price {
+    margin: 2em 0;
+    width: 100%;
+    align-items: center;
+  }
+  div.left-plan-column p {
+    padding: .5em;
+  }
+  div.total-price div.summary-table-row.pay-summary{
+    width: 65%;
+    margin: 0;
+  }
+  div.plan-summary-area-table.contract {
+    margin-bottom: 40px;
+  }
+  .period div.plan-summary-area-table.contract {
+    margin-bottom: 10px;
+  }
+  .monthly-pay div.plan-summary-area-table.contract {
+    margin-bottom: 25px;
+  }
+  div.topping-2-select-checkbox-area {
+    bottom: calc(85px + -7vw);
+    left: 13px;
+  }
+  p.custom-check-box-v2-select-text.option {
+    top: -60px;
+    right: auto;
+    bottom: auto;
+    left: calc(1.5vw - 9px);
+  }
+  div.topping-2-select-checkbox-area {
+    bottom: calc(90px + 3vw);
+    left: 13px;
+  }
+  label.custom-check-box-v2.option input[type="checkbox"] + span::after, label.custom-check-box-v2.option input[type="radio"] + span::after {
+    top: 24px;
+    left: 10px;
+  }
+  .entry-complete div.form-step-title p.first-title {
+    font-size: 2.7rem;
+  }
+  #popup-overseas-edit .entry-option-popup .popup-contents {
+    max-height: 85vh;
+    max-width: 90vw;
+    padding: 30px 15px;
+  }
+  #popup-overseas-edit .entry-option-popup .popup-header .title {
+    font-size: 2rem;
+  }
+  #popup-overseas-edit .entry-option-popup .popup-header .group .text {
+    font-size: 1.4rem;
+  }
+  #popup-overseas-edit section {
+    display: block;
+  }
+  #popup-overseas-edit section > p {
+    margin-top: 10px;
+  }
+  .overseas-day, .overseas-country {
+    display: block;
+  }
+  .overseas-start, .overseas-end {
+    width: 46%;
+  }
+  main.mypage-rental-add div.overseas-flex {
+    margin-bottom: 15px;
+  }
+  .overseas-term {
+    margin-left: 0;
+  }
+  .overseas-title {
+    margin-bottom: 15px;
+  }
+  main.mypage-rental-add div.mypage-content-box-title p {
+    font-size: 2rem;
+  }
+  .overseas-day-top {
+    margin-top: 30px;
+  }
+  .overseas-area-add, 
+  .overseas-country-add {
+    width: 46%;
+  }
+  .overseas-plan-add {
+    width: 100%;
+    margin-top: 15px;
+  }
+  main.mypage-contents select.form-control-country {
+    height: 39px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  .overseas-country-add, 
+  .overseas-plan-add {
+    margin-left: 0;
+  }
+  .overseas-country-flex {
+    justify-content: space-between;
+  }
+  main.mypage-rental-add .form-user-background {
+    margin-top: 30px;
+  }
+  main.mypage-rental-add div.plan-summary-area-title {
+    font-size: 1.8rem;
+  }
+  table.table-overseas-add, 
+  table.table-overseas-add td {
+    border: none;
+  }
+  .table-overseas-separate {
+    border-top: 1px solid #000000;
+  }
+  table.table-overseas-add th {
+    font-weight: normal;
+    text-align: left;
+    padding-right: 5%;
+  }
+  table.table-overseas-add tr.table-overseas-title th {
+    font-weight: bold;
+    font-size: 1.6rem;
+  }
+  .gray-background {
+    background-color: #dcdcdc;
+  }
+  table.table-overseas-add tr td:nth-child(2) {
+    text-align: center;
+  }
+  table.table-overseas-add td:last-child {
+    width: 40%;
+  }
+  table.table-overseas-add td {
+    padding: 16px 5px;
+  }
+  table.table-overseas-add tr td:nth-child(1) {
+    font-weight: normal;
+  }
+  table.table-overseas-add.mypage-prepaid.sp tbody {
+    display: table;
+    width: 100%;
+  }
+  main.mypage-rental-add div.plan-summary-area-table {
+    padding: 16px;
+  }
+  .overseas-calc-all-title {
+    width: 30%;
+  }
+  .overseas-calc-all-title {
+    padding: 16px;
+  }
+  .overseas-calc-all {
+    width: 70%;
+  }
+  .overseas-calc-all {
+    padding: 16px 21px;
+  }
+  .overseas-calc-all-title-area {
+    width: 100%;
+  }
+  .overseas-calc-all-area {
+    width: 100%;
+    margin: 0 auto;
+  }
+  .overseas-calc-all-area p {
+    text-align: right;
+  }
+  .overseas-change-content .overseas-country {
+    margin-top: 35px;
+  }
+  .overseas-change-content .overseas-change-top {
+    margin-top: 20px;
+  }
+  table.table-overseas-add tr:last-of-type td:last-child {
+    padding: 16px 5px;
+  }
+}
+/* 会員情報ページ */
+div.mypage-content-box.mypage-global-content-box {
+  padding-bottom: 20px;
+}
+.mypage-global-content-box .button {
+  justify-content: flex-end;
+}
+.mypage-global-content-box .button .button-body {
+  background-color: #282828;
+}
+.mypage-global-content-box div.js-dropdown-btn {
+  position: relative;
+}
+.mypage-global-content-box div.js-dropdown-btn::before {
+  content: "";
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  border-top: 16px solid #fff;
+  border-left: 16px solid transparent;
+  border-right: 16px solid transparent;
+  transition: .2s;
+}
+.mypage-global-content-box div.js-dropdown-btn.open::before {
+  border-top: none;
+  border-bottom: 18px solid #fff;
+}
+.mypage-global-content-box .js-dropdown-content {
+  padding-bottom: 20px;
+}
+@media screen and (min-width: 1281px) {
+  .mypage-global-content-box div.js-dropdown-btn::before {
+    right: 90px;
+  }
+}
+@media screen and (max-width: 767px) {
+  div.mypage-content-box.mypage-global-content-box {
+    padding-bottom: 0px;
+  }
+  .mypage-global-content-box div.js-dropdown-btn::before {
+    border-top: 12px solid #fff;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+  }
+  .mypage-global-content-box div.js-dropdown-btn.open::before {
+    border-bottom: 12px solid #fff;
+  }
+  .overseas-reentry div.mypage-top-element,
+  .overseas-edit-popup div.mypage-top-element{
+    background-color: #666666;
+  }
+
+}
+/* ご利用明細ページ */
+table.table-payment.table-overseas-add{
+  background-color: #FFFFFF;
+  padding: 0 20px;
+}
+table.table-payment.table-overseas-add tr th,
+table.table-payment.table-overseas-add tr td{
+  box-sizing: border-box;
+}
+table.table-payment.table-overseas-add tr td:nth-child(1){
+  width: 130px;
+}
+
+table.table-payment.table-overseas-add td:last-child{
+  width: 150px;
+}
+
+table.table-payment.table-overseas-add td.price-about,
+table.table-payment.table-overseas-add td.price-about.color-red{
+  text-align: center;
+  background-color: #dcdcdc;
+}
+table.table-payment.table-overseas-add td.price-about.color-red{
+  color: red;
+}
+table.table-payment.table-overseas-add td.plan-ttl{
+  font-weight: normal;
+}
+table.table-payment.table-overseas-add td.plan-s-total span:nth-of-type(2){
+  width: 80px;
+  display: inline-block;
+  text-align: left;
+}
+table.table-payment.table-overseas-add td:last-child{
+  padding: 15px 0;
+}
+
+table.table-payment.table-overseas-add tr:nth-of-type(1) td:last-child,
+table.table-payment.table-overseas-add tr:nth-of-type(2) td:last-child{
+  text-align: left;
+}
+
+table.table-payment.table-overseas-add tr.table-overseas-add-top td{
+  text-align: center;
+}
+table.table-payment.table-overseas-add tr.table-overseas-add-top td{
+  border-top: 1px solid #595959;
+}
+table.table-payment.table-overseas-add tr:not(.row-col) td:nth-of-type(3),
+table.table-payment.table-overseas-add tr:not(.row-col) td.price-center{
+  text-align: center;
+}
+.plan-summary-area-bottom.payment-total{
+  border-top: 5px solid #3C3C3C;
+}
+
+div.mypage-content-box-inner .plan-summary-area-bottom.payment-summary p{
+  color: #FFF;
+  text-align: center;
+}
+div.mypage-content-box-inner .plan-summary-area-bottom.payment-summary p span.overseas-all-price{
+  display: inline-block;
+  width: 100%;
+  color: #000;
+  text-align: right;
+}
+.payment-total .overseas-calc-all-title{
+  width: 190px;
+}
+.payment-total .overseas-calc-all{
+  width: 190px;
+  padding: 15px 0px;
+}
+div.mypage-content-box-inner .plan-summary-area-bottom.payment-summary p span.overseas-tax{
+  display: inline-block;
+  width: 80px;
+  text-align: left;
+}
+
+table.table-payment tr td:nth-child(2){
+  width: 300px;
+}
+
+table.table-global {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+  background-color: #FFFFFF;
+}
+table.table-global, table.table-global tbody, table.table-global tr, table.table-global th, table.table-global td {
+  border: none;
+}
+table.table-global th, table.table-global td {
+  background-color: #fff;
+  color: #000;
+  border-bottom: 2px solid #3C3C3C;
+}
+
+table.table-global th {
+  width: 20%;
+  font-size: 1.4rem;
+  font-weight: bold;
+  text-align: left;
+  padding-left: 30px;
+  line-height: 1.6;
+}
+table.table-global td {
+  font-size: 1.4rem;
+  text-align: left;
+  padding: 15px 0;
+}
+table.table-global td.color-red {
+  color: red;
+}
+table.table-global td.plan-ttl {
+  padding-left: 15px;
+}
+table.table-global td.price-about {
+  text-align: center;
+  border-left: 2px solid #3C3C3C;
+  width: 180px;
+}
+table.table-global td.price-about span:nth-child(1) {
+  width: 75px;
+  display: inline-block;
+  text-align: right;
+}
+table.table-global td.price-about span:nth-child(2) {
+  margin: 0 10px;
+  display: inline-block;
+  width: 16px;
+  font-size: 1.2rem;
+}
+table.table-global td.price-about span:nth-child(3) {
+  width: 45px;
+  display: inline-block;
+  text-align: left;
+}
+table.table-global td.plan-s-total {
+  text-align: center;
+  border-left: 2px solid #3C3C3C;
+  vertical-align: middle;
+  width: 180px;
+}
+table.table-global td.plan-s-total span:nth-child(1) {
+  width: 75px;
+  display: inline-block;
+  text-align: right;
+  font-weight: bold;
+  font-size: 1.7rem;
+}
+table.table-global td.plan-s-total span:nth-child(2) {
+  width: 16px;
+  display: inline-block;
+  font-size: 1.3rem;
+}
+table.table-global td.plan-s-total span:nth-child(3) {
+  width: 52px;
+  display: inline-block;
+  font-size: 1.3rem;
+}
+table.table-global th.b-total-ttl {
+  background-color: #000;
+  color: #FFEB00;
+  text-align: center;
+  padding: 0;
+  border-top: 4px solid #3C3C3C;
+  border-right: 3px solid #3C3C3C;
+}
+table.table-global td.plan-b-total {
+  background-color: #FFEB00;
+  text-align: right;
+  padding-right: 25px;
+  font-size: 1.8rem;
+  font-weight: bold;
+  border-top: 4px solid #3C3C3C;
+}
+table.table-global td.plan-b-total span {
+  font-size: 1.3rem;
+  font-weight: 400;
+  margin-left: 5px;
+}
+.payment-history-printing-button.global-payment-btn {
+  margin-top: 10px;
+}
+.payment-history-printing-button{
+  margin: 15px auto;
+}
+div.mypage-content-box-inner.mypage-global-payment-box-inner {
+  padding-top: 35px;
+}
+.mypage-global-payment-ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.mypage-global-payment-list {
+  padding: 0 60px;
+}
+.mypage-global-payment-list + .mypage-global-payment-list {
+  border-top: 1px solid #fff;
+  padding-top: 30px;
+  margin-top: 30px;
+}
+.mypage-global-payment-list-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.mypage-global-payment-list-inner.travel + .mypage-global-payment-list-inner.application {
+  margin: 40px 0 0 20px;
+}
+.mypage-global-payment-list-inner.application + .mypage-global-payment-list-inner.application {
+  margin: 20px 0 0 20px;
+}
+.mypage-global-payment-form-wrap {
+  display: flex;
+  align-items: center;
+}
+.mypage-global-payment-form + .mypage-global-payment-form {
+  margin-left: 20px;
+}
+.mypage-global-payment-form {
+  position: relative;
+}
+.mypage-global-payment-form::after {
+  display: block;
+  content: '';
+  width: 20px;
+  height: 20px;
+  background-image: url(https://d1q08lkutgkcx2.cloudfront.net/image/download_black.svg);
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 30px;
+  margin: auto;
+  transition: 0.4s;
+}
+.mypage-global-payment-form:hover::after {
+  background-image: url(https://d1q08lkutgkcx2.cloudfront.net/image/download_white.svg);
+  background-repeat: no-repeat;
+}
+.mypage-global-payment-form.global-receipt-form::after {
+  background-image: url(https://d1q08lkutgkcx2.cloudfront.net/image/icon-popup-black.svg);
+  background-repeat: no-repeat;
+}
+.mypage-global-payment-form.global-receipt-form:hover::after {
+  background-image: url(https://d1q08lkutgkcx2.cloudfront.net/image/icon-popup-white.svg);
+  background-repeat: no-repeat;
+}
+.mypage-global-payment-form.global-receipt-form .payment-history-printing-button {
+  background: #fff;
+}
+.mypage-global-payment-form.global-receipt-form .payment-history-printing-button:hover {
+  background: #000;
+}
+.mypage-global-payment-form .payment-history-printing-button {
+  font-size: 1.5rem;
+}
+.mypage-global-payment-date {
+  font-size: 2.2rem;
+  line-height: 1.4;
+}
+.mypage-global-payment-date > span.bold {
+  font-weight: bold;
+}
+.mypage-global-payment-date span + span {
+  margin-left: 80px;
+}
+.mypage-global-payment-date.application span + span {
+  margin-left: 90px;
+}
+.mypage-global-payment-date.application {
+  font-size: 2rem;
+}
+.mypage-global-payment-button > input.global-payment-btn {
+  margin: 0;
+  padding-right: 25px;
+}
+@media screen and (max-width: 767px) {
+  .mypage-global-payment-box table.table-global th {
+    width: 30%;
+    font-size: 1.2rem;
+    padding: 10px 0;
+    text-align: center;
+    min-width: 120px;
+  }
+  .mypage-global-payment-box table.table-global td {
+    font-size: 1.3rem;
+    text-align: left;
+    padding: 10px 0 10px 10px;
+    line-height: 1.6;
+    vertical-align: middle;
+    border-left: 2px solid #3C3C3C;
+  }
+  .mypage-global-payment-box .table-payment-title {
+    padding: 8px 0;
+    text-align: center;
+    background-color: #000;
+    color: #fff;
+    width: 100%;
+    font-size: 1.3rem;
+    font-weight: bold;
+    border-bottom: 3px solid #3C3C3C;
+  }
+  .mypage-global-payment-box table.table-global th.table-payment-title {
+    padding: 8px 0;
+    text-align: center;
+    background-color: #000;
+    color: #fff;
+    width: 100%;
+    font-size: 1.3rem;
+    font-weight: bold;
+    border-bottom: 3px solid #3C3C3C;
+  }
+  .mypage-global-payment-box table.table-global tr.price-subtotal th, .mypage-global-payment-box table.table-global tr.price-subtotal td {
+    background-color: #ddd;
+  }
+  .mypage-global-payment-box table.table-payment-total .price-total th {
+    background-color: #000;
+    color: #FFEB00;
+    font-size: 1.5rem;
+    line-height: 1;
+  }
+  .mypage-global-payment-box table.table-payment-total .price-total td {
+    background-color: #FFEB00;
+    color: #000;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    line-height: 1;
+  }
+  .mypage-global-payment-box table.table-payment-total .price-total td span {
+    font-size: 1.4rem;
+  }
+  .mypage-global-payment-box .payment-history-printing-button-padding {
+    padding: 0;
+  }
+  .mypage-global-payment-box .payment-history-printing-button-padding input {
+    margin: 0 auto 5px;
+    padding: 10px 20px 10px 0;
+    font-size: 1.3rem;
+  }
+  .mypage-global-payment-box .table-payment-date {
+    margin-bottom: 30px;
+  }
+  .mypage-global-payment-box .table-payment-plan {
+    margin-bottom: 5px;
+  }
+  .mypage-global-payment-box .table-payment-opt {
+    margin-top: 15px;
+  }
+  .mypage-global-payment-box .table-payment-postage {
+    margin-top: 15px;
+  }
+  .mypage-global-payment-box .table-payment-total {
+    margin-top: 15px;
+  }
+  div.contract-box-ago.mypage-global-payment-box .js-dropdown-content {
+    padding-top: 20px;
+    padding-bottom: 30px;
+  }
+  div.mypage-content-box.mypage-global-content-box.contract-box-ago.mypage-global-payment-box {
+    padding-bottom: 30px;
+  }
+  .mypage-global-payment-list {
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0 10px;
+  }
+  .mypage-global-payment-list-inner.travel + .mypage-global-payment-list-inner.application,
+  .mypage-global-payment-list-inner.application + .mypage-global-payment-list-inner.application {
+    margin: 20px 0 0 0;
+  }
+  .mypage-global-payment-form + .mypage-global-payment-form {
+    margin: 15px 0 0;
+  }
+  .mypage-global-payment-form-wrap {
+    max-width: 100%;
+    width: 240px;
+    display: block;
+    margin: 0 0 0 auto;
+  }
+  .mypage-global-payment-date {
+    font-size: 1.6rem;
+    width: 95px;
+    white-space: nowrap;
+  }
+  .mypage-global-payment-date.application {
+    font-size: 1.5rem;
+  }
+  .mypage-global-payment-form {
+    max-width: 240px;
+    margin-top: 10px;
+  }
+  .mypage-global-payment-form::after {
+    right: 18px;
+  }
+}
+/* 領収書ダウンロード 宛名入力ポップアップ */
+div.alart-popup-close-button.popup-receipt-close-button {
+  background: #000;
+  top: 5px;
+  right: 5px;
+}
+.popup-receipt-close-button > .fas {
+  color: #fff;
+}
+.entry-option-popup .popup-body.popup-receipt-body {
+  width: 500px;
+}
+.popup-receipt-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 30px;
+}
+.popup-receipt-title {
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  margin: 0;
+  padding-bottom: 30px;
+}
+.popup-receipt-lead {
+  font-size: 1.4rem;
+}
+.popup-receipt-text {
+  font-size: 1.6rem;
+  font-weight: bold;
+  white-space: nowrap;
+}
+.popup-receipt-input-name {
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-align: center;
+  word-wrap: break-word;
+  flex-grow: 1;
+  max-width: 450px;
+}
+.popup-receipt-input-honor {
+  font-size: 1.8rem;
+  font-weight: bold;
+  white-space: nowrap;
+  flex-grow: 0;
+  margin-left: 20px;
+}
+.popup-receipt-input-inner {
+  justify-content: center;
+}
+.popup-receipt-form {
+  width: 90%;
+  margin: 0 0 0 auto;
+}
+input.mypage-input-border.popup-receipt-input {
+  border: 2px solid #000;
+  padding: 0.3em 10px;
+}
+#receipt-name label.validator-error {
+  color: red;
+}
+.popup-receipt-button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  padding: 0;
+  appearance: none;
+  width: 100%;
+  padding: 8px 0;
+  font-weight: bold;
+  font-size: 1.5rem;
+  font-family: "Montserrat", "Noto Sans JP", sans-serif;
+  background: #FFEB00;
+  transition: 0.1s;
+  max-width: 260px;
+  margin: auto;
+}
+.popup-receipt-button:focus-visible {
+  outline: #000 solid 2px;
+}
+.popup-receipt-button.confirm:hover {
+  outline: 4px solid #000;
+  outline-offset: -4px;
+}
+.popup-receipt-button.confirm:disabled {
+  outline: none;
+  pointer-events: none;
+}
+.popup-receipt-button.cancel {
+  background: #000;
+  color: #fff;
+}
+.popup-receipt-button.cancel:hover {
+  outline: 4px solid #ffeb00;
+  outline-offset: -4px;
+}
+.popup-receipt-button + .popup-receipt-button {
+  margin-left: 10px;
+}
+.popup-receipt-name,
+.popup-receipt-confirm {
+  display: none;
+}
+.popup-receipt-name.active,
+.popup-receipt-confirm.active {
+  display: block;
+}
+.popup-receipt-honor {
+  justify-content: flex-end;
+  margin-top: 10px;
+}
+.popup-receipt-honor-input {
+  cursor: pointer;
+  font-size: 1.5rem;
+}
+.popup-receipt-honor-input + .popup-receipt-honor-input{
+  margin-left: 15px;
+}
+.popup-receipt-honor-input:focus-visible{
+  outline: none;
+  box-shadow: 0 0 0 2px #000;
+}
+@media screen and (max-width: 767px) {
+  #popup-receipt .popup-contents {
+    min-width: 320px;
+  }
+  .entry-option-popup .popup-body.popup-receipt-body {
+    width: 100%;
+  }
+  .popup-receipt-title {
+    font-size: 1.8rem;
+  }
+  .popup-receipt-form {
+    width: 85%;
+  }
+  .popup-receipt-button {
+    max-width: 100%;
+  }
+  .popup-receipt-input-inner {
+    justify-content: center;
+    flex-direction: column;
+  }
+  .popup-receipt-input-name {
+    max-width: 300px;
+  }
+  .popup-receipt-input-honor {
+    margin: 10px 0 0;
+  }
+  .popup-receipt-bottom-inner {
+    flex-direction: column-reverse;
+  }
+  .popup-receipt-button + .popup-receipt-button {
+    margin: 0 0 10px;
+  }
+  .popup-receipt-button.confirm {
+    width: 70%;
+  }
+  .popup-receipt-button.cancel {
+    width: 50%;
+  }
+  .popup-receipt-confirm.active .popup-receipt-lead {
+    text-align: center;
+    margin-top: 20px;
+  }
+}
+
+/* お申込み情報ページ */
+div.mypage-content-box.mypage-global-content-box.mypage-global-contract-box {
+  padding-bottom: 40px;
+}
+.button-disabled-entry-cancel {
+  opacity: 0.6;
+  pointer-events: none;
+}
+.mypage-global-content-box div.question-mark-corp {
+  cursor: pointer;
+}
+.mypage-global-content-box .dropdown-title-main {
+  /* border-bottom: 1px solid #fff; */
+  padding: 18px 25px;
+  color: #fff;
+  font-size: 1.8rem;
+  letter-spacing: 1px;
+}
+.mypage-global-content-box .dropdown-title {
+  border-top: 1px solid #fff;
+  padding: 18px 25px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 1.6rem;
+  letter-spacing: 1px;
+  position: relative;
+  transition: .3s;
+}
+.mypage-global-content-box .dropdown-title:last-of-type {
+  border-bottom: 1px solid #fff;
+}
+.mypage-global-content-box .dropdown-title span {
+  position: absolute;
+  right: 75px;
+  top: 18px;
+}
+.mypage-global-content-box .dropdown-title::before {
+  content: "";
+  position: absolute;
+  right: 25px;
+  top: 50%;
+  transform: translateY(-50%);
+  border-top: 13px solid #fff;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+}
+@media screen and (min-width: 768px) {
+  .mypage-global-content-box .dropdown-title:hover {
+    background-color: #f5f5f5;
+    color: #282828;
+  }
+  .mypage-global-content-box .dropdown-title:hover::before {
+    border-top: 13px solid #282828;
+  }
+}
+.mypage-global-content-box .dropdown-title.open {
+  background-color: #f5f5f5;
+  color: #282828;
+}
+.mypage-global-content-box .dropdown-title.open::before {
+  border-top: none;
+  border-bottom: 13px solid #282828;
+}
+div.mypage-content-box.mypage-global-content-box.contract-box-ago {
+  padding-bottom: 50px;
+}
+div.mypage-content-box.mypage-global-content-box.contract-box-ago-prepaid {
+  max-height: 300px;
+  overflow-y: overlay;
+}
+div.contract-box-ago .js-dropdown-content {
+  padding-top: 30px;
+}
+
+@media screen and (max-width: 767px) {
+  div.mypage-content-box.mypage-global-content-box.contract-box {
+    padding-bottom: 20px;
+  }
+  .mypage-global-content-box .dropdown-title {
+    padding: 15px 60px 15px 10px;
+    font-size: 1.5rem;
+    line-height: 1.5;
+  }
+  .mypage-global-content-box .dropdown-title span {
+    right: 5px;
+    top: 18px;
+    font-size: 1.2rem;
+  }
+  .mypage-global-content-box .dropdown-title::before {
+    top: calc(50% + 10px);
+    border-top: 12px solid #fff;
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+  }
+  .mypage-global-content-box .dropdown-title-main {
+    padding: 15px 10px;
+    font-size: 1.7rem;
+  }
+  div.contract-box-ago .js-dropdown-content {
+    padding-top: 10px;
+  }
+  div.mypage-top-element div.mypage-top-icon.adjust img {
+    height: 60px;
+  }
+}
+
+
+/*-----------------------------------
+お申し込みのキャンセル
+-----------------------------------*/
+div.mypage-global-content-box span.imei-select-img img{
+  right: 95px;
+}
+
+.password-td.white-td{
+  background-color: transparent;
+}
+
+
+/*-----------------------------------
+契約前のプラン変更・追加・延長をグレーアウト
+-----------------------------------*/
+.button-disabled div.mypage-nav-item,
+div.mypage-nav-item a.button-disabled::after,
+div.mypage-nav a.button-disabled::after,
+div.mypage-top-boxes a.button-disabled{
+  opacity: 0.6;
+  pointer-events: none;
+}
+div.mypage-nav a.button-disabled::after{
+  background: #FFFFFF;
+}
+
+div.mypage-top-boxes a.button-disabled .button-body{
+  background-color: #666666;
+}
+
+div.mypage-top-boxes a.button-disabled.overseas-caution-popup {
+  pointer-events: auto;
+}
+#popup-overseas-caution .entry-option-popup .popup-header .title {
+  font-size: 2.6rem;
+}
+#popup-overseas-caution .entry-option-popup .popup-body p {
+  font-size: 1.8rem;
+  padding: 40px 0 20px;
+  min-width: 450px;
+  text-align: center;
+}
+@media screen and (max-width: 767px){
+
+  div.mypage-top-element-wrapper.button-disabled{
+    opacity: 0.6;
+    background-color: #666666;
+  }
+  #popup-overseas-caution .entry-option-popup .popup-header .title {
+    font-size: 1.8rem;
+  }
+  #popup-overseas-caution .entry-option-popup .popup-body p {
+    font-size: 1.7rem;
+    min-width: unset;
+  }
+}
+
+/*-----------------------------------
+再申し込み用ログインフォーム
+-----------------------------------*/
+div.form-step-image-area {
+  background-color: #FFFFFF;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 15px 0px;
+  display: flex;
+  width: 100%;
+}
+div.form-step-image-area img {
+  max-width: 750px;
+  margin: auto;
+}
+div.form-next-button {
+  background: linear-gradient(to right, #FFC600, #FFE300);
+  width: 320px;
+  display: block;
+  margin: 0 auto;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #000;
+  letter-spacing: 0.02em;
+  position: relative;
+  text-align: center;
+  transition: .3s all;
+  cursor: pointer;
+  border-radius: 0;
+}
+div.form-next-button:hover {
+  color: #fff;
+}
+div.form-next-button span {
+  background: url(https://d1q08lkutgkcx2.cloudfront.net/image/okawari-button-arrow.svg) no-repeat 290px center;
+  background-size: 8px;
+  display: block;
+  padding: 25px 60px 25px 0;
+  position: relative;
+  z-index: 10;
+}
+div.form-next-button::after {
+  content: "";
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 60px;
+  background: #1E1E1E;
+  transition: .3s all;
+}
+div.form-next-button:hover::after {
+  width: 100%;
+}
+
+div.form-back-button {
+  background-color: #000;
+  width: 230px;
+  display: block;
+  margin: 0 auto;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #FFF;
+  letter-spacing: 0.02em;
+  position: relative;
+  text-align: center;
+  transition: .3s all;
+  cursor: pointer;
+  border-radius: 0;
+}
+div.form-back-button::before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 60px;
+  background: #1E1E1E;
+}
+div.form-back-button span {
+  background: url(https://d1q08lkutgkcx2.cloudfront.net/image/okawari-back-button-arrow.svg) no-repeat 25px center;
+  background-size: 8px;
+  display: block;
+  padding: 25px 0 25px 25px;
+  position: relative;
+  z-index: 10;
+}
+div.decoration-button-area-form-v2 {
+  width: 240px;
+  margin: 0px;
+  margin-right: 0px;
+  text-align: center;
+}
+.login-message {
+  bottom: -30px;
+  color: #000;
+  font-size: 1.6rem;
+  position: relative;
+  text-align: center;
+  line-height: 1.5em;
+  background: #fff;
+  padding: 20px 0;
+  margin: 0;
+}
+.repeat-login-form {
+  width: 100%;
+}
+div.mypage-content-box-inner .repeat-login-form th {
+  color: #000;
+  text-align: left;
+}
+
+@media screen and (max-width: 767px){
+  div.form-step-image-area img {
+    width: 95%;
+  }
+  div.decoration-button-area-form-v2 {
+    margin: 0 auto;
+  }
+  .login-repeat-main div.decoration-button-area-form-v2 {
+    margin: 0 auto;
+  }
+  div.mypage-content-box-inner .repeat-login-form th {
+    text-align: left;
+    padding: 20px 0 5px;
+  }
+  div.mypage-content-box-inner p {
+    margin-top: 0;
+  }
+  .login-repeat-main div.mypage-description-flex-left p {
+    margin: 15px 0 20px;
+  }
+  .repeat-login-form th, .repeat-login-form td {
+    display: block;
+    width: 100%;
+  }
+}
+/* タイムアウト画面 */
+header.mypage-header.global-mypage-header p.header-logo a img {
+  height: 42px;
+  margin: 14px 0 0;
+}
+
+/* 利用国・地域プランの追加　周遊プラン追加 */
+.overseas-country-select {
+  display: flex;
+  width: 100%;
+}
+.overseas-country-select .ttl-align-top {
+  padding-top: 50px;
+}
+.overseas-country-select .overseas-content {
+  width: calc(100% - 250px);
+  padding: 30px 0 10px;
+}
+.overseas-country-select .overseas-content .country-tab-menu {
+  display: flex;
+}
+.overseas-country-select .overseas-content .country-tab-menu .custom-check-box-v2 {
+  display: none;
+}
+.overseas-country-select .country-tab-menu .country-tab-btn .custom-check-box-v2-select-text {
+  background-color: unset;
+  border: none;
+  margin: 0;
+  padding: 0;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  color: #000;
+}
+.overseas-country-select .country-tab-menu .country-tab-btn .custom-check-box-v2-select-text label {
+  cursor: pointer;
+}
+.overseas-country-select .country-tab-menu .country-tab-btn {
+  width: 50%;
+  height: 50px;
+  line-height: 50px;
+  border-radius: 10px 10px 0 0;
+  cursor: pointer;
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-align: center;
+  background: #e8e8e8;
+  color: #000;
+}
+.overseas-country-select .country-tab-menu .country-tab-btn.is-btn-active {
+  background: #66D6CC;
+}
+.overseas-country-select .country-tab-menu .country-tab-btn.is-btn-active .custom-check-box-v2-select-text {
+  color: #000;
+}
+.country-tab-content {
+  border: 3px solid #66D6CC;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 0 0 10px 10px;
+}
+.country-tab-content .tab-content-country {
+  color: #000;
+  display: none;
+}
+.country-tab-content .tab-content-country.is-contents-active {
+  display: block;
+}
+.country-tab-content .tab-content-country .sub-ttl {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #000;
+}
+.fav-country-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 15px;
+}
+.fav-country-container .country-single {
+  width: calc(100% / 4 - 11.5px);
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  box-shadow: 0px 2px 4px rgb(0 0 0 / 30%);
+  border-radius: 1.25em;
+  cursor: pointer;
+  transition: .2s all;
+  height: 50px;
+  font-size: 1.4rem;
+  font-weight: bold;
+  padding-left: 15px;
+  box-sizing: border-box;
+  border: 4px solid transparent;
+}
+.fav-country-container .country-single img {
+  width: 20%;
+}
+.fav-country-container .country-single p {
+  text-align: center;
+  color: #000;
+  width: 80%;
+}
+.fav-country-container .country-multipul {
+  width: calc(100% / 3 - 10px);
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  box-shadow: 0px 2px 4px rgb(0 0 0 / 30%);
+  border-radius: 1.25em;
+  cursor: pointer;
+  transition: .2s all;
+  height: 50px;
+  font-size: 1.4rem;
+  font-weight: bold;
+  box-sizing: border-box;
+}
+.fav-country-container .country-multipul p {
+  text-align: center;
+  color: #000;
+  width: 80%;
+}
+.fav-country-container .js-popular-country.selected {
+  border: 4px solid #ffe401;
+}
+.fav-country-container .js-popular-country.selected p {
+  color: #000;
+}
+.overseas-country-flex.hide {
+  opacity: 0.5;
+  pointer-events: none;
+}
+#overseas-add .other-sub-ttl {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #fff;
+  margin-top: 10px;
+}
+tr.overseas-option-detail td {
+  line-height: 1.6;
+}
+.indent-interpretation {
+  margin-left: -4px;
+}
+@media screen and (min-width: 768px) {
+  #overseas-add .other-sub-ttl {
+    padding-left: 255px;
+  }
+  #overseas-add .overseas-country {
+    margin-top: 15px;
+  }
+}
+
+@media screen and (max-width: 767px){
+  #overseas-add .other-sub-ttl {
+    font-size: 1.8rem;
+    margin-top: 45px;
+    padding-left: 5px;
+    margin-bottom: 25px;
+  }
+  #overseas-add .overseas-country {
+    margin-top: 0px;
+  }
+  .overseas-country-select {
+    flex-direction: column;
+  }
+  .country-tab-content {
+    padding: 20px 10px;
+  }
+  .overseas-country-select .overseas-content {
+    width: 100%;
+    padding: 0;
+  }
+  .fav-country-container {
+    gap: 15px 10px;
+  }
+  .fav-country-container .country-single {
+    width: calc(100% / 2 - 5px);
+  }
+  .overseas-country-select .country-tab-menu .country-tab-btn .custom-check-box-v2-select-text {
+    padding-top: 6px;
+    line-height: 1.3;
+    font-size: 1.6rem;
+  }
+  .country-tab-content .tab-content-country .sub-ttl {
+    font-size: 1.8rem;
+  }
+  .fav-country-container .country-multipul {
+    width: calc(100% / 2 - 5px);
+  }
+  .table-alignment-sp {
+    vertical-align: top;
+    padding-top: 16px;
+    line-height: 1.6;
+  }
+  .fav-country-container .country-multipul p {
+    font-size: 1.3rem;
+  }
+}
+/* 利用国・地域プランの追加　周遊プラン追加ここまで */
+
+/* ミャンマー停止対応 start */
+.reception-stopped{
+  display: none;
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: #000;
+  line-height: 1.5;
+}
+
+.prepaid-giga-overseas-add .reception-stopped{
+  color: #bbb;
+  margin-top: 10px;
+  font-weight: normal;
+}
+
+@media screen and (max-width: 767px){
+  .reception-stopped{
+    margin-top: 20px;
+  }
+}
+/* ミャンマー停止対応 end */
+
+/* アクセシビリティ対応 start */
+/* コントラスト */
+a.pink-link {
+  color: #ff6bf3;
+}
+.datepicker-days th.dow:first-child, 
+.datepicker-days td:first-child{
+  color: #c7002e;
+}
+
+.datepicker-days th.dow:last-child, 
+.datepicker-days td:last-child{
+  color: #0000ff;
+}
+
+.datepicker-days thead{
+ border-bottom: 1px solid #cccccc;
+}
+
+.datepicker-days .holiday{
+  color: #c7002e;
+}
+
+.datepicker.datepicker-dropdown table tr td.day.focused,
+.datepicker.datepicker-dropdown table tr td.day:hover {
+  background: #fcdee7;
+}
+.datepicker.datepicker-dropdown table tr td.disabled.day.focused,
+.datepicker.datepicker-dropdown table tr td.disabled.day:hover {
+  background: #cccccc;
+}
+@media screen and (max-width: 767px){
+  div.recharge.dataflow-rental .travel-table table.data-usage-table th {
+    width: 26%;
+  }
+  div.recharge.dataflow-rental .travel-table .overseas-travel-period table.data-usage-table tr:not(.caption-area) td:nth-of-type(1), 
+  div.recharge.dataflow-rental .travel-table .overseas-travel-period table.data-usage-table tr:not(.caption-area) td:nth-of-type(3) {
+    width: 26%;
+  }
+  div.recharge.dataflow-rental .travel-table table.data-usage-table tr:not(.caption-area) td:nth-of-type(4) {
+    width: calc(22% - 10px);
+    padding-right: 10px;
+  }
+  div.recharge .travel-table table tbody {
+    width: 100%;
+    display: table;
+  }
+  div.recharge.dataflow-rental .travel-table table.data-usage-table td:nth-of-type(1),
+  div.recharge.dataflow-rental .travel-table table.data-usage-table td:nth-of-type(3) {
+    width: 26%;
+  }
+  h1.mypage-titile-area-title, p.mypage-titile-area-title {
+    margin-bottom: 5px;
+  }
+  .fav-country-container .country-single img {
+    max-width: 30px;
+  }
+}
+
+/* アクセシビリティ対応 end */

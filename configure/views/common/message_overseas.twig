@@ -1,0 +1,24 @@
+<div class="error-message login-message">
+    {% for message in messages %}
+        <p>{{ message }}</p>
+    {% endfor %}
+{% if errors|length > 0 %}
+  <div class="error-message-value">
+    {% for error in errors %}
+        <p>{{ error|raw }}</p>
+    {% endfor %}
+  </div>
+{% endif %}
+</div>
+{# <div class="login-message">
+    {% for message in login_messages %}
+        <p>{{ message }}</p>
+    {% endfor %}
+{% if login_list|length > 0 %}
+  <div class="login-message-value">
+    {% for login in login_list %}
+        <p>{{ login|raw }}</p>
+    {% endfor %}
+  </div>
+{% endif %}
+</div> #}

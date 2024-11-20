@@ -1,0 +1,269 @@
+  /**************/
+  /* decoration button */
+  /**************/
+  div.decoration-button.active {
+    background-color: #ffeb00;
+    transition: all 0.5s ease-out;
+  }
+  div.decoration-button.active::after {
+    background-color: #ffeb00;
+    transition: all 0.5s ease-out;
+  }
+
+  div.decoration-button.active div.text {
+    color: black;
+    transition: all 0.5s ease-out;
+  }
+  /* inactive */
+  div.decoration-button.inactive {
+    background-color: black;
+    transition: all 0.5s ease-out;
+  }
+  div.decoration-betton.new.inactive{
+    text-align: center;
+    background-color: #323232;
+    color: white;
+    padding: 10px 0;
+    border-radius: 0.75em;
+    margin-top: 10px;
+    border: none;
+  }
+  div.decoration-button.overseas-button-2line{
+    padding-right:40px;
+  }
+  div.decoration-button.inactive::after {
+    background-color: black;
+    transition: all 0.5s ease-out;
+  }
+  div.decoration-button.inactive div.text {
+    color: #ffeb00;
+    transition: all 0.5s ease-out;
+  }
+  /**************/
+  /* decoration button pink */
+  /**************/
+  /* inactive */
+  div.top-taiken-banner div.decoration-button.active {
+    background-color: #ffeb00;
+    transition: all 0.5s ease-out;
+  }
+  div.top-taiken-banner div.decoration-button.active::after {
+    background-color: #ffeb00;
+    transition: all 0.5s ease-out;
+  }
+
+  div.top-taiken-banner div.decoration-button.inactive {
+    background-color: #e6006b;
+    transition: all 0.5s ease-out;
+  }
+  div.top-taiken-banner div.decoration-button.inactive::after {
+    background-color: #e6006b;
+    transition: all 0.5s ease-out;
+  }
+
+  div.top-taiken-banner div.decoration-button.inactive div.text {
+    color: #ffeb00;
+    transition: all 0.5s ease-out;
+  }
+
+  /**************/
+  /* Site header */
+  /**************/
+
+  .header-menu {
+    position: relative;
+    display: inline-block;
+  }
+  .header-menu::before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -100;
+    content: "";
+    background: black;
+    transform-origin: left top;
+    transform: scale(0, 1);
+    transition: transform 0.3s;
+  }
+  .header-menu.active::before {
+    transform-origin: left top;
+    transform: scale(1, 1);
+  }
+
+  /**************/
+  /* mypage nav item */
+  /**************/
+  .mypage-nav-item.active {
+    transition: all 0.5s ease-out;
+  }
+  .mypage-nav-item.active p {
+    transition: all 0.5s ease-out;
+  }
+  .mypage-nav-item.inactive {
+    transition: all 0.5s ease-out;
+  }
+  .mypage-nav-item.inactive p {
+    transition: all 0.5s ease-out;
+  }
+
+  /**************/
+  /* sub dir nav button */
+  /**************/
+
+  div.sub-dir-nav-box.active {
+    margin-top: 10px;
+    margin-bottom: -10px;
+    transition: all 0.5s ease-out;
+  }
+  div.sub-dir-nav-box.inactive {
+    margin-top: 0;
+    margin-bottom: 0;
+    transition: all 0.5s ease-out;
+  }
+
+  div.sub-dir-nav-box::before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 100;
+    content: "";
+    background: #ffeb00;
+    transform-origin: left top;
+    transform: scale(0, 1);
+    transition: transform 0.3s;
+    z-index: 900;
+  }
+  div.sub-dir-nav-box.active::before {
+    transform-origin: left top;
+    transform: scale(1, 1);
+    z-index: 900;
+  }
+
+  /**************/
+  /* special contents */
+  /**************/
+
+  div.top-special-contents-icon.active {
+    margin-top: 10px;
+    margin-bottom: -10px;
+    transition: all 0.5s ease-out;
+  }
+  div.top-special-contents-icon.inactive {
+    margin-top: 0;
+    margin-bottom: 0;
+    transition: all 0.5s ease-out;
+  }
+  /************/
+  /* overseas */
+  /************/
+  div.overseas-step-icon-box-image.active div.overseas-step-icon-box-image-pos img {
+    opacity: 1;
+    transition: all 0.5s ease-out;
+  }
+
+  div.overseas-step-icon-box-image.active div.overseas-step-icon-box-image-neg img {
+    opacity: 0;
+    transition: all 0.5s ease-out;
+  }
+  div.overseas-step-icon-box-image.inactive div.overseas-step-icon-box-image-pos img {
+    opacity: 0;
+    transition: all 0.5s ease-out;
+  }
+
+  div.overseas-step-icon-box-image.inactive div.overseas-step-icon-box-image-neg img {
+    opacity: 1;
+    transition: all 0.5s ease-out;
+  }
+
+
+/* world map */
+img.worldmap-img.active {
+  opacity: 1;
+  transition: all 0.2s ease-out;
+}
+img.worldmap-img.inactive {
+  opacity: 0;
+  transition: all 0.5s ease-out;
+}
+
+
+
+div.form-back-button{
+  background-color: #000;
+  width: 320px;
+  display: block;
+  margin: 0 auto;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #FFF;
+  letter-spacing: 0.02em;
+  position: relative;
+  text-align: center;
+  transition: .3s all;
+  cursor: pointer;
+}
+div.form-back-button::before{
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 60px;
+  background: #1E1E1E;
+}
+div.form-back-button span{
+  background: url(https://d1q08lkutgkcx2.cloudfront.net/image/okawari-back-button-arrow.svg) no-repeat 25px center;
+  background-size: 8px;
+  display: block;
+  padding: 25px 0 25px 25px;
+  position: relative;
+  z-index: 10;
+}
+
+
+@media screen and (max-width: 767px){
+  div.row{
+    flex-direction: column-reverse;
+    align-items: flex-start;
+    width:300px;
+    margin: 30px auto;
+  }
+  div.row-first{
+    margin: 30px auto 0;
+    padding: 0;
+  }
+  div.row-nocontent {
+    width: auto;
+    margin: 0;
+  }
+  div.form-next-button,
+  div.form-next-stop-button,
+  div.form-back-button{
+    width: 300px;
+  }
+  div.form-next-button span,
+  div.form-next-stop-button span{
+    background: url(https://d1q08lkutgkcx2.cloudfront.net/image/okawari-button-arrow.svg) no-repeat 270px center;
+    background-size: 8px;
+  }
+  div.form-back-button span{
+    background: url(https://d1q08lkutgkcx2.cloudfront.net/image/okawari-back-button-arrow.svg) no-repeat 20px center;
+    background-size: 8px;
+  }
+  div.decoration-button-area-form-v2{
+    margin:10px 0;
+  }
+  div.form-user-back-button-sp{
+    margin:0 auto;
+  }
+}
+
+/*スタイル調整用*/
+.style-margin{
+  margin-top:50px;
+}

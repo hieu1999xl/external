@@ -1,0 +1,56 @@
+{#
+    プラン変更・追加・期間延長
+    要）popup-common.twig
+#}
+<div class="option-popup-block popup-prepaid-block" id="popup-overseas-edit">
+    <div class="entry-option-popup">
+        <div class="background"></div>
+        <div class="entry-option-popup-body">
+            <div class="alart-popup-close-button js-tabindex" tabindex="0"><i class="fas fa-times"></i></div>
+            <div class="popup-contents">
+                <div class="popup-wrap popup-overseas-edit">
+                    <div class="popup-header">
+                        <h2 class="title">海外データ ギガチャージ</h2>
+                        <div class="group">
+                            <p class="text">ご利用になりたいメニューを選んでください。</p>
+                        </div>
+                    </div>
+                    <div class="popup-body">
+                        <section>
+                            <a href="{{edit_prepaid_add_plan_overseas_url}}">
+                                <div class="button-body">
+                                    <div class="button-next-adjust button-next-charge">{{ asset_cdn_img('icon-charge-overseas.svg',{'aria-hidden':'true', 'width': 40, 'height' :40, 'alt':'現在のデータ利用量'}) }}</div>
+                                    <p>海外データ<br>ギガチャージ</p>
+                                    <span class="button-triangle">▶</span>
+                                </div>
+                            </a>
+                            <p>新たに海外データ通信の購入ができます。</p>
+                        </section>
+                        {% if settlement_type_value != 11 %}
+                        <section>
+                            <a href="{{extension_prepaid_add_plan_overseas_url}}">
+                                <div class="button-body">
+                                    <div class="button-next-adjust">{{ asset_cdn_img('icon-plus.svg',{'aria-hidden':'true', 'width': 40, 'height' :40, 'alt':'現在のデータ利用量'}) }}</div>
+                                    <p>海外データ<br>期間延長</p>
+                                    <span class="button-triangle">▶</span>
+                                </div>
+                            </a>
+                            <p>既にチャージしている海外データの期間延長ができます。</p>
+                        </section>
+                        <section>
+                            <a href="{{change_prepaid_add_plan_overseas_url}}">
+                                <div class="button-body">
+                                    <div class="button-next-adjust">{{ asset_cdn_img('icon-change.svg',{'aria-hidden':'true', 'width': 40, 'height' :40, 'alt':'現在のデータ利用量'}) }}</div>
+                                    <p>海外データ<br>容量変更</p>
+                                    <span class="button-triangle">▶</span>
+                                </div>
+                            </a>
+                            <p>既にチャージしている海外データの容量を増やせます。</p>
+                        </section>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

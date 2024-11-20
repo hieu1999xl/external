@@ -1,0 +1,76 @@
+<div class="mypage-nav">
+{% if constant('INACCESSIBLE_MYPAGE_DATA_FLOW') not in not_available_list %}
+  <a href="{{ data_flow_url }}" class="first-half">
+    <div class="mypage-nav-item" id="mypage-nav-item-1">
+      <div>
+        <p>データ使用量{% if can_charge_data == 1 and constant('INACCESSIBLE_MYPAGE_DATA_CHARGE') not in not_available_list %}{% if settlement_type_value != settlement_type_value_list.ATONE and settlement_type_value != settlement_type_value_list.ATOBARAI %}・<br>おかわりGIGA{% endif %}{% endif %}</p>
+      </div>
+    </div>
+  </a>
+{% endif %}
+
+  <a href="{{ payment_history_url}}" class="first-half">
+    <div class="mypage-nav-item" id="mypage-nav-item-2">
+      <div>
+        <p>ご利用明細</p>
+      </div>
+    </div>
+  </a>
+
+{# スマホ用のレイアウト崩れ用ヘッダメニュー #}
+{% if is_need_fake_header_menu %}
+  <a href="{{ index_contract_url }}" class="sp" class="first-half">
+    <div class="mypage-nav-item" id="mypage-nav-item-5">
+      <p>ご契約情報</p>
+    </div>
+  </a>
+{% endif %}
+
+  <a href="{{ index_contract_url }}" class="first-half">
+    <div class="mypage-nav-item" id="mypage-nav-item-3">
+      <div>
+        <p>ご契約情報</p>
+      </div>
+    </div>
+  </a>
+
+  <div class="mypage-nav-arrow mypage-nav-arrow-left js-tabindex" tabindex="0">
+    {{ asset_cdn_img('button-arrow-left_t.png',{'aria-hidden':'true', 'width': 40, 'height': 40, 'alt':'矢印'}) }}
+  </div>
+  <div class="mypage-nav-arrow mypage-nav-arrow-right js-tabindex" tabindex="0">
+    {{ asset_cdn_img('button-arrow-right_t.png',{'aria-hidden':'true', 'width': 40, 'height': 40, 'alt':'矢印'}) }}
+  </div>
+
+  <a href="{{ show_user_url }}" class="second-half">
+    <div class="mypage-nav-item" id="mypage-nav-item-4">
+      <p>お客様情報</p>
+    </div>
+  </a>
+
+{% if constant('INACCESSIBLE_MYPAGE_OVERSEAS') not in not_available_list %}
+  {% if settlement_type_value != settlement_type_value_list.ATONE and settlement_type_value != settlement_type_value_list.ATOBARAI %}
+  <a href="{{ mypage_overseas_url }}" class="second-half">
+    <div class="mypage-nav-item" id="mypage-nav-item-5">
+      <div class="div-pc">
+        <p>海外データプランの<br>購入</p>
+      </div>
+      <div class="div-sp">
+        <p>海外データ<br>プランの購入</p>
+      </div>
+    </div>
+  </a>
+  {% endif %}
+{% endif %}
+
+{% if is_wimax %}
+  <a href="{{wimax_faq_url}}" target="_blank" class="button-text second-half">
+{% else %}
+  <a href="{{faq_url}}" target="_blank" class="button-text second-half">
+{% endif %}
+    <div class="mypage-nav-item" id="mypage-nav-item-6">
+      <p>よくあるご質問</p>
+      <span class="button-triangle tab-open"></span>
+    </div>
+  </a>
+
+</div>

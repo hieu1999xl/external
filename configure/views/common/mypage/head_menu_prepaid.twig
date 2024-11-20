@@ -1,0 +1,72 @@
+<div class="mypage-nav mypage-nav-prepaid">
+    {% if constant('INACCESSIBLE_MYPAGE_DATA_FLOW') not in not_available_list %}
+        {% if is_access_maya_overseas_plan_purchase_page %}
+            {% if is_access_prepaid_data_charge_page %}
+                <a href="{{ edit_prepaid_add_plan_data_flow_edit_url }}">
+                    <div class="mypage-nav-item" id="mypage-nav-item-6">
+                        <div>
+                            <p>おかわりGIGA</p>
+                        </div>
+                    </div>
+                </a>
+            {% else %}
+                <a href="{{ edit_prepaid_add_plan_domestic_url }}">
+                    <div class="mypage-nav-item" id="mypage-nav-item-6">
+                        <div>
+                            <p>ギガチャージ<br />(国内データ)</p>
+                        </div>
+                    </div>
+                </a>
+            {% endif %}
+            {# クレカ払い&利用終了前のプランがある場合　もしくは　クレカ払い&1GBプラン&利用期間終了前の場合↓ #}
+            <a {% if settlement_type_value != 11 %}class="js-option-popup overseas-edit-popup prepaid-edit-popup js-tabindex focus_target_nav ac-popup-open" tabindex="0" data-focusmove="focus_target_nav" data-popup="popup-overseas-edit"{% else %}class="button-text" href="{{ edit_prepaid_add_plan_overseas_url }}"{% endif %}>
+                <div class="mypage-nav-item" id="mypage-nav-item-7">
+                    <div>
+                        <p>ギガチャージ<br />(海外データ)</p>
+                    </div>
+                </div>
+            </a>
+        {% endif %}
+    {% endif %}
+    {% if constant('INACCESSIBLE_MYPAGE_DATA_FLOW') not in not_available_list %}
+        <a href="{{ data_flow_prepaid_url }}">
+            <div class="mypage-nav-item" id="mypage-nav-item-1">
+                <div>
+                    <p>現在の利用状況</br >データ利用量</p>
+                </div>
+            </div>
+        </a>
+    {% endif %}
+    <a href="{{ payment_history_prepaid_url }}">
+        <div class="mypage-nav-item" id="mypage-nav-item-3">
+            <div>
+                <p>ご利用明細</p>
+            </div>
+        </div>
+    </a>
+    <a href="{{ index_contract_prepaid_url }}">
+        <div class="mypage-nav-item" id="mypage-nav-item-2">
+            <div>
+                {% if is_access_prepaid_data_charge_page %}
+                    <p>ご契約情報</p>
+                {% else %}
+                    <p>お申し込み情報</p>
+                {% endif %}
+            </div>
+        </div>
+    </a>
+    <a href="{{ show_user_prepaid_url }}">
+        <div class="mypage-nav-item" id="mypage-nav-item-5">
+            <p>会員情報</p>
+        </div>
+    </a>
+    {# プリペイド/継続課金プランリリース（2024/4/1）後に復活予定 #}
+    {# <a href="{{ faq_prepaid_url }}" target="_blank">
+        <div class="mypage-nav-item" id="mypage-nav-item-8">
+            <p>よくあるご質問</p>
+            <span class="button-triangle tab-open"></span>
+        </div>
+    </a> #}
+</div>
+{% include 'common/mypage/prepaid/popup-prepaid-edit.twig' %}
+{% include 'common/mypage/overseas/popup-common.twig' %}

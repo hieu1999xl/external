@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ja">
+{% include 'common/mypage/head_rental.twig' %}
+<body>
+<!-- Google Tag Manager (noscript)（ザオリク用）-->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TWSVL22B"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- Google Tag Manager (noscript)（ザオリク用）-->
+<!-- Google Tag Manager (noscript)（海外レンタル自社管理用）-->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFB6FZLP"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript)（海外レンタル自社管理用）-->
+<!-- Google Tag Manager (noscript)（海外レンタル自社管理用）-->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TLKJXZ8K"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript)（海外レンタル自社管理用）-->
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WZXDLNM"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NMBMMBV"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MFVGW35"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<header class="mypage-header">
+    <div class="header-wrapper">
+        <nav class="header-item">
+            <div>
+                <p class="header-logo">
+                    <a href="{{ top_rental_url }}">{{ asset_img('global-logo-short.svg') }}</a>
+                </p>
+            </div>
+            <div class="header-title">
+                <div class="current-tab-name-box">
+                    <p class="current-tab-name">
+                        {% block current_tab %}
+                        {% endblock %}
+                    </p>
+                </div>
+            </div>
+        </nav>
+    </div>
+</header>
+<main class="mypage-main login-repeat-main" role="main">
+    <div id="container">
+        <div class="mypage-container bg-plain-dark-gray bg-login bg-repeat-lightgray">
+            {% block form_step %}{% endblock %}
+            <div class="mypage-section-container">
+                <div class="form-step-title-wrapper">
+                    <div class="form-step-title">
+                        {% block step_img %}{% endblock %}
+                    </div>
+                    <div class="mypage-title-area">
+                        <div class="mypage-title-area-icon">
+                            {% block header_icon %}{% endblock %}
+                        </div>
+                        <div class="mypage-titile-area-text">
+                            <p class="mypage-titile-area-title">
+                                {% block title %}{% endblock %}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                {% include 'common/message.twig' %}
+                {% block description %}{% endblock %}
+                {% block content %}{% endblock %}
+            </div>
+            <div class="step-layout step-container step-container-footer" {% if "complete" in current_url %}style="display:none;"{% endif %}>
+                <div class="step select">
+                    <div class="step-title">STEP <span class="step-number">1</span></div>
+                    <div class="step-plan pc">お見積り</div>
+                </div>
+                <div class="step login">
+                    <div class="step-title">STEP <span class="step-number">2</span></div>
+                    <div class="step-plan pc">お客様情報入力</div>
+                </div>
+                <div class="step confirm">
+                    <div class="step-title">STEP <span class="step-number">3</span></div>
+                    <div class="step-plan pc">契約内容確認</div>
+                </div>
+                <div class="step payment">
+                    <div class="step-title">STEP <span class="step-number">4</span></div>
+                    <div class="step-plan pc">支払い情報入力</div>
+                </div>
+                <div class="step complete">
+                    <div class="step-title">申し込み<br class="sp">完了</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+<footer class="mypage-footer">
+    <div class="mypage-footer-main">
+        <div class="wrapper">
+            <div>
+                <ul>
+                    <li><a href="https://zeuswifi-global.jp/" target="_blank">TOP</a></li>
+                    <li><a href="https://zeuswifi-global.jp/terms/" target="_blank">利用規約</a></li>                    <li><a href="{{ pdf_privacy_url }}" target="_blank">プライバシーポリシー</a></li>
+                    <li class="mypage-footer-copyright footer-copy">&copy; 2020 ZEUS WiFi</li>
+                </ul>
+            </div>
+            <div class="mypage-footer-copyright-sp">
+                &copy; 2020 ZEUS WiFi
+            </div>
+        </div>
+    </div>
+</footer>
+{# TODO:フッター差し替え #}
+{# {% include 'common/footer_entry.twig' %} #}
+</body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PQMB32G"
+                  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+</html>

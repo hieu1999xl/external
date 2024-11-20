@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ja">
+{% include 'common/mypage/overseas/head.twig' %}
+<body>
+<!-- Google Tag Manager (noscript)（ザオリク用）-->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TWSVL22B"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- Google Tag Manager (noscript)（ザオリク用）-->
+<!-- Google Tag Manager (noscript)（海外レンタル自社管理用）-->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFB6FZLP"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript)（海外レンタル自社管理用）-->
+<!-- Google Tag Manager (noscript)（海外レンタル自社管理用）-->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TLKJXZ8K"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript)（海外レンタル自社管理用）-->
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WZXDLNM"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NMBMMBV"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MFVGW35"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<header class="mypage-header">
+    <div class="header-wrapper">
+        <nav class="header-item">
+            <div class="div-pc">
+                <p class="header-logo">
+                    <a href="{{ mypage_top_rental_url }}">{{ asset_img('global-logo-short.svg',{'width': 136, 'height': 40, 'alt':'ZEUS WiFi for GLOBAL'}) }}</a>
+                </p>
+            </div>
+            <div class="div-sp">
+                <p class="header-logo">
+                    <a href="{{ mypage_top_rental_url }}">{{ asset_img('global-logo-short.svg',{'width': 112, 'height': 33, 'alt':'ZEUS WiFi for GLOBAL'}) }}</a>
+                </p>
+            </div>
+            <div class="header-title">
+                <div class="current-tab-name-box">
+                    <p class="current-tab-name">
+                        {% block current_tab %}
+                        {% endblock %}
+                    </p>
+                </div>
+            </div>
+            {% if is_login %}
+            <div class="mypage-header-logout">
+                <div class="header-logout">
+                    <a href="{{ logout_url }}">
+                        <div class="header-logout-person header-logout-person-black">
+                            {{ asset_cdn_img('mypage-logout-black_t.png',{'aria-hidden':'true', 'width': 15, 'height': 16, 'alt':'LOG OUT'}) }}
+                        </div>
+                        <p>LOG OUT</p>
+                        <div class="header-logout-arrow header-logout-arrow-black">
+                            {{ asset_cdn_img('mypage-arrow-black_t.png',{'aria-hidden':'true', 'width': 7, 'height': 13, 'alt':'矢印'}) }}
+                        </div>
+                    </a>
+                </div>
+            </div>
+            {% endif %}
+        </nav>
+    </div>
+</header>
+    <div class="mypage-nav-wrapper" id="mypage-nav-wrapper-global">
+
+        {# マイページのヘッダメニュー #}
+        {% include 'common/mypage/overseas/head_menu.twig' %}
+
+    </div>
+
+    <main class="mypage-main mypage-contents {{ theme_class }}" role="main">
+        <div id="container">
+            <div class="mypage-container bg-plain-dark-gray">
+            {% block initial_cancel_process_bar %}{% endblock %}
+                <div class="mypage-section-container">
+                    <div class="mypage-title-area">
+                        <div class="mypage-title-area-icon">
+                            {% block header_icon %}{% endblock %}
+                        </div>
+                        <div class="mypage-titile-area-text">
+                            <h1 class="mypage-titile-area-title">
+                                {% block title %}{% endblock %}
+                            </h1>
+                            <div class="div-sp">
+                                <p class="mypage-titile-area-title-sub">
+                                    {% block sub_title %}{% endblock %}
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                {% include 'common/message.twig' %}
+                {% block description %}{% endblock %}
+                {% block content %}{% endblock %}
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="mypage-footer">
+        <div class="mypage-footer-main">
+            <div class="wrapper">
+                <div>
+                    <ul>
+                        <li><a href="https://zeuswifi-global.jp/" target="_blank">TOP</a></li>
+                        <li><a href="https://zeuswifi-global.jp/terms/" target="_blank">利用規約</a></li>
+                        <li><a href="{{ pdf_privacy_url }}" target="_blank">プライバシーポリシー</a></li>
+                        <li class="mypage-footer-copyright footer-copy">&copy; 2020 ZEUS WiFi</li>
+                    </ul>
+                </div>
+                <div class="mypage-footer-copyright-sp">
+                    &copy; 2020 ZEUS WiFi
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PQMB32G"
+                  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+</html>

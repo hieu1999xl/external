@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ja">
+{% include 'common/head_wimax.twig' %}
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WZXDLNM"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NMBMMBV"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MFVGW35"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<header class="wimax-menu">
+	<div class="inner">
+		<h1 class="logo">
+			<a href="{{ wimax_url }}">
+				{{ asset_cdn_img('wimax-logo2.png',{'alt' : 'ZEUS WiFi','width': 300, 'height': 93}) }}
+			</a>
+		</h1>
+		<ul class="pc_nav">
+			<li class="nav_type01 header-menu">
+        <a href="#merit">ZEUS WiMAX<br>の魅力</a>
+      </li>
+      <li class="nav_type01 header-menu">
+        <a href="#price">ご利用料金</a>
+      </li>
+      <li class="nav_type01 header-menu">
+        <a href="#product">端末紹介</a>
+      </li>
+      <li class="nav_type01 header-menu">
+        <a href="#option">オプション</a>
+      </li>
+      <li class="nav_type01 header-menu">
+        <a href="https://wimax-zeuswifi.jp/wimax_faq/">FAQ</a>
+      </li>
+      <li class="nav_type01 header-menu nav-btn">
+        <a href="{{ mypage_top_url }}" target="_blank">
+          {{ asset_cdn_img('wimax-btn-mypage.png',{'class' : 'pc','alt' : 'マイページ','width': 75, 'height': 40}) }}
+        </a>
+      </li>
+      <li class="nav_type01 header-menu nav-btn">
+        <a href="{{ entry_wimax_select}}">
+          {{ asset_img('wimax-btn-entry.png',{'class' : 'pc','alt' : 'お申し込み','width': 75, 'height': 40}) }}
+        </a>
+			</li>
+		</ul>
+		<ul class="sp_nav">
+			<li><a href="{{ wimax_url }}">トップページ</a></li>
+			<li><a href="{{ pdf_privacy_url }}?promotion=promotion_newservice">プライバシーポリシー</a></li>
+			<li><a href="{{ company_url }}?promotion=promotion_newservice">会社概要･特定商取引法に基づく表記</a></li>
+		</ul>
+	</div>
+  <div class="sp_btn">
+    <a href="{{ mypage_top_url }}" target="_blank">
+      {{ asset_cdn_img('wimax-btn-mypage-sp.png',{'class' : 'sp','alt' : 'マイページ','width': 75, 'height': 40}) }}
+    </a>
+    <a href="{{ entry_wimax_select}}">
+      {{ asset_cdn_img('wimax-btn-entry-sp.png',{'class' : 'sp','alt' : 'お申し込み','width': 75, 'height': 40}) }}
+    </a>
+  </div>
+</header>
+
+<main class="pb7" role="main">
+    {% block table %}{% endblock %}
+    <div class="main {% block page_class %}{% endblock %}">
+        {% block key_visual %}{% endblock %}
+        {% block content %}{% endblock %}
+    </div>
+</main>
+{% if top_url == 'https://zeus-wifi.jp/' %}
+<script>
+  (function(){
+    var uqid = "f08r1ab23rc7dZ5e";
+    var cid  = "13";
+
+    var a=document.createElement("script");
+    a.dataset.uqid=uqid;a.dataset.cid=cid;a.id="afadfpc-f08r1ab23rc7dZ5ecid13-"+Date.now();
+    a.src="//ac.campaign-info.net/fpc/cookie_js.php?scriptId="+encodeURIComponent(a.id);
+    document.head.appendChild(a);
+  })();
+</script>
+{% endif %}
+<footer class="footer-menu">
+	<div class="inner">
+		<div class="ft_logo">
+			<a href="{{ wimax_url }}">
+				{{ asset_cdn_img('wimax-logo.svg', {'alt' : 'ZEUS','width': 210, 'height': 93}) }}
+			</a>
+		</div>
+		<div class="ft_nav">
+			<ul>
+				<li><a href="{{ wimax_url }}">トップページ</a></li>
+				<li><a href="{{ wimax_contact_url }}">お問い合わせ</a></li>
+				<li><a href="{{ wimax_terms_url }}">利用規約</a></li>
+        <li><a href="{{ pdf_privacy_url }}" target="_blank">プライバシーポリシー</a></li>
+				<li><a href="{{ company_url }}">特定商取引法に基づく表記</a></li>
+      </ul>
+		</div>
+    <p id="copy">
+      <span>&copy; 2022 ZEUS WiMAX</span>
+    </p>
+  </div>
+</footer>
+</body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PQMB32G"
+                  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+</html>

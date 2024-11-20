@@ -1,0 +1,60 @@
+{#
+    プラン変更・追加・期間延長
+    要）popup-common.twig
+#}
+<div class="option-popup-block" id="popup-overseas-edit">
+    <div class="entry-option-popup">
+        <div class="background"></div>
+        <div class="entry-option-popup-body">
+            <div class="alart-popup-close-button js-tabindex js-tabindex-plan-popup" tabindex="0"><i class="fas fa-times"></i></div>
+            <div class="popup-contents">
+                <div class="popup-wrap popup-overseas-edit">
+                    <div class="popup-header">
+                        <h2 class="title">プラン変更・追加・期間延長</h2>
+                        <div class="group">
+                            <p class="text">ご利用になりたいメニューを選んでください。</p>
+                        </div>
+                    </div>
+                    <div class="popup-body">
+                        {% if is_rental_plan_change %}
+                        <section>
+                            <a href="{{ mypage_overseas_rental_change_url }}">
+                                <div class="button-body">
+                                    <div class="button-next-adjust">{{ asset_img('travel-change.svg',{'aria-hidden':'true', 'width': 45, 'height' :45, 'alt':'プラン変更'}) }}</div>
+                                    <p>プラン変更</p>
+                                    <span class="button-triangle" aria-hidden="true">▶</span>
+                                </div>
+                            </a>
+                            <p>お申し込み時にご入力いただいたご利用プランの変更ができます。</p>
+                        </section>
+                        {% endif %}
+                        {% if is_rental_plan_extension %}
+                        <section>
+                            <a href="{{ mypage_overseas_rental_extension_url }}">
+                                <div class="button-body">
+                                    <div class="button-next-adjust">{{ asset_img('travel-add.svg',{'aria-hidden':'true', 'width': 45, 'height' :45, 'alt':'渡航期間の延長'}) }}</div>
+                                    <p>渡航期間の延長</p>
+                                    <span class="button-triangle" aria-hidden="true">▶</span>
+                                </div>
+                            </a>
+                            <p>お申し込み時にご入力いただいた渡航期間の延長ができます。</p>
+                        </section>
+                        {% endif %}
+                        {% if is_rental_plan_add %}
+                        <section>
+                            <a href="{{ mypage_overseas_rental_add_url }}">
+                                <div class="button-body">
+                                    <div class="button-next-adjust">{{ asset_img('travel-plus.svg',{'aria-hidden':'true', 'width': 45, 'height' :45, 'alt':'利用国の追加'}) }}</div>
+                                    <p>利用国の追加</p>
+                                    <span class="button-triangle" aria-hidden="true">▶</span>
+                                </div>
+                            </a>
+                            <p>新たな利用国を追加できます。</p>
+                        </section>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

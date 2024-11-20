@@ -1,0 +1,202 @@
+/* 各ブランド固有表示用スタイル */
+.subsc-only,
+.wimax-only,
+.global-only,
+.charge-only,
+.charge-sub-only {
+  display: none;
+}
+/*重要なお知らせ 帯バナー*/
+div.under-kv-notion {
+  background-color: #E6E6E6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 16;
+  position: relative;
+}
+div.under-kv-notion.under-kv-notion-border {
+  border-top: 1px solid #aaa;
+}
+div.mypage-under-kv-notion {
+  border-top: 20px solid #282828;
+}
+div.under-kv-notion-inner {
+  width: auto;
+}
+div.under-kv-notion p.under-kv-notion-title {
+  color: #ff6159;
+  font-size: 1.3rem;
+  font-weight: bold;
+  text-align: left;
+  margin: 12px 0;
+  padding: 0;
+}
+div.under-kv-notion p.under-kv-notion-title a {
+  text-decoration:none;
+  font-size: 1.8rem;
+  color: #000000;
+  display: flex;
+  align-items: center;
+}
+.important-mark {
+  width: 55px;
+  margin-right: 10px;
+}
+.wimax-faq-banner +.under-kv-notion{
+  margin: -19px 0 80px 0;
+}
+@media screen and (max-width: 767px) {
+.wimax-faq-banner +.under-kv-notion{
+  margin: -12px 0 40px 0;
+}
+}
+@media screen and (max-width: 767px) {
+  div.under-kv-notion p.under-kv-notion-title a {
+    text-decoration:none;
+    font-size: 1.5rem;
+    justify-content: center;
+  }
+  div.under-kv-notion {
+    padding: 0 3%;
+    justify-content: flex-start;
+    justify-content: center;
+  }
+  div.under-kv-notion p.under-kv-notion-title {
+    padding: 0;
+    margin: 12px 0;
+  }
+}
+
+/*ポップアップの背景を暗くする*/
+.news-notion-black-background 
+ {
+  position: fixed;
+  background-color: #000000;
+  opacity: 0.4;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000000000001;
+}
+/*ポップアップ全体のサイズ*/
+.white-content-box-news-notion {
+  position: fixed;
+  max-height: calc(100% - 150px - 35px - 200px);
+  max-width: 1100px;
+  top: 50%;
+  left: 0;
+  right: 0;
+  transform: translateY(-50%);
+  padding: 50px 0;
+  margin: auto;
+  z-index: 1000000000002;
+  background-color: #F3F3F3;
+  overflow: auto;
+  box-sizing: content-box;
+}
+/*表示エリア*/
+.white-content-box-inner-news {
+  width: 85%;
+  height: 85%;
+  margin: 30px auto 0;
+}
+/*ポップアップ閉じるボタン*/
+.news-popup-close-button{
+  width: 35px;
+  height: 35px;
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  text-align: center;
+  background-color: #000000;
+  border-radius: 17px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.news-popup-close-button img {
+  width: 50%;
+}
+/*ポップアップ内タイトル*/
+.white-content-box-news-notion .white-content-box-title-notion {
+  padding: 0;
+  margin-top: 0;
+  font-weight: 600;
+}
+/*表*/
+#news-contents-detail table {
+  width: 80%;
+  border-collapse: collapse;
+}
+#news-contents-detail table th {
+  font-size: 1.5rem;
+  line-height: 1.3;
+  text-align: center;
+  white-space: nowrap;
+  background-color: #fff;
+  border: 1px solid #aaa;
+  border-bottom: 4px double #aaa;
+  padding: 10px 2px;
+}
+#news-contents-detail table td {
+  font-size: 1.5rem;
+  line-height: 1.3;
+  text-align: center;
+  background-color: #fff;
+  border: 1px solid #aaa;
+  padding: 10px 2px;
+}
+#news-contents-detail .red {
+  color: #f00;
+}
+#news-contents-detail .bg-red {
+  background-color: #eed1d1;
+}
+#news-contents-detail table.calendar td {
+  padding: 6px 2px;
+}
+@media screen and (max-width: 767px) {
+  /*ポップアップ全体のサイズ*/
+  .white-content-box-news-notion {
+    margin: 0 5%;
+    height: 80%;
+    max-height: initial;
+    bottom: 50px;
+  }
+  div.white-content-box-body{
+    padding: 0 0 50px 0;
+  }
+  .white-content-box-news-notion .white-content-box-inner-news{
+    height: 60vh;
+  }
+  /*ポップアップタイトル文字*/
+  .white-content-box-news-notion .white-content-box-title-notion {
+    padding: 0 5%;
+    font-size: 2.0rem;
+    width: 85%;
+    margin: 0 auto;
+  }
+  /*表*/
+  #news-contents-detail table {
+    width: 100%;
+  }
+}
+/*タブレット向けサイズ調整*/
+@media (max-width: 1280px) and (min-width: 768px) {
+  .white-content-box-news-notion {
+    height: 40%;
+    font-size:1.4rem;
+    margin: 0 auto;
+  }
+}
+.news-popup-close-button:focus {
+  background-color: #FFF;
+  border: 2px solid #333;
+  box-sizing: border-box;
+}
+.news-popup-close-button:focus img {
+  filter: brightness(0.0);
+}

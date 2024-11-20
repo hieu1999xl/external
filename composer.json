@@ -1,0 +1,46 @@
+{
+    "name": "fuel/fuel",
+    "type": "project",
+    "description" : "FuelPHP is a simple, flexible, community driven PHP 5.3.3+ framework, based on the best ideas of other frameworks, with a fresh start!",
+    "keywords": ["application", "website", "development", "framework", "PHP", "PHP7"],
+    "license": "MIT",
+    "require": {
+        "php": ">=5.3.3",
+        "composer/installers": "~1.0",
+        "fuel/core": "1.8.*",
+        "fuel/auth": "1.8.*",
+        "fuel/email": "1.8.*",
+        "fuel/oil": "1.8.*",
+        "fuel/orm": "1.8.*",
+        "fuel/parser": "1.8.*",
+        "fuelphp/upload": "2.0.6",
+        "monolog/monolog": "1.18.*",
+        "twig/twig": "1.*",
+        "hikaeme/monolog-ltsv-formatter": "^1.1",
+        "mockery/mockery": "^1.2",
+        "mpdf/mpdf": "^7.1.7",
+        "phpunit/phpunit": "^5.7.27",
+        "aws/aws-sdk-php": "^3.133",
+        "phpmailer/phpmailer": "^6.1",
+        "ochi51/cybozu-http": "^1.5"
+        },
+    "config": {
+        "vendor-dir": "configure/fuel/vendor"
+    },
+    "extra": {
+        "installer-paths": {
+            "configure/fuel/core": ["fuel/core"],
+            "configure/fuel/packages/auth": ["fuel/auth"],
+            "configure/fuel/packages/email": ["fuel/email"],
+            "configure/fuel/packages/oil": ["fuel/oil"],
+            "configure/fuel/packages/orm": ["fuel/orm"],
+            "configure/fuel/packages/parser": ["fuel/parser"]
+        }
+    },
+    "scripts": {
+        "post-install-cmd": [
+            "php oil r install"
+        ]
+    },
+    "minimum-stability": "stable"
+}

@@ -1,0 +1,404 @@
+/*マイページ内のボタンレイアウト*/
+
+/*ボタン*/
+.button{
+  display: flex;
+  flex-direction: row-reverse; 
+  position: relative;
+  margin-top: 35px;
+  column-gap: 35px;
+}
+
+#contract-cancel-form .button{
+  column-gap: 0;
+}
+
+.mypage-section-container div.button{
+  margin-top: 20px;
+}
+
+div.mypage-section-container div.button-Adjustment.button {
+  margin-top: 0;
+}
+
+.mypage-section-container div.button.mypage-button-wrapper {
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+.mypage-section-container #form-entry-insurance-option div.button.mypage-button-wrapper {
+  margin-top: 20px;
+}
+
+/*ボタン　サイズ*/
+.button-body {
+  width: calc((1100px - 250px - 1.5em) / 3);
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  height: 54px;
+  background-color: #3c3c3c;
+  z-index:2;
+  cursor: pointer;
+}
+
+/* .button-body:nth-child(2){
+  margin: 35px 35px 0 35px;
+} */
+.button-body.white{
+  background-color: #FFFFFF;
+  box-shadow: 0px 0px 10px rgb(0 0 0 / 30%);
+}
+.button-body.gray{
+  background-color: #F3F3F3;
+  box-shadow: 0px 0px 10px rgb(0 0 0 / 30%);
+}
+/*ボタン　文字*/
+.button-text {
+  display: block;
+  overflow-wrap: break-word;
+  text-decoration: none;
+  color: #fff;
+}
+
+.button-radius:focus-visible,
+.button-radius-next:focus-visible {
+  border-radius: 10px;
+}
+
+.button-space {
+  margin-top: 25px;
+}
+
+.button-space-bac {
+  margin-top: 50px;
+}
+
+.button-space:focus-visible{
+  border-radius: 10px;
+}
+
+.button-body p{
+  width: 100%;
+  color: white;
+  position: relative;
+  text-align: center;
+}
+
+div.mypage-content-box-inner .button-body-plan p{
+  width: 100%;
+  color: white;
+  position: relative;
+  right: 8px;
+  text-align: center;
+}
+
+.button-body.white p,
+.button-body.gray p{
+  color: #000000;
+}
+
+
+/*ボタン　三角マーク*/
+span.button-triangle {
+  color: #fff;
+  margin-left: 1em;
+}
+.button-body.white span.button-triangle,
+.button-body.gray span.button-triangle{
+  color: #000000;
+}
+
+.button-triangle.tab-open {
+  display: inline-block;
+  border: none;
+  background: url(https://d1q08lkutgkcx2.cloudfront.net/image/icon-new-tab.svg) center 4px no-repeat;
+  width: 15px;
+  height: 20px;
+  transform: translateY(-5%);
+  position: relative;
+}
+
+/*ボタン　アイコン画像*/
+.button-next{
+  margin-right: 1em;
+  height: 30px;
+}
+
+.button-next img{
+  height: 45px;
+  position: relative;
+  bottom: 7px;
+}
+/*ボタン　アイコン画像　元が大きいため調整用*/
+.button-next-adjust img{
+  height: 32px;
+  position: relative;
+}
+
+/* atone認証ボタン用スタイル */
+.button-text#editpayment_button_atone {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+/*戻るボタン*/
+
+.button-back {
+  height: 50px;
+  background-color: #000;
+  border: 2px solid #3c3c3c;
+}
+
+/*戻るボタン　逆順を解除する*/
+.button:last-of-type,
+.left{
+  flex-direction: row;
+  margin-top: 35px;
+}
+.right:last-child{
+  float: right;
+}
+/*ホバーアニメーション*/
+.button-body:hover,
+.button-body-plan:hover,
+.header-logout:hover{
+  transition:0.2s;
+}
+
+/*枠線を内側に表示*/
+.button-body:hover,
+.button-body-plan:hover,
+.header-logout:hover{
+  outline: 4px solid #ffeb00;
+  outline-offset: -4px;
+}
+
+.button-body.disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.button-body.hover-none:hover{
+  transition: none;
+  outline: none;
+}
+
+.button-contract.plan-change-reservation{
+    flex-direction: column;
+    align-items: end;
+}
+
+.plan-change-reservation .mypage-content-plan-text{
+  margin: 25px 0 auto 0;
+}
+
+@media screen and (min-width: 768px) {  
+  .button-contract{
+    flex-wrap: wrap;
+    gap: 35px;
+    margin-top: 35px;
+  }
+  .button-plan-change .button-body{
+    width: calc((1100px - 250px - 1.54em) / 3);
+  }
+}
+
+.button-contract.plan-change-reservation .button-body {
+  width: calc((1100px - 250px - 1.54em) / 3);
+}
+
+@media screen and (max-width: 767px) {
+  div.button{
+    display: block;
+  }
+
+  .button-body,
+  .button-body:nth-child(2) {
+    width: calc(100% - 42px);
+    height: 60px;
+    margin: 35px 0 0 0;
+  }
+
+  .button-body-create {
+    margin-top: 0;
+  }
+
+  .button-text-create {
+    margin-top: 35px;
+  }
+
+  .button-body.initial-contract-btn {
+    width: 100%;
+  }
+
+  .button-contract.plan-change-reservation .button-body {
+    width: calc(100% - 42px);
+  }
+
+  .button-text {
+    font-size: 1.5rem;
+  }
+
+  .mypage-btn-container div.btn-left-create {
+    margin: 0;
+    width: calc(100% - 42px);
+  }
+
+  .button-space:focus-visible{
+    outline: none;
+  }
+  
+  .button-space:focus-visible .button-margin-create{
+    border-radius: 10px;
+    outline: #FFA500 solid 2px;
+  }
+
+  .button-radius:focus-visible {
+    outline: none;
+  }
+  
+  .button-radius:focus-visible .button-body.light-shadow.prepaid-contract-btn {
+    outline: #FFA500 solid 2px;
+  }
+
+  .button-back{
+    height: 45px;
+  }
+
+  div.right,
+  div.right:last-child{
+    display:flex;
+    flex-direction: column-reverse;
+    float: none;
+  }
+
+  div.right.btn-column-create,
+  div.right.btn-column-create:last-child {
+    flex-direction: column;
+  }
+
+  .button-contract.plan-change-reservation{
+    display: block;
+  }
+
+  span.button-triangle.tab-open {
+    width: 13px;
+    height: 20px;
+    top: calc(20px);
+    transform: translate(0.5em ,-75%);
+    margin-left: -4px;
+  }
+  .mypage-nav-item span.button-triangle.tab-open {
+    top: calc(14px);
+  }
+
+  .mypage-section-container div.button{
+    margin-right: 0;
+  }
+  .mypage-section-container div.button.mypage-button-wrapper {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .mypage-section-container div.button.mypage-button-wrapper div.button.left,
+  .mypage-section-container div.button.mypage-button-wrapper div.button.right {
+    margin-top: 0;
+  }
+}
+
+/*サービス解約ページ　ボタン調整*/
+div.mypage-user-container a.button-text p{
+  color: #fff;
+  text-align: center;
+}
+
+.cancel_initial_over {
+  opacity: 0.5;
+}
+
+.cancel_initial_over:hover {
+  outline: none;
+  cursor: default;
+}
+
+.button-right:last-child {
+  flex-direction: row-reverse;
+}
+
+@media screen and (max-width: 767px) {
+  .button-text-plan {
+    display: inline;
+  }
+
+  .button-contract span{
+    order: 3;
+  }
+  .mypage-content-plan-text {
+    width: 100%;
+    padding: 0 5px;
+    margin-top: 25px;
+    order: 2;
+  }
+}
+
+/*プラン変更　ボタン調整*/
+div.mypage-content-box-inner .button-body-plan-cancel p {
+  right: 0;
+  text-align: center;
+}
+.button-right:last-child {
+  flex-direction: row-reverse;
+}
+
+/*ホバーアニメーション*/
+.procedure-button-body:hover {
+  transition:0.2s;
+}
+
+/*枠線を内側に表示*/
+.procedure-button-body:hover {
+  outline: 4px solid #ffeb00;
+  outline-offset: -4px;
+}
+
+/*202110～ GIGAボーナス*/
+/*非活性*/
+.procedure-button-body-received {
+  opacity: 0.4;
+  cursor: default;
+}
+.procedure-button-body.procedure-button-body-upper-left.procedure-button-body-received:hover{
+  outline: none;
+}
+
+.button-body-plan-cancel {
+  margin-top: 35px;
+}
+
+.cancel-page-initial-cancel-margin {
+  margin-right: 35px;
+}
+
+@media screen and (max-width: 767px) {
+  .cancel-page-initial-cancel-margin {
+    margin-right: 0;
+  }
+  .cancel-button-body-plan {
+    margin-top: 35px;
+  }
+}
+
+.plan-change-true{
+  display: none;
+}
+
+  .button.send-email-button{
+    flex-direction: row-reverse;
+  }
+
+@media screen and (max-width: 767px) {
+  .button.send-email-button{
+    flex-direction: column-reverse;
+  }
+}

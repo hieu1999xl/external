@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="ja">
+    {% include 'common/head.twig' %}
+    <body>
+        <!-- Google Tag Manager (noscript) -->
+        <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PQMB32G"
+        height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+        <!-- End Google Tag Manager (noscript) -->
+        <!-- Google Tag Manager (noscript) -->
+        <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PVCXGMGX"
+        height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+        <!-- End Google Tag Manager (noscript) -->
+        <noscript>
+            <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WZXDLNM&gtm_auth=5-Oybq4P9o8LMHTfSpMOpQ&gtm_preview=env-2&gtm_cookies_win=x" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+        </noscript>
+        <!-- Google Tag Manager (noscript) -->
+        <noscript>
+            <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NMBMMBV"height="0" width="0" style="display:none;visibility:hidden"></iframe>
+        </noscript>
+        <!-- End Google Tag Manager (noscript) -->
+        <!-- Google Tag Manager (noscript) -->
+        <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MFVGW35"
+        height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+        <!-- End Google Tag Manager (noscript) -->
+        <header class="service-header normal">
+            <div class="brand-color-line"></div>
+            <div class="inner">
+                <h1 class="logo">
+                    <a href="{{ top_url }}">
+                        {{ asset_cdn_img('logo_v.svg', {'class': 'pc hide-tb','alt': '格安モバイルWiFiならゼウスWiFi','width': 90, 'height': 64}) }}
+                        {{ asset_cdn_img('logo.svg', {'class': 'sp tb','alt': '格安モバイルWiFiならゼウスWiFi','width': 140, 'height': 43}) }}
+                    </a>
+                </h1>
+                <ul class="pc_nav">
+                    <li class="nav_type01 header-menu{{ charm_selected }}">
+                        <a href="{{ charm_url }}">ゼウスWiFi<br class="pc">とは</a>
+                    </li>
+                    <li class="nav_type01 header-menu{{ price_selected }}">
+                        <a href="{{ price_url }}">料金プラン</a>
+                    </li>
+                    <li class="nav_type01 header-menu{{ overseas_selected }}">
+                        <a href="{{ overseas_use_url }}">海外利用</a>
+                    </li>
+                    <li class="nav_type01 header-menu{{ device_selected }}">
+                        <a href="{{ device_url }}">機種情報</a>
+                    </li>
+                    <li class="nav_type01 header-menu{{ guide_selected }}">
+                        <a href="{{ guide_url }}">ご契約の流れ</a>
+                    </li>
+                    <li class="nav_type01 header-menu{{ faq_selected }}">
+                        <a href="{{ faq_url }}">よくある<br>ご質問</a>
+                    </li>
+                    <li class="nav_type01 header-menu header-mypage">
+                        <a href="{{ mypage_top_url }}" target="_blank">
+                            {{ asset_cdn_img('mypage-icon.svg', {'alt': 'MY PAGE','width': 40, 'height': 40}) }}
+                            <span>MY PAGE</span>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="pc_nav btn-box-container">
+                    <li class="nav_type03 request entry">
+                        <a href="{{ entry_select_url }}">
+                            お申し込み
+                            <span class="sub-mess"><span>5分</span>で完了</span>
+                        </a>
+                    </li>
+                    <li class="nav_type03 business global">
+                        <a href="https://zeuswifi-global.jp/" target="_blank">
+                        海外専用Wi-Fi
+                        <span class="sub-mess">新登場!</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="sp_btn">
+                <a href="{{ entry_select_url }}" data-gtm-click="ga_layout_head_nav">
+                    <span class="sub-mess"><span>5分</span>で完了</span>
+                    お申し込み
+                </a>
+                <a href="https://zeuswifi-global.jp/" target="_blank" class="business global">
+                    <span class="sub-mess">新登場！</span>
+                    海外専用<br>Wi-Fi
+                </a>
+            </div>
+            <div id="sp-menu" tabindex="0">
+                <span class="top-border"></span>
+                <span class="middle-border"></span>
+                <span class="bottom-border"></span>
+            </div>
+            <ul class="hum-nav sp_nav">
+                <li class="sp_nav_bond">
+                    <a href="{{ top_url }}">{{ asset_cdn_img('logo.svg', {'alt': '格安モバイルWiFiならゼウスWiFi','width': 300, 'height': 93}) }}</a>
+                </li>
+                <li class="sp_nav_type02">
+                    <a href="{{ entry_select_url }}" data-gtm-click="ga_layout_head_sp">
+                        <span class="sub-mess"><span>5分</span>で完了</span>お申し込み
+                    </a>
+                </li>
+                <li class="sp_nav_type01">
+                    <a href="https://zeuswifi-global.jp/" target="_blank">
+                    <span class="sub-mess">新登場！</span>
+                    海外専用<br>Wi-Fi
+                    </a>
+                </li>
+                
+                <li class="sp_nav_type03">
+                    <a href="{{ charm_url }}">ゼウスWiFiとは</a>
+                </li>
+                <li class="sp_nav_type03">
+                    <a href="{{ price_url }}">料金プラン</a>
+                </li>
+                <li class="sp_nav_type03">
+                    <a href="{{ overseas_use_url }}">海外利用</a>
+                </li>
+                <li class="sp_nav_type03">
+                    <a href="{{ device_url }}">機種情報</a>
+                </li>
+                <li class="sp_nav_type03">
+                    <a href="{{ guide_url }}">ご契約の流れ</a>
+                </li>
+                <li class="sp_nav_type03">
+                    <a href="{{ faq_url }}">よくあるご質問</a>
+                </li>
+                <li class="sp_nav_type03">
+                    <a href="{{ callcenter_url }}">お客様サポート</a>
+                </li>
+                <li class="sp_nav_type03">
+                    <a href="{{ mypage_top_url }}" target="_blank">{{ asset_cdn_img('nav_ico.svg', {'alt': 'MY PAGE','width': 73, 'height': 150}) }}MY PAGE</a>
+                </li>
+                <li class="sp_nav_type04">
+                    <a href="{{ business_url }}" target="_blank">
+                        <span>法人契約は<br>こちら！</span>
+                    </a>
+                </li>
+            </ul>
+        </header>
+        <main class="pb7" role="main">
+            {% block table %}{% endblock %}
+            <div class="main {% block page_class %}{% endblock %}">
+                {% block key_visual %}{% endblock %}
+                {% block content %}{% endblock %}
+            </div>
+        </main>
+        
+        <footer class="footer-menu footer-new">
+            <div class="inner">
+                <div class="ft_logo">
+                    <a href="{{ top_url }}">
+                        {{ asset_cdn_img('ft_logo.svg', {'class': 'pc', 'alt': '格安モバイルWiFiならゼウスWiFi','width': 155, 'height': 110}) }}
+                        {{ asset_cdn_img('ft_logo_sp.svg', {'class': 'sp', 'alt': '格安モバイルWiFiならゼウスWiFi','width': 155, 'height': 48}) }}
+                    </a>
+                </div>
+                <div class="ft_nav">
+                    <ul>
+                        <li><a href="{{ charm_url }}"><span class="centering">ゼウスWiFiとは</span></a></li>
+                        <li><a href="{{ price_url }}"><span class="centering">料金プラン</span></a></li>
+                        <li><a href="{{ overseas_use_url }}"><span class="centering">海外利用</span></a></li>
+                        <li><a href="{{ device_url }}"><span class="centering">機種情報</span></a></li>
+                        <li><a href="{{ guide_url }}"><span class="centering">ご契約の流れ</span></a></li>
+                        <li><a href="{{ faq_url }}"><span class="centering">よくあるご質問</span></a></li>
+                        <li><a href="{{ business_url }}" target="_blank"><span class="centering">法人契約</span></a></li>
+                        <li><a href="{{ callcenter_url }}"><span class="centering">お客様サポート</span></a></li>
+                    </ul>
+                    <ul class="pc">
+                        <li><a href="{{ anshin_kaiyaku_url }}">あんしん解約サポート</a></li>
+                        <li><a href="{{ contract_initial_cancel_url }}">初期契約解除</a></li>
+                        <li><a href="{{ news_url }}">お知らせ</a></li>
+                        <li><a href="{{ campaign_archive_url }}">キャンペーンアーカイブ</a></li>
+                        <li class="sp"><a href="{{ terms_url }}">利用規約</a></li>
+                        <li class="sp"><a href="{{ pdf_privacy_url }}" target="_blank">プライバシーポリシー</a></li>
+                        <li class="sp"><a href="{{ company_url }}">特定商取引法に基づく表記</a></li>
+                        <li class="pc"><a href="{{ terms_url }}">利用規約</a></li>
+                        <li class="pc"><a href="{{ pdf_privacy_url }}" target="_blank">プライバシーポリシー</a></li>
+                        <li class="pc"><a href="{{ company_url }}">特定商取引法に基づく表記</a></li>
+                    </ul>
+                    <ul class="pc">
+                        <li><a href="{{ business_partner_url }}" target="_blank">パートナー契約 新登場</a></li>
+                        <li><a href="https://wimax-zeuswifi.jp/" target="_blank">ZEUS WiMAX 新登場</a></li>
+                        <li><a href="https://zeuswifi-global.jp/" target="_blank">ZEUS WiFi for GLOBAL 新登場</a></li>
+                        <li><a href="{{ prepaid_lp_url }}" target="_blank">ZEUS WiFi CHARGE 新登場</a></li>
+                        <ul class="nest-list pc">
+                            <li>ZEUS WiFi 取扱説明書</li>
+                            <li><a href="{{ pdf_instruction_manual_mr1_url }}" target="_blank">MR1</a><a href="{{ pdf_instruction_manual_url }}" target="_blank">H01</a></li>
+                        </ul>
+                        <ul class="nest-list pc">
+                            <li>メディア</li>
+                            <li><a href="https://media.shibarinashi-wifi.jp/" target="_blank">コムナビ</a><a href="https://fuji-wifi.jp/column/" target="_blank">FUJIログ通信</a></li>
+                        </ul>
+                    </ul>
+                    <ul class="sp">
+                        <li><a href="{{ anshin_kaiyaku_url }}">あんしん解約サポート</a></li>
+                        <li><a href="{{ contract_initial_cancel_url }}">初期契約解除</a></li>
+                        <li><a href="{{ news_url }}">お知らせ</a></li>
+                        <li><a href="{{ campaign_archive_url }}">キャンペーンアーカイブ</a></li>
+                        <li><a href="{{ terms_url }}">利用規約</a></li>
+                        <li><a href="{{ pdf_privacy_url }}" target="_blank">プライバシーポリシー</a></li>
+                        <li><a href="{{ company_url }}">特定商取引法に基づく表記</a></li>
+                    </ul>
+                    <div class="footer-nest">
+                        <ul class="nest-list sp">
+                            <li>ZEUS WiFi 取扱説明書</li>
+                            <li><a href="{{ pdf_instruction_manual_mr1_url }}" target="_blank">MR1</a><br><a href="{{ pdf_instruction_manual_url }}" target="_blank">H01</a></li>
+                        </ul>
+                        <ul class="nest-list sp">
+                            <li>メディア</li>
+                            <li><a href="https://media.shibarinashi-wifi.jp/" target="_blank">コムナビ</a><br><a href="https://fuji-wifi.jp/column/" target="_blank">FUJIログ通信</a></li>
+                        </ul>
+                    </div>
+                    <ul class="sp column-3">
+                        <li><a href="{{ business_partner_url }}" target="_blank">パートナー契約 新登場</a></li>
+                        <li><a href="https://wimax-zeuswifi.jp/" target="_blank">ZEUS WiMAX</a></li>
+                        <li><a href="https://zeuswifi-global.jp/" target="_blank">ZEUS WiFi for <br>GLOBAL</a></li>
+                    </ul>
+                    <ul class="sp">
+                        <li><a href="{{ prepaid_lp_url }}" target="_blank">ZEUS WiFi CHARGE</a></li>
+                        <li><a href="https://zeuswifi-charge.jp/sub/" target="_blank">ZEUS WiFi CHARGE<br>オートチャージプラン</a></li>
+                    </ul>
+                </div>
+                <div class="privacy-mark">
+                    <a href="https://privacymark.jp/" target="_blank">{{ asset_cdn_img('logo-privacy-wh.png',{ 'width': 200, 'height' :200, 'alt':'プライバシーマーク'}) }}</a>
+                </div>
+            </div>
+            <p id="copy">
+                <span>&copy; 2020 ZEUS WiFi</span>
+            </p>
+        </footer>
+        {# 追従ボタン #}
+        {% block entry_fix %}{% endblock %}
+        {# チャットボット start #}
+        {# 除外するディレクトリ #}
+        {% set exclude_dir = [
+            'faq',
+            'support/callcenter',
+            'support_contact',
+            'support_contact/confirm',
+            'support_contact/complete',
+            'company'
+        ] %}
+        {% set current_dir = current_url|replace({(top_url): ''}) %}
+        {% set chatbot_flag = current_dir in exclude_dir ? false : true %}
+        {% if chatbot_flag %}
+        {#
+        - ID切り替え
+        - 本番：[チャットボット] b1c18162740d2c139770
+        - 開発：[チャットボット] 239153c914e809e75d18
+        #}
+        {% set support_chatbot_mode = 'dev' %}
+        {% if top_url == 'https://zeus-wifi.jp/' %}{% set support_chatbot_mode = 'prod' %}
+        {% elseif top_url == 'https://stg.zeus-wifi.jp/' %}{% set support_chatbot_mode = 'prod' %}
+        {% endif %}
+        {% set chatbot_id = support_chatbot_mode == 'prod' ? 'b1c18162740d2c139770' : '239153c914e809e75d18' %}
+        <script>
+        const tb = (window.innerWidth >= 768) && (window.innerWidth <= 1280); // タブレット幅判定
+        (function (c, n, s) {
+            if (c[n] === void 0) {c['ULObject'] = n;
+            c[n] = c[n] || function () {(c[n].q = c[n].q || []).push(arguments)};
+            c[n].l = 1 * new Date();var e = document.createElement('script');
+            e.async = 1;e.src = s + "/chatbot.js";
+            var t = document.getElementsByTagName('script')[0];t.parentNode.insertBefore(e, t);}
+        })(window, 'ul_widget', 'https://support-widget.userlocal.jp');
+        ul_widget('init', { 'id': '{{ chatbot_id }}',
+        'lg_id': '',
+        'pc_popup_space_width': tb ? '10px' : '80px', });
+
+        var chatbotDevice = window.innerWidth > 767 ? 'pc' : 'sp';
+        var chatbotPopupOpen = false;
+        ul_widget('hide');
+        function btnChatbot() {
+            ul_widget('show');
+            ul_widget('popup_open');
+            chatbotPopupOpen = true;
+        }
+        var chatbotBtnElem = document.getElementById('btn-chatbot')
+        if (chatbotBtnElem) {
+            chatbotBtnElem.addEventListener('click', btnChatbot);
+        }
+        ul_widget('event', 'popup_open', function () {
+            chatbotPopupOpen = true;
+        });
+        ul_widget('event', 'popup_close', function () {
+            if (chatbotDevice == 'pc' && document.documentElement.scrollHeight - window.innerHeight - 100 <= window.scrollY) {
+                ul_widget('hide');
+            }
+            chatbotPopupOpen = false;
+        });
+        var chatbotShow = false;
+        var chatbotSpBtn = document.getElementById('entry_fix');
+        var chatbotShowFunc = function () {
+            if (chatbotDevice == 'sp' && window.scrollY > 100 && window.scrollY < window.innerHeight) {
+                chatbotSpBtn.classList.add('show');
+            }
+            if (document.documentElement.scrollHeight - window.innerHeight - 100 > window.scrollY) {
+                if (!chatbotShow) {
+                    ul_widget('show');
+                    chatbotShow = true;
+                }
+            } else if (!chatbotPopupOpen) {
+                if (chatbotShow) {
+                    //ul_widget('hide');
+                    chatbotShow = false;
+                }
+            }
+        };
+        document.addEventListener('scroll', chatbotShowFunc);
+        document.addEventListener('DOMContentLoaded', chatbotShowFunc);
+        </script>
+        {% endif %}
+        {# チャットボット end #}
+    </body>
+</html>

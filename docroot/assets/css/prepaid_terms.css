@@ -1,0 +1,31 @@
+section.other-first {
+  background-image: none;
+  background-color: #FFF;
+}
+div.content-box-inner.empty-top div.terms-content-box {
+  border: 3px solid #9e00ff;
+}
+.terms-content-title-flex {
+  border-bottom: 3px solid #9e00ff;
+}
+div.content-container section.other-second .terms-content-box h2 {
+  border-bottom: 3px solid #9e00ff;
+}
+div.content-container section.other-second div.terms-btn {
+  outline: 1px solid #9e00ff;
+}
+div.content-container section.other-second div.terms-btn:hover, 
+div.content-container section.other-second div.terms-btn.show {
+  background-color: #9e00ff;
+  color: #FFFFFF;
+}
+body.prepaid-terms-body {
+  background: #FFFFFF;
+}
+section.other-second .terms-body ul.terms-list:first-child li.terms-year-select {
+  background-color: #9e00ff;
+  color: #FFFFFF;
+}
+div.content-container section.other-second ul.terms-list a {
+  color: #0044CC;
+}

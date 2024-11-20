@@ -1,0 +1,9257 @@
+/*********************/
+/*mypage-common*/
+/*********************/
+
+header {
+  z-index: 1;
+}
+
+div.bg-plain-dark-gray {
+  background-color: #282828;
+}
+div.bg-plain-white.bg-login{
+  background-color: #FFFFFF;
+  min-height: calc(100vh - 70px - 50px);
+}
+
+a.yellow-link{
+  text-decoration: underline;
+  color: #FFEB00;
+}
+
+.yellow-drop {
+  color: #FFEB00;
+  text-decoration: underline;
+}
+
+.hidden {
+  display: none;
+}
+
+div.mypage-container {
+  width: 100%;
+  padding-bottom: 50px;
+  /*ナビ下の隙間を埋める*/
+  margin-top: -1px;
+  /*はみ出してる分をマイナス*/
+  min-height: calc(100vh - 70px - 56px - 50px - 65px + 1px);
+  position: relative;
+  /*背景の文字　はみ出した分を非表示*/
+  overflow: hidden;
+}
+div.mypage-container.timeout-main-area {
+  min-height: calc(100vh - 70px - 56px - 50px + 1px);
+}
+
+div.bg-login{
+  min-height: calc(100vh - 65px - 70px - 35px);
+  overflow: hidden;
+}
+
+.mypage-section-container {
+  max-width: 1020px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+div.mypage-description {
+  font-size: 1.3rem;
+  text-align: left;
+  color: white;
+  position: relative;
+  z-index: 1;
+}
+
+div.complete-description {
+  padding: 20px 5%;
+  font-size: 1.3rem;
+  text-align: left;
+  background-color: white;
+}
+
+div.complete-description-title {
+  text-align: center;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+/*エラーメッセージ*/
+.error-message {
+  color: #FF6BF3;
+  font-size: 1.6rem;
+  position: relative;
+  bottom: 10px;
+  text-align: center;
+  line-height: 1.5em;
+}
+.error-message-value {
+  padding: 15px;
+  color: #DB0066;
+  background:#FEF6F6;
+  margin-bottom: 35px;
+  z-index: 1;
+  position: relative;
+}
+.error-center {
+  text-align: center;
+}
+label.validator-error {
+  color: #FFEB00;
+  font-size: 1.2rem;
+  display: block;
+  margin-top: 3px;
+}
+td.white-td label.validator-error{
+  color: red;
+}
+
+div.not-inputted-items-hidden {
+  display: none;
+}
+div.not-inputted-items {
+  color: red;
+  background-color: white;
+  margin: 10px 0;
+  padding: 10px;
+  height: auto;
+  max-width: 750px;
+  margin: 0 auto;
+}
+a.not-inputed-link {
+  text-decoration: none;
+  color: black;
+}
+a.not-inputed-link:hover {
+  color: #e6006b;
+}
+
+div.mypage-contract-select-container.mypage-overseas-select-container table tbody tr td{
+  width: 25%;
+}
+
+/*？ ホバーで吹き出しコメント表示*/
+div.question-mark{
+  position: relative;
+  cursor: default;
+}
+div.question-mark img{
+  position: absolute;
+  width: 20px;
+  top: -3px;
+  right: 5px;
+  transform: translateX(-50%);
+}
+div.question-mark:hover .comment {
+  display: inline;
+  cursor: pointer;
+}
+.comment {
+  display: none;
+  position: absolute;
+  left: 110px;
+  bottom: 10px;
+  margin: 1.5em 0;
+  padding: 7px 16px;
+  width: 130px;
+  color: #3C3C3C;
+  font-size: 1.3rem;
+  background: white;
+  border: 1px solid #3C3C3C;
+  z-index: 1;
+}
+.comment:after{
+  content: "";
+  position: absolute;
+  bottom: -27px;
+  left: 66px;
+  margin-left: 50px;
+  margin-top:30px;
+  border: 14px solid transparent;
+  border-top: 14px solid white;
+}
+
+table.table-mini .comment{
+  left: 40px;
+}
+
+div.corp-imei-select-overseas .comment{
+  left: 24px;
+  bottom: 22px;
+}
+
+@media screen and (max-width: 767px) {
+  div.mypage-section-container {
+    max-width: 90%;
+  }
+
+  div.mypage-contract-select-container.mypage-overseas-select-container table tbody tr td{
+    width: 45%;
+    padding-left: 4%;
+  }
+  .comment {
+    bottom: 30px;
+    left: 5px;
+  }
+  .comment:after{
+    left: 10px;
+  }
+  div.question-mark img{
+    position: absolute;
+    width: 18px;
+    top: 3px;
+    right: -3px;
+  }
+
+  table.table-mini .comment{
+    left: -20px;
+  }
+  table.table-mini .comment:after{
+    left: -10px;
+  }
+  table.table-mini div.question-mark img{
+    right: 4px;
+    top: 20px;
+    width: 14px;
+  }
+  div.question-mark:active .comment {
+    display: inline;
+  }
+  div.corp-imei-select-overseas .comment{
+    left: 105px;
+  }
+  div.corp-imei-select-overseas .comment:after{
+    left: 80px;
+  }
+  .error-message {
+    bottom: 10px;
+    padding-top: 30px;
+    text-align: left;
+  }
+}
+@media screen and (max-width: 320px) {
+  div.question-mark img{
+    right: -8px;
+  }
+}
+.error-message-value {
+  margin-top: 35px
+}
+.error-center {
+  text-align: center;
+}
+
+table.form-table {
+  table-layout: fixed;
+}
+select {
+  font-size: 1.3rem;
+  width: 35%;
+}
+table.form-table tr {
+  height: 5rem;
+}
+table.form-table th,
+td {
+  text-align: left;
+  vertical-align: top;
+}
+table.form-table th {
+  width: 250px;
+  font-size: 1.3rem;
+  padding-top: 10px;
+}
+
+div.support-contact-container div.form-user-background{
+  padding: 20px 0;
+}
+div.user-link {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+div.user-link div {
+  text-align: right;
+}
+div.entry-user-link {
+  height: 70px;
+  align-items: center;
+}
+.mypage-confirm-dialog{
+  max-width: 400px!important;
+  position: fixed!important;
+  background-color: #FFEB00!important;
+  margin: auto!important;
+  z-index: 1000000000002!important;
+  top: 50%!important;
+  left: 50%!important;
+  transform: translate(-50%,-50%)!important;
+  box-shadow: 15px 15px 25px 0 rgb(0 0 0 / 20%)!important;
+}
+
+@media screen and (max-width: 767px) {
+  .ui-dialog-buttonpane{
+    display: flex;
+    justify-content: center;
+  }
+}
+@media (max-width: 767px) {
+  table.form-table {
+    width: 100%;
+  }
+  table.form-table th,
+  table.form-table td {
+    display: block;
+    text-align: left;
+    width: 100%;
+  }
+  table.selection-table td {
+    display: block;
+    text-align: left;
+    width: 100%;
+  }
+}
+/*********************/
+/*mypage-footer*/
+/*********************/
+
+div.mypage-footer-main {
+  width: 100%;
+  height: auto;
+  text-align: center;
+  background-color: #000;
+  color: white;
+  bottom: 0;
+  font-size: 12px;
+  padding: 7px 0;
+  display: flex;
+  justify-content: left;
+}
+
+div.mypage-footer-main a {
+  text-decoration: none;
+  color: white;
+}
+
+div.mypage-footer-main .wrapper {
+  width: 100%;
+  max-width: 1170px;
+  text-align: left;
+  margin: 0 auto;
+}
+
+.wrapper.focus_top:focus-visible {
+  outline: none;
+}
+
+.mypage-footer-main ul {
+  list-style: none;
+  text-align: left;
+  margin: 15px 0;
+}
+
+div.mypage-footer-main ul li {
+  display: inline-block;
+  font-size: 12px;
+  margin: 0 15px;
+  text-decoration: none;
+}
+
+div.mypage-footer-main ul li:first-child {
+  margin-left: 0;
+}
+
+div.mypage-footer-main ul li.mypage-footer-copyright {
+  float: right;
+}
+
+div.mypage-footer-main .mypage-footer-copyright-sp {
+  text-align: center;
+  font-weight: normal;
+  margin-bottom: 15px;
+}
+
+div.mypage-footer-main ul li.mypage-footer-copyright {
+  display: "";
+}
+div.mypage-footer-main div.mypage-footer-copyright-sp {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  div.mypage-footer-main ul {
+    list-style: none;
+    text-align: center;
+  }
+
+  div.mypage-footer-main ul li:first-child {
+    margin-left: 15px;
+  }
+
+  div.mypage-footer-main ul li.mypage-footer-copyright {
+    display: none;
+  }
+  div.mypage-footer-main div.mypage-footer-copyright-sp {
+    display: block;
+  }
+
+  div.mypage-footer-main .wrapper {
+    width: 100%;
+    padding: 0px 4%;
+  }
+}
+
+
+/*************************/
+/* MyPage Menu */
+/*************************/
+
+header.mypage-header {
+  margin-top: 0;
+  width: 100%;
+  height: auto;
+  text-align: center;
+  position: relative;
+  background-color: black;
+}
+header.mypage-header.wimax{
+  background-color: #0B3180;
+}
+.mypage-titile-area-text{
+  z-index: 1;
+}
+
+@media (max-width: 1280px) {
+  header.mypage-header span.mypage-header-contract {
+    font-size: 0.8rem;
+  }
+
+  span.mypage-title-contract {
+    font-size: 0.75rem;
+  }
+}
+div.header-wrapper {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  font-size: 12px;
+  text-align: center;
+  position: relative;
+}
+
+header.mypage-header nav.header-item {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  margin-right: auto;
+  line-height: 20px;
+  background-color: black;
+}
+
+header.mypage-header div.current-tab-name-box {
+  position: relative;
+  bottom: 2px;
+}
+
+header.mypage-header p.current-tab-name {
+  text-align: left;
+  font-weight: bold;
+  font-size: 1.3rem;
+  border-left: 1px white solid;
+  color: #fff;
+  padding-left: 15px;
+  margin-left: 15px;
+}
+
+header.mypage-header p.header-logo {
+  padding-left: 10px;
+}
+
+header.mypage-header p.header-logo a img {
+  width: auto;
+  height: 40px;
+  margin: 12px 0;
+  image-rendering: -webkit-optimize-contrast;
+}
+
+/************/
+/* Contract */
+/************/
+
+table.mypage-contract-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 5px;
+}
+
+table.mypage-contract-table tr {
+  height: 1.5rem;
+}
+
+table.mypage-contract-table td {
+  border-collapse: collapse;
+  background: #fff;
+  color: black;
+}
+
+table.mypage-contract-table th {
+  border-collapse: collapse;
+  background-color: black;
+  color: white;
+  padding: 5px;
+  padding-left: 15px;
+  width: 30%;
+}
+
+span.total-price-box-large {
+  font-size: 1.2em;
+}
+
+span.total-price-box-total {
+  font-size: 1.5em;
+  color: #ffeb00;
+  font-weight: bold;
+}
+
+div.total-price-box-history {
+  text-align: right;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  height: 20px;
+  line-height: 17px;
+}
+
+span.total-price-box-history-title {
+  font-size: 0.7em;
+}
+
+div.total-price-box-history-latest span.total-price-box-history-title {
+  color: #ffeb00;
+}
+
+div.total-price-box-history span.total-price-box-history-title {
+  color: #ffeb00;
+}
+
+div.total-price-box-history span.total-price-box-total {
+  color: #ffeb00;
+}
+
+@media (max-width: 1280px) {
+  table.mypage-contract-table th {
+    width: 30%;
+  }
+}
+
+div.mypage-contract-wrapper-hidden {
+  display: none;
+}
+div.mypage-payment-history-wrapper-hidden {
+  display: none;
+}
+div.mypage-data-flow-wrapper-hidden {
+  display: none;
+}
+
+div.mypage-contract-select-container {
+  margin-top: 30px !important;
+}
+
+
+/************/
+/* user */
+/************/
+
+div.mypage-user-container {
+  max-width: 1024px;
+  padding-bottom: 30px;
+  text-align: left;
+  z-index: 2;
+}
+
+.mypage-user-info-detail-hidden {
+  display: none;
+}
+
+.mypage-invoice-info-detail-hidden {
+  display: none;
+}
+
+.mypage-delivery-info-detail-hidden {
+  display: none;
+}
+
+.corp-payment-info-detail-hidden {
+  display: none;
+}
+@media screen and (max-width: 767px) {
+  div.padding-content {
+    padding-bottom: 0;
+  }
+  div.header-wrapper {
+    height: 100%;
+  }
+  header.mypage-header.wimax div.header-wrapper{
+    height: 70px;
+  }
+}
+
+/***********/
+/* Override jquery ui */
+/***********/
+.ui-dialog {
+  z-index: 10000000 !important;
+}
+
+.ui-dialog .ui-dialog-title {
+  width: 100% !important;
+  background-color: #FFEB00 !important;
+  font-size: 23px !important;
+  font-weight: 900 !important;
+  margin-top: 28px !important;
+  border-bottom: solid 2px black;
+  white-space: unset !important;
+}
+
+.ui-draggable .ui-dialog-titlebar {
+  cursor: move;
+  background-color: #FFEB00!important;
+  padding: 0px 39px !important;
+}
+
+.ui-widget-header {
+  background-color: #FFEB00!important;
+  border: 0px !important;
+  background: #FFEB00 url(images/ui-bg_highlight-soft_75_cccccc_1x100_t.png) 50% 50% repeat-x!important;
+}
+
+.ui-dialog {
+  border: solid 5px #ffeb00 !important;
+  text-align: center;
+  padding: 0!important;
+}
+
+.ui-widget-content {
+  border: none!important;
+  background: #ffffff;
+  color: #222222;
+}
+
+.ui-corner-all, .ui-corner-bottom, .ui-corner-right, .ui-corner-br {
+  border-bottom-right-radius: 15px!important;
+}
+
+.ui-corner-all, .ui-corner-bottom, .ui-corner-left, .ui-corner-bl {
+  border-bottom-left-radius: 15px!important;
+}
+
+.ui-corner-all, .ui-corner-top, .ui-corner-right, .ui-corner-tr {
+  border-top-right-radius: 15px!important;
+}
+
+.ui-corner-all, .ui-corner-top, .ui-corner-left, .ui-corner-tl {
+  border-top-left-radius: 15px!important;
+}
+
+.ui-dialog .ui-dialog-buttonpane {
+  text-align: left;
+  border-width: 1px 0 0 0;
+  background-image: none;
+  margin-top: 33px!important;
+  padding: 0!important;
+  border-bottom-right-radius: 15px!important;
+  border-bottom-left-radius: 15px!important;
+  max-width: 400px!important;
+  height: 70px!important;
+}
+
+.ui-dialog .ui-dialog-buttonpane button:focus-visible {
+  outline: #333333 solid 3px;
+}
+
+.ui-widget {
+  font-family: "Montserrat", "Noto Sans JP", sans-serif!important;
+}
+
+.ui-dialog .ui-dialog-content {
+  margin-top: 24px !important;
+  font-size: 13px !important;
+}
+
+.popup-data-charge-text,
+.popup-insurance-option-text {
+  margin-top: 30px !important;
+  font-weight: 900 !important;
+  font-size: 15px !important;
+  border: solid 2px #000000;
+  background-color: white;
+  padding: 6px;
+  width: 338px !important;
+  text-align: center;
+  margin: 0 auto;
+  border-radius: 5px;
+  white-space: nowrap;
+}
+
+.popup-kaigai-text {
+  margin-top: 30px !important;
+  font-weight: 900 !important;
+  font-size: 15px !important;
+  border: solid 2px #000000;
+  background-color: white;
+  padding: 6px;
+  width: 338px !important;
+  text-align: center;
+  margin: 0 auto;
+  border-radius: 5px;
+}
+
+.mypage-popup-data-pop-second-text-margin {
+  margin-top: 34px !important;
+  margin-bottom: 30px !important;
+  font-weight: 900 !important;
+  font-size: 15px !important;
+}
+
+.mypage-popup-data-pop-anshin-text-margin {
+  margin-top: 10px !important;
+  margin-bottom: -6px !important;
+}
+
+button.ui-button.ui-dialog-titlebar-close {
+  display: none;
+}
+
+.dialog-btn-green {
+  background: white !important;
+  border-radius: 0 !important;
+  border: solid black 1px !important;
+  color: black !important;
+  outline: 0;
+}
+
+.dialog-btn-green:hover {
+  background-color: #ffeb00 !important;
+}
+
+button.dialog-btn-neg {
+  background: black !important;
+  border-radius: 0 !important;
+  border: solid black 2px !important;
+  color: #FFEB00 !important;
+  outline: 0;
+  margin: 13px 49px 0 auto !important;
+  height: 44px !important;
+  width: 121px !important;
+  font-size: 15px !important;
+}
+
+button.dialog-btn-neg:hover {
+  background: #FFEB00 !important;
+  border-radius: 0 !important;
+  border: solid black 2px !important;
+  color: black !important;
+  outline: 0;
+  font-weight: bold !important;
+  margin: 13px 49px 0 auto !important;
+  height: 44px !important;
+  width: 121px !important;
+  font-size: 15px !important;
+}
+
+button.dialog-btn-red {
+  background: #FFEB00 !important;
+  border-radius: 0 !important;
+  border: solid black 2px !important;
+  color: black !important;
+  outline: 0;
+  font-weight: bold !important;
+  margin: 13px 52px auto auto !important;
+  height: 44px !important;
+  width: 121px !important;
+  font-size: 15px !important;
+}
+
+button.dialog-btn-red:hover {
+  background: black !important;
+  border-radius: 0 !important;
+  border: solid black 2px !important;
+  color: #FFEB00 !important;
+  outline: 0;
+  font-weight: normal !important;
+  margin: 13px 52px auto auto !important;
+  height: 44px !important;
+  width: 121px !important;
+  font-size: 15px !important;
+}
+
+@media screen and (max-width: 767px) {
+  .ui-dialog .ui-dialog-title {
+    width: 100% !important;
+    background-color: #FFEB00 !important;
+    font-size: 18px !important;
+    font-weight: 900 !important;
+    margin-top: 28px !important;
+    border-bottom: solid 2px black;
+  }
+  .ui-draggable .ui-dialog-titlebar {
+    cursor: move;
+    background-color: #FFEB00!important;
+    padding: 0px 24px !important;
+  }
+  button.dialog-btn-neg {
+    background: black !important;
+    border-radius: 0 !important;
+    border: solid black 2px !important;
+    color: #FFEB00 !important;
+    outline: 0;
+    margin: 13px 18px 0 auto !important;
+    height: 44px !important;
+    width: 121px !important;
+    font-size: 15px !important;
+  }
+  button.dialog-btn-neg:hover {
+    background: #FFEB00 !important;
+    border-radius: 0 !important;
+    border: solid black 2px !important;
+    color: black !important;
+    outline: 0;
+    font-weight: bold !important;
+    margin: 13px 18px 0 auto !important;
+    height: 44px !important;
+    width: 121px !important;
+    font-size: 15px !important;
+  }
+  button.dialog-btn-red {
+    background: #FFEB00 !important;
+    border-radius: 0 !important;
+    border: solid black 2px !important;
+    color: black !important;
+    outline: 0;
+    font-weight: bold !important;
+    margin: 13px 0px auto auto !important;
+    height: 44px !important;
+    width: 121px !important;
+    font-size: 15px !important;
+  }
+  button.dialog-btn-red:hover {
+    background: black !important;
+    border-radius: 0 !important;
+    border: solid black 2px !important;
+    color: #FFEB00 !important;
+    outline: 0;
+    font-weight: normal !important;
+    margin: 13px 0px auto auto !important;
+    height: 44px !important;
+    width: 121px !important;
+    font-size: 15px !important;
+  }
+  .popup-data-charge-text,
+  .popup-insurance-option-text {
+    margin-top: 30px !important;
+    font-weight: 900 !important;
+    font-size: 11px !important;
+    border: solid 2px #000000;
+    background-color: white;
+    padding: 6px;
+    width: 258px !important;
+    text-align: center;
+    margin: 0 auto;
+    border-radius: 5px;
+  }
+  .ui-dialog .ui-dialog-content {
+    margin-top: 29px !important;
+    font-size: 13px !important;
+  }
+  .popup-kaigai-text {
+    margin-top: 30px !important;
+    font-weight: 900 !important;
+    font-size: 11px !important;
+    border: solid 2px #000000;
+    background-color: white;
+    padding: 6px;
+    width: 258px !important;
+    text-align: center;
+    margin: 0 auto;
+    border-radius: 5px;
+  }
+}
+
+@media screen and (max-width: 341px) {
+  button.dialog-btn-neg {
+    margin: 13px 0px 0 auto !important;
+  }
+  button.dialog-btn-neg:hover {
+    margin: 13px 0px 0 auto !important;
+  }
+}
+
+/*************/
+/* FAQ        */
+/*************/
+div.mypage-faq-contents {
+  text-align: left;
+  font-size: 1.3rem;
+}
+
+div.lp-faq-contents-v2 {
+  padding: 0 40px;
+  margin: 70px 0;
+}
+
+h2.faq-h2 {
+  font-size: 1.3rem;
+  padding: 5px;
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+  cursor: pointer;
+}
+
+span.lp-faq-question-label {
+  margin-right: 10px;
+  float: right;
+}
+
+div.lp-faq-answer {
+  border-bottom: solid 3px #ffeb00;
+  padding: 10px;
+  text-align: left;
+  background-color: #fff;
+  display: flex;
+}
+
+div.faq-answer-text {
+  padding-top: 15px;
+}
+
+div.lp-faq-answer-hidden {
+  display: none;
+}
+
+div.lp-faq-content img.faq-question-icon {
+  width: 40px;
+  height: 40px;
+  padding:0 30px;
+}
+
+div.faq-question-text {
+  width: 100%;
+  text-align: left;
+  padding-right: 10px;
+}
+
+@media screen and (max-width: 767px) {
+  div.lp-faq-content img.faq-question-icon {
+    padding:0 17px;
+  }
+}
+
+span.lp-faq-question-label img {
+  width: 20px;
+}
+
+div #support-faq-content{
+  padding: 0;
+  margin: 10px 0;
+}
+
+div.lp-faq-contents-v2 div.lp-faq-content {
+  margin: 10px 0;
+}
+
+div.lp-faq-contents-v2 div.faq-answer-text {
+  padding-top: 5px;
+  padding-right: 15px;
+}
+
+div.lp-faq-contents-v2 div.faq-question-text {
+  font-size: 1.5rem;
+}
+div.lp-faq-contents-v2 h2.faq-h2 {
+  padding: 20px 0;
+  background-color: #f1f1f1;
+}
+
+div.lp-faq-contents-v2 h2.lp-faq-question-open {
+  background-color: black;
+  color: white;
+}
+
+div.lp-faq-contents-v2 div.lp-faq-answer{
+  padding: 10px 0;
+  box-sizing: border-box;
+  background-color: white;
+  border: solid 10px #f1f1f1;
+}
+div.lp-faq-contents-v2 div.faq-answer-text p{
+  line-height: 2.5rem;
+  font-weight: 400;
+}
+div.lp-faq-contents-v2 div.lp-faq-content img.faq-question-icon {
+  padding: 0 30px;
+}
+div.lp-faq-contents-v2 div.lp-faq-answer img.faq-question-icon {
+  padding-left: 20px;
+}
+
+div.white-content-box-faq-v2 {
+  padding-bottom: 10px;
+}
+
+div.white-content-box-faq-v2.inactive {
+  display: none;
+}
+div.white-content-box-faq-v2.active {
+  display: "block";
+  animation: show 1s linear 0s;
+}
+@keyframes show{
+  from{
+    opacity: 0;
+  }
+  to{
+    opacity: 1;
+  }
+}
+
+div.white-content-box-inner-callcenter-faq {
+  margin-bottom: 50px;
+}
+
+@media (max-width: 767px) {
+  div.white-content-box-inner-callcenter-faq,
+  div.white-content-box-inner-callcenter-faq div.faq-category-box div.sub-dir-nav-box {
+    width: 100px;
+  }
+  div.lp-faq-contents-v2 {
+    padding: 5%;
+    margin: 10px 0;
+  }
+  div.lp-faq-content img.faq-question-icon {
+    width: 20px;
+  }
+  div.lp-faq-contents-v2 div.lp-faq-content img.faq-question-icon {
+    padding: 0 15px;
+  }
+  div.lp-faq-contents-v2 div.lp-faq-answer img.faq-question-icon {
+    padding: 0 10px;
+  }
+
+  div.lp-faq-contents-v2 div.faq-question-text {
+    font-size: 1.2rem;
+  }
+  div.lp-faq-contents-v2 h2.faq-h2,
+  div.lp-faq-contents-v2 div.faq-h2 {
+    padding: 10px 0;
+  }
+
+  span.lp-faq-question-label img {
+    width: 10px;
+  }
+  div.lp-faq-contents-v2 div.lp-faq-answer {
+    border: solid 5px #f1f1f1
+  }
+  div.faq-answer-text {
+    padding-right: 10px;
+  }
+}
+/*Mypage Input*/
+table.mypage-form-input-table {
+  text-align: left;
+}
+
+table.mypage-form-input-table th {
+  width: 25%;
+  font-size: 1.3rem;
+}
+
+input.mypage-input-border,
+input.mypage-login-input-border,
+input.mypage-cancel-input-border{
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0.3em;
+  margin: 0;
+  letter-spacing: 1px;
+  border: none;
+  height: 50px;
+  font-size: 1.5rem;
+}
+
+input.mypage-cancel-input-border{
+  border: 1px solid #AAAAAA;
+}
+
+input.mypage-input-border-security-code {
+  width: 208px;
+}
+
+main.mypage-contents select {
+  height: 50px;
+  width: 100%;
+  font-size: 1.5rem;
+  padding:5px 0;
+  border: none;
+  border-radius: 0;
+}
+td.credit_card_input {
+  width: 70%;
+}
+
+@media (max-width: 767px) {
+  input.mypage-input-border {
+    height: 37.5px;
+    font-size: 1.4rem;
+  }
+
+  main.mypage-main select {
+    font-size: 1.4rem;
+    width:100%;
+  }
+  div.expire_month select{
+    width: 40%;
+  }
+}
+
+input.mypage-input-border-invalid {
+  background-color: #FFF;
+}
+
+input.mypage-input-border:focus,
+input.mypage-login-input-border:focus{
+  outline: none;
+  border: 3px solid #FFEB00;
+}
+
+div.corp-imei-search input.mypage-input-border:focus{
+  border: none;
+}
+
+div.complete-buttons {
+  text-align: center;
+}
+
+div.text-under-button {
+  text-align: right;
+  color:white;
+  position: relative;
+  top: 10px;
+  right: 10px;
+}
+div.text-under-button.wimax{
+  color: #000000;
+  width: calc(100% - 13em - -10px);
+  margin: -10px auto 0;
+}
+div.attention-submit{
+  text-align: left;
+  margin: 30px 0 -25px auto;
+  width: 315px;
+}
+
+@media (max-width: 767px) {
+  div.text-under-button.wimax{
+    width: 97.5%;
+    margin: 0 auto;
+  }
+}
+
+/*Mypage Top*/
+div.mypage-top-boxes {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  margin: 20px auto;
+}
+
+div.mypage-top-boxes a {
+  text-decoration: none;
+  color:white;
+}
+
+div.mypage-top-element {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  background-color:#3c3c3c;
+  position: relative;
+}
+
+div.mypage-top-element div.mypage-top-icon {
+  width: 100%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+div.mypage-top-element div.mypage-top-icon img {
+  height: 80px;
+  padding: 5px;
+}
+
+div.mypage-top-element p.mypage-top-title {
+  margin-top: 0;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 0px;
+}
+
+/*利用規約と同意ボタン*/
+div.mypage-top-element p.mypage-top-title-row2 {
+  margin-top: -20px;
+}
+
+div.leave-checkbox-box {
+  border: 6px solid #ffeb00;
+  text-align: center;
+  background-color: white;
+  padding: 20px 0;
+  margin-top: 50px;
+  position: relative;
+}
+
+div.leave-checkbox-box-margin {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 50px;
+  background-color: #282828;
+}
+
+p.leave-checkbox-box-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: 20px 0;
+}
+
+p.leave-checkbox-box-title-size {
+  font-size: 2.0rem;
+}
+
+div.leave-checkbox-box-desciption {
+  font-size: 1.3rem;
+  text-align: left;
+  padding: 0 40px;
+  margin: 20px 0;
+}
+
+div.leave-checkbox-box-desciption p.terms-agree::before{
+  position: absolute;
+  top: 5px;
+  left: 0;
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  content: '';
+  border-radius: 100%;
+  background: red;
+}
+
+div.leave-checkbox-box-desciption p.terms-agree-contents::before{
+  position: absolute;
+  top: 5px;
+  left: 0;
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  content: '';
+  border-radius: 100%;
+}
+
+span.text-annotation{
+  font-size: 1.1rem;
+}
+
+div.box-hidden {
+  display: none;
+}
+
+table.form-table-multi-column td {
+  width: 35%;
+  position: relative;
+  font-size: 1.5rem;
+}
+@media (max-width: 767px) {
+  table.form-table-multi-column td {
+    width: 100%;
+    font-size: 1.4rem;
+  }
+}
+
+/*申し込み確認画面での変更ポップアップ*/
+div.form-black-background,
+div.form-black-background-device-option,
+div.form-black-background-plan,
+div.form-black-background-plan-done,
+div.form-black-background-plan-out,
+div.form-black-background-present-limit,
+div.form-black-background-present-pay-error {
+  position: fixed;
+  background-color: black;
+  opacity: 0.4;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: none;
+  z-index: 10000;
+}
+div.form-black-background-device-option,
+div.form-black-background-plan,
+div.form-black-background-plan-done,
+div.form-black-background-plan-out {
+  z-index: 10000;
+}
+div.form-black-background,
+div.form-black-background-credit-card {
+  position: fixed;
+  background-color: black;
+  opacity: 0.4;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: none;
+}
+div.form-black-background-credit-card {
+  z-index: 10000;
+}
+div.form-black-background,
+div.form-black-background-credit-card-name {
+  position: fixed;
+  background-color: black;
+  opacity: 0.4;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: none;
+}
+div.form-black-background-credit-card-name {
+  z-index: 10000;
+}
+div.form-black-background {
+  z-index: 1;
+}
+
+div.mypage-confirm-hidden-form {
+  display: none;
+}
+
+div.edit-partial-plan,
+div.edit-partial-plan-topping1,
+div.edit-partial-device-option,
+div.edit-partial-contractor,
+div.edit-partial-address,
+div.edit-partial-user,
+div.edit-partial-corp-contact,
+div.edit-partial-delivery {
+  position: fixed;
+  max-width: 1100px;
+  margin: auto;
+  z-index: 1000000000002;
+  background-color: white;
+  top: 20px;
+  left: 0;
+  right: 0;
+  bottom: 20px;
+  overflow-y: auto;
+  display: none;
+}
+
+div.edit-partial-plan{
+  max-height: 722px;
+}
+
+div.edit-partial-device-option div.mypage-user-container div.form-user-background div.topping-2-head-text-right{
+  justify-content: flex-end;
+}
+
+@media (max-width: 767px) {
+  div.edit-partial-plan,
+  div.edit-partial-plan-topping1,
+  div.edit-partial-device-option,
+  div.edit-partial-contractor,
+  div.edit-partial-address,
+  div.edit-partial-user,
+  div.edit-partial-corp-contact,
+  div.edit-partial-delivery {
+    width: 95%;
+  }
+}
+
+div.mypage-confirm-hidden-form {
+  z-index: 1000000000003;
+}
+
+div.edit-partial-plan form,
+div.edit-partial-plan-topping1 form,
+div.edit-partial-device-option form,
+div.edit-partial-contractor form,
+div.edit-partial-address form,
+div.edit-partial-user form,
+div.edit-partial-corp-contact form,
+div.edit-partial-delivery form {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+div.edit-partial-plan form div.mypage-user-container,
+div.edit-partial-plan-topping1 form div.mypage-user-container,
+div.edit-partial-device-option form div.mypage-user-container,
+div.edit-partial-contractor form div.mypage-user-container,
+div.edit-partial-address form div.mypage-user-container,
+div.edit-partial-user form div.mypage-user-container,
+div.edit-partial-corp-contact form div.mypage-user-container,
+div.edit-partial-delivery form div.mypage-user-container {
+  width: 100%;
+}
+
+input.cardno-box {
+  width: 10%;
+}
+@media (max-width: 767px) {
+  input.cardno-box {
+    width: 20%;
+  }
+}
+
+div.device-option-confirm-popup {
+  max-width: 400px;
+  height: 200px;
+  position: fixed;
+  background-color: white;
+  border: solid 20px #FFEB00;
+  margin: auto;
+  z-index: 1000000000002;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: none;
+}
+
+div.plan-confirm-popup {
+  max-width: 400px;
+  height: 200px;
+  position: fixed;
+  background-color: white;
+  border: solid 20px #FFEB00;
+  margin: auto;
+  z-index: 1000000000002;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: none;
+}
+
+div.plan-confirm-popup-done {
+  max-width: 400px;
+  height: 200px;
+  position: fixed;
+  background-color: white;
+  border: solid 20px #FFEB00;
+  margin: auto;
+  z-index: 1000000000002;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: none;
+}
+
+div.plan-confirm-popup-out {
+  max-width: 400px;
+  height: 200px;
+  position: fixed;
+  background-color: white;
+  border: solid 20px #FFEB00;
+  margin: auto;
+  z-index: 1000000000002;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: none;
+}
+
+div.plan-confirm-popup-end {
+  max-width: 400px;
+  height: 150px;
+  position: fixed;
+  background-color: white;
+  border: solid 20px #FFEB00;
+  margin: auto;
+  z-index: 1000000000002;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: none;
+}
+
+div.plan-confirm-popup-already {
+  height: 220px;
+}
+
+div.device-option-confirm-popup-already {
+  max-width: 850px;
+  height: 440px;
+  position: fixed;
+  background-color: white;
+  border: solid 20px #FFEB00;
+  margin: auto;
+  z-index: 1000000000002;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: none;
+  padding: 20px;
+}
+div.device-option-confirm-popup-already.wimax-device-option-confirm-popup-already {
+  height: 580px;
+}
+div.credit-card-confirm-popup {
+  max-width: 480px;
+  height: 260px;
+  position: fixed;
+  background-color: white;
+  border: solid 20px #FFEB00;
+  margin: auto;
+  z-index: 1000000000002;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: none;
+}
+div.credit-card-name-confirm-popup {
+  max-width: 480px;
+  height: 240px;
+  position: fixed;
+  background-color: white;
+  border: solid 20px #FFEB00;
+  margin: auto;
+  z-index: 1000000000002;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: none;
+}
+div.present-limit-confirm-popup {
+  max-width: 480px;
+  height: 240px;
+  position: fixed;
+  background-color: white;
+  border: solid 20px #FFEB00;
+  margin: auto;
+  z-index: 1000000000002;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: none;
+}
+div.present-pay-error-confirm-popup {
+  max-width: 480px;
+  height: max-content;
+  padding: 10px;
+  position: fixed;
+  background-color: white;
+  border: solid 20px #FFEB00;
+  margin: auto;
+  z-index: 1000000000002;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: none;
+}
+div.user-form-confirm-popup {
+  height: 265px;
+  text-align: center;
+}
+
+div.user-form-confirm-popup p {
+  line-height: 2.7rem;
+}
+
+div.device-option-confirm-popup-title p {
+  margin: 10px 0;
+  color: red;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+}
+div.mypage-content-box-inner .plan-confirm-popup-title p {
+  margin: 10px 0;
+  color: red;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+}
+div.mypage-content-box-inner .plan-confirm-popup-body p {
+  color: #1E1E1E;
+  text-align: center;
+}
+div.credit-card-confirm-popup-title p {
+  margin: 10px 0;
+  color: red;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+}
+div.credit-card-name-confirm-popup-title p {
+  margin: 10px 0;
+  color: red;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+div.present-limit-confirm-popup-title p {
+  margin: 10px 0;
+  color: red;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+}
+div.present-pay-error-confirm-popup-title p {
+  margin: 10px 0;
+  color: red;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+}
+div.device-option-confirm-popup-body {
+  margin: 10px 10px;
+  text-align: center;
+}
+
+div.device-option-confirm-popup-body-already {
+  margin: 30px 10px;
+  text-align: left;
+}
+div.device-option-confirm-popup-body-already .already-completed-text {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+div.device-option-confirm-popup-body-already .return-address-content {
+  margin: 5px 0 25px;
+  padding-left: 2em;
+}
+div.device-option-confirm-popup-body-already .return-address-content .content-box-border{
+  display: inline-block;
+  border: 1px solid #787878;
+  padding: 10px 30px;
+}
+div.device-option-confirm-popup-body-already p.color-red {
+  color: red;
+  font-size: 1.6rem;
+}
+div.present-limit-confirm-popup-body-already,
+div.present-pay-error-confirm-popup-body-already {
+  margin: 10px 10px;
+  text-align: center;
+}
+div.credit-card-confirm-popup-body {
+  margin: 10px 10px;
+}
+div.credit-card-name-confirm-popup-body {
+  margin: 10px 10px;
+}
+div.present-limit-confirm-popup-body {
+  margin: 10px 10px;
+}
+div.present-pay-error-confirm-popup-body {
+  margin: 10px 10px;
+}
+div.credit-card-name-confirm-popup-body div.credit-card-name-flex{
+  margin: 15px 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+div.credit-card-name-confirm-popup-body div.credit-card-name-flex.credit-card-name-flex-top{
+  margin-bottom: 2px;
+}
+div.credit-card-name-confirm-popup-body div.credit-card-name-flex.credit-card-name-flex-bottom{
+  margin-top: 2px;
+}
+div.credit-card-name-confirm-popup-body div.credit-card-name-flex p{
+  width: 50%
+}
+div.credit-card-name-confirm-popup-body div.credit-card-name-flex p.credit-card-name-kana{
+  vertical-align: middle;
+  line-height: 40px;
+}
+div.device-option-confirm-buttons {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px auto;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+div.plan-confirm-buttons {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px auto;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+div.credit-card-confirm-buttons {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px auto;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+div.credit-card-name-confirm-buttons {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px auto;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+div.device-option-confirm-button {
+  width: 150px;
+  height: 50px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.5s;
+  background-color: black;
+  color: #FFEB00;
+}
+
+div.plan-confirm-button {
+  width: 150px;
+  height: 50px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.5s;
+  background-color: #FFEB00;
+  color: black;
+}
+
+div.plan-confirm-button-back {
+  background-color: black;
+  color: #FFEB00;
+}
+
+div.present-limit-confirm-buttons {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px auto;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+div.credit-card-confirm-button {
+  width: 150px;
+  height: 50px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.5s;
+  background-color: black;
+  color: #FFEB00;
+}
+div.credit-card-name-confirm-button {
+  width: 150px;
+  height: 50px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.5s;
+  background-color: black;
+  color: #FFEB00;
+}
+div.present-limit-confirm-button {
+  width: 150px;
+  height: 50px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.5s;
+  background-color: black;
+  color: #FFEB00;
+}
+div.present-pay-error-confirm-button {
+  width: 150px;
+  height: 50px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.5s;
+  background-color: black;
+  color: #FFEB00;
+}
+div.contact-initial-cancel-button {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px auto;
+  position: relative;
+}
+
+@media (max-width: 767px) {
+  div.device-option-confirm-popup-already {
+    padding: 20px 10px;
+  }
+  div.device-option-confirm-popup-body-already .return-address-content {
+    padding-left: 1em;
+  }
+  div.device-option-confirm-popup-body-already .return-address-content .content-box-border {
+    padding: 5px 10px;
+  }
+  div.device-option-confirm-popup {
+    height: 200px;
+    border: solid 10px #FFEB00;
+    width: 80%;
+  }
+  div.device-option-confirm-popup.contact-initial-cancel{
+    height: 80vh;
+    overflow-y: scroll;
+  }
+  div.device-option-confirm-popup.contact-initial-cancel.wimax-device-option-confirm-popup-already{
+    height: 80vh;
+    overflow-y: scroll;
+  }
+  div.plan-confirm-popup {
+    height: 200px;
+    border: solid 10px #FFEB00;
+    width: 80%;
+  }
+  div.plan-confirm-popup-done {
+    height: 200px;
+    border: solid 10px #FFEB00;
+    width: 80%;
+  }
+  div.plan-confirm-popup-out {
+    height: 200px;
+    border: solid 10px #FFEB00;
+    width: 80%;
+  }
+  div.plan-confirm-popup-end {
+    height: 160px;
+    border: solid 10px #FFEB00;
+    width: 80%;
+  }
+  div.credit-card-confirm-popup {
+    height: 335px;
+    border: solid 10px #FFEB00;
+    width: 80%;
+  }
+  div.credit-card-name-confirm-popup {
+    height: 340px;
+    border: solid 10px #FFEB00;
+    width: 80%;
+  }
+  div.present-limit-confirm-popup {
+    height: max-content;
+    border: solid 10px #FFEB00;
+    width: 80%;
+  }
+
+  div.present-pay-error-confirm-popup {
+    height: max-content;
+    border: solid 10px #FFEB00;
+    width: 80%;
+  }
+  div.user-form-confirm-popup {
+    height: 270px;
+  }
+
+  div.device-option-confirm-button {
+    width: 100px;
+    height: 50px;
+  }
+  div.device-option-confirm-button {
+    padding: 0 10px;
+  }
+  div.plan-confirm-button {
+    width: 100px;
+    height: 50px;
+  }
+  div.plan-confirm-button,
+  div.present-limit-confirm-button {
+    width: 100px;
+    height: 50px;
+  }
+  div.present-limit-confirm-button {
+    padding: 0 10px;
+  }
+  div.present-limit-confirm-buttons{
+    position: static;
+  }
+  div.present-pay-error-confirm-button {
+    width: 100px;
+    height: 50px;
+  }
+  div.present-pay-error-confirm-button {
+    padding: 0 10px;
+  }
+  div.credit-card-confirm-button {
+    width: 47%;
+    height: 40px;
+  }
+  div.credit-card-confirm-button {
+    width: 100px;
+    height: 50px;
+  }
+  div.credit-card-confirm-button {
+    padding: 0 10px;
+  }
+  div.credit-card-name-confirm-button {
+    width: 47%;
+    height: 40px;
+  }
+  div.credit-card-name-confirm-button {
+    width: 100px;
+    height: 50px;
+  }
+  div.credit-card-name-confirm-button {
+    padding: 0 10px;
+  }
+  div.credit-card-name-confirm-popup-body div.credit-card-name-flex p{
+    width: 100%;
+    margin-top: 10px;
+  }
+  div.credit-card-name-confirm-popup-body div.credit-card-name-flex p.credit-card-name-kana{
+    line-height: initial;
+  }
+  div.credit-card-name-confirm-popup-body #input-credit-card-kana {
+    margin-top: 2px
+  }
+  div.credit-card-name-confirm-popup-body #input-credit-card-name {
+    margin-top: 2px
+  }
+  div.user-form-confirm-button {
+    width: 150px;
+  }
+}
+
+
+/*規約  同意するボタン*/
+div.confirm-box {
+  width: 200px;
+  height: 30px;
+  background-color: black;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  position: relative;
+  transition: 0.5s;
+  cursor: pointer;
+}
+div.confirm-box:hover {
+  background-color: #e6006b;
+  transition: 0.5s;
+}
+div.confirm-box-selected {
+  background-color: #e6006b;
+}
+div.confirm-box input {
+  position: absolute;
+  left: -20px;
+  margin: auto 0;
+}
+
+div.vaidation-error-area-remark {
+  height: auto;
+}
+div.gender-label-box {
+  margin-bottom: 5px;
+  height: 25px;
+}
+
+@media (max-width: 767px) {
+  div.gender-label-box {
+    margin-top: 5px;
+    margin-bottom: 10px;
+  }
+
+  .vaidation-error-area {
+    margin-top: 0.4rem;
+  }
+}
+
+input[name="securitycode"] {
+  font-size: 1.5rem;
+  border: solid #acacac 1px;
+}
+
+select[name="expire_year"],
+select[name="expire_month"] {
+  width: 80px!important;
+}
+
+table.form-entry {
+  width: 100%;
+  max-width: 1000px;
+}
+
+div.entry-confirm-plan-edit-links p {
+  line-height: 30px;
+}
+
+/* Custom checkbox */
+
+/*  DEMO 01 CHECKBOX */
+label.custom-check-box {
+  position: relative;
+}
+
+label.custom-check-box input[type="checkbox"] + span::before,
+label.custom-check-box input[type="radio"] + span::before {
+  border-color: #333;
+}
+label.custom-check-box input[type="checkbox"]:checked + span::before,
+label.custom-check-box input[type="radio"]:checked + span::before {
+  background-color: #333;
+}
+
+label.custom-check-box span {
+  display: inline-block;
+}
+label.custom-check-box input[type="checkbox"],
+label.custom-check-box input[type="radio"] {
+  opacity: 0;
+  cursor: pointer;
+}
+label.custom-check-box input[type="checkbox"] + span::before,
+label.custom-check-box input[type="checkbox"] + span::after,
+label.custom-check-box input[type="radio"] + span::before,
+label.custom-check-box input[type="radio"] + span::after {
+  position: absolute;
+  top: 1px;
+  left: 0;
+  display: inline-block;
+  content: '';
+  box-sizing: border-box;
+}
+label.custom-check-box input[type="checkbox"] + span::before,
+label.custom-check-box input[type="radio"] + span::before {
+  z-index: 0;
+  background-color: white;
+  width: 18px;
+  height: 18px;
+  border: 1px #333 solid;
+  border-radius: 4px;
+}
+label.custom-check-box input[type="checkbox"] + span::after,
+label.custom-check-box input[type="radio"] + span::after {
+  z-index: 1;
+  margin: 2px 5px;
+  width: 7px;
+  height: 10px;
+}
+label.custom-check-box input[type="checkbox"]:checked + span::before,
+label.custom-check-box input[type="radio"]:checked + span::before  {
+  background-color: #333;
+}
+label.custom-check-box input[type="checkbox"]:checked + span::after,
+label.custom-check-box input[type="radio"]:checked + span::after {
+  border: 2px solid #fff;
+  border-width: 0 2px 2px 0;
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+div.confirm-box input[type="checkbox"] + span::after,
+div.confirm-box input[type="radio"] + span::after {
+  margin: 0px 5px;
+}
+
+label.custom-check-box.user-radio{
+  display: block;
+}
+label.custom-check-box.user-radio:first-of-type{
+  margin-bottom: 10px;
+}
+label.custom-check-box.user-radio span{
+  display: inline;
+}
+
+label.custom-check-box.user-radio input[type="radio"]:checked + span::before{
+  background-color: #888888;
+}
+
+@media (max-width: 767px) {
+  label.custom-check-box input[type="checkbox"] + span::before,
+  label.custom-check-box input[type="radio"] + span::before {
+    width: 20px;
+    height: 20px;
+    border-radius: 3px;
+    top: -1px;
+  }
+  label.custom-check-box input[type="checkbox"] + span::after,
+  label.custom-check-box input[type="radio"] + span::after {
+    margin: 1px 6px;
+    width: 7px;
+    height: 10px;
+  }
+  label.custom-check-box span {
+    margin-right: 5px;
+  }
+
+  div.plan-select-box-inner label.custom-check-box input[type="checkbox"] + span::before,
+  div.plan-select-box-inner label.custom-check-box input[type="radio"] + span::before {
+    width: 15px;
+    height: 15px;
+    border-radius: 2px;
+    top: -1px;
+  }
+  div.plan-select-box-inner label.custom-check-box input[type="checkbox"] + span::after,
+  div.plan-select-box-inner label.custom-check-box input[type="radio"] + span::after {
+    margin: 0px 5px;
+    width: 5px;
+    height: 8px;
+  }
+
+  div.option-select-area label.custom-check-box input[type="checkbox"] + span::before,
+  div.option-select-area label.custom-check-box input[type="radio"] + span::before {
+    width: 15px;
+    height: 15px;
+    border-radius: 2px;
+    top: -1px;
+  }
+  div.option-select-area label.custom-check-box input[type="checkbox"] + span::after,
+  div.option-select-area label.custom-check-box input[type="radio"] + span::after {
+    margin: 0px 5px;
+    width: 5px;
+    height: 8px;
+  }
+
+  div.confirm-box label.custom-check-box input[type="checkbox"] + span::before,
+  div.confirm-box label.custom-check-box input[type="checkbox"] + span::before {
+    width: 15px;
+    height: 15px;
+    border-radius: 2px;
+    top: -1px;
+  }
+
+  div.confirm-box label.custom-check-box input[type="checkbox"] + span::after,
+  div.confirm-box label.custom-check-box input[type="radio"] + span::after {
+    margin: -2px 5px;
+    width: 5px;
+    height: 8px;
+  }
+
+  label.custom-check-box.user-radio {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  label.custom-check-box.user-radio:first-of-type {
+    margin-bottom: 0;
+    margin-right: 10px;
+  }
+}
+
+/* end Custom checkbox */
+
+label.label-input {
+  display: inline-block;
+  margin: 5px 20px 0 0;
+  width: 50px;
+}
+
+label.label-input label {
+  width: 200px;
+  margin-left: -5px;
+  position: absolute;
+  top: -2px;
+  left: 30px;
+}
+div.confirm-box span {
+  position: absolute;
+  left: -50px;
+  top: 3px;
+  cursor: pointer;
+}
+div.confirm-box label {
+  cursor: pointer;
+}
+
+/* *********** */
+/* New with plan-select limited/unlimited */
+/* *********** */
+
+/* new form step */
+@media (max-width: 767px) {
+  div.confirm-box span {
+    top: 7px;
+  }
+}
+
+/* new form */
+div.form-plan-option-box-desciption-title-box {
+  margin: 30px 0;
+}
+
+div.form-plan-option-extra-description {
+  box-sizing: border-box;
+}
+div.form-application-container div.mypage-user-container {
+  max-width: 750px;
+  margin: 0 auto;
+}
+
+table.mypage-form-input-table {
+  margin: 20px 0;
+}
+
+div.total-price-box-history {
+  margin-top: 10px;
+}
+
+div.edit-partial-plan div.form-user-background,
+div.edit-partial-plan-topping1 div.form-user-background,
+div.edit-partial-device-option div.form-user-background,
+div.edit-partial-contractor div.form-user-background,
+div.edit-partial-address div.form-user-background,
+div.edit-partial-user div.form-user-background,
+div.edit-partial-corp-contact div.form-user-background,
+div.edit-partial-delivery div.form-user-background {
+  max-width: 750px;
+  margin: 0 auto;
+}
+
+div.corp-mypage-description {
+  max-width: 750px;
+  margin: 0 auto;
+  color: #000;
+}
+
+div.form-plan-option-detail-description-button-area {
+  background-color: black;
+  width: 240px;
+  height: 50px;
+  color: #FFEB00;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+}
+
+div.form-plan-option-detail-description-button div.decoration-button-wrapper,
+div.form-plan-option-detail-description-button-pink div.decoration-button-wrapper {
+  justify-content: flex-end;
+  margin-top: -55px;
+  margin-bottom: 20px;
+}
+
+div.form-plan-option-detail-description-button-area span.decoration-button-next {
+  position: absolute;
+  right: 20px;
+}
+
+div.decoration-button-area-form-v2 {
+  width: 240px;
+  margin: 10px;
+  margin-right: 0px;
+  text-align: center;
+}
+
+@media (max-width: 767px) {
+  div.decoration-button-area-form-v2 {
+    width: 150px;
+  }
+  div.decoration-button-area-form-v2-long {
+    width: 310px;
+  }
+  div.decoration-button div.text-2line {
+    width: 110%;
+    margin-left: -10%;
+  }
+  div.decoration-button div.text-2line span.decoration-button-next {
+    padding-right: 0;
+  }
+}
+
+select.form-item-delivery {
+  width: 40%;
+}
+div.leave-checkbox-box span::before {
+  margin-top: -3px !important;
+}
+
+/**************/
+/* New desgin */
+/* 2021/01/18~ */
+/**************/
+
+/*文字色の基本を白にする*/
+div.mypage-content-box-inner th{
+  color: #FFF;
+}
+div.mypage-content-box-inner p{
+  color: #FFF;
+  word-break: break-word;
+  text-align: left;
+}
+div.mypage-content-box-inner .leave p {
+  color: #000;
+}
+div.mypage-content-box-inner .leave p span {
+  color: #e6006b;
+}
+/*PC・SPでの表示・非表示を切り替える*/
+div.shown-pc{
+  display: contents;
+}
+
+div.shown-sp{
+  display: none;
+}
+
+@media screen and (max-width: 767px) {
+  div.shown-pc{
+    display: none;
+  }
+
+  div.shown-sp{
+    display: contents;
+  }
+}
+
+div.form-price-estimate-flex {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+}
+
+div.form-price-table-left {
+  width: 50%;
+}
+div.form-price-table-right {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+}
+
+div.form-price-table-total-box,
+div.total-price-box-total-box{
+  height: 30px;
+  background-color: #ffeb00;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  margin: 0 5px;
+}
+div.total-price-box-total-box {
+  background-color: #eeecec;
+}
+span.form-price-table-total {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+span.total-price-box-total {
+  color: black;
+  font-size: 2.3rem;
+}
+div.total-price-box-history-title-box {
+  height: 30px;
+  display: flex;
+  align-items: center;
+  margin: 0 5px;
+}
+span.total-price-box-history-title {
+  font-size: 1.2rem;
+}
+
+div.form-plan-option-detail-description-body p {
+  font-size: 1.3rem;
+}
+
+table.form-campaign-table,
+table.price-estimate-table {
+  width: 100%;
+}
+table.form-campaign-table th,
+table.reset-form th {
+  width: 30%;
+}
+table.form-campaign-table td,
+table.reset-form td {
+  width: 70%;
+}
+table.form-table tr {
+  height: 5rem;
+}
+table.reset-form th,
+table.reset-form td {
+  text-align: center;
+}
+
+table.price-estimate-table th {
+  width: 70%;
+  text-align: left;
+  padding: 5px 10px;
+}
+table.price-estimate-table td {
+  width: 20%;
+  text-align: right;
+}
+table.price-estimate-table td.yen {
+  width: 10%;
+  background-color: transparent;
+  text-align: left;
+}
+table.price-estimate-table-contract {
+  padding-top: 30px;
+}
+
+table.price-estimate-table-contract th {
+  width: 60%;
+}
+table.price-estimate-table-contract td {
+  width: 30%;
+}
+table.price-estimate-table-contract td.yen {
+  width: 10%;
+  font-size: 0.6rem;
+  padding: auto 2px 0;
+  white-space: nowrap;
+}
+div.form-top-emptry-area {
+  height: 50px;
+}
+div.form-confirm-price {
+  float: right;
+  width: auto;
+  margin: 20px 0;
+}
+
+table.reset-form {
+  width: 100%;
+  margin: 30px 0;
+}
+
+table.price-fee-related-table td {
+  font-size: 1.3rem;
+  vertical-align: middle;
+  background-color: #fff;
+}
+
+div.form-title {
+  width: 300px;
+  height: 100px;
+  margin: 0 auto;
+  position: relative;
+}
+
+div.mypage-content-box-title{
+  padding: 30px 0;
+  text-align: left;
+  color: white;
+}
+
+div.mypage-content-box-title p {
+  font-size: 2.5rem;
+  letter-spacing: 0.1em;
+  line-height: 25px;
+}
+
+div.mypage-content-box-title.wimax p{
+  color: #000000;
+}
+
+div.corp-multiple-tab {
+  color: #FFF;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+#corp-multiple-tab-contract,
+#corp-multiple-tab-cancel {
+  width: 49%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  border-radius: 10px;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+#corp-multiple-tab-contract {
+  background-color: #000;
+}
+
+#corp-multiple-tab-cancel {
+  color: #000;
+  background-color: #BAC4C4;
+}
+
+.corp-multiple-tab-selected {
+  border: 4px solid #FFEB00;
+}
+
+.corp-cancel-th {
+  color: #BAC4C4;
+}
+
+@media screen and (max-width: 767px) {
+  div.mypage-content-box-title {
+    padding: 20px 0;
+  }
+  div.mypage-content-box-title.wimax{
+    padding-bottom: 0;
+  }
+  div.mypage-content-box-title p {
+    margin-left: 0.3em;
+    font-size: 1.4em;
+  }
+  div.corp-multiple-tab {
+    margin-bottom: 15px;
+  }
+}
+
+/* mypage nav */
+div.mypage-nav-wrapper {
+  width: 100%;
+  background-color: #282828;
+  padding-bottom: 5px;
+}
+div.mypage-nav {
+  max-width: 1100px;
+  margin: 0 auto;
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 10px;
+}
+
+div.mypage-nav a {
+  width: 100%;
+  height: 100%;
+  font-size: 1.3rem;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+}
+
+div.mypage-nav a:focus-visible{
+  outline: none;
+}
+
+div.mypage-nav a:focus-visible div.mypage-nav-item,
+div.mypage-nav-item:focus-visible{
+  outline: none;
+  outline: 2px solid #fff;
+}
+
+div.mypage-nav-item{
+  width: 90%;
+  height: 60px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 0;
+}
+
+div.mypage-nav a::after {
+  position: absolute;
+  bottom: -4px;
+  left: 5%;
+  content: '';
+  width: 90%;
+  height: 2px;
+  background: #FFEB00;
+  transform: scale(1, 1);
+  transform-origin: center top;
+  transition: transform .3s;
+  z-index: 1;
+}
+@media screen and (max-width:768px){
+  div.mypage-nav.mypage-nav-prepaid a::after {
+    bottom: 3px;
+  }
+}
+@media screen and (min-width: 767px) {
+  div.mypage-nav a:hover::after {
+    transform: scale(0, 1);
+  }
+  div.mypage-nav a.button-disabled:hover::after {
+    transform: none;
+  }
+
+  /*こんど払い グローバルナビ非表示(PC)*/
+  div.mypage-nav a.sp{
+    display: none;
+  }
+}
+
+/* New mypage common */
+div.mypage-title-area {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  margin-top: 30px;
+  margin-bottom: -30px;
+}
+div.mypage-title-area.wimax{
+  margin-bottom: 0;
+}
+h1.mypage-titile-area-title,
+p.mypage-titile-area-title {
+  font-size: 3.5rem;
+  font-weight: bold;
+  color: white;
+  text-align: left;
+  margin-bottom: 35px;
+}
+p.mypage-titile-area-title.wimax{
+  color: #000000;
+  padding-bottom: 20px;
+}
+div.mypage-title-area-icon {
+  margin: 0 15px;
+  width: auto;
+  padding-bottom: 5px;
+}
+div.mypage-title-area-icon.wimax{
+  margin: 15px 30px 30px 0;
+  width: 75px;
+}
+div.mypage-title-area-icon img {
+  width: 100%;
+}
+div.mypage-title-area-icon img.dataflow-icon {
+  width: 128px;
+}
+@media screen and (max-width: 767px) {
+  div.mypage-nav {
+    padding: 0;
+  }
+  div.mypage-title-area {
+    display: flex;
+    align-items: flex-start;
+    padding: 25px 0 10px;
+  }
+  div.mypage-title-area.wimax{
+    padding: 0;
+  }
+
+  div.mypage-title-area-icon{
+    margin: 0 10px;
+    width: 100px;
+    height: 70px;
+  }
+  div.mypage-title-area-icon.wimax{
+    width: 50px;
+    margin: 0 30px 0 0;
+  }
+  div.mypage-title-area-icon img {
+    width: 100%;
+  }
+  div.mypage-nav-item{
+    width:calc(100% - 10px - 5%);
+  }
+  div.mypage-title-area-icon img.dataflow-icon {
+    width: 83px;
+  }
+}
+@media screen and (max-width: 320px) {
+  div.mypage-nav-item{
+    height: 78px;
+  }
+}
+div.decoration-button-area-mypage-icon {
+  width: 185px;
+  margin-left: 50px;
+}
+div.decoration-button-area-mypage-icon div.decoration-button {
+  height: 40px;
+}
+div.decoration-button-area-mypage-icon div.decoration-button::after {
+  height: 40px;
+}
+div.decoration-button-area-mypage-icon div.decoration-button div.text {
+  padding-top: 5px;
+  padding-left: 30px;
+}
+div.decoration-button-shokikaiyaku div.text {
+  padding-left: 20px;
+}
+
+div.mypage-contract-description {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+div.mypage-contract-description div.mypage-description {
+  width: 50%;
+}
+
+div.mypage-contract-description div.mypage-contract-select-container {
+  width: 40%;
+}
+div.mypage-contract-description div.mypage-payment-history-select-container{
+  width: 20%;
+}
+div.mypage-contract-description div.mypage-payment-history-select-container table tbody tr td{
+  border:none;
+  padding:0;
+}
+
+div.mypage-contract-select-container table{
+  border-collapse: collapse;
+}
+div.mypage-contract-select-container select {
+  width: 100%;
+  border: none;
+}
+
+div.mypage-contract-select-container table th {
+  padding: 0 !important;
+}
+div.mypage-contract-select-container table td {
+  background-color: white;
+}
+
+div.mypage-description-flex-left {
+  text-align: left;
+  color: white;
+}
+div.mypage-description-flex-left.wimax{
+  color: #000000;
+}
+
+div.form-capacity-notice.payment-select-caution {
+  display: flex;
+  align-items: center;
+  margin: 40px auto;
+  padding: 0;
+}
+
+div.form-capacity-notice-icon {
+  width: 35px;
+}
+
+div.form-capacity-notice p {
+  margin: 0 10px;
+  letter-spacing: 0.11rem;
+}
+
+div.form-capacity-notice.payment span.strong {
+  color: #e6006b;
+  font-size: 1.7rem;
+  font-weight: 600;
+}
+
+div.payment-edit-caution {
+  margin-top: 40px;
+}
+
+@media (min-width: 768px) {
+  div.payment-edit-caution table.table-base {
+    border-spacing: 0;
+  }
+
+  div.payment-edit-caution table.table-base.user-input th:before {
+    content: none;
+  }
+
+  div.payment-edit-caution table.td-input th,
+  div.payment-edit-caution table.td-input td {
+    border-top: 1px solid #000000;
+  }
+
+  div.payment-edit-caution table.td-input tr:last-child th,
+  div.payment-edit-caution table.td-input tr:last-child td {
+    border-bottom: 1px solid #000000;
+  }
+
+  div.payment-edit-caution table.td-input td {
+    padding: 10px 0;
+  }
+}
+
+@media (max-width: 767px) {
+  div.payment-edit-caution table.table-base.user-input th,
+  div.payment-edit-caution table.table-base.user-input td {
+    height: auto;
+  }
+
+  div.payment-edit-caution table.td-input td {
+    margin-bottom: 10px;
+  }
+}
+
+table.table-base.user-input caption {
+  margin-top: 1em;
+  caption-side: bottom;
+  text-align: left;
+  color: #FFFFFF;
+}
+
+table.table-base.user-input caption span {
+  padding-bottom: 0.5em;
+  display: inline-block;
+}
+
+@media screen and (max-width: 767px) {
+  div.mypage-description select {
+    width: 100%;
+    height: auto;
+  }
+  div.mypage-description-flex-left {
+    width: 100%;
+  }
+  div.mypage-contract-description div.mypage-contract-select-container {
+    width: 100%;
+    padding: 15px 0;
+  }
+  h1.mypage-titile-area-title,
+  p.mypage-titile-area-title {
+    font-size: 2.4rem;
+    color: white;
+    position:relative;
+    line-height: 30px;
+    padding-bottom: 0;
+  }
+  p.mypage-titile-area-title-sub {
+    font-size: 1.8rem;
+    color: white;
+    position: relative;
+    text-align: left;
+  }
+  p.mypage-titile-area-title.wimax{
+    padding: 15px 0 0;
+  }
+  p.mypage-titile-area-title-sub.wimax{
+    color: #000000;
+  }
+  div.form-capacity-notice.payment-select-caution {
+    margin: 30px auto;
+    padding: 0;
+    align-items: start;
+  }
+  div.form-capacity-notice-icon {
+    width: 25%;
+  }
+  div.form-capacity-notice.payment span.strong {
+    font-size: 1.4rem;
+  }
+}
+
+/*FAQ 回答の文字色を変更*/
+div.faq-answer-text p{
+  color: #000;
+}
+
+/*New Table layout*
+ *2021/01/19~*
+*/
+
+table.table-base {
+  border-collapse: separate;
+  table-layout: fixed;
+  border-spacing: 6px;
+  width: 100%;
+  margin: 0 auto;
+  word-break: break-word;
+  line-height: 1.4;
+}
+table.form-confirm-info-table.initial-confirm-table {
+  background-color: unset;
+}
+table.table-base p{
+  color: #000;
+}
+table.table-base.user-input p {
+  margin-top: 0.5em;
+  color: #FFFFFF;
+  font-size: 1.1rem;
+  line-height: 1.5rem;
+}
+
+table.table-base th,
+table.table-base td {
+  box-sizing: border-box;
+  height: 50px;
+  font-size: 1.25rem;
+  padding: 5px 10px;
+}
+
+table.table-base.plan-table-base th,
+table.table-base.plan-table-base td {
+  padding: 10px;
+  line-height: 1.5;
+}
+
+table.table-base th{
+  width: 37%;
+  color: #FFFFFF;
+  font-weight: bold;
+  text-align: left;
+  position: relative;
+  padding: 0 10px;
+  background-color: #000000;
+}
+.table-base.user-edit-table th{
+  width: 31%;
+}
+table.table-base.user-input th{
+  background-color: transparent;
+}
+table.table-base.user-input tr:first-child th{
+  border-top: 1px solid #DDDDDD;
+}
+table.table-base.user-input th:before{
+  position: absolute;
+  content: '';
+  bottom: -2.5px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: #DDDDDD;
+}
+table.table-base.user-input tr:last-child th::before{
+  bottom: 0;
+}
+table.table-base td,
+table.payment-history-table th {
+  color: #000;
+  background-color: #fff;
+  vertical-align: middle;
+}
+table.table-base.table-mini.user-edit-table {
+  border-spacing: 0;
+}
+table.table-base.table-mini.user-edit-table td {
+  padding: 10px 0;
+  border-top: 1px solid #000000;
+}
+table.table-base.table-mini.user-edit-table th {
+  border-top: 1px solid #000;
+}
+table.table-base.table-mini.user-input.user-edit-table th:before{
+  background: none;
+}
+table.table-base.table-mini.user-input.user-edit-table input.mypage-user-half {
+  width: 49%;
+}
+table.table-base.table-mini.user-input.user-edit-table input.mypage-user-half + input.mypage-user-half {
+  margin-left: 1%;
+}
+.mypage-edit-table-bottom {
+  width: 520px;
+  padding: 0 0 10px 230px;
+  border-bottom: 1px solid #000;
+}
+main.mypage-paymenthistory table.table-base th,
+main.mypage-paymenthistory table.table-base td {
+  border-bottom: 1px solid #3c3c3c;
+}
+div.mypage-content-box.wimax table.table-base th{
+  color: #000000;
+}
+table.table-base.user-input tr:first-child th{
+  border-color: #000000;
+}
+table.table-base.user-input th:before{
+  background: #000000;
+}
+div.mypage-content-box.wimax table.table-base td{
+  border: none;
+}
+div.mypage-content-box.wimax table.table-base td input{
+  background-color: #d9eff6;
+}
+td.colmn-center{
+  text-align: center;
+}
+#option_cancel_area table.table-base td {
+  background-color: #3c3c3c;
+  padding: 0 0 0 10px;
+}
+table.table-base.cancel-table-base th {
+  border-top: 1px solid #000000;
+  background-color: #3C3C3C;
+  border-bottom: 1px solid #000000;
+}
+.mypage-initial_contract_cancellation div.white-content-box-form {
+  background-color: #3C3C3C;
+}
+.mypage-initial_contract_cancellation table.form-table span {
+  color: #FFF;
+}
+#option_cancel_area table.table-base tr.cancel-option-column td {
+  background-color: #FFF;
+  border-bottom: unset;
+  padding: 0 10px;
+}
+.opution-cancel-indent {
+  padding-left: 1em;
+  text-indent: -1em;
+  display: inline-block;
+}
+.mypage-cancel-question-area {
+  margin-top: 45px;
+}
+.mypage-cancel-question-area .question-1 {
+  padding-top: 0;
+}
+.mypage-cancel div.cancel label#leave-password-error {
+  color: #ffeb00;
+  background-color: #3C3C3C;
+  border: none;
+  margin: 0;
+  padding-top: 3px;
+}
+.mypage-cancel div.leave-checkbox-box-margin {
+  margin: 20px 0;
+}
+
+@media (min-width: 768px) {
+  #option_cancel_area table.table-base th{
+    width: 558px;
+  }
+}
+
+@media (max-width: 767px) {
+  table.table-base th{
+    width: 35%;
+    font-size: 1.2rem;
+    line-height: 1.5em;
+    height: auto;
+    padding: 10px;
+  }
+  table.table-base td{
+    height: auto;
+  }
+  table.table-base.user-input tr:first-child th{
+    border: none;
+  }
+  table.table-base th:before,
+  table.table-base th:after{
+    display: none;
+  }
+
+  table.sp-long{
+    border-spacing:0px;
+  }
+
+  table.sp-long th,
+  table.sp-long td{
+    width:95%;
+    border-collapse: none;
+    padding: 0 2.5%;
+    border: none;
+    margin: 0 auto;
+    display: block;
+  }
+
+  table.sp-long td.overseas-plan {
+    padding: 0 0 0 2.5%;
+  }
+
+  table.sp-long th{
+    margin:12px auto 3px;
+    padding: 2.5%;
+  }
+
+  table.table-base.plan-change-reservation-table th{
+    padding: 10px;
+  }
+  .mypage-contract table.table-base td {
+    height: auto;
+    padding: 10px;
+    line-height: 1.8rem;
+  }
+  .mypage-edit-table-bottom {
+    width: 95%;
+    padding: 22px 2.5% 0;
+    border: none;
+  }
+  table.table-base.table-mini.user-edit-table td,
+  table.table-base.table-mini.user-edit-table th {
+    padding: 0;
+    border-top: none;
+  }
+  table.table-base.table-mini.user-input.user-edit-table input.mypage-user-half {
+    width: 48.5%;
+  }
+  table.table-base.table-mini.user-input.user-edit-table input.mypage-user-half + input.mypage-user-half {
+      margin-left: 3px;
+  }
+  table.table-base.table-mini.user-input.user-edit-table input.mypage-tel-col-30 {
+    width: calc((100% - 21.5px) / 3);
+  }
+  table.table-base.table-mini.user-input.user-edit-table input.mypage-tel-col-30 + span {
+    margin: 0 2px;
+  }
+}
+
+/*カラム内結合・分割*/
+table.table-split {
+  border-collapse: separate;
+  border-spacing: 0;
+  width: 100%;
+  margin: 0 auto;
+}
+
+tr.split-row{
+  display: table-row;
+}
+
+table.table-split th.under-bar,
+table.table-split td.under-bar{
+  border-bottom: 5px solid #3c3c3c;
+}
+
+main.mypage-paymenthistory table.table-split th.under-bar,
+main.mypage-paymenthistory table.table-split td.under-bar{
+  border-bottom: 5px solid #3c3c3c;
+}
+
+@media (min-width: 768px) {
+  td.password-td span.field-icon.field-icon-mypage.input-eye {
+    right: 5%;
+    top: 15px;
+  }
+}
+
+/*分割しているテーブルだけ、各セルのパディングを微調整*/
+table.table-split tr > td{
+  padding-top: 0.6em;
+  padding-bottom: 0.6em;
+  height: auto;
+  border-right: 1px solid #3c3c3c;
+}
+
+table.table-split th,
+table.table-split td{
+  border-bottom: 1px solid #3c3c3c;
+}
+
+table.table-split tr > td.split-colmn-end {
+  border-right: none;
+}
+
+table.payment-history-table th {
+  text-align: center;
+  width: 15%;
+}
+.split-colmn{
+  width: 45%;
+}
+.price{
+  width: 28.5%;
+  text-align: center;
+}
+
+table.table-split td.pending {
+  color: #e6006b;
+}
+
+/*合計のセルを黄色にする*/
+table.table-base th.total,
+table.table-base td.total,
+table.table-split th.total,
+table.table-split td.total{
+  text-align: center;
+  font-weight: bold;
+  color: #000;
+  background-color: #FFeb00;
+  border:none;
+  padding: 11px 0;
+}
+table.table-split th.total{
+  border-right: 1px solid #3C3C3C;
+}
+
+table.table-split td.total{
+  border-left: 1px solid #3C3C3C;
+}
+
+main.mypage-paymenthistory table.table-split th.total{
+  border-right: 0;
+}
+
+main.mypage-paymenthistory table.table-split td.total{
+  border-left: 0;
+}
+
+table.sp-table th,
+table.sp-table td {
+  border: none;
+}
+
+input.mypage-tel-col-30 {
+  width: 31.7%;
+}
+
+@media screen and (max-width: 767px) {
+
+  input.mypage-tel-col-30 {
+    width: calc((100% - 10px) / 3);
+  }
+
+  table.table-split {
+    border-spacing: 5px 0;
+  }
+
+  table.table-split th{
+    border-bottom:5px #3C3C3C solid;
+  }
+  table.table-split th.total{
+    border-bottom:none;
+  }
+
+  table.table-base th.total,
+  table.table-split th.total{
+    padding: 5px 0;
+  }
+
+  table.table-split tr > td{
+    text-align: left;
+    height: 30px;
+  }
+
+  table.table-split td.pending{
+    border-bottom:5px #3C3C3C solid;
+  }
+
+  table.table-split th.under-bar{
+    border-bottom: none;
+  }
+
+  table.table-split tr > td {
+    border-right: none;
+  }
+}
+
+/*背景が白色の時のテーブル設定*/
+table.table-white{
+  width: 50%;
+  margin: 0 auto 0 0;
+}
+table.table-white th{
+  background-color: #000000;
+}
+table.table-white th:before,
+table.table-white th:after{
+  display: none;
+}
+table.table-white td.white-td {
+  border: none;
+  padding: 0;
+}
+
+td.password-td {
+  position: relative;
+}
+
+td.password-td span.field-icon {
+  position: absolute;
+  right: 10px;
+  top: 12px;
+}
+
+table.table-base.user-input button {
+  height: 54px;
+  margin-left: 30px;
+  background-color: #000000;
+  border: 1px solid #AAAAAA;
+  color: #FFFFFF;
+}
+
+/*ログイン画面用*/
+
+@media (max-width: 767px) {
+
+  td.password-td span.field-icon {
+    position: absolute;
+    right: 10px;
+    top: 11px;
+  }
+
+  td.password-td input {
+    width: 100%;
+  }
+
+  table.table-white {
+    width: 100%;
+  }
+}
+/*少し小さめの表*/
+table.table-mini{
+  width: calc(100% - 13em);
+}
+@media (max-width: 767px) {
+  table.table-mini{
+    width: 100%;
+  }
+}
+
+/*入力できる表
+  inputのマージンを調整*/
+table.td-input td{
+  padding:0;
+  background-color: transparent;
+  color: #FFFFFF;
+}
+
+table.td-input td span.field-icon{
+  color: #000000;
+}
+
+/* パスワード登録画面のパスワード入力ルールの文言 */
+.password-register-rule{
+  width: calc(100% - 13em);
+  margin: 1em auto 0;
+}
+
+/*カードの有効期限の日付幅調整*/
+table.td-input select.pulldown{
+  width: 37.5%;
+}
+
+tr.invoice_input td input:disabled{
+  cursor: default;
+  background: #DDDDDD;
+}
+
+@media (max-width: 767px) {
+  table.td-input th{
+    width:95%;
+    display: block;
+    border-collapse: none;
+    padding: 10px 2.5%;
+    border: none;
+    text-align: left
+  }
+  table.table-base.user-edit-table th {
+    width:95%;
+  }
+  table.td-input td{
+    display: block;
+    height: auto;
+  }
+  table.td-input span.field-icon.field-icon-mypage {
+    top: 15px;
+    right: 5%;
+  }
+
+  table.table-base.user-input th,
+  table.table-base.user-input td {
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    padding: 0 2.5%;
+  }
+
+  table.table-base.user-input .sp-block {
+    height: auto;
+    display: block;
+  }
+
+  table.table-base.user-input .sp-password-edit-box {
+    display: block;
+    height: auto;
+  }
+
+  table.table-base.user-input th {
+    text-align: left;
+    padding: 5px 0;
+    height: auto;
+    height: 37.5px;
+  }
+
+  table.table-base.user-input.login th {
+    padding: 0 2.5%;
+  }
+  table.table-base.user-input td input[type="text"],
+  table.table-base.user-input td input[type="email"],
+  table.table-base.user-input td input[type="tel"],
+  table.table-base.user-input td input[type="password"]{
+    height: 50px;
+  }
+  table.td-input select.pay-pulldown{
+    height: 50px;
+    margin: 0;
+  }
+
+  /* パスワード登録画面のパスワード入力ルールの文言 */
+  .password-register-rule{
+    width: unset;
+  }
+  .password-register-rule > p{
+    margin: 12px auto 3px;
+    width: 95%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  th {
+    font-size: 1rem;
+  }
+}
+
+/*右端の小さい選択表*/
+div.small-select{
+  width: 40%;
+  margin-right: 60%;
+  position: relative;
+  z-index: 1;
+}
+div.small-select th{
+  width: 50%;
+}
+@media screen and (max-width: 767px) {
+  div.small-select{
+  width: 100%;
+  margin: auto;
+  }
+  div.small-select th{
+    width: 35%;
+  }
+}
+
+/*mypage/footerのレイアウト修正
+ *2021/01~
+*/
+
+footer.mypage-footer div.mypage-footer-main div.max-wrap{
+  max-width: 1020px;
+}
+ul.colmn-fotter{
+  padding-inline-start: 0;
+}
+div.mypage-footer-main ul li.footer-copy{
+  margin-right: 0;
+}
+div.footer-copy-sp{
+  display: none;
+}
+
+@media screen and (max-width: 767px) {
+  div.mypage-footer-main ul li.footer-copy{
+    display: none;
+  }
+  div.footer-copy-sp{
+    display: block;
+  }
+
+  ul.colmn-fotter{
+    width: 90%;
+    display: flex;
+    justify-content: space-around;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  div.mypage-footer-main ul.colmn-fotter li{
+      margin-right: 0;
+  }
+}
+/***********/
+/* Mypage data usage table */
+/************/
+
+table.data-usage-table {
+  border-collapse: separate;
+  width: 100%;
+  table-layout: fixed;
+  word-break: break-word;
+  box-sizing: border-box;
+  border-spacing: 5px;
+}
+
+table.data-usage-table td {
+  text-align: center;
+  padding: 11px 0;
+  background-color: #fff;
+}
+
+table.data-usage-table th {
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  width: 30%;
+}
+/* dataflow */
+textarea.text-area-inquery {
+  width: 100%;
+  height: 100px;
+  border: solid 1px black;
+}
+
+div.scroll-box{
+  overflow-y: scroll;
+  max-height: 60px;
+}
+.scroll-box::-webkit-scrollbar {
+  background:#ccc;
+  width:10px;
+}
+.scroll-box::-webkit-scrollbar-thumb {
+  background:#3c3c3c;
+  border-radius: 50px;
+  height: 50px;
+}
+
+div.scroll-box p{
+  color:black;
+}
+@media screen and (max-width: 768px) {
+  div.scroll-box{
+    max-height: 152px;
+    width: 100%;
+  }
+  div.scroll-box p{
+    text-align: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+  table.data-usage-table th {
+    width: 50%;
+  }
+}
+
+/* New logout */
+div.header-logout {
+  width: 150px;
+  height: 40px;
+  background-color: white;
+  position: absolute;
+  top: 14px;
+  right: 0px;
+}
+
+div.header-logout a {
+  text-decoration: none;
+}
+
+div.header-logout p {
+  line-height: 40px;
+  font-weight: bold;
+  position: relative;
+  color: black;
+}
+
+div.header-logout-person {
+  position: absolute;
+  left: 15px;
+  top: 7px;
+  width: 24px;
+}
+div.header-logout img {
+  width: 100%;
+}
+
+div.header-logout-arrow {
+  position: absolute;
+  left: 120px;
+  top: 11px;
+  width: 10px;
+}
+@media screen and (max-width: 768px) {
+  div.header-logout-person {
+    position: absolute;
+    left: 13px;
+    top: 12px;
+    width: 15px;
+  }
+  div.header-logout-arrow {
+    position: absolute;
+    left: 92px;
+    top: 12px;
+    width: 7px;
+  }
+}
+div.payment-history-button-area{
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 30px;
+}
+div.payment-history-button-area div.decoration-button-area-square div.arrow{
+  position: absolute;
+  top: 48%;
+  left: 80%;
+  transform: translate(-50%,-50%);
+  transition: 0.2s;
+}
+@media screen and (min-width: 768px) {
+  div.payment-history-button-area div.decoration-button-area-square:hover div.arrow{
+    top: 53%;
+  }
+  div.payment-history-button-area div.decoration-button-area-square-selected:hover div.arrow{
+    top: 50%;
+  }
+}
+div.payment-history-billing-usage-switch{
+  display:flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+div.payment-history-billing-usage-switch .mypage-contract-select-container select{
+  height: 43px;
+}
+div.mypage-payment-history-select-container{
+  margin-left: 30px;
+}
+div.mypage-overseas-select-container{
+  margin-left: 50%;
+  z-index: 1;
+}
+div.corpmypage-overseas-select-container{
+  z-index: 1;
+}
+div.decoration-button-area-square{
+  position: relative;
+  margin-right: 30px;
+  transition: 0.5s;
+  cursor: pointer;
+  background-color: black;
+  color: white;
+  padding: 15px 40px 15px 15px;
+}
+div.decoration-button-area-square:last-child{
+  margin-right:0;
+}
+@media screen and (max-width: 768px) {
+  div.header-logout {
+    width: 97px;
+    top: 14px;
+    right: 12px;
+  }
+  div.header-logout p {
+    line-height: 40px;
+    font-weight: bold;
+    position: relative;
+    margin-left: 3px;
+    font-size: 1.1rem;
+  }
+  div.header-logout img {
+    position: relative;
+  }
+  div.header-logout-person img {
+    right: 5px;
+  }
+  div.header-logout-arrow img {
+    right: 8px;
+  }
+  div.payment-history-button-area{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  div.decoration-button-area-square{
+    width: 45%;
+    margin-right: 5%;
+  }
+  div.payment-history-billing-usage-switch{
+    margin-bottom: -20px;
+    flex-wrap: wrap;
+  }
+}
+div.decoration-button-area-square:hover{
+  background-color: #FFEB00;
+  color:black;
+}
+div.decoration-button-area-square-selected{
+  background-color: #FFEB00;
+  color: black;
+}
+
+@media screen and (max-width: 767px) {
+  div.mypage-payment-history-select-container{
+    margin: 0;
+  }
+  div.mypage-payment-history-select-container table.mypage-payment-history-table select{
+    width: 100%;
+    height: auto;
+  }
+  div.payment-history-billing-usage-switch div.mypage-payment-history-select-container table.mypage-payment-history-table select{
+    height: 43px;
+  }
+  div.payment-history-billing-usage-switch div.mypage-contract-select-container {
+    margin-top: 5px !important;
+  }
+  div.mypage-contract-description div.mypage-payment-history-select-container{
+    width: 100%;
+  }
+}
+
+/* mypage overseas-sub-dir */
+div.mypage-contract-select-container.mypage-overseas-select-container.mypage-contract-select-container select{
+  padding-left: unset;
+  text-align: center;
+}
+
+@media screen and (max-width: 767px) {
+  div.mypage-contract-select-container.mypage-overseas-select-container.mypage-contract-select-container select{
+    padding-left: unset;
+  }
+}
+
+div.mypage-top-element-wrapper {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+div.search-by-area {
+  position: relative;
+  height: 450px;
+}
+
+.select2 {
+  border: solid 5px #FFEB00;
+  background-color: #FFEB00;
+}
+.corp-imei-search{
+  background-color: none;
+}
+/* TODO:1151取り込み前の設定  width: 267px;  font-size: 1em;  margin: 0;  height: 37.5px;*/
+.corp-imei-search input{
+  width: 267px;
+  margin: 0;
+  font-size: 1.3rem;
+  font-family: "Montserrat", "Noto Sans JP", sans-serif;
+  color: #444444;
+  padding-left: 8px;
+  padding-right: 20px;
+  height: 39px;
+}
+
+.corp-imei-search input::placeholder{
+  font-size: 1.3rem;
+  font-family: "Montserrat", "Noto Sans JP", sans-serif;
+  color: #444444;
+}
+
+@media screen and (max-width: 767px) {
+  span.select2 {
+    width: 100%!important;
+  }
+
+}
+
+img.worldmap-img {
+  position: absolute;
+  top: 70px;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+span.remark-text-small {
+  font-size: 0.7rem;
+}
+
+@media screen and (max-width: 767px) {
+  div.mypage-overseas-select-container{
+    margin-left: 0;
+  }
+  div.mypage-nav a {
+    font-size: 1.16rem;
+  }
+  div.mypage-nav.mypage-nav-prepaid a {
+    font-size: 1.1rem;
+  }
+  div.mypage-top-element div.mypage-top-title-box {
+    height: 40px;
+    padding-top: 10px;
+  }
+
+  div.mypage-top-element-wrapper {
+    width: 150px;
+    height: 150px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* ZEUS法人マイページ */
+  div.mypage-top-boxes a.mainmenu-btnlink {
+    margin-bottom: 20px;
+    width: 40%;
+  }
+
+  div.mypage-top-boxes a.mainmenu-btnlink:nth-child(odd) {
+    margin-right: 20px;
+  }
+
+  div.bottom-margin {
+    margin-bottom: 0;
+    width: auto;
+  }
+  /* ZEUS法人マイページEND */
+
+  div.mypage-top-element p.mypage-top-title {
+    font-size: 1.3rem;
+    color:white
+  }
+  div.mypage-top-element div.mypage-top-icon img {
+    height: 50px;
+  }
+  div.mypage-nav a {
+    font-weight: 400;
+  }
+  div.mypage-top-boxes {
+    justify-content: center;
+  }
+  div.mypage-top-boxes a{
+    color: #000000;
+    margin-right: 2%;
+  }
+  div.mypage-top-boxes a:nth-child(3){
+    margin-right: 0;
+  }
+    div.mypage-top-boxes a.overseas-un-use{
+    margin-right: 0;
+  }
+}
+/* iPhone 5*/
+
+
+@media screen and (max-width: 360px) {
+  div.mypage-top-element-wrapper  {
+    width: 134px;
+    height: 134px;
+  }
+  div.mypage-top-element-wrapper:hover {
+    width: 130px;
+    height: 130px;
+  }
+
+  div.mypage-top-element p.mypage-top-title{
+    font-size: 1.2rem;
+  }
+  header.mypage-header div.current-tab-name-box {
+    padding-left: 5px;
+    margin-left: 0px;
+  }
+  header.mypage-header p.header-logo a img {
+    height: 30px;
+    margin: 18px 10px;
+  }
+
+  header.mypage-header nav.header-item div.header-title {
+    padding-left: 0;
+  }
+  header.mypage-header p.current-tab-name {
+    font-size: 1.1rem;
+  }
+
+  p.mypage-titile-area-title-sub {
+    font-size: 1.8rem;
+  }
+  div.decoration-button-area-long {
+    width: 210px;
+  }
+  table.payment-history-table th {
+    font-size: 1.0rem;
+  }
+  table.payment-history-table td {
+    font-size: 1.2rem;
+  }
+}
+
+div.search-by-country-name,
+div.search-by-area {
+  text-align: left;
+  margin: 20px 0;
+}
+
+div.search-by-country-name select {
+  width: 330px;
+}
+select.search-by-country-name-select {
+  width: 30%;
+}
+label.label-select-country {
+  margin-left: 100px;
+}
+
+/*海外プラン*/
+div.search-by-country-name-title,
+div.search-by-area-title {
+  background-color: black;
+  width: 165px;
+  color: white;
+  padding: 5px 0 5px 6rem;
+  margin-bottom: 20px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+}
+div.search-by-country-name-title p,
+div.search-by-area-title p{
+  font-size: 1.3rem;
+}
+
+select._dataplans:disabled  {
+  background-color: #eeeeee;
+}
+
+@media screen and (max-width: 767px) {
+  div.search-by-country-name-title,
+  div.search-by-area-title {
+    width: 40%;
+    padding:0 1em;
+  }
+
+  /*スマホの時はテキスト中央*/
+  div.search-by-country-name-title p,
+  div.search-by-area-title p{
+    width: 100%;
+    text-align: center;
+  }
+
+  img.worldmap-img {
+    width: 100%;
+  }
+  div.search-by-area {
+    height: 230px;
+  }
+  select.search-by-country-name-select {
+    width: 100%;
+  }
+  label.label-select-country {
+    margin-left: 0;
+  }
+}
+
+input.mypage-user-half {
+  width: 49.5%;
+}
+
+@media screen and (min-width: 767px) {
+  tr.div-sp {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  input.mypage-user-half {
+    width: 49%;
+    margin-right: 2%;
+  }
+
+  input.mypage-user-half:nth-child(2) {
+    margin-right: 0;
+  }
+}
+
+div.mypage-contract-select-container table tbody tr td {
+  border: 1px solid #D9D9D9;
+}
+div.mypage-contract-select-container table tbody tr th {
+  border: 1px solid black;
+  text-align: center;
+}
+
+/*あんしん解約サポート*/
+
+div.mypage-content-box .anshin-kaiyaku {
+  text-align: left;
+  color: #fff;
+}
+
+div.anshin-kaiyaku-notion{
+  border: none;
+  margin: 0;
+  padding: 0;
+  position: static;
+}
+div.anshin-kaiyaku-notion ul{
+  padding-left: 22px;
+}
+
+div.anshin-kaiyaku-notion ul li{
+  padding-bottom: 0.5em;
+  text-indent: -1em;
+}
+
+div.anshin-kaiyaku-notion ul li::before{
+  top:2px;
+}
+
+div.anshin-kaiyaku-notion-mypage {
+  border: none;
+  margin-top: 0;
+  padding: 0;
+}
+
+ div.anshin-kaiyaku-reason {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+
+.reason-inner {
+  width: 100%;
+}
+
+.reason-inner:first-child {
+  margin-right: 35px;
+}
+
+.reason-flex{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+div.reason-inner .reason-title{
+  color: #fff;
+  background-color: #282828;
+  width: auto;
+  padding: 15px 0;
+  margin: 5px 0 20px;
+  height: auto;
+  display: block;
+  text-align: center;
+}
+
+@media screen and (max-width: 767px) {
+  div.anshin-kaiyaku-reason{
+    display: block;
+  }
+  div.anshin-kaiyaku-reason div.reason-inner {
+    width: 100%;
+    margin-top: 35px;
+  }
+  div.nav-icon-box-initial-cancel div.sub-dir-nav-box div.nav-box-text p{
+    font-size:1.1rem;
+  }
+}
+
+table.mypage-select-table th{
+  background-color: #000000;
+}
+table.mypage-select-table tr:first-child th{
+  border: none;
+}
+table.mypage-select-table th:before,
+table.mypage-select-table th:after{
+  display: none;
+}
+
+table.mypage-select-table td{
+  padding-bottom: 0;
+  padding-top: 0;
+}
+table.mypage-select-table th,
+table.mypage-select-table td{
+  height:auto;
+}
+
+div.leave{
+  text-align:left;
+}
+
+.select2-selection__rendered {
+  line-height: 37.5px !important;
+}
+.select2-container .select2-selection--single {
+  height: 37.5px !important;
+}
+.select2-selection__arrow {
+  height: 37.5px !important;
+}
+
+tr.data-flow-total th,
+tr.data-flow-total td {
+  color: black;
+  background-color: #FFEB00;
+}
+tr.data-flow-total th {
+  border-right: transparent;
+}
+tr.data-flow-total td {
+  border-left: transparent;
+  font-weight: bold;
+}
+
+div.data-flow-last-update {
+  margin: 5px 5px 5px 0;
+  color:white;
+}
+div.data-flow-last-update p{
+  text-align: right;
+}
+
+@media screen and (max-width: 767px) {
+  div.data-flow-years div.white-content-box-title.white-content-box-title-mypage {
+    padding-top: 30px;
+    padding-bottom: 10px;
+  }
+}
+
+.corp-imei-select{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 89px;
+}
+.corp-imei-select-overseas{
+  margin: 0;
+}
+.corp-imei-select p{
+  background-color: black;
+  color: white;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  margin-right: 5px;
+  border: 2px solid #444444;
+}
+.corp-imei-select div.question-mark{
+  background-color: black;
+  color: white;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  padding: 0 35px 0 20px;
+  margin-right: 5px;
+  border: 2px solid #444444;
+}
+
+.corp-imei-select div.question-mark img{
+  top: 13px;
+  right: -3px;
+}
+
+.corp-imei-select select,
+.corp-imei-select-overseas.corp-imei-select select{
+  width: 300px;
+}
+
+@media screen and (max-width: 767px) {
+  .corp-imei-select{
+    flex-direction: column;
+    justify-content: center;
+    height: 100px;
+  }
+  .corp-imei-select p{
+    width: 88%;
+    justify-content: center;
+    margin: 0;
+  }
+  .corp-imei-select div,
+  .corp-imei-select select{
+    width: 100%;
+  }
+  div.corp-imei-select-overseas .corp-imei-select{
+    width: 100%;
+  }
+  .corp-imei-select div.question-mark{
+    justify-content: center;
+    width: 100%;
+    margin: 0;
+    box-sizing: border-box;
+  }
+
+  .corp-imei-select div.question-mark img{
+    right: 19%;
+    top: 53%;
+    transform: translate(-50%,-50%);
+  }
+}
+
+/* Mypage form change */
+
+div.decoration-button-wrapper-back-button {
+  justify-content: flex-start;
+  padding-left: 50px;
+  box-sizing: border-box;
+}
+
+div.mypage-nav-arrow {
+  display: none;
+}
+
+/* Override decoration button in mypage for sp */
+@media screen and (max-width: 767px) {
+  div.decoration-button-area-long {
+    width: 180px;
+  }
+  /* override faq icon */
+  div.lp-faq-content img.faq-question-icon {
+    width: 30px;
+    height: 30px;
+  }
+  div.lp-faq-contents-v2 div.lp-faq-answer img.faq-question-icon{
+      padding: 0 12px;
+  }
+  div.mypage-nav-wrapper {
+    overflow: hidden;
+    position: relative;
+  }
+  div.mypage-nav-wrapper:has(.mypage-nav-prepaid) {
+    overflow-x: scroll;
+  }
+  div.mypage-nav {
+    width: 200vw;
+    margin-left: 0;
+    max-width: initial;
+    margin-top: 5px;
+  }
+  div.mypage-nav-moved:not(.mypage-nav-prepaid) {
+    margin-left: -100%;
+
+  }
+  div.mypage-nav-arrow {
+    position: absolute;
+    display: block;
+    width: 20px;
+    top: 19px;
+  }
+  div.mypage-nav-arrow img {
+    width: 100%;
+  }
+  div.mypage-nav-arrow-left {
+    left: 5px;
+    z-index: 1;
+  }
+  div.mypage-nav-arrow-right {
+    right: 5px;
+    z-index: 1;
+  }
+
+  div.mypage-nav-arrow-shown {
+    display: block;
+  }
+  div.mypage-nav-arrow-hidden {
+    display: none;
+  }
+
+  .corp-imei-select .corp-imei-search{
+    background-color: #FFEB00;
+    width: calc(100% - 10px);
+  }
+  .corp-imei-search input{
+    width: 100%;
+    font-size: 1em;
+    margin: 0;
+    height: 37.5px;
+  }
+  div.mypage-nav-arrow-left-prepaid,div.mypage-nav-arrow-right-prepaid{
+    display: none;
+  }
+}
+.leave-survey-wrapper {
+  padding-top: 20px;
+  padding-bottom: 0px;
+}
+.reason-for-cancellation-td-margin {
+  margin-top: -3px;
+  display: block;
+}
+@media screen and (max-width: 320px){
+  div.mypage-nav-arrow img {
+    position: relative;
+    top: 10px;
+  }
+}
+
+@media(min-width: 767px){
+  a[href^="tel:"]{
+    pointer-events: none;
+  }
+  .mypage-content-box-inner {
+    height: auto;
+    margin: auto 50px;
+    padding-top: 20px;
+    margin-top: 50px;
+  }
+  div.mypage-content-box.wimax div.mypage-content-box-inner{
+    padding-top: 40px;
+  }
+}
+
+
+/*data-flow data-charge*/
+
+@media(max-width: 767px){
+  div.mypage-content-box-inner {
+    margin: auto 10px;
+  }
+  div.mypage-content-box-data-flow-inner{
+    margin: auto 25px;
+  }
+  span.font-space-narrow{
+    letter-spacing: -0.06em;
+    font-size: 1.9rem;
+  }
+}
+.fas fa-eye toggle-password{
+  position: relative;
+  top: 4px;
+}
+
+.fa-eye:before,
+.fa-eye-slash:before {
+  position: relative;
+  top: 3px;
+}
+
+.password_check_eye {
+  position: relative;
+  top: 4px;
+}
+
+@media (max-width: 767px) {
+  .password_check_eye {
+    top: 3px;
+  }
+}
+
+/*Edge・IEのみ
+ *ブラウザのデフォルトで目のマークが出るので非表示にさせる
+*/
+input::-ms-reveal {
+  visibility: hidden;
+}
+
+@media (max-width: 767px) {
+  .fa-eye:before {
+    top: 3px;
+  }
+  .fa-eye-slash:before{
+    top: 3px;
+  }
+}
+div.mypage-content-box {
+  background-color: #3C3C3C;
+  width: 100%;
+  height: auto;
+  position: relative;
+  padding-bottom : 35px;
+  z-index: 1;
+  margin-top: 30px;
+}
+div.mypage-content-box-contract-cancel-complete {
+  padding: 40px;
+  box-sizing: border-box;
+}
+div.mypage-content-box-contract-cancel-complete .mypage-content-box-inner {
+  margin: 0;
+  padding: 0;
+  ;
+}
+@media (max-width: 767px) {
+  div.mypage-content-box-contract-cancel-complete {
+    padding: 20px;
+  }
+}
+div.mypage-content-box.datacharge {
+  padding-bottom : 45px;
+}
+div.mypage-content-box.wimax{
+  background-color: #FFFFFF;
+  box-shadow: 0px 0px 10px rgb(0 0 0 / 30%);
+}
+
+main.mypage-contract-corp-multiple div.mypage-content-box {
+  background-color: unset;
+  margin-top: 10px;
+}
+
+main.mypage-contract-corp-multiple div.mypage-content-box-inner {
+  margin: unset;
+  padding-top: unset;
+  margin-top: unset;
+}
+
+main.mypage-contract-corp-multiple div.mypage-content-box-corp table {
+  background-color: #282828;
+  table-layout: auto;
+  word-wrap: break-word;
+}
+
+main.mypage-contract-corp-multiple div.mypage-content-box-corp th {
+  border-bottom: 2px solid #282828;
+  height: 35px;
+}
+
+main.mypage-contract-corp-multiple div.mypage-content-box-corp th:last-child {
+  border-right: 2px solid #282828;
+}
+
+main.mypage-contract-corp-multiple div.mypage-content-box-corp th.colspan-2-border {
+  border-right: none;
+}
+
+main.mypage-contract-corp-multiple div.mypage-content-box-corp th,
+main.mypage-contract-corp-multiple div.mypage-content-box-corp td {
+  border-right: 2px solid #282828;
+  border-bottom: 2px solid #282828;
+  line-height: 1.3;
+  padding: 6px 10px;
+}
+
+main.mypage-contract-corp-multiple .myTable-pickup {
+  font-weight: bold;
+}
+
+main.mypage-contract-corp-multiple td.view-the-details a {
+  display: block;
+}
+main.mypage-contract-corp-multiple td.view-the-details a{
+  margin: auto;
+  width: fit-content;
+
+}
+main.mypage-contract-corp-multiple td.view-the-details a:last-child {
+  margin-top: 35px;
+}
+
+main.mypage-contract-corp-multiple div.mypage-content-box-corp td.contract_text_left {
+  font-size: 1.3rem;
+}
+
+main.mypage-contract-corp-multiple .myTable {
+  border-left: 1px solid #282828;
+  border-top: 10px solid #282828;
+}
+
+main.mypage-contract-corp-multiple th.col-2 {
+  width: 160px;
+}
+
+main.mypage-contract-corp-multiple th.col-3 {
+  width: 75px;
+}
+
+main.mypage-contract-corp-multiple th.col-4 {
+  width: 170px;
+}
+
+main.mypage-contract-corp-multiple th.col-5 {
+  width: 150px;
+}
+
+main.mypage-contract-corp-multiple th.col-6 {
+  width: 80px;
+}
+
+main.mypage-contract-corp-multiple th.col-7 {
+  width: 95px;
+}
+
+main.mypage-contract-corp-multiple button.select-button {
+  width: 95px;
+  padding: 20px 0;
+}
+
+main.mypage-contract-corp-multiple div.mypage-content-box-corp td.view-the-details {
+  padding: 0;
+}
+
+main.mypage-contract span.imei-select-img img,
+main.mypage-contract-corp-one span.imei-select-img img{
+  position: absolute;
+  width: 20px;
+  left: 147px;
+  top: 50%;
+  transform: translateY(-50%) translateX(-50%);
+  -webkit-transform: translateY(-50%) translateX(-50%);
+}
+
+.annotation-popup-text {
+  line-height: 2.0rem;
+  overflow-y: auto;
+  height: 50vh;
+  padding: 30px;
+}
+
+@media(max-width: 767px){
+  main.mypage-contract-corp-multiple div.mypage-content-box-corp table,
+  main.mypage-contract-corp-multiple div.mypage-content-box-corp th,
+  main.mypage-contract-corp-multiple div.mypage-content-box-corp td {
+    border: 5px solid #282828;
+    line-height: 1.5;
+  }
+
+  main.mypage-contract-corp-multiple div.mypage-content-box-corp th {
+    padding: 15px 8px;
+  }
+
+  main.mypage-contract-corp-multiple div.mypage-content-box-corp td {
+    text-align: left;
+    padding: 15px;
+  }
+
+  main.mypage-contract-corp-multiple button.select-button {
+    width: 100%;
+    padding: 10px 0;
+  }
+
+  main.mypage-contract-corp-multiple td.col-select-sp a:not(:last-child) button.select-button {
+    margin-bottom: 15px;
+  }
+
+  main.mypage-contract-corp-multiple div.mypage-content-box {
+    padding-bottom: 0;
+  }
+
+  main.mypage-contract-corp-multiple div.shown-sp-corp:not(:last-child) {
+    margin-bottom: 25px;
+  }
+}
+
+/*タイトルなしのセクション　余白調整*/
+div.edit-pass {
+  padding-top : 35px;
+}
+
+div.upper-box {
+  padding-bottom: 20px;
+}
+.margin-up{
+  margin-top: 35px;
+}
+
+div.cancel{
+  background-color: #fff;
+}
+
+div.cancel p{
+  color: #000;
+}
+
+.mypage-cancel div.cancel{
+  background-color: #3C3C3C;
+}
+
+.mypage-cancel div.cancel p,
+.mypage-cancel div.cancel label{
+  color: #fff;
+}
+
+.mypage-cancel div.cancel label,
+#cancel-contract-checkbox{
+  cursor: pointer;
+}
+
+
+div.inner-upper-box{
+  margin-top: 0;
+}
+@media(max-width: 767px){
+  div.upper-box {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+}
+
+div.vertical-characters{
+  writing-mode: vertical-rl;
+  font-family: 'Montserrat bold';/*同じ字体の太字を指定*/
+  font-weight: bold;
+  font-size: 10rem;
+  position: absolute;
+  z-index: 0;
+  right: 0%;
+  white-space: nowrap;
+  top: 20px;
+  line-height: 90px;
+  text-align: center;
+  overflow-x: hidden;/*はみ出た分スクロールさせない*/
+}
+div.vertical-characters.wimax{
+  color: #d7d7d7;
+}
+div.cancel-popup-data-charge p{
+  color:black;
+}
+
+.cancel-caution-text,
+.mypage-cancel div.cancel p.cancel-caution-text,
+div.mypage-content-box-inner p.cancel-caution-text {
+  color: #FF6BF3;
+}
+
+/*任意項目のテキスト*/
+span.any-text{
+  font-size: 1.2rem;
+  vertical-align: bottom;
+}
+
+/*初期契約解除*/
+/*ページ内ナビ*/
+div.guide-nav-icons{
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+}
+div.guide-nav-icon-box {
+  width: 318px;
+}
+div.nav-icon-box a {
+  text-decoration: none;
+}
+div.guide-nav-icon-box div.sub-dir-nav-box {
+  height: 80px;
+}
+div.sub-dir-nav-box{
+  color: #fff;
+  background-color: #3C3C3C;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+div.sub-dir-nav-box::after {
+  display: none;
+}
+div.guide-nav-icon-box div.nav-arrow-box {
+  left: 143px;
+  bottom: -8px;
+  position: absolute;
+  width: 15px;
+  height: 10px;
+}
+div.guide-nav-icon-box div.nav-arrow-box img{
+  width: 100%;
+}
+div.sub-dir-nav-box:hover{
+color: #000;
+}
+div.sub-dir-nav-box div.nav-box-number{
+  position: absolute;
+  left: 12px;
+  top: 12px;
+  z-index: 90;
+  font-size: 2.5rem;
+}
+div.nav-icon-box-initial-cancel div.sub-dir-nav-box div.nav-box-icon{
+  width: 80px;
+  left: 170px;
+  z-index: 1000;
+  position: absolute;
+}
+div.guide-nav-icon-box div.sub-dir-nav-box div.nav-box-icon1 img {
+  margin-left: 33px;
+  margin-top: 2px;
+}
+div.guide-nav-icon-box div.sub-dir-nav-box div.nav-box-icon2 img {
+  margin-left: 20px;
+}
+div.guide-nav-icon-box div.sub-dir-nav-box div.nav-box-icon3 img {
+  margin-left: 21px;
+  margin-top: 7px;
+}
+div.guide-nav-icon-box div.sub-dir-nav-box div.nav-box-icon img{
+  width: 100%;
+}
+div.guide-nav-icon-box div.sub-dir-nav-box div.nav-box-text{
+  position: absolute;
+  left: 60px;
+  z-index: 1000;
+}
+@media screen and (max-width: 767px){
+
+  div.guide-nav-icons{
+    padding-top: 20px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  div.nav-icon-box{
+    margin-bottom: 0;
+  }
+  div.nav-icon-box-initial-cancel div.sub-dir-nav-box div.nav-box-text p {
+    font-size: 8px;
+    line-height: 1.5rem;
+  }
+  div.price-nav-icons div.nav-box-text p{
+    font-size: 0.1rem;
+  }
+}
+
+/*セクション内のタイトルとアイコン位置*/
+div.inital-cancel-title{
+  display: flex;
+  justify-content: center;
+  width: auto;
+  font-size: 2em;
+  padding: 15px 0 30px;
+}
+div.inital-cancel-title p{
+  font-size: 3rem;
+  letter-spacing: 0;
+  line-height: 35px;
+  text-align: center;
+}
+
+div.cancel-step{
+  font-weight: bold;
+  text-align:center;
+  margin-right:35px;
+  margin-left: -105px;
+  margin-top: 4px;
+}
+
+/*タイトル横のアイコン*/
+div.cancel-step-img img{
+  width: 70px;
+}
+
+span.small-caption{
+  font-size: 0.6em;
+}
+.cancel-text{
+  width: 80%;
+  text-align: left;
+  margin:auto;
+}
+.cancel-text p{
+  margin:auto;
+}
+/*テキストエリアのサイズ調整*/
+.cancel-text1 p{
+  width: 48%;
+  margin: auto;
+}
+/*注釈*/
+div.cancel-text2 p.cancel-notes{
+  text-align: center;
+  width: 90%;
+}
+div.cancel-text3 p.cancel-notes{
+  text-align: center;
+  width: 100%;
+}
+/*図のサイズ*/
+.cancel-figure{
+  padding-top: 3em;
+}
+
+.cancel-figure img{
+  width: 40%;
+  display: block;
+  margin: auto;
+}
+
+img.yellow-notion-icon {
+    margin-left: 4px;
+}
+
+div.device-option-confirm-button{
+  background-color: #FFEB00;
+  color: black;
+}
+div.device-option-confirm-button a{
+  text-decoration: none;
+  color: black;
+}
+
+div.device-option-confirm-button.device-option-confirm-button-back {
+    background-color: black;
+    color: #FFEB00;
+}
+
+div.present-limit-confirm-button{
+  background-color: #FFEB00;
+  color: black;
+}
+div.present-limit-confirm-button a{
+  text-decoration: none;
+  color: black;
+}
+div.present-limit-confirm-button.present-limit-confirm-button-back {
+  background-color: black;
+  color: #FFEB00;
+}
+
+div.present-pay-error-confirm-button{
+  background-color: #FFEB00;
+  color: black;
+}
+div.present-pay-error-confirm-button a{
+  text-decoration: none;
+  color: black;
+}
+div.present-pay-error-confirm-button.present-pay-error-confirm-button-back {
+  background-color: black;
+  color: #FFEB00;
+}
+
+
+/*わからないことがあるときは*/
+div.custmer-contract{
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ margin-top: 50px;
+}
+
+div.initial-cancel-contact {
+  margin-left: 2em;
+}
+div.initial-cancel-contact p{
+  text-align: center;
+}
+
+p.contract-initial-cancel-contact-title {
+  font-size: 2.5rem;
+}
+
+div.initial-cancel-contact a{
+  text-decoration: none;
+  color:#fff;
+}
+
+div.initial-cancel-contact p.l1 {
+  font-size: 3.0rem;
+  line-height: 4.0rem;
+}
+div.initial-cancel-contact p.l2 {
+  font-size: 6.0rem;
+  line-height: 6.0rem;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+div.initial-cancel-contact p.l3,
+div.initial-cancel-contact p.l4{
+  font-size: 1.5rem;
+}
+
+div.troubled-person-image {
+  position: static;
+  right: 0;
+  bottom: 0;
+  margin-left: -15%;
+  width: 15%;
+}
+
+div.contract-area p{
+  text-align: right;
+  color: #fff;
+  margin-bottom: -30px;
+}
+
+@media screen and (max-width: 767px) {
+  div.cancel-step{
+    margin-right: 10px;
+    margin-left: -30px;
+    margin-top: 7px;
+  }
+  div.guide-nav-icon-box{
+    width: 30%;
+    height: 80px;
+  }
+  div.guide-nav-icon-box div.sub-dir-nav-box {
+    width: 100%;
+  }
+  div.guide-nav-icon-box div.sub-dir-nav-box div.nav-box-icon{
+    top: 2.5em;
+    left:calc((100% - 80px) /2);
+    height: 50%;
+    width: 80px;
+    display: flex;
+    justify-content: center;
+  }
+  div.sub-dir-nav-box div.nav-box-number {
+    font-size: 2.0rem;
+    left: 6px;
+    top: 6px;
+  }
+  div.guide-nav-icon-box div.sub-dir-nav-box div.nav-box-icon img {
+    height: 30px;
+    width: auto;
+    left: 0;
+    right: 0;
+    margin: auto;
+  }
+  div.guide-nav-icon-box div.sub-dir-nav-box div.nav-box-icon1 img {
+      height: 26px;
+      margin-left: 12px;
+      margin-top: 10px;
+  }
+  div.guide-nav-icon-box div.sub-dir-nav-box div.nav-box-icon2 img {
+    height: 31px;
+    margin-left: 20px;
+    margin-top: 6px;
+  }
+  div.guide-nav-icon-box div.sub-dir-nav-box div.nav-box-icon3 img {
+    height: 25px;
+    margin-left: 9px;
+    margin-top: 11px;
+  }
+  div.guide-nav-icon-box div.nav-arrow-box {
+    width: 15px;
+    height: 10px;
+    left: 42%;
+    bottom: -7px;
+  }
+  div.guide-nav-icon-box div.sub-dir-nav-box div.nav-box-text {
+    top: 5px;
+    left: 5%;
+    width: 95%;
+    text-align: center;
+  }
+ .nav-box-number{
+   font-size: 1.2rem;
+  }
+
+
+  div.inital-cancel-title{
+    font-size: 1.5em;
+  }
+
+  /*タイトル横のアイコン*/
+  div.cancel-step-img img{
+    width: 40px;
+  }
+
+  div.inital-cancel-title p{
+    font-size: 2rem;
+  }
+
+  span.small-caption{
+    font-size: 0.6em;
+  }
+
+  .cancel-figure{
+    margin-top: 2em;
+  }
+
+  .cancel-figure img{
+    width: 70%;
+  }
+
+  div.custmer-contract{
+    display: block;
+    margin: 35px 0 0 0;
+  }
+  div.initial-cancel-contact{
+    margin: 0;
+  }
+
+  div.troubled-person-image {
+   display: none;
+  }
+
+  div.initial-cancel-contact p.l1 {
+    font-size: 2.3rem;
+    line-height: 3rem;
+    margin-top: 2.7rem;
+  }
+  div.initial-cancel-contact p.l2 {
+    font-size: 3.5rem;
+    line-height: 4rem;
+    margin-bottom: 0.6rem;
+  }
+
+  div.contract-area {
+    float: none;
+    width: 100%;
+    margin-top: 2.7rem;
+  }
+  div.contract-area p{
+    text-align: center;
+  }
+
+  p.contract-initial-cancel-contact-title {
+    line-height: 1.3em;
+  }
+
+  .cancel-text1 p{
+    width: 100%;
+  }
+
+  div.cancel-text2 p.cancel-notes,
+  div.cancel-text3 p.cancel-notes{
+    text-align: left;
+  }
+  div.cancel-text2 p.cancel-notes{
+    width: 100%;
+  }
+}
+/*timeout処理*/
+.timeout-title p,
+div.timeout p{
+  color: #000;
+}
+
+div.timeout{
+  background-color: #fff;
+  margin-bottom: 30px;
+}
+
+div.timeout-margin{
+  margin-top: 35px;
+}
+
+/*データチャージの画面微調整*/
+p.custom-check-box-v2-select-text.datacharge{
+  padding: 4px 18px;
+  margin-top: 10px;
+}
+
+.payment-history-printing-button-padding {
+  text-align: right;
+}
+.payment-history-printing-button {
+  background-color: #FFEB00;
+  cursor: pointer;
+  margin-top: 34px;
+  padding: 8px 0;
+  font-family: "Montserrat", "Noto Sans JP", sans-serif;
+  font-weight: bold;
+  font-size: 1.3rem;
+  border: none;
+  width: 257.5px;
+  transition: 0.5s;
+}
+.payment-history-printing-button:hover {
+  background-color: #000;
+  color: #FFF;
+  font-weight: normal;
+}
+
+@media screen and (max-width: 767px) {
+  .payment-history-printing-button-padding {
+    padding: 0px 6px 5px 5px;
+  }
+  .payment-history-printing-button {
+    width: 100%;
+    margin-top: 39px;
+  }
+  .payment-history-printing-button.csv-download {
+    margin-top: 20px;
+  }
+  div.timeout{
+    margin-top: 0;
+  }
+
+}
+
+div.mypage-user-container-cancel {
+  max-width: 1020px;
+  margin: 0 auto;
+  background-color: white;
+  text-align: left;
+  z-index: 2;
+}
+
+div.mypage-user-container-button {
+  margin: 0 auto;
+  text-align: left;
+  z-index: 2;
+}
+
+div.white-content-box-form {
+  background-color: white;
+  padding: 40px 30px;
+  margin-top: 15px;
+}
+
+table.form-table {
+    border-spacing: 7px;
+    margin: 0 auto;
+}
+
+table.form-table span {
+  color: #1E1E1E;
+}
+
+table.form-table span.mandatory {
+    background-color: #e6006b;
+    color: white;
+    border-radius: 8px;
+    position: relative;
+    text-align: center;
+    padding: 5px 15px;
+    font-size: 1.3rem;
+    margin-right: 5px;
+}
+
+table.form-table span.gray {
+  background-color: gray;
+  color: white;
+  border-radius: 8px;
+  position: relative;
+  text-align: center;
+  padding: 5px 15px;
+  font-size: 1.3rem;
+  margin-right: 5px;
+}
+
+table.form-table span.cannot_be_changed {
+  color: #e6006b;
+  margin-left: 10px;
+  font-size: 1.2rem;
+}
+
+table.form-table th {
+  width: 250px;
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+  vertical-align: middle;
+  padding-top: 0;
+}
+
+table.form-table th.reason-for-cancellation {
+  vertical-align: top;
+}
+
+table.form-table tr.reason-for-cancellation-margin {
+  margin-top: 50px;
+  color: #FFF;
+}
+
+table.form-table tr.reason-for-cancellation-space {
+  height: 15px;
+}
+
+table.form-table td {
+  vertical-align: top;
+  padding: 0;
+}
+
+div.mypage-user-container-cancel input.mypage-input-border {
+  margin: 0;
+  padding: 25px 10px;
+  background-color: #D9D9D9;
+  border: none;
+  border-radius: 8px;
+}
+
+table.form-table td.flex-gender-area {
+  display: flex;
+  align-items: center;
+}
+
+div.leave-checkbox-box-entry {
+  outline: 1px solid #000000;
+  outline-offset: -1px;
+  text-align: center;
+  background-color: #FFFFFF;
+  padding-top: 20px;
+  margin-top: 50px;
+  position: relative;
+}
+
+.mypage-initial_contract_cancellation div.leave-checkbox-box-entry,
+.mypage-initial_contract_cancellation div.confirm-box-entry {
+  background-color: #3C3C3C;
+  color: #FFF;
+  outline: unset;
+}
+
+div.leave-checkbox-box-plan {
+  outline: 1px solid #000000;
+  outline-offset: -1px;
+  text-align: center;
+  background-color: #FFFFFF;
+  padding-top: 20px;
+  padding-bottom: 30px;
+  margin: 0 auto 0.1em;
+  position: relative;
+  width: calc(100% - 13.8em);
+}
+
+div.leave-checkbox-box-entry-cancel {
+  outline: 1px solid #000000;
+  outline-offset: -1px;
+  text-align: center;
+  background-color: #3C3C3C;
+  padding-top: 20px;
+  margin-top: 50px;
+  position: relative;
+  padding-bottom: 30px;
+  color: #FFF;
+}
+
+p.terms-agree {
+  position: relative;
+  margin-bottom: 15px;
+  padding-left: 1.2em;
+}
+p.terms-agree a {
+  text-decoration: underline;
+}
+p.terms-agree-contents {
+  padding-left: 1.2em;
+}
+
+p.terms-agree-plan-change {
+  margin-bottom: 15px;
+}
+
+p.terms-agree-plan-change-1,
+p.terms-agree-plan-change-2,
+p.terms-agree-plan-change-3,
+p.terms-agree-plan-change-4 {
+  margin-bottom: 10px;
+}
+
+p.terms-agree-plan-change-2 {
+  margin-top: 10px;
+}
+
+/*TODO:p.terms-agree-contents:nth-of-type(6)から7に最近変更?*/
+p.terms-agree-contents:nth-of-type(7) {
+  margin-bottom: 15px;
+}
+
+p.terms-agree-red {
+  color: red;
+  margin-bottom: 15px;
+}
+
+table.form-confirm-info-table th, table.form-confirm-info-table td {
+  height: 30px;
+}
+
+table.form-confirm-info-table th {
+  width: 30%;
+  padding: 10px 15px;
+  text-align: left;
+}
+
+table.form-confirm-info-table td {
+  border: 1px solid #b1b1b1;
+  width: 70%;
+  vertical-align: middle;
+  margin: 0;
+  background-color: #D9D9D9;
+  border: none;
+}
+
+div.mandatory.agree-check {
+  left: 390px;
+}
+
+div.mandatory.agree-check-plan {
+  left: 390px;
+}
+
+div.mandatory {
+  background-color: #ea338d;
+  color: white;
+  width: 45px;
+  border-radius: 7px;
+  position: relative;
+  top: 41px;
+  left: 269px;
+  text-align: center;
+  z-index: 1;
+}
+
+div.confirm-box-entry {
+  width: 100%;
+  height: 60px;
+  background-color: white;
+  color: black;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  position: relative;
+  padding-bottom: 15px;
+}
+
+th.reason-for-cancellation span.mandatory{
+    margin-left: 10px;
+}
+
+label.leave-checkbox {
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.leave-checkbox-text {
+  margin-left: 30px;
+}
+
+div.confirm-box span
+.confirm-box-plan label.leave-checkbox{
+  margin-left: 0;
+}
+div.confirm-box-plan span {
+  left: 3px;
+  top: -17px;
+}
+div.confirm-box-plan.confirm-box-selected{
+  background-color: #000000;
+}
+div.confirm-box-plan.confirm-box-selected{
+  background-color: #e6006b;
+}
+.confirm-box-plan label.custom-check-box input[type="checkbox"]:checked + span::before{
+  background-color: #333;
+}
+.confirm-box-plan label.custom-check-box.entry input[type="checkbox"]:checked + span::after{
+
+  border: 2px solid #fff;
+  border-width: 0 2px 2px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.confirm-box-plan label.leave-checkbox{
+  margin: 0;
+}
+
+.plan-change-table td.password-td span.field-icon.field-icon-mypage {
+  transform: translateY(-50%);
+}
+
+
+@media screen and (max-width: 767px) {
+  .leave-checkbox-text {
+    margin-left: 55px;
+  }
+  .plan-change-table td.password-td span.field-icon.field-icon-mypage {
+    top: 8px;
+  }
+}
+.leave-checkbox-pointer,
+.leave-checkbox-pointer label,
+.leave-checkbox-pointer input {
+  cursor: pointer;
+}
+
+label.custom-check-box.entry input[type="checkbox"] + span::before {
+  z-index: 0;
+  background-color: white;
+  width: 18px;
+  height: 18px;
+  border: 1px #333 solid;
+  border-radius: 0;
+  position: relative;
+  left: -41px;
+  top: 22px;
+  cursor: pointer;
+}
+
+label.custom-check-box.entry input[type="checkbox"] + span::after {
+  z-index: 1;
+  margin: 2px 5px;
+  width: 7px;
+  height: 10px;
+  position: relative;
+  left: -58px;
+  top: 18px;
+}
+
+label.custom-check-box.entry input[type="checkbox"]:checked + span::after {
+  border: 2px solid black;
+  border-width: 0 2px 2px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+label.custom-check-box.entry {
+  margin-left: 25px;
+}
+
+div.mandatory.agree-check {
+  left: 420px;
+  margin-top: -20px;
+}
+
+div.mandatory.agree-check-plan {
+  top: 25px;
+  left: 209px;
+  margin-top: -20px;
+}
+
+.complete-text {
+  margin: 5px 0px;
+}
+
+div.mypage-content-box-inner p.complete-text-yellow {
+  color: #FFEB00;
+}
+div.mypage-content-box-inner p.complete-text-red {
+  color: red;
+  font-size: 1.6rem;
+  margin: 0 0;
+}
+.complete-text-top {
+  margin-top: 30px;
+}
+table.table-base.user-input.subsc-edit-table tr.border-top-none td.address-wrap {
+  padding-top: 0;
+}
+.return-address-wrap {
+  padding: 5px 30px;
+  display: inline-block;
+  margin-bottom: 15px;
+}
+.complete-text-bottom {
+  margin-bottom: 30px;
+}
+
+div.inner-upper-box-cancel{
+  margin-top: 15px;
+}
+
+.button-body-cancel {
+  margin-top: 20px;
+}
+
+.button-body-plan-margin {
+  margin-top: 20px;
+}
+
+div.device-option-confirm-button,
+div.present-limit-confirm-button,
+div.present-pay-error-confirm-button {
+  background-color: #FFEB00;
+  color: black;
+  text-align: center;
+}
+
+div.device-option-confirm-button.device-option-confirm-button-back,
+div.present-limit-confirm-button.present-limit-confirm-button-back,
+div.present-pay-error-confirm-button.present-pay-error-confirm-button-back {
+  background-color: black;
+  color: #FFEB00;
+}
+div.present-pay-error-confirm-button.present-pay-error-confirm-button-back{
+  margin: auto;
+}
+.cancel_move_button a {
+  color: black;
+  text-decoration:none;
+}
+
+.button-next_contract img {
+  height: 55px;
+  position: relative;
+}
+
+div.confirm-box.confirm-box-plan{
+  background-color: black;
+}
+
+div.confirm-box-plan.confirm-box-selected{
+  background-color: #e6006b;
+}
+
+@media screen and (max-width: 767px) {
+  .return-address-wrap {
+    padding: 5px 10px;
+  }
+
+  div.mypage-user-container-cancel input.mypage-input-border {
+    margin: 0;
+    padding: 25px 10px;
+    background-color: #D9D9D9;
+    border: none;
+    border-radius: 8px;
+    margin-bottom: 10px;
+  }
+
+  table.form-confirm-info-table th {
+    width: 95%;
+    padding: 10px 2.5%;
+    text-align: left;
+    height: auto;
+  }
+
+  table.form-confirm-info-table.initial-confirm-table th {
+    background-color: #000;
+  }
+
+  table.form-confirm-info-table td {
+    border: 1px solid #b1b1b1;
+    width: 95%;
+    vertical-align: middle;
+    margin: 0;
+    background-color: #D9D9D9;
+    border: none;
+    height: auto;
+  }
+
+  table.initial-confirm-table th {
+    width: 90px;
+    min-width: 90px;
+  }
+
+  table.initial-confirm-table td {
+    width: 100%;
+    padding: 10px;
+  }
+
+  div.leave-checkbox-box-entry-cancel {
+    outline: 1px solid #000000;
+    outline-offset: -1px;
+    text-align: center;
+    padding-top: 20px;
+    margin-top: 35px;
+    position: relative;
+    padding-bottom: 30px;
+  }
+
+  div.mypage-title-area {
+      display: flex;
+      align-items: flex-start;
+      padding: 25px 0 35px;
+  }
+
+  div.leave-checkbox-box-entry {
+    outline: 1px solid #000000;
+    outline-offset: -1px;
+    text-align: center;
+    background-color: #FFFFFF;
+    padding-top: 20px;
+    margin-top: 35px;
+    position: relative;
+  }
+
+  div.leave-checkbox-box-plan {
+    width: 97%;
+    outline: 1px solid #000000;
+    outline-offset: -1px;
+    text-align: center;
+    background-color: #FFFFFF;
+    padding-top: 20px;
+    position: relative;
+  }
+
+  div.white-content-box-form {
+    background-color: white;
+    padding: 40px 25px;
+    margin-top: 0px;
+  }
+
+  div.white-content-box-form.initial-confirm-wrap {
+    padding: 10px 5px;
+  }
+
+  .error-message-value {
+    margin-top: 30px;
+    text-align: center;
+  }
+
+  div.mandatory.agree-check {
+    top: 41px;
+    left: 30%;
+    transform: translateX(-30%);
+  }
+
+  div.mandatory.agree-check-plan {
+    top: 41px;
+    left: 30%;
+    transform: translateX(-30%);
+  }
+
+  label.custom-check-box.entry {
+    margin-left: 60px;
+  }
+  div.confirm-box.confirm-box-plan{
+    width: 150px;
+    margin: 0 auto 0 30%;
+  }
+  .confirm-box-plan label.custom-check-box.entry{
+    margin-left: 20px;
+  }
+  div.confirm-box.confirm-box-plan label.custom-check-box input[type="checkbox"] + span::before{
+    width: 18px;
+    height: 18px;
+    top: 22px;
+  }
+  div.confirm-box.confirm-box-plan label.custom-check-box.entry input[type="checkbox"] + span::after{
+    top: 15px;
+  }
+  div.leave-checkbox-box-plan div.mandatory.agree-check-plan{
+    top: 27px;
+    left: 11%;
+    transform: none;
+  }
+
+}
+
+div.content-box-inner-mypage p {
+  font-size: 1.4rem;
+}
+
+div.button-body-margin {
+  margin-top: 50px;
+}
+
+div.content-box-title-margin p {
+  margin-bottom: 40px;
+  margin-top: -5px;
+}
+div.present-limit-confirm-popup-body-already a,
+div.present-pay-error-confirm-popup-body-already a{
+  text-decoration: none;
+  color: #e6006b;
+}
+table.table-base td.cancel-reason-padding {
+  padding: 10px;
+}
+@media screen and (max-width: 767px) {
+  div.content-box-title p {
+    margin-bottom: 0px;
+    padding-top: 30px;
+    text-align: center;
+  }
+
+  div.content-box-inner-mypage p.call-time-box-mypage {
+    font-size: 1rem;
+    width: calc(17% - 5px);
+    padding: 10px 5px;
+  }
+
+  div.content-box-inner-mypage p.call-mail-mypage {
+    letter-spacing: 0em;
+    font-size: 1.4rem;
+  }
+
+  div.content-box-inner-mypage p.call-time {
+    font-size: 1.2rem;
+  }
+  div.present-limit-confirm-popup-body-already,
+  div.present-pay-error-confirm-popup-body-already{
+    text-align: left;
+  }
+
+
+  div.present-pay-error-confirm-button.present-pay-error-confirm-button-back {
+    margin: auto;
+  }
+
+  div.cancel-reason-question {
+    margin-bottom: -7px;
+    margin-top: 15px;
+  }
+
+  div.cancel-reason-answer {
+    margin-bottom: 6px;
+    margin-left: 12px;
+  }
+
+  table.table-base td.cancel-reason-padding {
+    padding: 1px 10px 9px;
+  }
+
+  div.white-content-box-body-feature-2 {
+    width: 455px;
+  }
+}
+  /* imei-balloon-corp start */
+  div.contact-imei-attention {
+    position: relative;
+  }
+  div.contact-imei-attention:hover span.imei-balloon-corp {
+    display: inline;
+  }
+  span.imei-balloon-corp {
+    display: none;
+    position: absolute;
+    margin: 1.5em 0;
+    padding: 0 10px;
+    width: 180px;
+    right: -44px;
+    bottom: 19px;
+    font-size: 16px;
+    background: #ebebeb;
+    border: 1px solid #000000;
+    z-index: 1000000000000000;
+  }
+  span.imei-balloon-corp:before {
+    border-top: 12px solid #000000;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    bottom: -13px;
+    left : 30%;
+    content: "";
+    position: absolute;
+  }
+  span.imei-balloon-corp:after {
+    border-top: 12px solid #ebebeb;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    bottom: -12px;
+    left : 30%;
+    content: "";
+    position: absolute;
+  }
+@media screen and (max-width: 767px) {
+  span.imei-balloon-corp {
+    bottom: -90%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+  }
+  div.contact-imei-attention {
+    position: static;
+  }
+}
+
+/* imei-balloon-mypage start */
+div.contact-imei-attention {
+  position: relative;
+}
+div.contact-imei-attention:hover span.imei-balloon-mypage {
+  display: inline;
+}
+span.imei-balloon-mypage {
+  display: none;
+  position: absolute;
+  margin: 1.5em 0;
+  padding: 0 10px;
+  width: 180px;
+  right: 9px;
+  bottom: 12px;
+  font-size: 16px;
+  background: #ebebeb;
+  border: 1px solid #000000;
+  z-index: 1000000000000000;
+}
+span.imei-balloon-mypage:before {
+  border-top: 12px solid #000000;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  bottom: -13px;
+  left : 30%;
+  content: "";
+  position: absolute;
+}
+span.imei-balloon-mypage:after {
+  border-top: 12px solid #ebebeb;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  bottom: -12px;
+  left : 30%;
+  content: "";
+  position: absolute;
+}
+@media screen and (max-width: 767px) {
+  span.imei-balloon-mypage {
+    bottom: -90%;
+    left: 100%;
+    transform: translateY(-50%) translateX(-50%);
+  }
+  div.contact-imei-attention {
+    position: static;
+    padding: 5px 0;
+  }
+}
+
+div.question-mark-corp {
+  position: relative;
+  cursor: default;
+}
+span.imei-select-img img {
+  position: absolute;
+  width: 20px;
+  right: 5px;
+  top: 50%;
+  transform: translateY(-50%) translateX(-50%);
+  -webkit-transform: translateY(-50%) translateX(-50%);
+}
+@media screen and (max-width: 767px) {
+  span.imei-select-img img,
+  main.mypage-contract span.imei-select-img img,
+  main.mypage-contract-corp-one span.imei-select-img img {
+    position: absolute;
+    width: 18px;
+    top: 1.8em;
+    left: calc(50% + 3.5em);
+    right: 0;
+    transform: unset;
+  }
+  .mypage-contract .mypage-global-contract-box span.imei-select-img img {
+    left: calc(50%);
+    top: 2em;
+  }
+}
+@media screen and (max-width: 320px) {
+  span.imei-select-img img {
+    right: -8px;
+  }
+}
+.corp-imei-select div.question-mark-corp {
+  background-color: black;
+  color: white;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  padding: 0 35px 0 20px;
+  margin-right: 5px;
+  border: 2px solid #444444;
+}
+.corp-imei-select span.imei-select-img img {
+  right: -38px;
+}
+@media screen and (max-width: 767px) {
+  .corp-imei-select div.question-mark-corp {
+    width: 100%;
+    margin: 0;
+    box-sizing: border-box;
+    text-align: center;
+  }
+  .corp-imei-select span.imei-select-img img {
+    right: calc(50% - 7.5em);
+    left: auto;
+    top: 50%;
+    transform: translate(-50%,-50%);
+  }
+}
+/* imei-balloon-corp end */
+/* ご契約端末一覧 start */
+div.mypage-content-box-corp {
+  background-color: #282828;
+  width: 100%;
+  height: auto;
+  position: relative;
+  z-index: 1;
+}
+div.mypage-content-box-corp > table {
+  line-height: 1.4;
+}
+div.mypage-content-box-corp-caution {
+  background-color: white;
+  width: 100%;
+  height: auto;
+  position: relative;
+  z-index: 1;
+  margin-top: 30px;
+  display:flex;
+}
+div.mypage-content-box-corp-caution-icon {
+  margin: 10px 5px auto 5px;
+}
+
+th.table-space{
+  width: 140px;
+}
+
+div.mypage-content-box-corp table,
+div.mypage-content-box-corp th,
+div.mypage-content-box-corp td {
+  border-collapse: collapse;
+  background-color: #fff;
+}
+
+div.mypage-content-box-corp table{
+  width: 100%;
+}
+div.mypage-content-box-corp th,
+div.mypage-content-box-corp td {
+  padding: 6px 5.2px;
+  vertical-align: middle;
+  text-align: center;
+  border-right: 2px solid #3C3C3C;
+  border-bottom: 2px solid #3C3C3C;
+}
+div.mypage-content-box-corp th {
+  padding: 8px;
+  background-color: black;
+  color:white;
+  border-bottom: 4px solid #3C3C3C;
+}
+
+#myTable,
+.myTable{
+  border-left: 1px solid #3C3C3C;
+}
+div.mypage-content-box-corp th:last-child,
+div.mypage-content-box-corp td:last-child,
+div.mypage-content-box-corp td.view-the-details {
+  border-right: none;
+}
+
+div.mypage-content-box-corp td.row-plan{
+    word-break: keep-all;
+}
+
+div.mypage-content-box-corp-select {
+  background-color: #282828;
+  width: 100%;
+  height: auto;
+  position: relative;
+  z-index: 1;
+  margin-top: 30px;
+}
+div.mypage-content-box-corp-select table,
+div.mypage-content-box-corp-select th,
+div.mypage-content-box-corp-select td {
+  border: 1px solid black;
+  border-collapse: collapse;
+  background-color: #fff;
+}
+div.mypage-content-box-corp-select th,
+div.mypage-content-box-corp-select td {
+  padding: 5px 27.15px;
+  vertical-align: middle;
+  text-align: center;
+}
+div.mypage-content-box-corp-select th {
+  background-color: black;
+  color:white;
+}
+table.table-base-corp {
+  table-layout: auto;
+}
+table.table-base-corp td {
+  border-bottom: none;
+}
+
+.mypage-content-plan-text {
+  width: 31%;
+  margin: 0 auto 0 0;
+  margin-top: 25px;
+  color: #ffffff;
+  font-size: 1.1rem;
+  text-align: left;
+}
+
+.info-cancel-day {
+  color: #000000;
+}
+
+/* 一時使用 */
+.display-none {
+  display: none;
+}
+
+div.plan-confirm-button-back p {
+  color: #FFEB00;
+}
+
+div.leave-checkbox-box-plan p {
+  color: #1E1E1E;
+  text-align: unset;
+}
+div.confirm-box-plan p {
+  color: white;
+}
+
+div.mandatory.agree-check-plan p {
+  color: #fff;
+}
+
+table.table-base th.after-plan-table {
+  color: #000;
+  border-left: 1px solid #3c3c3c;
+  background-color: #FFEB00;
+}
+
+table.table-base td.after-plan-box {
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+td.after-plan-box .arrow {
+  position: absolute;
+  right: 150px;
+  pointer-events: none;
+  transform: translate(0%,0%);
+  transition: 0.2s;
+}
+
+main.mypage-main select.plan-pulldown {
+  width: 100%;
+  border: none;
+}
+
+.after-plan-box select {
+  -webkit-appearance: none;
+  appearance: none; /* デフォルトのスタイルを無効 */
+}
+
+.after-plan-box select::-ms-expand {
+  display: none; /* デフォルトのスタイルを無効(IE用) */
+}
+
+table.table-base td.change-plan-password-td {
+  padding: 0;
+}
+#plan-input-password + .vaidation-error-area label.validator-error{
+  background: #3c3c3c;
+  margin-top: 0;
+  padding-top: 3px;
+}
+
+#campaign-content {
+  display: none;
+}
+
+td.after-plan-box select {
+  font-family: "Montserrat", "Noto Sans JP", sans-serif;
+  font-size: 1.3rem;
+  padding: 0 5px;
+}
+
+.target-plan-price:not(#target-plan-price-0) {
+  display: none;
+}
+
+div.mypage-title-area-icon .change-plan-icon img {
+  margin-bottom: 11px;
+}
+
+@media (max-width: 767px) {
+  div.leave-checkbox-box-desciption{
+    padding: 0 5%;
+  }
+
+  p.terms-agree-plan-change-4 {
+    margin-bottom: 25px;
+  }
+  main.mypage-contents select#plan-pulldown-select,
+  table.table-base.plan-change-table th,
+  table.table-base.plan-change-table td{
+    height: 45px;
+  }
+  div.leave-checkbox-box-plan p.leave-checkbox-box-title{
+    font-size: 1.4rem;
+    text-align: left;
+  }
+
+  td.password-td.change-plan-password-td span.field-icon.field-icon-mypage.input-eye {
+    transform: translateY(-50%);
+  }
+}
+
+@media screen and (max-width: 767px) {
+  p.leave-checkbox-box-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 13px 5%;
+  }
+
+  div.leave-checkbox-box-desciption {
+    font-size: 1.2rem;
+  }
+
+  #plan-input-password .password_check_eye{
+    transform: translateY(-50%);
+  }
+}
+
+div.contract-box {
+  position: unset;
+}
+
+.plan-cancel-popup-sub {
+  text-align: center;
+  font-weight: bold;
+}
+
+.plan-cancel-popup {
+  text-align: left;
+  padding: 0 3%;
+}
+
+div.mypage-content-box-inner p.plan-cancel-button-color {
+  color: #000;
+}
+
+div.plan-confirm-popup-already {
+  height: 230px;
+}
+
+div.vertical-characters-plan {
+  font-size: 9rem;
+}
+
+div.plan-button-body-margin {
+  margin-top: 0;
+  margin-bottom: 50px;
+}
+
+@media screen and (max-width: 767px) {
+  .plan-cancel-popup-sub {
+    text-align: left;
+    padding: 0 3%;
+    margin-top: -10px;
+  }
+  .plan-cancel-popup {
+    text-align: left;
+    padding: 0 3%;
+  }
+  div.plan-button-body-margin {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+}
+
+button.select-button {
+  width: 90px;
+  border: none;
+  border-radius: 5px;
+  background-color: #FFEB00;
+  font-family: "Montserrat", "Noto Sans JP", sans-serif;
+  font-weight: 500;
+  font-size: 1.3rem;
+  padding: 5px;
+  cursor: pointer;
+}
+
+button.select-full-cancel-button {
+  width: 100%;
+  border: none;
+  border-radius: 5px;
+  background-color: #FFEB00;
+  font-family: "Montserrat", "Noto Sans JP", sans-serif;
+  font-weight: 500;
+  font-size: 1.3rem;
+  padding: 5px;
+  cursor: pointer;
+}
+.margin-up-corp {
+  margin-top: 30px;
+}
+.view-the-details {
+  width: 109px;
+}
+.no-contracted-terminal {
+  margin: 5px 0;
+}
+@media screen and (max-width: 767px) {
+  button.select-button {
+    width: 95%;
+  }
+
+  table.table-base-corp {
+    table-layout: auto;
+  }
+  table.table-base-corp td {
+    width: 65%;
+  }
+  table.table-base td.search-by-select-corp-year {
+    width: 65%;
+    margin-bottom: 5px;
+  }
+  table.table-base td.corp-year-button {
+    width: 65%;
+  }
+  table.table-base input.select-start-year {
+    width: 85%;
+  }
+  div.select-corp-button-position {
+    width: 30%;
+  }
+  div.select-corp-button {
+    width: 100%;
+  }
+  div.select-corp-title {
+    font-size: 1.4em;
+    color: #fff;
+    margin-top: 11px;
+  }
+  div.mypage-content-box-corp table, div.mypage-content-box-corp th, div.mypage-content-box-corp td {
+    border: 5px solid #3c3c3c;
+  }
+  div.mypage-content-box-corp-select table, div.mypage-content-box-corp-select th, div.mypage-content-box-corp-select td {
+    border: 5px solid #3c3c3c;
+  }
+  div.select-corp-button-cancel {
+    width: 30%;
+  }
+
+  div.mypage-content-box-corp th{
+    padding: 15px 8px;
+  }
+  div.mypage-content-box-corp th.row-option{
+    padding: 5px;
+  }
+  #myTable,
+  .myTable{
+    border-left: none;
+  }
+}
+@media screen and (min-width: 767px) {
+  div.mypage-content-box-inner-no-contracted-terminal {
+    margin-top: 0px;
+  }
+}
+/*PC・SPでの表示・非表示を切り替える corpmypage/contract start*/
+div.shown-pc-corp {
+  display: block;
+}
+div.shown-sp-corp {
+  display: none;
+}
+@media screen and (max-width: 767px) {
+  div.shown-pc-corp{
+    display: none;
+  }
+  div.shown-sp-corp{
+    display: block;
+    z-index: unset;
+  }
+}
+/*PC・SPでの表示・非表示を切り替える corpmypage/contract end*/
+/* ご契約端末一覧 end */
+/*法人マイページポップアップ start*/
+/*ポップアップの背景を暗くする*/
+div.procedure-notion-black-background {
+  position: fixed;
+  background-color: #000000;
+  opacity: 0.4;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000000000001;
+}
+/*ポップアップ全体のサイズ*/
+/*TODO:1151取り込み前 max-height: calc(100% - 150px - 35px - 200px);*/
+div.white-content-box-procedure-notion {
+  position: fixed;
+  max-height: calc(600px - 150px - 35px - 200px);
+  max-width: 920px;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  right: 0;
+  padding: 60px 0;
+  margin: auto;
+  z-index: 1000000000002;
+  background-color: #F3F3F3;
+}
+/*TODO:1151取り込み前　max-height: calc(100% - 150px - 35px - 200px);*/
+div.white-content-box-procedure-notion-two {
+  position: fixed;
+  max-height: calc(800px - 150px - 35px - 200px);
+  max-width: 920px;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  right: 0;
+  padding: 60px 0;
+  margin: auto;
+  z-index: 1000000000002;
+  background-color: #F3F3F3;
+}
+div.white-content-box-procedure-notion-three {
+  position: fixed;
+  max-height: calc(100% - 150px - 35px - 200px);
+  max-width: 920px;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  right: 0;
+  padding: 60px 0;
+  margin: auto;
+  z-index: 1000000000002;
+  background-color: #F3F3F3;
+}
+div.white-content-box-procedure-notion-expansion {
+  background-color: #FFFFFF;
+  border: 7px solid #ddd;
+  outline: initial;
+  outline-offset: 0;
+}
+div.white-content-box-title-procedure-notion p {
+  color: #000000;
+}
+div.white-content-box-body-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+div.white-content-box-body-flex-bottom {
+  margin-top: 50px;
+}
+div.white-content-box-body-bottom {
+  margin-top: 50px;
+}
+.procedure-button-body {
+  width: calc((1100px - 250px - 1.5em) / 3);
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  height: 50px;
+  background-color: #3c3c3c;
+  z-index: 1;
+  cursor: pointer;
+
+}
+.procedure-button-body p {
+  width: 100%;
+  color: white;
+  position: relative;
+  right: 8px;
+  text-align: center;
+}
+
+.procedure-button-body-upper-left {
+  margin-right: 0px;
+} 
+
+
+.button-center:last-child {
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+/*表示エリア*/
+div.white-content-box-procedure-notion div.white-content-box-inner-procedure {
+  width: 90%;
+  height: 90%;
+  overflow-x: hidden;
+  margin: 30px auto 0;
+}
+div.white-content-box-procedure-notion-two div.white-content-box-inner-procedure {
+  width: 90%;
+  height: 90%;
+  overflow-x: hidden;
+  margin: 30px auto 0;
+}
+div.white-content-box-procedure-notion-three div.white-content-box-inner-procedure {
+  width: 90%;
+  height: 90%;
+  overflow-x: hidden;
+  margin: 30px auto 0;
+}
+/*ポップアップ閉じるボタン*/
+div.procedure-popup-close-button {
+  width: 35px;
+  height: 35px;
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  text-align: center;
+  background-color: #000000;
+  border-radius: 17px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.fa-times {
+  font-size: 2rem;
+}
+div.procedure-popup-close-button img {
+  width: 50%;
+}
+/*ポップアップ内タイトル*/
+div.white-content-box-procedure-notion div.white-content-box-title-notion {
+  padding: 0;
+  margin-top: 0;
+}
+div.white-content-box-procedure-notion-two div.white-content-box-title-notion {
+  padding: 0;
+  margin-top: 0;
+}
+div.white-content-box-procedure-notion-three div.white-content-box-title-notion {
+  padding: 0;
+  margin-top: 0;
+}
+
+/* 注釈ポップアップ */
+div.annotation-popup-text p {
+  color: #000;
+}
+div.annotation-popup div.white-content-box-procedure-notion-two {
+  padding: 0px;
+  box-sizing: border-box;
+  max-height: unset;
+  height: auto;
+}
+
+@media screen and (max-width: 767px) {
+  div.white-content-box-procedure-notion {
+    position: fixed;
+    max-height: 100%;
+    max-width: 90%;
+    left: 0;
+    right: 0;
+    padding: 60px 0;
+    margin: auto;
+    z-index: 1000000000002;
+  }
+  /*TODO:1151取り込み前　max-height: 100%;*/
+  div.white-content-box-procedure-notion-two {
+    position: fixed;
+    height: 75%;
+    max-width: 90%;
+    left: 0;
+    right: 0;
+    padding: 60px 0;
+    margin: auto;
+    z-index: 1000000000002;
+    max-height: calc(800px - 150px - 35px - 125px);
+  }
+  div.white-content-box-procedure-notion-three {
+    position: fixed;
+    max-height: 100%;
+    max-width: 90%;
+    left: 0;
+    right: 0;
+    padding: 60px 0;
+    margin: auto;
+    z-index: 1000000000002;
+  }
+  div.white-content-box-title-procedure-notion p {
+    font-size: 18px;
+  }
+  div.white-content-box-body-flex {
+    display: block;
+  }
+  div.white-content-box-body-flex-bottom {
+    margin-top: 15px;
+  }
+  .procedure-button-body {
+    width: calc(100% - 42px);
+  }
+  div.white-content-box-procedure-notion div.white-content-box-inner-procedure {
+    margin: 0 auto;
+  }
+  div.white-content-box-procedure-notion-two div.white-content-box-inner-procedure {
+    margin: 0 auto;
+  }
+  div.white-content-box-procedure-notion-three div.white-content-box-inner-procedure {
+    margin: 0 auto;
+  }
+  div.white-content-box-body-bottom {
+    margin-top: 15px;
+  }
+  .procedure-button-body-upper-left {
+    margin-right: 0;
+    margin-bottom: 15px;
+  }
+  .annotation-popup-text {
+    height: 80vh;
+  }
+}
+/*法人マイページポップアップ end*/
+/*法人マイページポップアップ 一時切り替え start*/
+.hide {
+  display: none;
+}
+/*法人マイページポップアップ 一時切り替え end*/
+/*プレゼント受け取り済 or 未納の場合でキャンペーンボタン押したときのポップアップ start*/
+div.procedure-campaign-received-confirm-popup {
+  max-width: 490px;
+  height: 215px;
+  position: fixed;
+  background-color: white;
+  border: solid 20px #FFEB00;
+  margin: auto;
+  z-index: 1000000000002;
+  top: 0;
+  bottom: 90px;
+  left: 0;
+  right: 0;
+  display: none;
+}
+div.procedure-campaign-received-confirm-popup-unpaid {
+  max-width: 525px;
+  height: 190px;
+  position: fixed;
+  background-color: white;
+  border: solid 20px #FFEB00;
+  margin: auto;
+  z-index: 1000000000002;
+  top: 0;
+  bottom: 90px;
+  left: 0;
+  right: 0;
+  display: none;
+}
+div.procedure-campaign-received-confirm-popup-title p {
+  margin: 20px 0;
+  color: red;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+}
+div.procedure-campaign-received-confirm-popup-body {
+  margin: 10px 10px;
+  text-align: center;
+}
+div.procedure-campaign-received-confirm-buttons {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px auto;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+div.procedure-campaign-received-confirm-button {
+  width: 170px;
+  height: 50px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.5s;
+  background-color: #FFEB00;
+  color: black;
+  text-align: center;
+}
+div.procedure-campaign-received-confirm-button-back {
+  background-color: black;
+  color: #FFEB00;
+}
+div.procedure-campaign-received-confirm-button a{
+  text-decoration: none;
+  color: black;
+}
+.procedure-dataflow-button a {
+  color: black;
+  text-decoration:none;
+}
+div.procedure-campaign-received-black-background {
+  position: fixed;
+  background-color: black;
+  opacity: 0.4;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: none;
+}
+div.procedure-campaign-received-black-background {
+  z-index: 10000;
+}
+@media (max-width: 767px) {
+  div.procedure-campaign-received-confirm-popup {
+    height: 295px;
+    border: solid 10px #FFEB00;
+    width: 80%;
+    bottom: 0;
+  }
+  div.procedure-campaign-received-confirm-popup-unpaid {
+    height: 230px;
+    border: solid 10px #FFEB00;
+    width: 80%;
+    bottom: 0;
+  }
+  div.procedure-campaign-received-confirm-button {
+    width: 100px;
+    height: 50px;
+  }
+  div.white-content-box-procedure-notion-expansion {
+    border: 3px solid #ddd;
+  }
+  div.procedure-campaign-received-confirm-popup-body {
+    text-align: left;
+  }
+}
+/*プレゼント受け取り済 or 未納の場合でキャンペーンボタン押したときのポップアップ end*/
+
+/*秋キャンペーン おかわりGIGA*/
+div.form-capacity-select.cp-charge-select{
+  width: 55%;
+  margin: auto;
+}
+div.form-capacity-select.cp-charge-select label{
+  pointer-events: none;
+}
+
+div.form-capacity-select.cp-charge-select .form-capacity-select-area.datacharge{
+  height: auto;
+}
+div.form-capacity-select-area.datacharge.cp-charge.selected .form-capacity-select-checkbox-area{
+  line-height: 0;
+}
+
+div.form-capacity-select-area.cp-charge{
+  align-items: center;
+  border: none;
+  background: transparent;
+  transition: none;
+}
+
+div.form-capacity-select-area.cp-charge .form-capacity-select-image{
+  width: 100%;
+  box-sizing: initial;
+  border: none;
+  transition: none;
+  border-radius: 0;
+}
+
+div.form-capacity-select-area.cp-charge div.form-capacity-select-checkbox-area{
+  transform: none;
+  position: static;
+}
+
+.corp-button-text-plan {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: #fff;
+}
+
+.corp-button-body-plan {
+  width: calc((1100px - 250px - 1.5em) / 3);
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  /* margin-top: 35px; */
+  height: 50px;
+  background-color: #282828;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.corpmypage-content-plan-text {
+  display: table;
+  margin: 0 auto;
+  margin-top: 25px;
+}
+
+@media (max-width: 767px) {
+  div.form-capacity-select.cp-charge-select{
+    width: 100%;
+  }
+}
+label.charge-img{
+  width:100%;
+}
+.no-bottom{
+  bottom: 0;
+}
+
+div.under-kv-notion.mypage-notion {
+  background-color: #282828;
+  padding: 45px 0 0;
+}
+div.under-kv-notion.mypage-notion div.under-kv-notion-inner{
+  text-align: left;
+  width: 100%;
+  background-color: #fee6eb;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 0;
+  padding-top: 15px;
+}
+
+div.white-content-box-alart-notion div.white-content-box-inner-alart{
+  width: 100%;
+  margin: 0;
+}
+
+div.alart-popup-close-button{
+  background-color: #F3F3F3;
+}
+
+.fa-times{
+  font-size: 2rem;
+}
+
+/*ポップアップタイトル文字*/
+div.white-content-box-title-notion p {
+  font-size: 2.8rem;
+  line-height: 1.2em;
+}
+p.pop-up-news-red {
+  color: red;
+}
+
+@media screen and (max-width: 767px) {
+  /*スクロール対応*/
+  div.white-content-box-wcampaign-notion{
+    bottom: 50px;
+  }
+  /*ポップアップタイトル文字*/
+  div.white-content-box-title-notion p {
+    padding: 0 5%;
+  }
+}
+
+/*202204~
+  WiMAXプラン*/
+
+/*ボタン調整用*/
+div.mypage-top-boxes{
+  display: block;
+  margin: 20px auto;
+}
+div.mypage-top-boxes a{
+  width: 100%;
+  color: #FFFFFF;
+}
+.button.left.nav-flex{
+  justify-content: space-between;
+  gap: 35px;
+  margin-top: 0;
+}
+.nav-flex .button-body{
+  min-width: initial;
+  width: auto;
+}
+.nav-flex a.button-text{
+  margin-top: 35px;
+}
+div.mypage-user-container a.button-text p.attention {
+  text-align: right;
+  font-size: 1.1rem;
+  margin-top: 5px;
+}
+
+/*ご契約情報 表内のボタン*/
+table.table-base.table-in-button td > div{
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.table-button{
+  display: inline-block;
+  width: 166px;
+  padding: 0.7em 0.5em;
+  margin: 0.7em 0;
+  border-radius: 0.7em;
+  color: #000000;
+  text-align: center;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.table-button input{
+  position: absolute;
+  width: 15px;
+  right: 135px;
+  top: 50%;
+  transform: translateY(-50%);
+  margin: 0;
+  z-index: 2;
+}
+
+/*解約ボタン*/
+table.table-base.table-in-button td > div.cancel-option-button{
+  justify-content: center;
+}
+
+.option-cancel-all,
+.insurance-option-request {
+  background-color: #FFFFFF;
+  width: 166px;
+  margin: 0.7em 5px 0.7em auto;
+  border-radius: 0.7em;
+}
+
+.option-cancel-all.table-mini,
+.insurance-option-request.table-mini {
+  background-color: #FFFFFF;
+  width: 166px;
+  margin: 0.7em 89px 0.7em auto;
+  border-radius: 0.7em;
+}
+
+.option-cancel-all.table-mini,
+.insurance-option-request.table-mini {
+  background-color: #FFFFFF;
+  width: 166px;
+  margin: 0.7em 89px 0.7em auto;
+  border-radius: 0.7em;
+}
+
+.option-cancel-button,
+.insurance-request-button {
+  text-align: center;
+  background-color: #e6006b;
+  color: #FFFFFF;
+  cursor: pointer;
+  padding: 1.0em 1.5em 1.1em 0.5em;
+  border-radius: 0.7em;
+  box-sizing: border-box;
+  position: relative;
+}
+
+@media (min-width: 767px) {
+  .option-cancel-all.option-cancel-caution {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    background-color: unset;
+    border-radius: unset;
+    width: calc(100% - 13em - 10px);
+  }
+  .option-cancel-caution .option-cancel-button {
+    width: 166px;
+  }
+  .option-cancel-caution-pc {
+    margin-top: 10px;
+  }
+  tr.allcheck td label.table-button.option-active{
+    margin-right: 90px;
+  }
+  tr.allcheck td{
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .option-cancel-caution-sp {
+    margin-top: 30px;
+    padding: 0 5px;
+  }
+  div.mypage-top-boxes a p.attention {
+    font-size: 1.1rem;
+    margin: -15px auto 10px;
+    width: 150px;
+  }
+}
+
+.option-cancel-button::before,
+.insurance-request-button::before {
+  content: '▶';
+  position: absolute;
+  font-size: 0.8rem;
+  right: 10px;
+  color: #FFFFFF;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.table-button:hover,
+.option-cancel-button:hover,
+.insurance-request-button:hover {
+  opacity: 0.7;
+}
+
+/*ボタン（押せる）*/
+.table-button.option-active{
+  background-color: #FFEB00;
+  cursor: pointer;
+}
+
+/*ボタン（押せない）*/
+.table-button.option-disabled{
+  background-color: #CCCCCC;
+  color: #333333;
+  pointer-events:none;
+}
+
+.option-cancel-list{
+  font-size: 1.5rem;
+  line-height: 2.0rem;
+}
+
+@media screen and (max-width: 767px) {
+  div.mypage-top-boxes{
+    display: flex;
+    margin: 20px auto 0;
+  }
+  div.mypage-top-boxes a{
+    width: 50%;
+    margin-right: 0;
+  }
+
+  .button.left.nav-flex{
+    justify-content: space-between;
+  }
+  .nav-flex .button-body{
+    min-width: initial;
+    width: auto;
+  }
+
+  /*ご契約情報 表内のボタン*/
+  table.table-base.table-in-button td{
+    padding: 0px 9px;
+  }
+  table.table-base.table-in-button td > div {
+    flex-direction: row;
+    width: 100%;
+    padding: 0.7em 0;
+    word-break: break-all;
+    line-height: 1.8rem;
+  }
+  .table-button {
+    width: 33%;
+    margin: 0;
+    padding: 1.6rem 0 1.6rem 2.6rem;
+    border-radius: 0.7em;
+  }
+  .option-cancel-all{
+    width: 56%;
+  }
+  .option-cancel-all, .insurance-option-request {
+    margin: 0.7em 5px 0 auto;
+  }
+  .mypage-contract table.table-base.table-in-button td {
+    padding: 10px;
+  }
+  .mypage-contract table.table-base.table-in-button td > div {
+    padding: 0;
+  }
+  table.table-base.table-in-button tr.option-detail-sp {
+    display: flex;
+  }
+  table.table-base.table-in-button tr.option-title-colmn,
+  table.table-base.table-in-button tr.option-detail-sp {
+    margin: 0;
+  }
+  table.table-base.table-in-button tr.option-title-colmn th {
+    margin-bottom: 5px;
+  }
+  table.table-base.table-in-button tr.option-detail-sp td {
+    width: 40%;
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+  }
+  table.table-base.table-in-button tr.option-detail-sp td:last-child {
+    width: 60%;
+    border-left: 5px solid #3c3c3c;
+  }
+  table.table-base.table-in-button tr.option-detail-sp td.option-campaign-td {
+    width: 100%;
+  }
+  table.table-base.table-in-button tr.option-detail-sp td.option-campaign-td {
+    border-left: unset;
+  }
+  table.table-base.table-in-button tr.option-title-colmn:not(:first-child) {
+    margin-top: 30px;
+  }
+  table.table-base.table-in-button tr.cancel-option-column {
+    display: flex;
+    margin-bottom: 5px;
+  }
+  table.table-base.table-in-button tr.cancel-option-column th {
+    width: 65%;
+    display: flex;
+    align-items: center;
+  }
+  table.table-base.table-in-button tr.cancel-option-column td {
+    width: 35%;
+    background-color: #3C3C3C;
+    padding: 0;
+    padding-left: 5px;
+  }
+  table.table-base.table-in-button tr.cancel-option-column td .table-button {
+    width: 100%;
+    margin: 0;
+    padding: 1.4rem 0.7rem 1.4rem 2.7rem;
+    border-radius: 0.7em;
+  }
+  #option_cancel_area tr.allcheck td label::before {
+    left: 20px;
+    top: 12px;
+  }
+  #option_cancel_area tr.allcheck td {
+    padding: 0;
+    margin: 0;
+  }
+  #option_cancel_area div.option-cancel-all {
+    width: 58%;
+    margin: 0.7em 5px 0.7em auto;
+  }
+  .mypage-contract table.table-base tr.contract-cancel-attention td {
+    padding: 0;
+  }
+  #option_cancel_area table.table-base tr.cancel-option-column td {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #option_cancel_area .table-button input {
+    left: 8px;
+    right: 0;
+  }
+}
+
+/* 契約情報 */
+.contract-comment {
+  color: #FFFFFF;
+  margin: 15px 0;
+}
+.contract-comment tr td.contract-comment-title{
+  font-size: 1.6rem;
+  line-height: 2.5rem;
+}
+.contract-comment tr td{
+  line-height: 1.8rem;
+}
+table.table-base tr.contract-cancel-attention td{
+  background: #3C3C3C;
+  color: #FFFFFF;
+  line-height: 1.8rem;
+  padding: 0;
+}
+@media screen and (min-width: 768px) {
+  div.mypage-content-box-corp td.contract_text_left {
+    text-align: left;
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .contract-comment {
+    width: 100%;
+    margin: 15px auto;
+  }
+}
+
+/* 保険オプション */
+table.table-base.table-in-button th {
+  padding: 1rem 10px;
+  line-height: 1.8rem;
+}
+
+@media (min-width: 767px) {
+  table.table-base.table-in-button.wimax-option-base th {
+    line-height: 2rem;
+    padding: 1rem 25px;
+    text-align: left;
+  }
+
+  table.table-base.table-in-button.wimax-option-base th.wimax-zeus-option {
+    padding-right: 41px;
+  }
+}
+
+div.insurance-option-inquiry {
+  font-size: 1.3rem;
+  line-height: 20px;
+  margin: 0px auto;
+  color: #FFFFFF;
+  width: calc(100% - 13em - 10px);
+}
+
+div.insurance-option-inquiry a {
+  pointer-events: auto;
+  text-decoration: underline;
+}
+
+div.insurance-option-inquiry span.insurance-option-indent {
+  padding-left: 1em;
+  text-indent: -1em;
+  display: inline-block;
+}
+
+div.insurance-option-inquiry span.insurance-option-caution {
+  font-size: 11.4px;
+}
+
+#option-details-area table.table-base.table-in-button th {
+  border: 6px solid #3C3C3C;
+  border-width: 6px 0 0;
+}
+
+@media (min-width: 767px) {
+  .option-cancel-all.option-cancel-caution {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    background-color: unset;
+    border-radius: unset;
+    width: calc(100% - 13em - 10px);
+  }
+  .option-cancel-caution .option-cancel-button {
+    width: 166px;
+  }
+  .option-cancel-caution-pc {
+    margin-top: 10px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .option-cancel-caution-sp {
+    margin-top: 30px;
+    padding: 0 5px;
+  }
+}
+
+#entry-insurance-option-area {
+  position: relative;
+  padding-bottom: calc(35px + 0.7em);
+}
+
+.mypage-insurance-option-campaign {
+  background-color: unset;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 13vw;
+  transform: translate(-20%, 20%);
+}
+
+div.entry-insurance-option-text {
+  line-height: 1.8rem;
+  color: #FFFFFF;
+  margin-bottom: 30px;
+}
+
+div.entry-insurance-option-image {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+div.insurance-option-image-area {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 72%;
+}
+
+div.insurance-option-image-area img {
+  width: 30%;
+  background-color: #FFF;
+  border-radius: 20px;
+}
+
+.insurance-option-request.insurance-option-request-after {
+  margin: 0 5px 0 0;
+}
+
+.insurance-option-entry-button {
+  display: flex;
+  align-items: center;
+}
+
+.button-next-adjust.insurance-option-entry-button img {
+  height: 45px;
+}
+
+div.mypage-insurance-option-select label.custom-check-box-v2 span::before {
+  position: absolute;
+  display: inline-block;
+  content: '';
+  box-sizing: border-box;
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  border: 4px solid #999;
+  background-color: #fff;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+  -webkit-transform: translateY(-50%) translateX(-50%);
+  margin: 0;
+  padding: 0;
+}
+
+div.mypage-insurance-option-select label.custom-check-box-v2 span::after {
+  position: absolute;
+  display: inline-block;
+  content: '';
+  box-sizing: border-box;
+  border: none;
+  width: 26px;
+  height: 26px;
+  border-radius: 13px;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+  -webkit-transform: translateY(-50%) translateX(-50%);
+  margin: 0;
+  padding: 0;
+}
+
+div.mypage-insurance-option-select label.custom-check-box-v2 input[type="radio"]:checked + span::after {
+  background-color: #FFE000;
+  border: none;
+  border-width: unset;
+  transform: translateY(-50%) translateX(-50%);
+  -webkit-transform: translateY(-50%) translateX(-50%);
+}
+
+div.mypage-insurance-option-select div.form-capacity-select-area.datacharge {
+  height: unset;
+  margin: unset;
+  background-color: unset;
+  position: unset;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+div.mypage-insurance-option-select div.form-capacity-select:first-child div.form-capacity-select-area.datacharge {
+  margin-bottom: 39px;
+}
+
+div.mypage-insurance-option-select div.form-capacity-selects {
+  display: block;
+}
+
+div.mypage-insurance-option-select div.form-capacity-select {
+  width: 100%;
+}
+
+div.mypage-insurance-option-select div.form-capacity-select-checkbox-area {
+  position: unset;
+  transform: unset;
+  width: 5%;
+}
+
+.mypage-plan-opt-recommend-mark {
+  width: 100px;
+  margin-right: 22px;
+}
+
+.mypage-plan-opt-recommend-mark-hidden {
+  visibility: hidden;
+}
+
+div.mypage-insurance-option-select div.form-capacity-select-area.active,
+div.mypage-insurance-option-select div.form-capacity-select-area.selected {
+  box-sizing: unset;
+  border: unset;
+  transition: unset;
+}
+
+div.insurance-option-plan-name {
+  width: 47%;
+}
+
+div.insurance-option-plan-name p {
+  font-weight: bold;
+  line-height: 1.5;
+}
+
+div.insurance-option-plan-name p:nth-child(1) {
+  font-size: 2.5rem;
+}
+
+div.insurance-option-plan-name p:nth-child(2) {
+  font-size: 1.7rem;
+}
+
+div.mypage-insurance-option-select div.mypage-content-box-title {
+  padding: 30px 0 44px;
+}
+
+.insurance-option-plan-price {
+  font-size: 2.3rem;
+  font-weight: bold;
+}
+
+.insurance-option-plan-price span {
+  font-size: 3.8rem;
+  margin-right: 5px;
+}
+
+.insurance-option-red {
+  color: #e6006b;
+  font-size: 2.4rem;
+  margin: 0 7px;
+}
+
+.insurance-option-black {
+  font-size: 2.4rem;
+  margin: 0 7px;
+}
+
+div.confirm-box.confirm-box-checked {
+  background-color: #e6006b;
+  transition: 0.5s;
+}
+
+#insurance-option-agreement-checkbox,
+#form-entry-insurance-option div.confirm-box span,
+#form-entry-insurance-option div.confirm-box label {
+  cursor: pointer;
+}
+
+.mypage-entry-insurance-option-campaign {
+  position: absolute;
+  right: -30px;
+  top: -30px;
+  width: 145px;
+}
+
+#form-entry-insurance-option div.leave-checkbox-box {
+  background-color: #3C3C3C;
+  color: #FFF;
+}
+
+@media screen and (max-width: 768px) {
+  table.table-base.table-in-button tr,
+  table.table-base.table-in-button th,
+  table.table-base.table-in-button td {
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  table.table-base.table-in-button tr:last-of-type,
+  table.table-base.table-in-button tr:last-of-type td {
+    margin-bottom: 0;
+  }
+
+  table.table-base.table-in-button th {
+    width: 100%;
+  }
+
+  .table-button input {
+    left: 12px;
+    right: 0;
+  }
+
+  table.table-base.insurance-info caption span:first-of-type,
+  table.table-base.insurance-info caption {
+    font-size: 1.4rem;
+  }
+
+  .mypage-insurance-option-campaign {
+    background-color: unset;
+    position: absolute;
+    right: -2%;
+    top: -21px;
+    width: 31%;
+  }
+
+  div.entry-insurance-option-content {
+    padding: 0 5px;
+  }
+
+  div.entry-insurance-option-text {
+    margin-bottom: 20px;
+  }
+
+  div.entry-insurance-option-image {
+    display: block;
+  }
+
+  div.insurance-option-image-area {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  div.insurance-option-image-area img {
+    width: 31%;
+  }
+
+  div.mypage-insurance-option-select label.custom-check-box-v2 span::before {
+    width: 30px;
+    height: 30px;
+    left: 0;
+  }
+
+  div.mypage-insurance-option-select label.custom-check-box-v2 span::after {
+    width: 19px;
+    height: 19px;
+    left: 0;
+  }
+
+  div.insurance-option-plan-name {
+    width: 75%;
+  }
+
+  div.insurance-option-plan-name p:nth-child(1) {
+    font-size: 1.8rem;
+  }
+
+  .mypage-plan-opt-recommend-mark {
+    width: 20%;
+    margin-right: 0;
+  }
+
+  div.mypage-insurance-option-select div.form-capacity-select-checkbox-area {
+    width: 8%;
+  }
+
+  div.insurance-option-plan-name p:nth-child(2) {
+    font-size: 1.3rem;
+  }
+
+  .insurance-option-red,
+  .insurance-option-black {
+    font-size: 2rem;
+    margin: 0 7px;
+  }
+
+  div.mypage-content-box-inner p.insurance-option-plan-price {
+    font-size: 1.6rem;
+    text-align: center;
+  }
+
+  .insurance-option-plan-price span {
+    font-size: 3.6rem;
+  }
+
+  div.mypage-insurance-option-select div.form-capacity-select:first-child div.form-capacity-select-area.datacharge {
+    margin-bottom: 11px;
+  }
+
+  div.mypage-insurance-option-select div.form-capacity-select-area.datacharge {
+    align-items: flex-start;
+    margin-bottom: 11px;
+  }
+
+  div.mypage-insurance-option-select label.custom-check-box-v2 {
+    position: unset;
+  }
+
+  div.mypage-insurance-option-select label.charge-img {
+    position: relative;
+  }
+
+  div.mypage-insurance-option-select div.form-capacity-select:first-child label.charge-img {
+    margin-bottom: 30px;
+  }
+
+  div.mypage-insurance-option-select div.mypage-content-box-title {
+    padding: 30px 0;
+  }
+
+  #entry-insurance-option-area {
+    position: relative;
+    padding-bottom: 35px;
+  }
+
+  .insurance-option-request.insurance-option-request-after {
+    margin: 0 0 0 auto;
+  }
+
+  .mypage-entry-insurance-option-campaign {
+    position: absolute;
+    right: -17px;
+    top: -50px;
+    width: 30%;
+  }
+
+  #form-entry-insurance-option div.confirm-box:hover {
+    background-color: black;
+  }
+
+  #form-entry-insurance-option div.confirm-box.confirm-box-checked {
+    background-color: #e6006b;
+    transition: 0.5s;
+  }
+}
+
+/* プラン変更 */
+@media (max-width: 767px) {
+  .button-body-plan-margin {
+    margin-top: 0;
+  }
+
+  .corpmypage-content-plan-text {
+    padding: 0;
+    margin-top: 15px;
+  }
+}
+
+table.table-base.plan-password-table-margin {
+  margin-top: 35px;
+}
+
+div.plan-confirm-popup-done .plan-confirm-popup-title p {
+  margin: 10px 0;
+  color: red;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+}
+div.plan-confirm-popup-done .plan-confirm-popup-body p {
+  color: #1E1E1E;
+  text-align: center;
+}
+
+div.plan-confirm-popup-out .plan-confirm-popup-title p {
+  margin: 10px 0;
+  color: red;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+}
+div.plan-confirm-popup-out .plan-confirm-popup-body p {
+  color: #1E1E1E;
+  text-align: center;
+}
+
+@media (max-width: 767px) {
+  td.after-plan-box .arrow {
+    right: 6%;
+  }
+}
+
+.plan-confirm-popup-title p {
+  margin: 10px 0;
+  color: red;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.plan-confirm-popup-body p {
+  color: #1E1E1E;
+  text-align: center;
+}
+
+.plan-cancel-button-color {
+  color: #000;
+}
+
+div.sub-dir-nav-box-initial-cancel {
+  border-top: none;
+}
+
+div.change-plan-not-cancel-popup {
+  height: 270px;
+}
+
+@media (max-width: 767px) {
+  div.change-plan-not-cancel-popup {
+    height: 265px;
+  }
+}
+
+/* 20221222改修 */
+td.customer-id {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+p#js-copytext {
+  font-size: 1.6rem;
+}
+
+button.js-copybtn {
+  font-family: "Montserrat", "Noto Sans JP", sans-serif;
+  padding: 4px 20px;
+  border-radius: 4px;
+  border-width: 1px;
+  border-color: #3c3c3c;
+}
+
+button.js-copybtn img {
+  width: 15px;
+  vertical-align: bottom;
+  margin-right: 10px;
+}
+
+#js-copyalert {
+  display: none;
+  color: #000;
+  width: 150px;
+  background: #fff;
+  text-align: center;
+  padding: 1.3rem;
+  position: absolute;
+  top: 50px;
+  right: 145px;
+}
+
+#js-copyalert::before {
+  content: "";
+  position: absolute;
+  bottom: -24px;
+  left: 50%;
+  margin-left: -15px;
+  border: 12px solid transparent;
+  border-top: 12px solid #FFF;
+  z-index: 2;
+}
+
+tr.allcheck th,
+tr.allcheck td {
+  background: none;
+}
+
+tr.allcheck td input {
+  display: none;
+}
+
+tr.allcheck td label::before {
+  display: inline-block;
+  content: url(../img/allcheck.svg);
+  width: 22px;
+  left: 15px;
+  position: absolute;
+  top: 6px;
+}
+
+tr.allcheck td {
+  text-align: right;
+}
+
+tr.allcheck td label.table-button.option-active {
+  text-align: right;
+  padding-right: 2.5rem;
+}
+
+tr.allcheck .table-button:hover {
+  background-color: #fff57e;
+  opacity: 1;
+}
+
+.mypage-global-payment-date .pc{
+  margin-left: 80px;
+}
+
+.table-base.insurance-info tr.pc th,
+.table-base.insurance-info tr.pc td {
+  background: none;
+  height: auto;
+  font-size: 1.2rem;
+}
+
+div.insurance-request-button a {
+  color: #fff;
+}
+
+div.insurance-option-request + div.text-under-button {
+  top: -5px;
+  right: 20px;
+  font-size: 1.2rem;
+}
+
+div.insurance-option-request + div.text-under-button p {
+  text-align: right;
+}
+
+.table-base.insurance-info tr.pc td p {
+  color: #fff;
+  width: 100%;
+}
+
+/*-----------------------------------
+
+------------------------------------*/
+.dataflow-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dataflow-list .mypage-payment-history-select-container > div {
+  display: flex;
+  align-items: center;
+}
+.dataflow-list p select{
+  height: 50px;
+}
+
+.dataflow-list p.list-title{
+  background-color: #ffeb00;
+  margin-right: 5px;
+  padding: 16px 10px;
+  height: 20px;
+  text-align: center;
+}
+
+.dataflow-list div.mypage-contract-select-container table{
+  width: 230px;
+}
+
+table.data-usage-table.daily-data tr.daily-header th,
+table.data-usage-table.daily-data tr.daily-header td{
+  background-color: #000;
+  color: #FFF;
+  font-weight: bold;
+}
+table.data-usage-table.daily-data th.day-giga{
+  width: 30vw;
+}
+table.data-usage-table.daily-data th{
+  background-color: #fff;
+  color: #000;
+  font-weight: normal;
+}
+
+table.data-usage-table thead.data-usage-thead,
+table.data-usage-table tbody.data-usage-tr{
+  display: block;
+}
+table.data-usage-table tbody.data-usage-tr{
+  overflow-x: hidden;
+  overflow-y: scroll;
+  padding: 0 2.5px;
+  height: 288px;
+}
+
+.business-monthly-fee-area{
+  margin-top: 30px;
+}
+
+table.measured-rate{
+  margin: 20px 0 0;
+  width: 400px;
+  border-collapse: collapse;
+}
+table.measured-rate tr.measured-rate-base{
+  border-bottom: 3px solid;
+}
+table.measured-rate tr.measured-rate-base td{
+  padding: 0.8em 0.5em;
+  line-height: 1.3em;
+}
+table.measured-rate tr.measured-rate-base td > span{
+  color: #ffeb00;
+}
+table.measured-rate td{
+  padding: 0.6em 0.5em;
+  text-align: right;
+  font-size: 1.15em;
+  border: 1px solid #FFF;
+}
+
+table.measured-rate td:first-child{
+  width: 40%;
+  vertical-align: middle;
+  text-align: center;
+}
+.business-graf-area{
+  width: 400px;
+  margin-top: 30px;
+}
+
+.business-graf-area img{
+  margin-bottom: 17px;
+}
+
+.graf-measured-rate{
+  width: 100%;
+}
+@media (min-width: 767px) {
+
+  .payment-history-download{
+    display: flex;
+    flex-direction: row-reverse;
+  }
+
+  .payment-history-download .payment-history-printing-button{
+    margin-left: 20px;
+  }
+}
+
+.payment-history-download .payment-history-printing-button.csv-download{
+  background-color: #ddd;
+}
+.payment-history-download .payment-history-printing-button.csv-download:hover{
+  background-color: #000;
+}
+
+@media (max-width: 767px) {
+  .dataflow-list{
+    display: block;
+  }
+  .dataflow-list p.list-title{
+    height: 22px;
+    padding: 10px 5px;
+  }
+  table.data-usage-table.daily-data th.day-giga{
+    width: 56vw;
+  }
+  .dataflow-list div.mypage-payment-history-select-container table.mypage-payment-history-table select{
+    height: 40px;
+  }
+
+  table.measured-rate {
+    width: 100%;
+  }
+  .business-graf-area{
+    width: 100%;
+    margin: 30px auto 0;
+    text-align: center;
+  }
+
+  .business-graf-area img.base-fee {
+    width: 75%;
+    margin: 0 auto 15px -10px;
+  }
+  .business-graf-area img:last-of-type {
+    margin-bottom: 0;
+  }
+}
+
+@media (max-width: 767px) {
+  table.table-base td.customer-id {
+    padding: 10px;
+  }
+
+  .table-base.insurance-info tr.sp th,
+  .table-base.insurance-info tr.sp td {
+    background: none;
+    padding: 0;
+    margin-left: auto;
+    justify-content: flex-end;
+  }
+
+  #js-copyalert {
+    top: 118px;
+    right: calc(100% - (100px + 26px));
+    width: 84px;
+    font-size: 1.2rem;
+  }
+
+  button.js-copybtn {
+    padding: 10px 20px;
+    width: 100%;
+    height: 43px;
+  }
+
+  #js-copyalert::before {
+    bottom: 8px;
+    left: 110%;
+    transform: rotate(-90deg);
+  }
+
+  table.table-base.table-in-button tr.allcheck.pc {
+    display: none;
+  }
+
+  tr.allcheck.sp td label.table-button.option-active {
+    width: 60%;
+    padding: 1em 1.5em 1.1em 0.5em;
+  }
+
+  tr.allcheck.sp td {
+    padding: 0;
+    margin: 12px 11px 0 0;
+    border: 0;
+  }
+
+  tr.allcheck.sp th.pc {
+    display: none;
+  }
+
+  tr.allcheck td label::before {
+    left: 35px;
+    top: 10px;
+  }
+
+  tr.allcheck.sp td label.table-button.option-active {
+    padding-right: 3rem;
+  }
+
+  table.table-base td.customer-id {
+    border-bottom: 0;
+  }
+
+  .insurance-option-request,
+  .insurance-option-request.table-mini {
+    width: 197px;
+    margin: 0.7em 5px 0.7em auto;
+  }
+
+  div.insurance-option-inquiry {
+    width: 90%;
+    margin: 30px auto 0;
+  }
+
+  .sp.copy-notice {
+    font-size: 12px;
+    text-align: right;
+  }
+
+  table.table-base.table-in-button tr {
+    margin-bottom: 25px;
+  }
+}
+
+/* iphone se */
+@media (max-width: 375px) {
+  #js-copyalert {
+    top: 144px;
+    width: 93px;
+    padding: 1.3rem 0.5rem;
+    right: calc(100% - (110px + 10px));
+  }
+}
+
+.anshin-teisoku {
+  width: 120px;
+}
+
+/* atoneボタンを隠す(!importantでatone APIのstyleを上書き) */
+.atone-button {
+  display: none !important;
+}
+
+.button-text.editpayment-button-hidden {
+  display: none;
+}
+
+div.insurance-option-inquiry span.no-snippet{
+  font-size: 1.6rem;
+  line-height: 20px;
+}
+
+div.mypage-title-area-icon img.insurance-option{
+  width: 150px;
+}
+
+/* 20230222改修 */
+th.under-bar.billing-date,
+td.under-bar.use-of-month {
+  width: 13.5%;
+  text-align: center;
+}
+tr.payment-history-row.guide .split-colmn {
+  background: none;
+  color: #fff;
+  text-align: center;
+  font-weight: bold;
+}
+table.table-base tr.payment-history-row.guide:not(:first-of-type) {
+  display: none;
+}
+table.table-base tr.payment-history-row.guide {
+  height: 1.5rem;
+}
+tr.payment-history-row.guide .under-bar {
+  height: 25px;
+  background: none;
+  color: #fff;
+  margin-bottom: 0;
+  font-weight: bold;
+}
+td.split-colmn.price.under-bar.price-subtotal {
+  width: 100%;
+}
+@media (max-width: 767px) {
+  table.table-base th span.billing-date,
+  table.table-base th span.use-of-month {
+    height: 50%;
+    display: block;
+  }
+  table.table-base th span.billing-date,
+  table.table-base th span.use-of-month {
+    height: 50%;
+    display: flex;
+    width: 100%;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    left: 0;
+    top: 0;
+  }
+  table.table-base th span.use-of-month {
+    background-color: #fff;
+    color: #000;
+    top: 50%;
+  }
+  table.table-base tr.payment-history-row.guide {
+    height: 5.5rem;
+  }
+  table.table-base tr.payment-history-row.guide {
+    background: none;
+  }
+  table.table-base tr.payment-history-row.guide span:last-of-type {
+    border-top: 1px solid #fff;
+    margin-top: -2px;
+    background: none;
+    color: #fff;
+  }
+  table.table-base tr.payment-history-row.guide th,
+  table.table-base tr.payment-history-row.guide td,
+  table.table-base th.payment-history-row.guide span.use-of-month {
+    background: none;
+    color: #fff;
+    text-align: center;
+    font-weight: bold;
+  }
+  table.table-base tr.payment-history-row.guide th {
+    border-bottom: none;
+  }
+}
+
+/* FAQ */
+div.mypage-faq-content {
+  background-color: #fff;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  width: auto;
+  max-width: 100%;
+}
+@media (max-width: 767px) {
+  div.mypage-faq-content {
+    padding-left: 4%;
+    padding-right: 4%;
+  }
+}
+
+/* プリペイドプラン用CSS start */
+div.recharge div.data-flow-last-update p{
+  width: fit-content;
+  text-align: left;
+  margin: 0 0 0 auto;
+  color: #666;
+}
+div.recharge table.data-usage-table td,
+div.recharge table.table-base td{
+  text-align: left;
+  padding: 11px;
+}
+table.recharge-remaining th{
+  background-color: unset;
+  color: unset;
+  border: unset;
+  width: 75%;
+  text-align: left;
+  font-size: 2.2rem;
+}
+div.recharge table.recharge-remaining td{
+  background-color: unset;
+  text-align: center;
+}
+div.recharge table.recharge-remaining tr.data-flow-1 td,
+div.recharge table.recharge-remaining tr.data-flow-2 td{
+  padding: 0;
+}
+div.recharge table.recharge-remaining tr.data-flow-1 td.data-label{
+  color: #19b115;
+  font-weight: bold;
+}
+
+div.recharge table.recharge-remaining td.data-capacity{
+  font-weight: bold;
+}
+.recharge table.recharge-remaining tr.data-flow-2 td{
+  font-size: 2rem;
+  vertical-align: baseline;
+  font-weight: bold;
+}
+div.recharge span.remaining,
+div.recharge span.full{
+  margin-right: 2px;
+}
+div.recharge span.remaining{
+  font-size: 3rem;
+  color: #19b115;
+}
+table.recharge-remaining td.interval{
+  width: 10px;
+}
+div.recharge-graph{
+  background-color: #f2f2f2;
+  position: relative;
+  width: 100%;
+  height: 35px;
+  margin: 10px 0;
+}
+div.recharge-graph span.remaining-area{
+  background-color: #19b115;
+  position: absolute;
+  right: 0;
+  width: 0;
+  height: 35px;
+}
+div.recharge-graph span.re-remaining-area{
+  background-color: #19b115;
+  position: absolute;
+  right: 0;
+  width: 0;
+  height: 35px;
+}
+.recharge-remaining-area{
+  margin: 0 0 20px;
+}
+div.recharge + div.button div.button-body{
+  margin-top: 50px;
+}
+div.recharge + div.button.right div.button-body{
+  margin: 15px 0 35px;
+}
+tbody.recharge-history{
+  display: block;
+  max-height: 356px;
+  overflow-y: scroll;
+}
+div.data-charge tbody.recharge-history{
+  display: flex;
+  flex-direction: column-reverse;
+}
+div.data-charge tbody.recharge-history tr:first-child{
+  order: 1;
+}
+tbody.recharge-history tr{
+  display: table;
+  width: 100%;
+  border-spacing: 3px;
+}
+div.recharge table.data-usage-table{
+  border-spacing: 6px;
+}
+form.recharge div.form-capacity-selects{
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+form.recharge div.form-capacity-select{
+  width: 48%;
+}
+form.recharge div.form-capacity-select-area.datacharge{
+  height: unset;
+  border: unset;
+  margin: 10px 0 75px;
+  border: solid 5px #FFF;
+}
+.recharge-return-text{
+  margin-top: 20px;
+}
+form.recharge div.form-capacity-selects {
+  width: 80%;
+  margin: 0 auto;
+}
+form.recharge div.rechage-365:nth-child(1) {
+  order: 4;
+}
+form.recharge div.rechage-365:nth-child(2) {
+  order: 3;
+}
+form.recharge div.rechage-365:nth-child(3) {
+  order: 2;
+}
+form.recharge div.rechage-365:nth-child(4) {
+  order: 1;
+}
+p.recharge-title {
+  width: 80%;
+  margin: 20px auto 10px;
+  font-size: 2rem;
+  font-weight: bold;
+}
+p.recharge-title:last-of-type {
+  margin: 40px auto 10px;
+}
+form.recharge div.form-capacity-select-image img {
+  box-shadow: 0px 0px 10px rgb(0 0 0 / 30%);
+}
+form.recharge div.form-capacity-select-checkbox-area {
+  top: 113%;
+}
+form.recharge p.custom-check-box-v2-select-text.datacharge {
+  padding: 4px 40px;
+  cursor: pointer;
+  pointer-events: all;
+}
+form.recharge p.custom-check-box-v2-select-text.datacharge > label{
+  cursor: pointer;
+}
+
+#plan-type_switch {
+  display: block;
+  padding-top: 45px;
+  width: 100%;
+}
+
+#plan-type_switch .plan-button {
+  display: inline-block;
+  background-color: #3C3C3C;
+  color: white;
+  width: 50%;
+  height: 50px;
+  padding-top: 10px;
+  font-size: 2.5rem;
+  text-align: center;
+  border: #1E1E1E solid 1px;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+#plan-type_switch .plan-button#overseas-plan {
+  background-color: white;
+  color: #3C3C3C;
+}
+
+#plan-type_switch .plan-button p {
+  display: inline;
+}
+
+.mypage-content-box-inner.overseas-area {
+  background-color: #3C3C3C;
+  box-sizing: border-box;
+}
+
+.search-by-ational_flag.overseas-area {
+    width: auto;
+    display: block;
+    height: 240px;
+}
+
+/**
+ * 国旗を選択して国を選択するためのCSS
+ */
+.countries > a, .excursion {
+  display: inline-block;
+  cursor:pointer;
+}
+
+.excursion {
+  position: relative;
+}
+
+.excursion_menu {
+  position: absolute;
+  background-color: #FFF;
+}
+
+.excursion_country {
+  display: block;
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  width: 140px;
+  border: 1px solid #282828;
+}
+
+.excursion_country:hover {
+  background-color: #1E1E1E;;
+}
+
+/**
+ * 過去申込情報に関するCSS
+ */
+#open, #close {
+  cursor: pointer;
+}
+
+.table-plan-history {
+  margin-bottom: 20px;
+}
+
+.table-plan-history:after {
+	content: "";
+	height: 1px;
+	width: 100%;
+	padding: 12px 0;
+	display: block;
+}
+
+@media screen and (min-width: 768px) {
+  div.recharge table.table-base tr th,
+  div.recharge table.table-base tr td{
+    font-weight: normal;
+    text-align: center;
+    position: relative;
+    padding: 0 10px;
+    color: #000;
+    background-color: #f2f2f2;
+    border: unset;
+  }
+  div.recharge table.table-base tr th{
+    width: 10%;
+  }
+  div.recharge table.table-base tr td:nth-child(2){
+    width: 38%;
+  }
+  div.recharge table.table-base tr td:nth-child(3){
+    width: 15%;
+  }
+  div.recharge table.table-base tr td:nth-child(4){
+    width: 15%;
+  }
+  div.recharge table.table-base tr td:nth-child(5){
+    width: 10%;
+  }
+  div.recharge table.table-base tr:nth-child(1) th,
+  div.recharge table.table-base tr:nth-child(1) td{
+    font-weight: bold;
+    text-align: center;
+    position: relative;
+    padding: 0 10px;
+    color: #19b115;
+    background-color: #d1efd0;
+    border: 1px solid #19b115;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  table.recharge-remaining th{
+    width: 0;
+  }
+  div.mypage-content-box-inner p.recharge-plan-sp{
+    font-weight: bold;
+    margin: 0px 0 15px;
+    font-size: 1.3rem;
+    text-align: center;
+  }
+  form.recharge div.form-capacity-select {
+    width: 100%;
+  }
+  form.recharge div.form-capacity-selects {
+    width: 100%;
+  }
+  form.recharge div.form-capacity-select-area.datacharge {
+    margin: 10px 0 50px;
+  }
+  form.recharge p.custom-check-box-v2-select-text.datacharge {
+    padding: 4px 18px;
+  }
+  form.recharge div.form-capacity-select-checkbox-area {
+    transform: translate(-50%,-50%);
+    left: 50%;
+  }
+  form.recharge div.mypage-content-box-data-flow-inner {
+    margin: auto 15px;
+  }
+  tr.recharge-history-separate{
+    height: 45px;
+    margin: 20px 0 15px;
+    position: relative;
+  }
+  tr.recharge-history-separate:after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 50%;
+    display: inline-block;
+    width: 50%;
+    height: 3px;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    background-color: #19b115;
+  }
+  tr.recharge-history-separate:last-child {
+    display: none;
+  }
+  div.recharge + div.button div.button-body {
+    margin-top: 35px;
+  }
+  div.recharge + div.button.right div.button-body {
+    margin: 0 0 35px;
+  }
+}
+
+.input-daterange input.datepicker-lp {
+  width: 130px;
+}
+
+.input-daterange input:last-child {
+  text-align: left;
+  width: 180px;
+  border-radius: 11px !important;
+  background: no-repeat 90% center/24px url(/assets/img/calendar-icon.svg)
+}
+
+.datepicker-dropdown {
+  transform: unset;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1000;
+  display: none;
+  float: left;
+  min-width: 10rem;
+  padding: .5rem 0;
+  margin: .125rem 0 0;
+  font-size: 1rem;
+  color: #212529;
+  text-align: left;
+  list-style: none;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid rgba(0, 0, 0, .15);
+  border-radius: .25rem
+}
+
+.datepicker-days th.dow:first-child,
+.datepicker-days td:first-child{
+  color: #ff0000;
+}
+
+.datepicker-days th.dow:last-child,
+.datepicker-days td:last-child{
+  color: #0000ff;
+}
+
+.datepicker-days thead{
+  border-bottom: 1px solid #cccccc;
+}
+
+.datepicker-days .holiday{
+  color: #ff0000;
+}
+
+.calendar-caution {
+  color: #ff003c;
+  font-weight: bold;
+  line-height: 1.4em;
+  font-size: 1.4rem;
+  margin-top: 20px;
+}
+
+/* フォームエラーCSS */
+#form-edit-overseas .form-control.is-invalid {
+    border-color: #dc3545;
+    padding-right: calc(1.5em + .75rem);
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='none' stroke='%23dc3545' viewBox='0 0 12 12'%3e%3ccircle cx='6' cy='6' r='4.5'/%3e%3cpath stroke-linejoin='round' d='M5.8 3.6h.4L6 6.5z'/%3e%3ccircle cx='6' cy='8.2' r='.6' fill='%23dc3545' stroke='none'/%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right calc(.375em + .1875rem) center;
+    background-size: calc(.75em + .375rem) calc(.75em + .375rem);
+}
+
+#form-edit-overseas .invalid-feedback {
+  color: #dc3545;
+}
+/* プリペイドプラン用CSS end */
+
+.another-plan-a {
+  text-decoration: underline;
+  color: #FFEB00;
+  line-height: 2;
+}
+
+/*ポップアップタイトル文字*/
+div.white-content-box-title{
+  width: 100%;
+  text-align: center;
+}
+/*ポップアップタイトル文字*/
+div.white-content-box-title-notion p{
+  font-size: 2.8rem;
+  line-height: 1.2em;
+  font-weight: bold;
+}
+
+div.white-content-box-title-changecompany-notion p{
+  font-size: 2.6rem;
+}
+
+/*ポップアップの背景を暗くする*/
+div.support-notion-black-background,
+div.guidance-notion-black-background,
+div.wimaxdelay-notion-black-background,
+div.weatherdelay-notion-black-background,
+div.changecompany-notion-black-background,
+div.special2-1-notion-black-background,
+div.special2-2-notion-black-background{
+  position: fixed;
+  background-color: #000000;
+  opacity: 0.4;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000000000001;
+}
+
+/*ポップアップ全体のサイズ*/
+div.white-content-box-support-notion,
+div.white-content-box-guidance-notion,
+div.white-content-box-wimaxdelay-notion,
+div.white-content-box-weatherdelay-notion,
+div.white-content-box-changecompany-notion,
+div.white-content-box-special2-1-notion,
+div.white-content-box-special2-2-notion{
+  position: fixed;
+  max-height: calc(100% - 150px - 35px - 200px);
+  max-width: 1100px;
+  top: 50%;
+  left: 0;
+  right: 0;
+  transform: translateY(-50%);
+  padding: 50px 0;
+  margin: auto;
+  z-index: 1000000000002;
+  background-color: #F3F3F3;
+  overflow: auto;
+}
+
+div.white-content-box-support-notion{
+  height: calc(100% - 150px - 35px - 200px);
+  max-height: initial;
+}
+
+/*表示エリア*/
+div.white-content-box-support-notion div.white-content-box-inner-support,
+div.white-content-box-guidance-notion div.white-content-box-inner-guidance,
+div.white-content-box-wimaxdelay-notion div.white-content-box-inner-wimaxdelay,
+div.white-content-box-weatherdelay-notion div.white-content-box-inner-weatherdelay,
+div.white-content-box-changecompany-notion div.white-content-box-inner-changecompany,
+div.white-content-box-special2-1-notion div.white-content-box-inner-special2-1,
+div.white-content-box-special2-2-notion div.white-content-box-inner-special2-2{
+  width: 85%;
+  height: 90%;
+  margin: 30px auto 0;
+}
+
+div.white-content-box-changecompany-notion div.white-content-box-inner-changecompany{
+  height: 50vh;
+}
+
+/*ポップアップ閉じるボタン*/
+div.support-popup-close-button,
+div.guidance-popup-close-button,
+div.wimaxdelay-popup-close-button,
+div.weatherdelay-popup-close-button,
+div.changecompany-popup-close-button,
+div.special2-1-popup-close-button,
+div.special2-2-popup-close-button{
+  width: 35px;
+  height: 35px;
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  text-align: center;
+  background-color: #000000;
+  border-radius: 17px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+div.support-popup-close-button img,
+div.guidance-popup-close-button img,
+div.wimaxdelay-popup-close-button img,
+div.weatherdelay-popup-close-button img,
+div.changecompany-popup-close-button img,
+div.special2-1-popup-close-button img,
+div.special2-2-popup-close-button img{
+  width: 50%;
+}
+
+/*ポップアップ内タイトル*/
+div.white-content-box-support-notion div.white-content-box-title-notion,
+div.white-content-box-guidance-notion div.white-content-box-title-notion,
+div.white-content-box-wimaxdelay-notion div.white-content-box-title-notion,
+div.white-content-box-weatherdelay-notion div.white-content-box-title-notion,
+div.white-content-box-changecompany-notion div.white-content-box-title-notion,
+div.white-content-box-special2-1-notion div.white-content-box-title-notion,
+div.white-content-box-special2-1-notion div.white-content-box-title-notion{
+  padding: 0;
+  margin-top: 0;
+}
+
+/*お知らせ帯バナー余白調整*/
+div.content-box-title p.callcenter-section-title-short.wimax-news-marginadjust {
+  margin: 0px;
+}
+
+@media screen and (max-width: 1440px){
+  /*ポップアップ全体のサイズ*/
+  div.white-content-box-support-notion,
+  div.white-content-box-guidance-notion,
+  div.white-content-box-wimaxdelay-notion,
+  div.white-content-box-weatherdelay-notion,
+  div.white-content-box-changecompany-notion,
+  div.white-content-box-special2-1-notion,
+  div.white-content-box-special2-2-notion{
+    top: 50%;
+    transform: translateY(-50%);
+    margin: 0 5%;
+    max-width: 90%;
+    height: calc(100% - 50px - 40px - 20vh);
+    max-height: initial;
+  }
+
+  div.white-content-box-guidance-notion,
+  div.white-content-box-wimaxdelay-notion,
+  div.white-content-box-weatherdelay-notion,
+  div.white-content-box-changecompany-notion,
+  div.white-content-box-special2-1-notion,
+  div.white-content-box-special2-2-notion{
+    height: auto;
+    max-height: initial;
+  }
+
+  /*表示エリア*/
+  div.white-content-box-support-notion div.white-content-box-inner-support,
+  div.white-content-box-special2-1-notion div.white-content-box-inner-special2-1,
+  div.white-content-box-special2-2-notion div.white-content-box-inner-special2-2{
+    width: 75%;
+    height: 75%;
+    overflow-x: hidden;
+  }
+  div.white-content-box-guidance-notion div.white-content-box-inner-guidance,
+  div.white-content-box-wimaxdelay-notion div.white-content-box-inner-wimaxdelay,
+  div.white-content-box-weatherdelay-notion div.white-content-box-inner-weatherdelay,
+  div.white-content-box-changecompany-notion div.white-content-box-inner-changecompany {
+    height: 50vh;
+  }
+
+}
+
+@media screen and (max-width: 767px){
+  /*ポップアップタイトル文字*/
+  div.white-content-box-title-notion p{
+    padding: 0 5%;
+    font-size: 2.0rem;
+  }
+
+  /*表示エリア*/
+  div.white-content-box-support-notion div.white-content-box-inner-support,
+  div.white-content-box-guidance-notion div.white-content-box-inner-guidance,
+  div.white-content-box-wimaxdelay-notion div.white-content-box-inner-wimaxdelay,
+  div.white-content-box-weatherdelay-notion div.white-content-box-inner-weatherdelay,
+  div.white-content-box-changecompany-notion div.white-content-box-inner-changecompany,
+  div.white-content-box-special2-1-notion div.white-content-box-inner-special2-1,
+  div.white-content-box-special2-2-notion div.white-content-box-inner-special2-2{
+    width: 90%;
+    overflow: scroll;
+    height: 75%;
+  }
+
+  /*ポップアップ全体のサイズ*/
+  div.white-content-box-support-notion,
+  div.white-content-box-guidance-notion,
+  div.white-content-box-wimaxdelay-notion,
+  div.white-content-box-weatherdelay-notion,
+  div.white-content-box-changecompany-notion,
+  div.white-content-box-special2-1-notion,
+  div.white-content-box-special2-2-notion{
+    margin: 0 5%;
+    height: 80%;
+    max-height: initial;
+  }
+
+  /*お知らせ帯バナー余白調整*/
+  section.other-first.wimax-news-marginadjust{
+    padding: 0 0 30px;
+  }
+}
+
+.overseas-attention{
+  padding: 5px 10px 10px 10px;
+}
+@media screen and (max-width: 767px){
+  .mypage-content-box .table-base.sp-long .scroll-box,.overseas-attention p{
+    font-size: 1.2rem;
+  }
+}
+
+/* サブスクトップ */
+div.button.left.nav-flex:not(.rental-mypage-top div.button) {
+  display: flex;
+  gap: 0 20px;
+  justify-content: left;
+  flex-wrap: wrap;
+}
+.subsc-mypage-top .button.left.nav-flex .button-text {
+  width: calc(50% - 10px);
+  margin: 20px 0 0 0;
+}
+.subsc-mypage-top .button.left.nav-flex .menu-focus:focus-visible {
+  border-radius: 15px;
+}
+.subsc-mypage-top .nav-flex .button-body {
+  flex-direction: row;
+  width: 100%;
+  height: 100px;
+  border-radius: 15px;
+  margin: 0 auto;
+  box-shadow: 3px 3px 6px #202020;
+  box-sizing: border-box;
+  background-color: #666666;
+}
+.button-body.subsc-mypage-top.title-body {
+  display: flex;
+}
+.subsc-mypage-top .button-subsc-top {
+  margin-right: 0;
+  height: 58px;
+  vertical-align: middle;
+  display: flex;
+  width: 120px;
+}
+.subsc-mypage-top .button-subsc-top.button-next img {
+  width: 45px;
+  height: auto;
+  margin: auto;
+  bottom: 0;
+}
+.subsc-mypage-top .button-subsc-top.button-next-adjust img {
+  width: 60px;
+  height: auto;
+  margin: auto;
+}
+.subsc-mypage-top .button-subsc-top.button-next-adjust.btn-overseas img {
+  width: 70px;
+}
+.subsc-mypage-top a.button-text .title-body {
+  padding-right: 20px;
+}
+.subsc-mypage-top a.button-text .title-body p.btn-ttl {
+  right: unset;
+  position: relative;
+  text-align: left;
+  font-size: 1.8rem;
+  font-weight: bold;
+  line-height: 1.3;
+}
+.subsc-mypage-top a.button-text .title-body p.btn-desc {
+  font-size: 1.3rem;
+  font-weight: 400;
+  padding-left: 8px;
+  display: inline-block;
+  margin-top: 5px;
+  text-align: left;
+}
+.subsc-button-disabled {
+  pointer-events: none;
+  opacity: 0.6;
+}
+.subsc-button-abled {
+  pointer-events: auto;
+  opacity: 1;
+}
+@media screen and (max-width: 767px){
+  .subsc-mypage-top .nav-flex .button-body {
+    flex-direction: column;
+    padding: 10px;
+    height: 145px;
+  }
+  .subsc-mypage-top .button-subsc-top.button-next-adjust img {
+    width: 50px;
+  }
+  .subsc-mypage-top .button-subsc-top.button-next img {
+    width: 40px;
+  }
+  .subsc-mypage-top .button-subsc-top.button-next-adjust.btn-overseas img {
+    width: 60px;
+  }
+  .subsc-mypage-top a.button-text .title-body p.btn-ttl {
+    text-align: center;
+    font-size: 1.2rem;
+  }
+  .subsc-mypage-top a.button-text .title-body {
+    padding-right: 0;
+  }
+  .subsc-mypage-top a.button-text .title-body p.btn-desc {
+    font-size: 1.1rem;
+    margin-top: 5px;
+    right: 0;
+    line-height: 1.3;
+    padding: 0;
+  }
+}
+/* お客様情報 */
+table.table-base.subsc-table {
+  border-collapse: collapse;
+}
+table.table-base.user-input.subsc-table tr:first-child th {
+  border-top: 1px solid #fff;
+}
+table.table-base.subsc-table th,
+table.table-base.subsc-table td {
+  color: #fff;
+  background-color: unset;
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+}
+table.table-base.user-input.subsc-table tr:first-child th {
+  border-color: #fff;
+}
+table.table-base.user-input.subsc-table th:before {
+  background: unset;
+}
+.subsc-user-edit-container-wrap {
+  display: flex;
+  margin: 0 6.5em;
+  padding-top: 40px;
+  flex-direction: row-reverse;
+}
+.subsc-user-edit-btn-container {
+  display: flex;
+}
+.subsc-user-edit-container-wrap .subsc-user-edit-btn-container .button-next {
+  width: 90px;
+}
+.subsc-user-edit-container-wrap .button-next {
+  margin-right: 0;
+  height: 58px;
+  vertical-align: middle;
+  display: flex;
+  width: 120px;
+}
+.subsc-user-edit-container-wrap .button-next img {
+  height: auto;
+  position: relative;
+  bottom: unset;
+  width: 45px;
+  margin: auto;
+}
+.subsc-user-edit-btn-container .subsc-user-edit-btn {
+  margin-top: 0px;
+}
+.subsc-user-edit-btn-container .subsc-user-edit-btn .subsc-user-edit-link {
+  margin-bottom: 10px;
+  text-align: left;
+}
+.subsc-user-edit-container-wrap .subsc-user-edit-btn-container .subsc-user-edit-btn .subsc-user-edit-link {
+  margin-bottom: 10px;
+  text-align: left;
+  display: block;
+  overflow-wrap: break-word;
+}
+.subsc-user-edit-container-wrap .subsc-user-edit-btn-container .v-user-edit-btn .subsc-user-edit-link a:nth-child(2) {
+  margin: 0;
+
+}
+.subsc-user-edit-btn-container p.attention {
+  font-size: 1.1rem;
+  text-align: right;
+  padding-right: 0;
+  color: #FFF;
+  word-break: break-word;
+}
+.subsc-user-edit-btn-container p.attention a {
+  color: #FFEB00;
+  text-decoration: underline;
+}
+.subsc-content-area p.attention a {
+  text-decoration: underline;
+}
+.subsc-user-edit-container-wrap .subsc-user-edit-btn-container .subsc-user-edit-btn .subsc-user-edit-link a {
+  color: #FFEB00;
+  text-decoration: underline;
+  margin: 0;
+}
+.subsc-user-edit-container-wrap .subsc-user-edit-btn-container .subsc-user-edit-btn .subsc-user-edit-link a:first-child {
+  margin-bottom: 7px;
+}
+.subsc-user-edit-container-wrap .subsc-user-edit-btn-container .subsc-user-edit-btn .subsc-user-edit-link.one-line {
+  padding-top: 25px;
+}
+.subsc-user-edit-container-wrap .subsc-user-edit-btn-container .subsc-user-edit-btn .subsc-user-edit-link.space-top {
+  padding-top: 15px;
+}
+
+@media screen and (max-width: 767px){
+  table.table-base.user-input.subsc-table tr th,
+  table.table-base.user-input.subsc-table tr td {
+    display: table-cell;
+  }
+  table.table-base.user-input.subsc-table tr th {
+    padding: 10px;
+    width: 30%;
+  }
+  table.table-base.user-input.subsc-table tr td {
+    padding: 10px;
+    width: 70%;
+  }
+  .subsc-user-edit-container-wrap {
+    margin: 0;
+    padding-top: 25px;
+  }
+  .subsc-user-edit-btn-container p.attention {
+    font-size: 1.2rem;
+    text-align: left;
+  }
+  .subsc-user-edit-container-wrap .subsc-user-edit-btn-container .subsc-user-edit-btn .subsc-user-edit-link a:first-child {
+    margin-bottom: 12px;
+  }
+  .subsc-user-edit-container-wrap .subsc-user-edit-btn-container .subsc-user-edit-btn .subsc-user-edit-link.one-line {
+    padding-right: 5px;
+  }
+  .subsc-user-edit-container-wrap .subsc-user-edit-btn-container .subsc-user-edit-btn .subsc-user-edit-link a {
+    font-size: 1.4rem;
+  }
+}
+/* お客様情報の変更 パスワード変更 ご契約者様住所変更　お支払方法変更　*/
+.type-nodescription p.mypage-titile-area-title {
+  padding-bottom: 15px;
+}
+table.table-base.user-input.subsc-edit-table {
+  border-collapse: collapse;
+}
+table.table-base.user-input.subsc-edit-table tr:first-child th {
+  border-color: #fff;
+  border-top: 1px solid #fff;
+}
+table.table-base.user-input.subsc-edit-table tr th,
+table.table-base.user-input.subsc-edit-table tr td {
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  height: auto;
+  padding: 10px 0;
+}
+table.table-base.user-input.subsc-edit-table tr.border-top-none th,
+table.table-base.user-input.subsc-edit-table tr.border-top-none td {
+  border-top: none;
+}
+table.table-base.user-input.subsc-edit-table tr.border-bottom-none th,
+table.table-base.user-input.subsc-edit-table tr.border-bottom-none td {
+  border-bottom: none;
+}
+table.table-base.user-input.subsc-edit-table.password-table tr th,
+table.table-base.user-input.subsc-edit-table.password-table tr td {
+  border-top: none;
+  border-bottom: none;
+}
+.table-base.user-input.subsc-edit-table tr td input.mypage-input-border {
+  margin: 0;
+  padding: 20px 10px;
+  background-color: #f5f5f5;
+  border: none;
+  border-radius: 8px;
+  box-sizing: border-box;
+  letter-spacing: 1px;
+  height: 40px;
+  font-size: 1.6rem;
+}
+table.table-base.user-input.subsc-edit-table tr td select {
+  background-color: #f5f5f5;
+  border: none;
+  height: 40px;
+  margin: 0;
+  border-radius: 8px;
+  font-size: 1.6rem;
+  padding: 5px;
+}
+table.table-base.user-input.subsc-edit-table .mypage-attention-address-btn {
+  position: relative;
+  display: inline-block;
+  padding-right: 30px;
+  border-bottom: 1px solid #fff;
+  cursor: pointer;
+}
+table.table-base.user-input.subsc-edit-table .yellow-before {
+  border-bottom: none;
+}
+table.table-base.user-input.subsc-edit-table .mypage-attention-address-btn::before {
+  content: "";
+  border-top: 10px solid #ddd;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-bottom: none;
+  position: absolute;
+  right: 0px;
+  top: 4px;
+}
+table.table-base.user-input.subsc-edit-table .yellow-before::before {
+  border-top: 10px solid #FFEB00;
+  right: 10px;
+}
+table.table-base.user-input.subsc-edit-table .mypage-attention-address-btn.open::before {
+  transform: rotate(180deg);
+}
+.mypage-content-box-title p.edit-ttl {
+  width: calc(100% - 17rem);
+  margin: auto;
+}
+table.table-base.user-input.subsc-edit-table .mypage-attention-address {
+  padding: 15px 0 10px;
+}
+table.table-base.user-input.subsc-edit-table tr td.password-td span.field-icon {
+  top: 22px;
+}
+table.table-base.user-input.subsc-edit-table tr td.password-td span.field-icon .password_check_eye {
+  top: 0;
+}
+table.table-base.user-input.subsc-edit-table tr td.password-td span.field-icon .password_check_eye {
+  top: 0;
+}
+table.table-base.user-input.subsc-edit-table tr td.password-td span.field-icon .password_check_eye.fa-eye:before, 
+table.table-base.user-input.subsc-edit-table tr td.password-td span.field-icon .password_check_eye.fa-eye-slash:before {
+  position: relative;
+  top: 0px;
+}
+div.form-capacity-notice.payment-select-caution.subsc-coution {
+  width: calc(100% - 17rem);
+  margin: 0 auto 30px;
+}
+div.payment-edit-caution table.subsc-edit-table.td-input tr:last-child th, 
+div.payment-edit-caution table.subsc-edit-table.td-input tr:last-child td {
+  border-bottom: 1px solid #fff;
+}
+table.table-base.user-input.subsc-edit-table th:before {
+  background: unset;
+}
+.edit-btns-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 35px;
+}
+
+.edit-btns-container .button,
+.edit-btns-container .button:first-child {
+  margin-top: 0;
+  padding-top: 10px;
+}
+div.edit-btns-container div.button-save:first-child {
+  padding-top: 0;
+}
+div.edit-btns-container div.button-save:last-of-type {
+  padding-top: 0;
+  margin-top: 10px;
+}
+
+.edit-btns-container .button:last-of-type{
+  margin-top: 0;
+}
+.edit-btns-container .button .button-body {
+  margin-top: 0;
+}
+div.form-capacity-notice.payment span.strong.color-yellow {
+  color: #FFEB00;
+}
+a.color-yellow {
+  color: #FFEB00;
+}
+table.table-base.user-input.subsc-edit-table p a.color-yellow {
+  text-decoration: underline;
+}
+@media screen and (max-width: 767px){
+  table.table-base.user-input.subsc-edit-table tr th {
+    border-top: 1px solid #fff;
+    border-bottom: none;
+    height: auto;
+    padding: 10px 0 5px;
+    margin: 0 auto;
+  }
+  table.table-base.user-input.subsc-edit-table tr td {
+    border-bottom: none;
+    border-top: none;
+    height: auto;
+    padding: 5px 0 10px;
+    margin: 0 auto;
+  }
+  table.table-base.user-input.subsc-edit-table tr th.pc {
+    display: none;
+  }
+  table.table-base.user-input.subsc-edit-table tr:last-child td {
+    border-bottom: 1px solid #fff;
+  }
+  table.table-base.user-input.subsc-edit-table.password-table tr:last-child td {
+    border-bottom: none;
+  }
+  table.table-base.user-input.subsc-edit-table tr td.password-td span.field-icon {
+    top: 18px;
+  }
+  div.mypage-content-box-title p.edit-ttl {
+    width: 95%;
+  }
+  div.form-capacity-notice.payment-select-caution.subsc-coution {
+    width: 95%;
+  }
+  .edit-btns-container {
+    flex-direction: column;
+  }
+  .edit-btns-container .button:nth-child(2) {
+    padding-top: 0;
+    margin-bottom: 0;
+  }
+  .edit-btns-container .button {
+    margin: 10px 0;
+  }
+  .subsc-edit-table label.validator-error:last-of-type {
+    margin-bottom: 1rem;
+  }
+  div.mypage-title-area.type-nodescription {
+    padding: 15px 0 0px;
+  }
+  div.payment-edit-caution table.subsc-edit-table.td-input tr:last-child th.noborder {
+    border-bottom: none;
+  }
+}
+/* ご利用明細 */
+.mypage-content-box.subsc-history div.mypage-content-box-inner {
+  height: auto;
+  margin: auto;
+  padding-top: 40px;
+  margin-top: 50px;
+  width: 80%;
+  max-width: 700px;
+}
+.mypage-content-box.subsc-history .mypage-content-box-inner .sub-ttl {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+.mypage-content-box.subsc-history .list-flex {
+  display: flex;
+  justify-content: space-between;
+}
+.mypage-content-box.subsc-history .list-flex div.mypage-content-box-title {
+  padding: 20px 0;
+}
+.mypage-content-box.subsc-history .list-flex div.mypage-content-box-title p {
+  font-size: 2.1rem;
+  line-height: 25px;
+}
+.payment-history-printing-button-wrap {
+  position: relative;
+  margin: 15px auto;
+}
+.payment-history-printing-button-wrap::before {
+  content: "";
+  background-image: url(https://d1q08lkutgkcx2.cloudfront.net/image/download_black.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  right: 10px;
+  top: 11px;
+  transition: .5s;
+  width: 20px;
+  height: 20px;
+  right: 20px;
+  top: 8px;
+}
+.payment-history-printing-button-wrap:hover::before {
+  background-image: url(https://d1q08lkutgkcx2.cloudfront.net/image/download_white.svg);
+}
+.payment-history-printing-button-wrap .payment-history-printing-button {
+  margin: 0 auto;
+}
+.about-payment-area {
+  color: #FFFFFF;
+  margin: 30px 0 0 75px;
+}
+.about-payment-area p {
+  line-height: 2.5rem;
+}
+.about-payment-area p a {
+  text-decoration: underline;
+}
+@media screen and (max-width: 767px){
+  .mypage-content-box.subsc-history div.mypage-content-box-inner {
+    width: 90%;
+  }
+  .mypage-content-box.subsc-history .mypage-content-box-inner .sub-ttl {
+    margin-bottom: 35px;
+  }
+  .mypage-content-box.subsc-history .list-flex {
+    flex-direction: column;
+  }
+  .mypage-content-box.subsc-history .list-flex div.mypage-content-box-title {
+    padding: 10px 0 0;
+  }
+  .mypage-content-box.subsc-history .list-flex div.mypage-content-box-title p {
+    font-size: 1.9rem;
+  }
+  .about-payment-area {
+    color: #FFFFFF;
+    margin: 23px 0 0 auto;
+  }
+}
+/* ご利用明細ここまで */
+/* ご利用明細 法人*/
+.subsc-history-houjin .payment-history-printing-button {
+  margin: 0 auto;
+}
+.subsc-user-edit-container-wrap.houjin .subsc-user-edit-btn-container .subsc-user-edit-btn {
+  padding-top: 15px;
+}
+/* ご利用明細 法人　ここまで*/
+
+/* 解約アンケートバリデーション start */
+#contract-cancel-form.contract-cancel-form-prepaid .validator-error,
+#contract-cancel-form .validator-error-data-charge {
+  color: #ffeb00;
+  margin: 5px 0 0;
+  font-size: 1.2rem;
+  display: block;
+}
+#contract-cancel-form .validator-error-data-charge.text {
+  display: inline;
+  margin: 0;
+  margin-left: 10px;
+}
+#contract-cancel-form .validator-error-data-charge.password {
+  transform: translateX(170px);
+  margin: 0;
+}
+#contract-cancel-form p.mypage-content-box-title-inner > span {
+  font-size: 1.4rem;
+}
+#contract-cancel-form p.mypage-content-box-lead {
+  font-size: 1.3rem;
+  margin-top: 5px;
+}
+#contract-cancel-form .leave-survey-wrapper:first-child {
+  padding-top: 0;
+}
+@media screen and (max-width: 767px){
+  #contract-cancel-form .validator-error-data-charge.text,
+  #contract-cancel-form .validator-error-data-charge.password {
+    transform: none;
+  }
+  #contract-cancel-form p.mypage-content-box-title-inner > span {
+    font-size: 1.2rem;
+  }
+}
+/* 解約アンケートバリデーション end */
+
+@media (min-width: 768px) and (max-width: 1280px) {
+  div.vertical-characters{
+    z-index: 0;
+  }
+  div.contract-box{
+    position: relative;
+    z-index: 1;
+  }
+  main.mypage-contract-corp-multiple div.mypage-content-box-corp th, main.mypage-contract-corp-multiple div.mypage-content-box-corp td{
+    padding: 6px 0.5em;
+  }
+  main.mypage-contract-corp-multiple button.select-button{
+    width: 70px;
+  }
+  #option_cancel_area table.table-base td{
+    padding: 0;
+  }
+  
+  #option_cancel_area table.table-base th{
+    width: 70%;
+  }
+  .option-cancel-all.option-cancel-caution{
+    width: auto;
+    margin: 0.7em auto;
+    justify-content: space-evenly;
+  }
+  .option-cancel-caution p.option-cancel-caution-pc{
+    width: 70%;
+  }
+}
+.sp-password-edit-box .mypage-input-border:focus {
+  outline: 3px solid #ffeb00;
+}
+
+div.white-content-box-procedure-notion-expansion:focus{
+  border: 7px solid #ddd;
+  outline: 1px solid #000;
+  outline-offset: 0;
+}
+
+.button-flex{
+  display: flex;
+  justify-content: space-between;
+}
+.button-flex .button-body{
+  margin-top: 0;
+}
+
+@media screen and (max-width: 767px){
+  .button-flex{
+    flex-direction: column-reverse;
+  }
+}

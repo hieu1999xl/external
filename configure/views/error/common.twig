@@ -1,0 +1,34 @@
+{% extends 'common/notlogin/layout.twig' %}
+{% block header_icon %}{{ asset_cdn_img('error-icon-top_t.png',{'width': 128, 'height': 107}) }}{% endblock %}
+{% block title %}{{ summary }}{% endblock %}
+{% block sub_title %}{{ sub_summary }}{% endblock %}
+{% block description %}
+
+{% endblock %}
+{% block content %}
+ <div class="div-pc">
+    <div class = "vertical-characters">
+        NOT FOUND
+    </div>
+</div>
+<div class="mypage-content-box upper-box">
+    <div class="mypage-content-box-inner inner-upper-box">
+    {% for detail in details %}
+        <p>{{ detail }}</p>
+    {% endfor %}
+    </div>
+</div>
+<!--前へ戻るボタン start-->
+<div class="button right">
+    <a href="{{back_url}}" class="button-text">
+        <div class="button-body">
+            <div class="button-next-adjust">
+            {{ asset_cdn_img('error-button-top.svg',{'width': 290, 'height': 150}) }}
+            </div>
+            <p>{{ back_label }}</p><span class="button-triangle">▶</span>
+        </div>
+    </a>
+</div>
+<!--前へ戻るボタン end-->
+
+{% endblock %}

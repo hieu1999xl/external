@@ -1,0 +1,27 @@
+{#
+    ポップアップ用共通
+#}
+<script>
+    (function ($) {
+        $(function() {
+            $('.js-option-popup').on('click', function () {
+                var popupId = $(this).data('popup');
+                $(`#${popupId}`).addClass('active');
+                // 閉じるボタンにフォーカスを当てる
+                $('.alart-popup-close-button').focus();
+                return false;
+            });
+            $('.alart-popup-close-button').on('click', function () {
+                // ポップアップを閉じる
+                $('.option-popup-block').removeClass('active');
+                // 次のフォーカスターゲットを指定する
+                var focusmove = $(this).data('focusmove');
+                // フォーカスする
+                $('.' + focusmove).focus();
+            });
+            $('.entry-option-popup .background').on('click', function () {
+                $('.option-popup-block').removeClass('active');
+            });
+        });
+    })(jQuery);
+</script>

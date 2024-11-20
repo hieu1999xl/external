@@ -1,0 +1,5006 @@
+/* ************************* */
+/* 2020_10_release           */
+/* 20220119_縛りなし向けに編集 */
+/* ************************* */
+
+/*-------------------------------------------
+    レイアウト調整用
+-------------------------------------------*/
+/*PC・SPでの表示切り替え*/
+@media screen and (min-width: 768px) {
+  /*PC表示*/
+  .pc,
+  div.div-pc,
+  img.div-pc,
+  span.pc_dot,
+  table.overseas-plan-table .overseas-table-pc,
+  #cv dl dt a.pc,
+  span.pc_br,
+  .overseas-table-unselected{
+    display: "";
+  }
+
+  /*SP非表示*/
+  .sp,
+  div.div-sp,
+  img.div-sp,
+  span.sp_br,
+  .sp_btn,
+  #sp-menu,
+  #cv dl dt a.sp,
+  table.overseas-plan-table .overseas-table-sp,
+  img.img-mv-sp{
+    display: none;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  /*PC非表示*/
+  .pc,
+  div.div-pc,
+  img.div-pc,
+  span.pc_dot,
+  table.overseas-plan-table .overseas-table-pc,
+  span.pc_br,
+  #cv dl dt a.pc,
+  .overseas-table-unselected,
+  img.img-mv{
+    display: none;
+  }
+
+  /*SP表示*/
+  .sp,
+  div.div-sp,
+  img.div-sp,
+  span.sp_br,
+  #sp-menu,
+  .sp_btn,
+  #cv dl dt a.sp,
+  table.overseas-plan-table .overseas-table-sp,
+  img.img-mv-sp{
+    display: "";
+  }
+  img.div-sp {
+    height: auto;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  body{
+    min-width: 0;
+  }
+  .remark-text {
+    font-size: 0.9rem;
+    line-height: 13px;
+  }
+  .remark-text.campaign{
+    font-size: 0.9rem;
+    line-height: 2.0rem;
+  }
+  div.section-container {
+    max-width: 100%;
+    padding: 0 8%;
+  }
+  img.img-mv-sp{
+    width: 100%;
+    height: auto;
+  }
+  div.fuji-section-container-contact{
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .area-none.area-upper.breadcrumbs{
+    margin-bottom: -20px;
+  }
+  .arrow-move{
+    padding-left: 10px;
+    display: inline-block; 
+  }
+}
+
+/*パンくずリスト*/
+.List-Item {
+  display: inline-block;
+  font-size: 1.25rem;
+}
+.List-Item-Link {
+  display: inline-block;
+  text-decoration: none;
+  color: inherit;
+  vertical-align: middle;
+}
+ul.List li a span{
+  top: -5px;
+}
+ul.List li a span img{
+  image-rendering: -webkit-optimize-contrast;/*画像をシャープにする*/
+  width: 15px;
+  height: 15px;
+}
+
+
+/* Mypage footer  */
+footer.mypage-footer{
+  padding: 0;
+}
+div.mypage-footer-main{
+  width: 100%;
+  height: auto;
+  text-align: center;
+  background-color: #fff;
+  color: #000;
+  bottom: 0;
+  font-size: 12px;
+  padding: 7px 0;
+  display: flex;
+  justify-content: left;
+}
+@media (max-width: 767px) {
+  div.mypage-footer-main .wrapper {
+    width: 100%;
+    padding: 0px 4%;
+  }
+}
+div.mypage-footer-main .wrapper {
+  width: 100%;
+  max-width: 1100px;
+  text-align: left;
+  margin: 0 auto;
+}
+div.mypage-footer-main ul {
+  list-style: none;
+  text-align: left;
+  margin: 15px 0;
+  width: auto;
+}
+div.mypage-footer-main ul li {
+  display: inline-block;
+  font-size: 12px;
+  margin: 0 15px;
+  text-decoration: none;
+}
+div.mypage-footer-main ul li:first-child {
+  margin-left: 0;
+}
+div.mypage-footer-main a {
+  text-decoration: none;
+  color: #000;
+}
+div.mypage-footer-main ul li{
+  display: inline-block;
+  font-size: 12px;
+  margin: 0 15px;
+  text-decoration: none;
+}
+@media (max-width: 767px) {
+  div.mypage-footer-main ul {
+    text-align: center;
+  }
+  div.mypage-footer-main ul li.mypage-footer-copyright {
+    display: none;
+  }
+  div.form-container {
+    min-height: calc(100vh - 162px);
+  }
+}
+div.mypage-footer-main ul li.mypage-footer-copyright{
+  float: right;
+}
+div.mypage-footer-main .mypage-footer-copyright-sp{
+  display: none;
+  text-align: center;
+  font-weight: normal;
+  margin-bottom: 15px;
+}
+@media (max-width: 767px) {
+  div.mypage-footer-main div.mypage-footer-copyright-sp {
+    display: block;
+  }
+}
+div.entry-form-first-attention{
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  background: white;
+  border-radius: 0.75em;
+  box-shadow: 0 0 8px rgb(0,0,0,20%);
+}
+div.entry-form-first-attention a{
+  text-decoration: none;
+}
+div.entry-form-first-attention-image-area{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+p.entry-form-first-attention-image{
+  width: 50px;
+}
+p.entry-form-first-attention-title{
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+div.entry-form-first-attention-text{
+  margin-left: 15px;
+}
+div.entry-form-first-attention-text p{
+  text-align: left;
+  font-weight: bold;
+  margin: 10px 0;
+}
+p.attention{
+  line-height: 1.5rem;
+}
+p.password-title-remark {
+  font-size: 1.3rem;
+}
+div.topping-label {
+  position: relative;
+  height: 100%;
+  width: 110px;
+  background-color: #ffe401;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+div.topping-label img {
+  height: 30%;
+  z-index: 10;
+  position: relative;
+}
+div.topping-label::after{
+  position: relative;
+  content: "";
+  top: 0;
+  right: -20px;
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  background: #ffe401;
+  transform: skewX(-45deg);
+  z-index: 0;
+}
+@media screen and (max-width: 767px) {
+  div.entry-form-first-attention{
+    margin-top: 20px;
+    flex-direction: column;
+  }
+  div.entry-form-first-attention-image-area{
+    width: 100%;
+  }
+  p.entry-form-first-attention-image{
+    width: 30px;
+    height: 30px;
+  }
+  div.entry-form-first-attention-text{
+    margin: 0 20px;
+  }
+  div.entry-form-first-attention-text p{
+    font-size: 1.2rem;
+  }
+}
+
+.entry-button-container.complete .decoration-button-wrapper {
+  margin-left: 40px;
+}
+div#payment_deferred_attention {
+  padding: 10px 0 0;
+  display: block;
+  line-height: 1.7rem;
+}
+div#payment_deferred_attention .attention {
+  margin-top: 10px;
+  text-indent: unset;
+  padding-left: unset;
+}
+div#payment_deferred_attention .attention-head {
+  font-size: 1em;
+  line-height: 1.5;
+  margin: 0;
+}
+div#payment_deferred_attention .attention-body {
+  line-height: 1.5;
+  margin: 0;
+  padding: 0 0 0 1em;
+  list-style: none;
+}
+div#payment_deferred_attention .attention-body li {
+  position: relative;
+  text-indent: -1em;
+}
+div#payment_deferred_attention .attention-body li::before {
+  position: relative;
+  content: '・';
+}
+.mypage-payment-info-detail-deferred h2.form-h2{
+  text-align: center;
+  margin-bottom: 30px;
+}
+div.white-content-box-form-condo h2.form-h2-2 {
+  margin-top: 70px;
+}
+@media screen and (max-width: 767px){
+  div.white-content-box-form-condo h2.form-h2-2 {
+    margin-top: 50px;
+  }
+}
+.mypage-payment-info-detail-deferred span.text-deferred{
+  display: block;
+  text-align: center;
+  padding: 10px 0 0 0;
+  margin: 0.5em 0 0;
+  color: #333;
+}
+.mypage-payment-info-detail-deferred div.row{
+  align-items: baseline;
+}
+@media screen and (max-width: 767px){
+  .mypage-payment-info-detail-deferred h2.form-h2{
+    margin-bottom: 15px;
+  }
+  .mypage-payment-info-detail-deferred span.text-deferred{
+    display: block;
+    margin: 0.5em 0 1em;
+    color: #333;
+  }
+
+  div#payment_deferred_attention{
+    padding: 10px 0 0 10px;
+    display: inline-block;
+  }
+  div#payment_deferred_attention .attention {
+    margin-top: 8px;
+    padding-right: 10px;
+  }
+}
+/*条件表*/
+div.price-topping-2-body-right-row {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: solid 1px #000;
+}
+
+div.price-topping-2-body-right-row:last-child {
+  border-bottom: solid 1px #000;
+}
+div.price-topping-2-body-right-column {
+  text-align: left;
+  font-size: 1.3rem;
+}
+div.price-topping-2-body-right-column-remarks{
+  padding: 0;
+}
+div.price-topping-2-body-right-column:last-child {
+  box-sizing: border-box;
+  width: 80%;
+  border-left: solid 1px #000;
+  padding: 5px 7px;
+
+}
+div.price-topping-2-body-right-row p{
+  letter-spacing: 0;
+  font-size: 1.3rem;
+  margin-bottom: 0;
+}
+
+ul.table-option{
+  margin: 0;
+  padding-left:1.5em;
+  line-height: 1.5rem;
+}
+ul.table-option li{
+  margin: 5px 0;
+  line-height: 1.5em;
+}
+
+@media screen and (max-width: 767px) {
+  div.price-topping-2-body-right-column {
+    font-size: 1.2rem;
+  }
+  div.price-topping-2-body-left-text p {
+    font-size: 1.3rem;
+    line-height: 2.0rem;
+    width: auto;
+  }
+  div.price-topping-2-body-right-row p{
+    letter-spacing: 0;
+    font-size: 1.2rem;
+  }
+  .option-table{
+    width:100%;
+  }
+  .option-table img{
+    width: 80%;
+    padding: 0 10% 10%;
+    margin-top: 30px;
+  }
+  ul.table-option li{
+    margin: 0;
+    line-height: 1.5em;
+  }
+}
+/* Custom select */
+label.custom-check-box-v2 {
+  position: relative;
+  margin:0 15.5px 10px 2.5px;
+  cursor: pointer;
+}
+label.custom-check-box-v2 span,
+label.custom-check-box-v2-2 span {
+  display: inline-block;
+}
+label.custom-check-box-v2 input[type="checkbox"],
+label.custom-check-box-v2 input[type="radio"],
+label.custom-check-box-v2-2 input[type="checkbox"],
+label.custom-check-box-v2-2 input[type="radio"] {
+  opacity: 0;
+}
+label.custom-check-box-v2 input[type="checkbox"] + span::before,
+label.custom-check-box-v2 input[type="radio"] + span::before,
+label.custom-check-box-v2-2 input[type="checkbox"] + span::before,
+label.custom-check-box-v2-2 input[type="radio"] + span::before {
+  z-index: 0;
+  background-color: #fff;
+  width: 27px;
+  height: 27px;
+  margin-left: 35%;
+}
+label.custom-check-box-v2 input[type="checkbox"] + span::after,
+label.custom-check-box-v2 input[type="radio"] + span::after,
+label.custom-check-box-v2-2 input[type="checkbox"] + span::after,
+label.custom-check-box-v2-2 input[type="radio"] + span::after {
+  z-index: 1;
+  margin: 1px 17px;
+  width: 12px;
+  height: 17px;
+}
+label.custom-check-box-v2 input[type="checkbox"] + span::before,
+label.custom-check-box-v2 input[type="checkbox"] + span::after,
+label.custom-check-box-v2 input[type="radio"] + span::before,
+label.custom-check-box-v2 input[type="radio"] + span::after,
+label.custom-check-box-v2-2 input[type="checkbox"] + span::before,
+label.custom-check-box-v2-2 input[type="checkbox"] + span::after,
+label.custom-check-box-v2-2 input[type="radio"] + span::before,
+label.custom-check-box-v2-2 input[type="radio"] + span::after {
+  position: absolute;
+  top: 17px;
+  left: 4px;
+  display: inline-block;
+  content: '';
+  box-sizing: border-box;
+}
+label.custom-check-box-v2.plan input[type="checkbox"] + span::before,
+label.custom-check-box-v2.plan input[type="radio"] + span::before,
+label.custom-check-box-v2.option input[type="checkbox"] + span::before,
+label.custom-check-box-v2.option input[type="radio"] + span::before,
+label.custom-check-box-v2-2.plan input[type="checkbox"] + span::before,
+label.custom-check-box-v2-2.plan input[type="radio"] + span::before,
+label.custom-check-box-v2-2.option input[type="checkbox"] + span::before,
+label.custom-check-box-v2-2.option input[type="radio"] + span::before {
+  z-index: 0;
+  background-color: lightgray;
+  width: 28px;
+  height: 28px;
+  margin-left: 35%;
+  position: relative;
+  left: -24px;
+  top: 12px;
+}
+
+@media screen and (max-width: 767px){
+  label.custom-check-box-v2.plan input[type="checkbox"] + span::before,
+  label.custom-check-box-v2.plan input[type="radio"] + span::before,
+  label.custom-check-box-v2.option input[type="checkbox"] + span::before,
+  label.custom-check-box-v2.option input[type="radio"] + span::before,
+  label.custom-check-box-v2-2.plan input[type="checkbox"] + span::before,
+  label.custom-check-box-v2-2.plan input[type="radio"] + span::before,
+  label.custom-check-box-v2-2.option input[type="checkbox"] + span::before,
+  label.custom-check-box-v2-2.option input[type="radio"] + span::before {
+    z-index: 0;
+    background-color: lightgray;
+    width: 22px;
+    height: 22px;
+    margin-left: 35%;
+    position: relative;
+    left: -28px;
+    top: -9px;
+  }
+  div.edit-partial-plan form div.form-capacity-select-checkbox-area label
+  div.edit-partial-plan label.custom-check-box-v2.plan input[type="radio"] + span::before{
+    width: 18px;
+    height: 18px;
+  }
+  div.edit-partial-plan label.custom-check-box-v2.plan input[type="radio"] + span::after{
+    width: 7px;
+    height: 12px;
+    top: -7px;
+    left: 3px;
+  }
+}
+
+label.custom-check-box-v2.option input[type="checkbox"] + span::before,
+label.custom-check-box-v2.option input[type="checkbox"] + span::after,
+label.custom-check-box-v2.option input[type="radio"] + span::before,
+label.custom-check-box-v2.option input[type="radio"] + span::after,
+label.custom-check-box-v2-2.option input[type="checkbox"] + span::before,
+label.custom-check-box-v2-2.option input[type="checkbox"] + span::after,
+label.custom-check-box-v2-2.option input[type="radio"] + span::before,
+label.custom-check-box-v2-2.option input[type="radio"] + span::after {
+  position: absolute;
+  top: 5px;
+  left: 1px;
+  display: inline-block;
+  content: '';
+  box-sizing: border-box;
+}
+label.custom-check-box-v2.option input[type="checkbox"] + span::after,
+label.custom-check-box-v2.option input[type="radio"] + span::after,
+label.custom-check-box-v2-2.option input[type="checkbox"] + span::after,
+label.custom-check-box-v2-2.option input[type="radio"] + span::after {
+  top: 9px;
+  left: 3px;
+}
+
+@media screen and (max-width: 767px){
+  label.custom-check-box-v2 input[type="checkbox"] + span::before,
+  label.custom-check-box-v2 input[type="checkbox"] + span::after,
+  label.custom-check-box-v2 input[type="radio"] + span::before,
+  label.custom-check-box-v2 input[type="radio"] + span::after,
+  label.custom-check-box-v2-2.option input[type="checkbox"] + span::after,
+  label.custom-check-box-v2-2.option input[type="radio"] + span::after {
+    top: -8px;
+    left: 4px;
+    display: inline-block;
+    content: '';
+    box-sizing: border-box;
+  }
+
+  label.custom-check-box-v2.option input[type="checkbox"] + span::before,
+  label.custom-check-box-v2.option input[type="checkbox"] + span::after,
+  label.custom-check-box-v2-2.option input[type="checkbox"] + span::after,
+  label.custom-check-box-v2-2.option input[type="radio"] + span::after{
+    top: -52px;
+    left: 22px;
+    display: inline-block;
+    content: '';
+    box-sizing: border-box;
+    width: 7px;
+    height: 11px;
+  }
+  label.custom-check-box-v2 input[type="checkbox"] + span::before,
+    label.custom-check-box-v2 input[type="radio"] + span::before,
+    label.custom-check-box-v2-2 input[type="checkbox"] + span::before,
+    label.custom-check-box-v2-2 input[type="radio"] + span::before {
+    width: 18px;
+    height: 18px;
+    left: -18px;
+    top: -7px;
+  }
+  label.custom-check-box-v2.option input[type="checkbox"] + span::before,
+  label.custom-check-box-v2.option input[type="radio"] + span::before,
+  label.custom-check-box-v2-2.option input[type="checkbox"] + span::before,
+  label.custom-check-box-v2-2.option input[type="radio"] + span::before {
+    width: 24px;
+    height: 24px;
+    left: 2px;
+    top: 22px;
+  }
+  label.custom-check-box-v2.option input[type="checkbox"] + span::after,
+  label.custom-check-box-v2.option input[type="radio"] + span::after {
+    top: 22px;
+    left: 8px;
+  }
+}
+@media screen and (max-width: 320px){
+  label.custom-check-box-v2.option input[type="checkbox"] + span::after,
+  label.custom-check-box-v2.option input[type="radio"] + span::after {
+    top: 30px;
+    left: 8px;
+    width: 7px;
+  }
+}
+
+@media screen and (max-width: 320px){
+  label.custom-check-box-v2 input[type="checkbox"] + span::before,
+  label.custom-check-box-v2 input[type="checkbox"] + span::after,
+  label.custom-check-box-v2 input[type="radio"] + span::before,
+  label.custom-check-box-v2 input[type="radio"] + span::after,
+  label.custom-check-box-v2-2 input[type="checkbox"] + span::before,
+  label.custom-check-box-v2-2 input[type="checkbox"] + span::after,
+  label.custom-check-box-v2-2 input[type="radio"] + span::before,
+  label.custom-check-box-v2-2 input[type="radio"] + span::after {
+    left: -1px;
+  }
+  label.custom-check-box-v2.option input[type="checkbox"] + span::before,
+  label.custom-check-box-v2.option input[type="radio"] + span::before,
+  label.custom-check-box-v2-2.option input[type="checkbox"] + span::before,
+  label.custom-check-box-v2-2.option input[type="radio"] + span::before {
+    top: 30px;
+  }
+}
+label.custom-check-box-v2 input[type="checkbox"] + span::after,
+label.custom-check-box-v2 input[type="radio"] + span::after,
+label.custom-check-box-v2-2 input[type="checkbox"] + span::after,
+label.custom-check-box-v2-2 input[type="radio"] + span::after {
+  z-index: 1;
+  margin: 1px 17px;
+  width: 8px;
+  height: 13px;
+}
+label.custom-check-box-v2 input[type="checkbox"]:checked + span::after,
+label.custom-check-box-v2 input[type="radio"]:checked + span::after,
+label.custom-check-box-v2-2 input[type="checkbox"]:checked + span::after,
+label.custom-check-box-v2-2 input[type="radio"]:checked + span::after {
+  border: 1.5px solid #000;
+  border-width: 0 1.5px 1.5px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+p.custom-check-box-v2-select-text {
+  font-weight: 600;
+  margin: 5px 5px 0 0;
+  padding: 4px 18px 4px 3px;
+}
+p.custom-check-box-v2-select-text.text-size{
+  font-size: 1.2rem;
+  margin-left: 2px;
+}
+@media screen and (max-width: 767px) {
+  p.custom-check-box-v2-select-text.text-size{
+    font-size: 1rem;
+    margin-left: 6px;
+  }
+}
+p.custom-check-box-v2-select-text.adjust{
+  margin-top: 25px;
+}
+p.custom-check-box-v2-select-text.option{
+  padding: 4px 18px;
+}
+p.custom-check-box-v2-select-text.div-sp {
+  display: none;
+}
+@media screen and (max-width: 767px) {
+  label.custom-check-box-v2 {
+    position: relative;
+    margin:0 2.5px 10px;
+    cursor: pointer;
+  }
+  p.custom-check-box-v2-select-text {
+    padding: 4px 18px;
+    margin: 5px 5px 0;
+  }
+  p.custom-check-box-v2-select-text.div-sp {
+    display: block;
+  }
+  p.custom-check-box-v2-select-text.div-pc {
+    display: none;
+  }
+  label.custom-check-box-v2 input[type="checkbox"] + span::before,
+  label.custom-check-box-v2 input[type="radio"] + span::before,
+  label.custom-check-box-v2-2 input[type="checkbox"] + span::before,
+  label.custom-check-box-v2-2 input[type="radio"] + span::before{
+    margin: 0;
+  }
+  label.custom-check-box-v2 input[type="checkbox"] + span::after,
+  label.custom-check-box-v2 input[type="radio"] + span::after,
+  label.custom-check-box-v2-2 input[type="checkbox"] + span::after,
+  label.custom-check-box-v2-2 input[type="radio"] + span::after {
+    margin: 1px 8px;
+  }
+}
+div.decoration-button div.text span.text-step-body {
+  color: #fff;
+}
+/*ボタンの非活性化*/
+div.decoration-button-area-disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+/* Form capacity */
+div.form-capacity-notice {
+  display: flex;
+  align-items: center;
+  margin: 30px auto;
+  padding-top: 10px;
+}
+div.form-capacity-notice-icon {
+  width: 35px;
+}
+div.form-capacity-notice p {
+  margin: 0 10px;
+  letter-spacing: 0.05rem;
+  font-size: 1.4rem;
+}
+div.form-capacity-notice span.strong a{
+  text-decoration: underline;
+  font-size: 1.7rem;
+  font-weight: 600;
+}
+div.form-capacity-notice span.strong-mini {
+  font-weight: 600;
+}
+div.form-capacity-selects {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+div.form-capacity-select-area {
+  box-sizing: border-box;
+  width: 100%;
+  margin: 10px 0;
+  background-color: transparent;
+  cursor: pointer;
+  position: relative;
+  border-radius: 0.75em;
+}
+div.form-capacity-remarks {
+  text-align: right;
+  font-size: 1.1rem;
+}
+div.form-capacity-select-area.active,
+div.form-capacity-select-area.selected {
+  box-sizing: border-box;
+  border: solid 5px #ffe401;
+  transition: border 0.1s;
+  border-radius: 1.0em;
+  line-height: 0.5em;
+}
+.special-plan-select div.form-capacity-select-area.active,
+.special-plan-select div.form-capacity-select-area.selected {
+  border: solid 5px #ff003c;
+}
+div.form-capacity-select-image img {
+  width: 100%;
+}
+div.form-capacity-select-checkbox-area,
+div.topping-2-select-checkbox-area {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  position: absolute;
+  left: 10px;
+  margin-top: 78px;
+  pointer-events: none;
+  bottom: 18px;
+}
+div.form-capacity-pull-down-button-left,
+div.form-capacity-pull-down-button-right{
+  padding: 5px;
+  border: solid 1px black;
+  cursor: pointer;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 10px rgb(0 0 0 / 20%);
+}
+div.form-capacity-pull-down-button-left p,
+div.form-capacity-pull-down-button-right p{
+  pointer-events: auto;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+}
+div.form-capacity-description-body-left,
+div.form-capacity-description-body-right{
+  box-sizing: border-box;
+  background-color: #fff;
+  max-height: 100vh; /* for pull down animation */
+  transition: max-height 0.5s;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  border-radius: 0 0 0.75em 0.75em;
+  filter: drop-shadow(2px 5px 5px #c8c8c8);
+  z-index: 1;
+}
+div.form-capacity-description-body-left.hidden,
+div.form-capacity-description-body-right.hidden{
+  border: solid 5px transparent;
+  background-color: transparent;
+  max-height: 0;
+  transition: max-height 0.1s;
+}
+div.form-capacity-description-body-left img,
+div.form-capacity-description-body-right img{
+  width: 100%;
+  height: 100%;
+}
+.campaign + .entry-plan-select label.custom-check-box-v2 {
+  margin-bottom: 5px;
+}
+
+@media screen and (max-width: 767px) {
+  div.form-capacity-notice-icon {
+    width: 10%;
+  }
+  div.form-capacity-notice.payment div.form-capacity-notice-icon {
+    width: 25%;
+  }
+}
+
+/*内容詳細*/
+div.form-capacity-description-body-left table,
+div.form-capacity-description-body-right table{
+  border-spacing: 0;
+}
+div.form-capacity-description-body-left table th,
+div.form-capacity-description-body-left table td,
+div.form-capacity-description-body-right table th,
+div.form-capacity-description-body-right table td{
+  border-collapse: collapse;
+  padding: 7px;
+  width: 100%;
+}
+div.form-capacity-description-body-left table th,
+div.form-capacity-description-body-right table th{
+  border-right: 1px solid #787878;
+  border-bottom: 1px solid #787878;
+  width: 33%;
+}
+div.form-capacity-description-body-left table td,
+div.form-capacity-description-body-right table td{
+  border-bottom: 1px solid #787878;
+  width: 218px;
+}
+div.form-capacity-description-body-left table th.border-none,
+div.form-capacity-description-body-left table td.border-none,
+div.form-capacity-description-body-right table th.border-none,
+div.form-capacity-description-body-right table td.border-none{
+  border-bottom: none;
+}
+div.price-topping-2-body-right-row.adjust:last-child{
+  border-bottom: none;
+}
+div.form-capacity-description-body-left table th.border-top,
+div.form-capacity-description-body-left table td.border-top,
+div.form-capacity-description-body-right table th.border-top,
+div.form-capacity-description-body-right table td.border-top{
+  border-top: none;
+}
+div.form-capacity-description-body-right table td.free-zero{
+  width: 2.5em;
+  border-right: none;
+  vertical-align: middle;
+}
+span.pink-promotion{
+  font-size: 1rem;
+  color: #E43E5A;
+  font-weight: bold;
+  border-left: none;
+}
+div.form-capacity-description th,
+div.form-capacity-description td{
+  vertical-align: middle;
+}
+div.form-capacity-description th.cancel-fee{
+  height: 40px;
+}
+div.free-plan th{
+  height: 18.2px;
+}
+@media screen and (max-width: 767px) {
+  div.form-capacity-description-body-left,
+  div.form-capacity-description-body-right{
+    width: 100%;
+  }
+  div.form-capacity-description{
+    display: block;
+  }
+  div.form-capacity-select {
+    width: 100%;
+    display:flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  div.form-capacity-select-area {
+    height: auto;
+  }
+
+  div.form-capacity-description {
+    margin: 0;
+  }
+  div.form-capacity-select-area.active,
+  div.form-capacity-select-area.selected {
+    border-radius: 0.75em;
+  }
+  div.form-capacity-description-body-left table,
+  div.form-capacity-description-body-right table{
+    border-spacing: 0;
+    padding-top: 10px
+  }
+
+  div.form-capacity-description-body-left table th,
+  div.form-capacity-description-body-right table th,
+  div.form-capacity-description-body-left table td,
+  div.form-capacity-description-body-right table td{
+    padding: 5px;
+  }
+  div.form-capacity-description-body-left table th,
+  div.form-capacity-description-body-right table th{
+    width: 37%;
+  }
+  div.form-capacity-description-body-right table td.pink-promotion{
+    padding: 5px 0;
+  }
+  div.form-capacity-description-body-left table th.border-top,
+  div.form-capacity-description-body-left table td.border-top,
+  div.form-capacity-description-body-right table th.border-top,
+  div.form-capacity-description-body-right table td.border-top{
+    border-top: 1px solid #787878;
+  }
+}
+@media screen and (max-width: 320px) {
+  div.left-plan-column{
+    width: fit-content;
+  }
+  div.form-capacity-description-body-left table th,
+  div.form-capacity-description-body-right table th{
+    width: 40%;
+  }
+  div.form-capacity-description-body-left table th,
+  div.form-capacity-description-body-right table th,
+  div.form-capacity-description-body-left table td,
+  div.form-capacity-description-body-right table td{
+    padding: 5px;
+  }
+}
+
+/* Topping 2 */
+div.topping-2-select,
+div.free-plan-select{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+div.topping-2-select-area,
+div.topping-2-select-area-relief-option,
+div.topping-2-select-area-cloud,
+div.topping-2-select-area-insurance,
+div.topping-2-select-area-marugoto {
+  width: 100%;
+  justify-content: space-between;
+  cursor: pointer;
+  margin-bottom: 10px;
+  position: relative;
+  filter: drop-shadow(0 0 5px rgba(0,0,0,20%));
+
+}
+div.topping-2-select-area.active,
+div.topping-2-select-area.selected,
+div.topping-2-select-area-2.active,
+div.topping-2-select-area-2.selected,
+div.topping-2-select-area-relief-option.active,
+div.topping-2-select-area-relief-option.selected,
+div.topping-2-select-area-insurance.active,
+div.topping-2-select-area-insurance.selected,
+div.topping-2-select-area-cloud.active,
+div.topping-2-select-area-cloud.selected,
+div.topping-2-select-area-marugoto.active,
+div.topping-2-select-area-marugoto.selected {
+  box-sizing: border-box;
+  border: solid 5px #ffe401;
+  transition: border 0.1s;
+  border-radius: 1.25em;
+  line-height: 0;
+}
+div.topping-2-select-image {
+  height: 100%;
+  width: 50%;
+  background-color: #e6e6e6;
+  cursor: pointer;
+}
+div.topping-2-select-image img{
+  height: 100%;
+}
+div.topping-2-select-label {
+  height: 100%;
+  width: 50%;
+  background-color: #000;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.2s linear;
+  cursor: pointer;
+}
+div.topping-2-select-label p {
+  font-size: 2.0rem;
+  font-weight: bold;
+}
+/* div.topping-2-select-checkbox-area {
+  position: relative;
+  bottom: 77px;
+  left: 25px;
+  pointer-events: none;
+} */
+div.topping-2-select-checkbox-area label,
+div.topping-2-select-checkbox-area-2 label {
+  cursor: pointer;
+}
+div.topping-2-select-area.active div.topping-2-select-label,
+div.topping-2-select-area-2.active div.topping-2-select-label,
+div.topping-2-select-area-2.selected div.topping-2-select-label {
+  background-color: #ff003c;
+  transition: 1;
+  transition: 0.2s linear;
+}
+@media screen and (max-width: 767px) {
+  div.topping-2-head-text {
+    width: 100%;
+    flex-wrap: wrap;
+  }
+  div.topping-2-head-text-left {
+    width: 100%;
+  }
+  div.topping-2-head-text-right {
+    width: 100%;
+    margin: 30px 0;
+  }
+  div.topping-2-select {
+    width: 100%;
+  }
+  div.topping-2-select-area,
+  div.topping-2-select-area-2,
+  div.topping-2-select-area-cloud,
+  div.topping-2-select-area-marugoto {
+    width: 100%;
+    height: auto;
+    flex-wrap: wrap;
+    margin: 20px auto;
+  }
+  div.topping-2-select-area img,
+  div.topping-2-select-area-2 img,
+  div.topping-2-select-area-cloud img,
+  div.topping-2-select-area-marugoto img {
+    width: 100%;
+  }
+  div.topping-2-select-image {
+    width: 100%;
+  }
+  div.topping-2-select-label {
+    width: 100%;
+    height: 70px;
+  }
+  div.topping-2-select-checkbox-area,
+  div.topping-2-select-checkbox-area-2{
+    bottom: 91px;
+  }
+  div.topping-2-select-checkbox-area{
+    bottom: 23px;
+    left: 10px;
+  }
+  div.topping-2-select div.topping-2-select-checkbox-area,
+  div.topping-2-select div.topping-2-select-checkbox-area-2 {
+    justify-content: center;
+  }
+  div.topping-2-select p.custom-check-box-v2-select-text {
+    text-align: center;
+  }
+  div.entry-form-title{
+    margin-bottom: 2px;
+  }
+  div.edit-partial-device-option form div.mypage-user-container div.entry-form-title,
+  div.edit-partial-device-option-cloud form div.mypage-user-container div.entry-form-title{
+    margin: 20px 0 17px;
+  }
+  div.topping-2-select-area.active,
+  div.topping-2-select-area.selected,
+  div.topping-2-select-area-2.active,
+  div.topping-2-select-area-2.selected,
+  div.topping-2-select-area-cloud.active,
+  div.topping-2-select-area-cloud.selected,
+  div.topping-2-select-area-marugoto.active,
+  div.topping-2-select-area-marugoto.selected {
+  border-radius: 1.2em;
+  line-height: 0;
+  }
+  div.topping-2-select-area {
+    border: solid 5px transparent;
+    box-sizing: border-box;
+  }
+  form[action*="/corp/options"] div.topping-2-select-area.selected {
+    border-radius: .9em;
+  }
+  div.topping-2-select-checkbox-area {
+    
+  }
+  label.custom-check-box-v2.option input[type="checkbox"] + span::before,
+  label.custom-check-box-v2.option input[type="radio"] + span::before {
+    left: 0px;
+    top: 20px;
+  }
+}
+/* Plan summary */
+div.plan-summary-area {
+  position: relative;
+  box-sizing: border-box;
+  width: 100%;
+  background-color: #F2F2F2;
+  border-radius: 0 0.75em;
+  filter: drop-shadow(4px 4px 4px rgb(0,0,0,20%));
+}
+div.plan-summary-area p.summary-row-title{
+  font-weight: bold;
+  color: white;
+  text-align: center;
+  font-size: 1.8rem;
+  margin-top: 20px;
+}
+div.plan-summary-area p.attention{
+  font-weight: bold;
+  font-size: 1.2rem;
+  padding: 0 10px 10px;
+}
+div.plan-summary-area p.attention.cancel{
+  padding-bottom: 0;
+  margin-top: 10px;
+}
+div.plan-summary-area-title {
+  width: 100%;
+  height: 50px;
+  background-color: #00bfbf;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.0rem;
+  font-weight: bold;
+  border-radius: 0.75em 0.75em 0 0;
+  padding: 5px 0;
+  position: relative;
+  z-index: 2;
+  margin-top: 70px;
+}
+@media screen and (max-width: 767px) {
+  div.plan-summary-area p.attention.sp-line{
+    border-bottom: 1px solid #787878;
+  }
+  div.plan-summary-area-title{
+    margin-top: 45px;
+  }
+
+}
+
+/* Plan summary table */
+
+div.plan-summary-area-table {
+  width: 90%;
+  margin: auto;
+  padding: 5%;
+  background-color: #FFFFFF;
+  border-radius: 0 0 0.75em 0.75em;
+  filter: drop-shadow(0px 0px 5px #B3B3B3);
+}
+div.plan-summary-area-table.plan-confirm{
+  filter: none;
+  background-color: transparent;
+  padding: 0;
+  margin: 0 0 1em;
+  width: 100%;
+  border-radius: 0;
+}
+
+div.plan-summary-area-table .contact{
+  width: 90%;
+  margin: auto;
+  padding: 5% 0px;
+}
+
+div.plan-summary-area-table.cancel {
+  width: 90%;
+  padding: 0;
+  background-color: #F3F3F3;
+}
+div.plan-summary-area-table.confirm {
+  margin: 0;
+}
+@media screen and (max-width: 767px){
+  div.plan-summary-area-table.cancel {
+    width: 85%;
+    margin: 0 auto;
+  }
+}
+
+
+/*選択中のプランを表示*/
+@media screen and (min-width: 767px){
+  div.plan-summary-table-row-wide{
+    width: 92%;
+    padding: 0;
+  }
+  div.plan-summary-table-row.entry-payment{
+    border-top: 1px solid #00bfbf;
+    border-radius: 0;
+  }
+
+  div.plan-summary-table-row .cancel{
+    margin: 0;
+  }
+
+}
+div.plan-summary-area-table.contract{
+  padding: 0;
+  filter: none;
+}
+@media screen and (max-width: 767px){
+  div.plan-summary-table-row.entry-payment{
+    display: flex;
+  }
+
+  div.plan-summary-area-table{
+    width: 90%;
+  }
+  div.plan-summary-area-table.contract{
+    margin: 1em 0;
+    width: 100%;
+  }
+}
+div.plan-summary-table-row.cancel{
+  width: 90%;
+  border: 1px solid #00bfbf;
+  background-color: transparent;
+  margin: 0 0 20px 0;
+  justify-content: left;
+  padding: 0 3%;
+}
+
+div.plan-summary-table-row.cancel div.summary-table-column-left{
+  width: 24%;
+  display: block;
+}
+
+@media screen and (min-width: 767px) {
+  div.plan-summary-table-row.monthly-payment,
+  div.plan-summary-table-row.entry-payment{
+    margin-left: 20px;
+  }
+}
+div.plan-summary-table-row.monthly-payment{
+  background-color: white;
+  border: none;
+}
+@media screen and (max-width: 767px) {
+  div.plan-summary-table-row.monthly-payment{
+    display: flex;
+  }
+  div.plan-summary-table-row.cancel{
+    width: 95%;
+    margin: 0 0 1em 0;
+    padding: 2.5%;
+  }
+  div.plan-summary-table-row.cancel div.summary-table-column-left{
+    width: 100%;
+    padding: 0 0 0.5em;
+    display: block;
+  }
+}
+div.cancel p {
+  color: #000;
+}
+div.plan-summary-table-row.monthly-payment{
+    display: flex;
+  }
+div.plan-summary-table-row-wide div.summary-table-column-left {
+  width: 38%;
+}
+div.plan-summary-table-row .cancel div.summary-table-column-left {
+  font-size: 1.45rem;
+  font-weight: bold;
+}
+@media screen and (max-width: 767px) {
+
+
+  div.summary-table-column-left {
+    padding: 0.25em 0;
+  }
+
+  div.plan-summary-table-row-wide div.summary-table-column-left {
+    width: 100%;
+  }
+  div.summary-table-column.plan-confirm{
+    display: block;
+  }
+  div.summary-table-column.summary-table-column-right p,
+  div.summary-table-column-right p{
+    font-size: 1.25em;
+    font-weight: bold;
+  }
+  .entry-payment div.plan-summary-table-row {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+  .entry-payment div.summary-table-column-left.sp-line {
+    width: 50%;
+    border-bottom:none;
+  }
+
+}
+
+div.summary-table-column.summary-table-column-left.adjust.price.white{
+  background-color: white;
+}
+div.summary-table-column-left.price{
+  width: 59%;
+  text-align: left;
+
+}
+div.summary-table-column-left.price.total{
+  justify-content: flex-end;
+}
+
+div.summary-table-column-right.price{
+  width: 38.3%;
+}
+@media screen and (max-width: 767px){
+  div.six-month{
+    width: 140px;
+  }
+}
+div.six-month,
+div.seven-month,
+div.breakdown-list{
+  width: 100%;
+  text-align: right;
+}
+div.breakdown-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #e4e4e4;
+  padding: 0.5rem 0;
+}
+div.breakdown-list p:first-child {
+  text-align: left;
+  padding-left: 20px;
+}
+div.seven-month p{
+  font-size: 1.3rem;
+}
+div.summary-table-long-right {
+  width: 100%;
+  color: #000;
+  justify-content: flex-start;
+  height: 50px;
+}
+div.summary-table-column-right.summary-table-column-yellow {
+  background-color: #ffe401;
+}
+div.summary-table-column-right.summary-table-column-yellow p {
+  font-size: 2.4rem;
+  font-weight: bold;
+}
+span.summary-text-tie-period{
+  font-weight: normal;
+}
+
+@media screen and (max-width: 767px) {
+
+  div.summary-table-column.summary-table-column-right.price.cancel-fee{
+    position: relative;
+    top: -45px;
+  }
+  div.summary-table-column{
+    display: block;
+  }
+  div.summary-table-column-center{
+    width: auto;
+    text-align: left;
+    margin-right: 2.5px;
+    padding: 0px;
+  }
+  div.summary-table-column-center.campaign-row{
+    width: 100%;
+  }
+  div.summary-table-column-right{
+    width: auto;
+    height: auto;
+    text-align: right;
+  }
+  div.summary-table-column-left.price.total{
+    justify-content: flex-start;
+  }
+
+  .monthly-pay div.summary-table-column-left.sp-line{
+    width: 50%;
+    border-bottom: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  div.seven-month{
+    text-align: center;
+    margin: 0.5em 0;
+  }
+  div.seven-month p{
+    font-size: 1.4rem;
+    font-weight: bold;
+  }
+  div.breakdown-list{
+    width: 100%;
+  }
+  div.breakdown-list.entry-corp-breakdown{
+    width: 125%;
+  }
+
+  div.flex-box-select.margin-down.total-pricediv div.left-plan-column{
+    width: 40%;
+  }
+  div.flex-box-select.margin-down.total-price div.summary-table-column-right{
+    width: 100%;
+  }
+}
+
+/* Plan price summary */
+div.plan-price-summary-area-table {
+  width: 40%;
+  margin: 0 auto;
+  padding: 10px 0;
+  color: #909090
+}
+div.price-summary-table-row {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: solid 1px #909090;
+  padding: 10px 0;
+  margin-top: 2.5px;
+}
+div.price-summary-table-row:first-child{
+  margin-top: 5px;
+}
+div.campaign-table2::before {
+  top: 0;
+}
+div.campaign-table2::after {
+  display: none;
+}
+div.price-summary-table-row:last-child  {
+  border-bottom: solid 1px #909090;
+}
+div.price-summary-table-column {
+  width: 50%;
+  height: 30px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  box-sizing: border-box;
+}
+div.summary-table-column .selected{
+  font-weight: normal;
+  font-size: 1em;
+}
+div.price-summary-table-column-left {
+  width: 50%;
+  font-weight: bold;
+}
+div.price-summary-table-column-right {
+  width: 50%;
+  justify-content: center;
+}
+@media screen and (max-width: 767px) {
+  div.plan-price-summary-area-table {
+    width: 90%;
+  }
+  div.price-summary-table-column-left {
+    width: 50%;
+  }
+  div.price-summary-table-column-right {
+    width: 50%;
+  }
+  .plan-table div.summary-table-column.summary-table-column-center.adjust{
+    width: 55%;
+  }
+}
+/* Plan total summary */
+div.plan-total-summary-area-table {
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px 3.5%;
+  background-color: #1E1E1E;
+  box-sizing: border-box;
+  color: white;
+  border-radius: 0 0 0.75em 0.75em;
+  display: flex;
+  justify-content: flex-end;
+}
+div.hikari-campaign-table{
+  justify-content: space-between;
+}
+div.plan-total-summary-area-table-detail{
+  width: 43%;
+}
+div.plan-total-summary-area-table-change{
+  width: 14%;
+}
+p.campaign-price-change{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 2.2rem;
+  height: 70%;
+}
+p.campaign-price-change.sp{
+  display: none;
+}
+div.total-summary-table-row {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 3px 0;
+}
+div.total-summary-table-column {
+  width: 50%;
+  height: 30px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  box-sizing: border-box;
+}
+p.campaign-table-sub-title{
+  font-size: 2.2rem;
+  font-weight: bold;
+  margin: 15px 0;
+  text-align: center;
+}
+p.after-hikari-monthly-price{
+  text-align: right;
+  line-height: 1.3rem;
+}
+div.total-summary-table-column-left {
+  justify-content: center;
+  font-weight: bold;
+  width: 60%;
+  flex-direction: column;
+  align-items: flex-start;
+}
+div.total-summary-table-column-right {
+  justify-content: flex-end;
+  font-size: 2.0rem;
+  font-weight: bold;
+}
+.small-price-monthly{
+  font-size: 1.1rem;
+  line-height: 1.2rem;
+}
+.small-price{
+  font-size:1.3rem;
+}
+.small-price-attention{
+  font-size: 1.0rem;
+}
+div.total-summary-table-column-right span.summary-text-monthly-fee,
+div.total-summary-table-column-right span.summary-text-initial-fee,
+div.total-summary-table-column-right span.summary-text-tax,
+div.total-summary-table-column-right span.summary-text-after-hikari-monthly-fee,
+div.total-summary-table-column-right span.summary-text-after-hikari-tax{
+  font-size: 2.6rem;
+}
+div.total-summary-table-row-strong {
+  margin: 5px 0;
+}
+div.total-summary-table-row-strong div.total-summary-table-column-left {
+  font-size: 2.2rem;
+}
+
+div.total-summary-table-row-strong span.summary-text-total,
+div.total-summary-table-row-strong span.summary-text-after-hikari-total{
+  font-size: 3.3rem;
+  color: #FFE500;
+  font-weight: 600;
+}
+@media screen and (max-width: 767px) {
+  div.plan-total-summary-area-table{
+    flex-direction: column;
+  }
+  div.total-summary-table-column-left {
+    width: 50%;
+  }
+  div.total-summary-table-column-right {
+    width: 50%;
+  }
+  div.total-summary-table-row-strong div.total-summary-table-column-right {
+    font-size: 2.8rem;
+  }
+  div.total-summary-table-column-right span.summary-text-monthly-fee,
+  div.total-summary-table-column-right span.summary-text-initial-fee,
+  div.total-summary-table-column-right span.summary-text-tax,
+  div.total-summary-table-column-right span.summary-text-after-hikari-monthly-fee,
+  div.total-summary-table-column-right span.summary-text-after-hikari-tax{
+    font-size: 2.0rem;
+  }
+  div.total-summary-table-row-strong span.summary-text-total,
+  div.total-summary-table-row-strong span.summary-text-after-hikari-total{
+    font-size: 2.8rem;
+  }
+  div.total-summary-table-row-strong div.total-summary-table-column-right{
+    font-size: 2.2rem;
+  }
+  .small-price{
+    font-size: 1.2rem;
+  }
+}
+
+.recommendation-tag {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50px;
+  height: 50px;
+}
+@media screen and (max-width: 767px) {
+  .recommendation-tag {
+    top: -35px;
+  }
+}
+
+/* Form input */
+div.validation-error-area{
+  margin-top: -2px;
+}
+@media screen and (max-width: 767px) {
+  div.validation-error-area.corp-user{
+    margin-top: 5px;
+  }
+  p.validation-error-area.corp-user.card-error#corporate-validator-area-invoice{
+    display: block;
+  }
+  div.validation-error-area.corp-user.card-error,
+  p.validation-error-area.corp-user.card-error#corporate-validator-area-invoice{
+    margin-top: 25px;
+  }
+  div#user-info-radio-error {
+    margin-top: 25px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .tag-required-box,
+  .tag-optional-box{
+    margin-bottom: 10px;
+  }
+}
+
+/*プラン表の金額　文字サイズ調整*/
+span.summary-text-monthly-fee,
+span.summary-text-monthly-tax-fee,
+span.summary-text-device-option-price,
+span.summary-text-device-option-price-marugoto,
+span.summary-text-device-option-price01,
+span.summary-text-device-option-price02,
+span.summary-text-device-option-price-cloud,
+span.summary-text-initial-fee,
+span.summary-text-cancel-tax-fee,
+span.summary-text-monthly-tax-total,
+span.summary-text-postage,
+.summary-text-campaign-tax-total,
+.monthly-campaign-after,
+span.summary-text-insurance-option-price{
+  font-weight: bold;
+  font-size: 1.35em;
+}
+span.summary-text-postage span{
+  font-weight: normal;
+  font-size: 1.3rem;
+}
+span.summary-text-monthly-tax-total,
+.summary-text-campaign-tax-total,
+.monthly-campaign-after,
+.pre-payment.insurance-row div.seven-month p{
+  font-size: 1.7em;
+}
+div.summary-table-column span.plan-tax,
+div.breakdown-list p:last-child span.plan-tax,
+div.summary-table-column-right span.plan-tax {
+  font-size: 1.4rem;
+  font-weight: normal;
+}
+div.breakdown-list p:last-child span,
+.pre-payment.insurance-row div.seven-month p {
+  font-weight: bold;
+}
+div.plan-summary-table-row-wide div.summary-table-column-left.sr-op,
+div.plan-summary-table-row-wide div.summary-table-column-left.dls,
+div.plan-summary-table-row-wide div.summary-table-column-left.cbcp {
+  width: 100%;
+}
+@media screen and (min-width: 767px){
+  .entry-plan-select{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+}
+@media screen and (max-width: 767px){
+  .entry-plan-select.twitter{
+    display: block;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+}
+.entry-plan-select div.form-capacity-area{
+  width: 100%;
+  position: relative;
+}
+@media screen and (max-width: 767px){
+  .entry-plan-select div.form-capacity-area.twitter{
+    width: 100%;
+    display:flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+}
+div.entry-plan-select div.form-capacity-area img{
+  width: 245px;
+  position: relative;
+  z-index: 1;
+}
+
+div.select-standard-left img,
+div.select-free img{
+  width: 215px;
+}
+
+@media screen and (max-width: 767px){
+  div.entry-plan-select div.form-capacity-area img{
+    width: 235px;
+  }
+  div.edit-partial-plan div.form-capacity-area div.select-standard-left img,
+  div.edit-partial-plan div.form-capacity-area div.select-free img{
+    width: 210px;
+  }
+  span.summary-text-monthly-fee,
+  span.summary-text-monthly-tax-fee,
+  span.summary-text-device-option-price,
+  span.summary-text-device-option-price-marugoto,
+  span.summary-text-device-option-price-cloud,
+  span.summary-text-initial-fee,
+  span.summary-text-cancel-tax-fee,
+  span.summary-text-monthly-tax-total,
+  span.summary-text-postage{
+    font-size: 1.2em;
+  }
+  span.summary-text-monthly-tax-total{
+    font-size: 1.5em;
+  }
+}
+@media screen and (max-width: 320px){
+  span.summary-text-monthly-tax-total{
+    font-size: 1.4em;
+  }
+  div.edit-partial-plan div.form-capacity-area img{
+    width: 190px;
+  }
+  div.edit-partial-plan div.form-capacity-area div.select-standard-right img{
+    width: 85px;
+    top: -5px;
+    left: 10px;
+  }
+}
+.form-capacity-area.title-cloudplan.campaign {
+  border: none;
+  text-align: center;
+  position: relative;
+}
+.form-capacity-area.title-cloudplan span{
+  font-size: 1.2em;
+}
+.form-capacity-area.title-cloudplan h2{
+  font-size: 2.5em;
+  font-weight: bold;
+  margin: 0.5em 0 0;
+}
+.form-capacity-area.title-cloudplan.campaign h2 + p {
+  font-size: 2.4rem;
+  font-weight: bold;
+  line-height: 44px;
+}
+
+@media screen and (max-width: 767px) {
+  .form-capacity-area.title-cloudplan.campaign::before,
+  .edit-partial-plan .form-capacity-area.title-cloudplan.campaign::before {
+    height: 70px;
+    top: 10px;
+    left: 3px;
+  }
+  .form-capacity-area.title-cloudplan.campaign::after,
+  .edit-partial-plan .form-capacity-area.title-cloudplan.campaign::after {
+    height: 70px;
+    top: 10px;
+    right: 3px;
+  }
+  .form-capacity-area.title-cloudplan.campaign::before,
+  .form-capacity-area.title-cloudplan.campaign::after{
+    top: 10px;
+  }
+}
+div.form-capacity-pull-down-button-left,
+div.form-capacity-pull-down-button-right{
+  text-align: center;
+  background-color: #00bfbf;
+  color: white;
+  padding: 10px 0;
+  margin-top: 10px;
+  border: none;
+  border-radius: 0.75em;
+  z-index: 1;
+  position: relative;
+  width: 60%;
+  margin: auto;
+}
+div.form-capacity-description-body-left,
+div.form-capacity-description-body-right{
+  width: 100%;
+  margin: 20px auto 90px;
+  justify-content: flex-start;
+  border-radius: 0.75em;
+}
+div.form-capacity-description-body-left.info-cloudplan.hidden{
+  margin-bottom: 30px;
+}
+div.form-capacity-description-body-left.info-cloudplan{
+  display: block;
+}
+div.form-capacity-pull-down-button-left img,
+div.form-capacity-pull-down-button-right img{
+  width: 13px;
+  margin: 0 5px;
+}
+div.form-capacity-pull-down-button-left.form-capacity-pull-down-button-open{
+  background-color: #ffffff;
+  color: #00bfbf;
+}
+.prepaid-plan-form div.form-plan-option-detail-button-insurance.form-plan-option-detail-button-open {
+  background-color: #ffffff;
+  color: #0046ff;
+}
+.form-capacity-pull-down-button-left img.pull-down-arrow-to-close{
+  transform: rotate(180deg);
+}
+.form-capacity-description .description-title{
+  display: flex;
+  align-items: center;
+  width: 90%;
+  margin: 15px auto;
+}
+
+.form-capacity-description .description-title img{
+  width: 50px;
+  margin-right: 0.5em;
+}
+.form-capacity-description .description-title span{
+  color: #00bfbf;
+  font-size: 1.2em;
+  margin-top: 0.5em;
+  font-weight: bold;
+}
+
+.form-capacity-description .description{
+  width: 90%;
+  margin: 1.2em auto;
+}
+.description dl{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+.description dl img{
+  width: 70%;
+  filter: drop-shadow(5px 2px 5px rgb(0,0,0,20%));
+}
+@media screen and (max-width: 767px) {
+  .description dl img{
+    width: 80%;
+  }
+}
+.description dl div{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.description dl div dt{
+  color: #00bfbf;
+  font-weight: bold;
+  line-height: 1.5;
+  font-size: 25px;
+}
+.description dl div dd{
+  margin: 0;
+}
+.description-button {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.description-button a{
+  color: #00bfbf;
+  text-decoration: underline;
+  font-size: 20px;
+}
+
+@media screen and (min-width: 767px){
+  div.entry-plan-select-detail{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    position: relative;
+    justify-content: space-between;
+    margin: 20px 0;
+    z-index: 1;
+  }
+}
+div.form-capacity-select{
+  display:flex;
+  width: 45%;
+  position: relative;
+  height: 175px;
+}
+div.form-capacity-select-image span{
+  position: absolute;
+  top: -25px;
+  right: -25px;
+  width: 22%;
+}
+@media screen and (max-width: 767px){
+  div.entry-plan-select{
+    margin: 15px auto;
+  }
+  div.entry-plan-select-detail{
+    margin: 0;
+  }
+  div.entry-plan-select-detail-standard,
+  div.entry-plan-select-detail-free{
+    width: 100%;
+  }
+  div.form-capacity-select{
+    flex-direction: column;
+    height: 26vw;
+    width: 100%;
+    margin: 10px 0;
+  }
+  div.form-capacity-select-checkbox-area {
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    pointer-events: none;
+    margin-top: 40px;
+    top: 20px;
+  }
+  p.custom-check-box-v2-select-text{
+    position: relative;
+    right: 75px;
+    top: 4px;
+  }
+  p.custom-check-box-v2-select-text.option{
+    position: relative;
+    top: 10px;
+    right: 11px;
+    bottom: 79px;
+    left: -16px;
+    font-size: 1rem;
+    pointer-events: none;
+  }
+  .wcp p.custom-check-box-v2-select-text.option {
+    top: -9px;
+  }
+  div.form-capacity-select-image span{
+    position: absolute;
+    top: -25px;
+    right: -12px;
+    width: 30%;
+  }
+  .form-capacity-area.title-cloudplan{
+    padding: 0 0 0.7em 1em;
+    line-height: 2.75em;
+    border-left: 13px solid #00bfbf;
+  }
+  .form-capacity-area.title-cloudplan h2{
+    margin: 0;
+    line-height: 1em;
+  }
+  .form-capacity-area.title-cloudplan.campaign h2 span {
+    line-height: 1.3em;
+    font-size: 3.9rem;
+  }
+  div.form-capacity-pull-down-button-left{
+    width: 100%;
+  }
+  .form-capacity-description .description-title img{
+    width: 40px;
+  }
+  .description dl div dt{
+    font-size: 20px;
+    line-height: 1;
+  }
+  .description dl div dd a{
+    font-size: 13px;
+  }
+  div.form-capacity-description-body-left.hidden{
+    margin: 0 0 20px;
+  }
+  div.form-capacity-description-body-left,
+  div.form-capacity-description-body-right{
+  margin: 20px auto 40px;
+  }
+  .form-capacity-area.title-cloudplan.campaign h2 + p {
+    font-size: 1.4rem;
+  }
+}
+#form-entry-edit-device-option div.topping-2-select-area,
+#form-entry-edit-device-option div.topping-2-select-area-2,
+#form-entry-edit-device-option-cloud div.topping-2-select-area,
+div.relief-item-select,
+#form-entry-edit-device-option div.topping-2-select-area-cloud,
+#form-entry-edit-device-option div.topping-2-select-area-insurance,
+#form-entry-edit-device-option div.topping-2-select-area-marugoto{
+  filter: drop-shadow(0px 3px 5px rgb(0,0,0,20%));
+}
+@media screen and (max-width: 320px){
+  div.edit-partial-plan form div.mypage-user-container .form-capacity-area.title-cloudplan h2 {
+    font-size: 1.6em;
+    line-height: 26px;
+  }
+  .form-capacity-area.title-cloudplan.campaign h2 + p {
+    line-height: 18px;
+    font-size: 1.4rem;
+    margin-top: 1rem;
+  }
+  .edit-partial-plan .form-capacity-area.title-cloudplan.campaign::after,
+  .edit-partial-plan .form-capacity-area.title-cloudplan.campaign::before {
+    height: 60px;
+    top: 7px;
+  }
+  p.custom-check-box-v2-select-text.option {
+    position: relative;
+    right: 11px;
+    top: -65px;
+    font-size: 1rem;
+  }
+
+  label.custom-check-box-v2{
+    margin: 0;
+  }
+  p.custom-check-box-v2-select-text{
+    top: 7px;
+    right: 47px;
+  }
+  p.custom-check-box-v2-select-text.text-size{
+    font-size: 0.9rem;
+    margin-left: 0px;
+    letter-spacing: -0.05em;
+    padding: 0;
+  }
+  p.custom-check-box-v2-select-text {
+    font-weight: normal;
+    padding: 0;
+    margin: 0;
+  }
+}
+div.entry-form-title {
+  position: relative;
+  margin-bottom: 45px;
+}
+.free-first-month {
+  position: absolute;
+  width: 100px;
+  right: 120px;
+  top: 42%;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+}
+div.entry-form-sub-title h3{
+  font-size: 2em;
+  margin: 0.5em 0;
+}
+@media screen and (min-width: 767px){
+  div.entry-option{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px 0;
+  }
+}
+div.entry-option-button{
+  display: flex;
+}
+@media screen and (max-width: 767px){
+  div.entry-option-button{
+    margin-top: 15px;
+    height: 40px;
+  }
+  .free-first-month {
+    width: 19%;
+    position: unset;
+    transform: unset;
+    -webkit-transform: unset;
+  }
+}
+div.entry-option-description{
+  margin: 30px 0;
+}
+div.entry-option-attention{
+  display: flex;
+  align-items: center;
+}
+div.entry-option-attention.adjust{
+  margin: 0 5px 0 -15px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+div.entry-option-attention-image{
+  width: 35px;
+  margin: 0px 10px 0 0;
+}
+div.entry-option-attention-text{
+  color: #ff003c;
+  font-weight: bold;
+  line-height: 1.4em;
+  font-size: 1.4rem;
+}
+div.entry-option-right a,
+div.entry-option-center a{
+  color: #ffe401;
+}
+@media screen and (min-width: 767px){
+  div.entry-option-left,
+  div.entry-option-right{
+    width: 47%;
+  }
+}
+div.entry-option-left,
+div.entry-option-right{
+  width: 45%;
+  position: relative;
+}
+div.entry-option-center{
+  width: 100%;
+}
+
+@media screen and (max-width: 767px){
+  div.entry-option-attention-text{
+    margin: 10px 0;
+    font-size: 1.2rem;
+  }
+
+  .mypage-confirm-hidden-form-device-option div.entry-option-support,
+  .mypage-confirm-hidden-form-device-option-cloud div.entry-option-support{
+    width: 96%;
+    margin: auto;
+  }
+  div.entry-option-left,
+  div.entry-option-right,
+  div.entry-option-center{
+    width: auto;
+  }
+  div.entry-option-description{
+    margin: 20px 0;
+  }
+}
+div.flex-entry-option{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+  height: 100px;
+}
+@media screen and (max-width: 767px){
+  div.flex-entry-option{
+    margin-top: 15px;
+    gap: 10px;
+  }
+}
+div.entry-option-right.free-plan{
+  z-index: 1;
+  width: 100%;
+}
+div.form-plan-option-detail-description,
+div.form-plan-option-detail-2-description{
+  margin: 0;
+  padding: 1.2em 5%;
+  width: 90%;
+  max-height: 100vh;
+  transition: max-height 0.5s;
+  filter: drop-shadow(2px 5px 5px #c8c8c8);
+  border: none;
+  border-radius: 0.75em;
+  position: relative;
+  z-index: 0;
+  background-color: #FFFFFF;
+}
+div.form-plan-option-detail-description-cloud{
+  margin: 0;
+  padding: 1.2em 5%;
+  width: 91%;
+  transition: max-height 0.5s;
+  filter: drop-shadow(2px 5px 5px #c8c8c8);
+  border: none;
+  border-radius: 0.75em;
+  position: relative;
+  z-index: 0;
+  background-color: #FFFFFF;
+  margin-bottom: 20px;
+}
+div.form-plan-option-detail-description-insurance{
+  margin: 0;
+  padding: 1.2em 5%;
+  width: 91%;
+  transition: max-height 0.5s;
+  filter: drop-shadow(2px 5px 5px #c8c8c8);
+  border: none;
+  border-radius: 0.75em;
+  position: relative;
+  z-index: 0;
+  background-color: #FFFFFF;
+  margin-bottom: 20px;
+}
+div.form-plan-option-detail{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+div.form-plan-option-detail-description-close,
+div.form-plan-option-detail-2-description-close{
+  max-height: 0;
+  transition: max-height 0.1s;
+  display: none;
+}
+div.form-plan-option-detail-description-button-box {
+  position: relative;
+}
+
+div.form-plan-option-detail-description-button-close {
+  display: none;
+}
+
+div.form-plan-option-detail-button,
+div.form-plan-option-detail-2-button{
+  background-color: #00bfbf;
+  color: white;
+  padding: 10px 0;
+  border-radius: 0.75em;
+  text-align: center;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgb(0 0 0 / 20%);
+  margin-top: 20px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+div.form-plan-option-detail-button-open,
+div.form-plan-option-2-detail-button-open,
+div.form-plan-option-detail-button-cloud{
+  background-color: #00bfbf;
+  color: white;
+  padding: 10px 0;
+  border-radius: 0.75em;
+  text-align: center;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgb(0 0 0 / 20%);
+  margin-top: 20px;
+  width: 100%;
+  margin: 0px auto 20px;
+}
+
+div.form-plan-option-detail-button-insurance{
+  background-color: #00bfbf;
+  color: white;
+  padding: 10px 0;
+  border-radius: 0.75em;
+  text-align: center;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgb(0 0 0 / 20%);
+  margin-top: 20px;
+  width: 60%;
+  margin: 0px auto 20px;
+  line-height: 1.2em;
+}
+
+div.form-plan-option-detail-button-open{
+  border-radius: 0.75em;
+  background-color: #ffffff;
+  color: #00bfbf;
+  position: relative;
+  z-index: 1;
+}
+
+div.form-plan-option-2-detail ul.option-ul{
+  display: flex;
+justify-content: space-between;
+align-items: center;
+flex-wrap: wrap;
+list-style-type: none;
+padding: 0;
+margin: 15px 0 0 0;
+}
+div.form-plan-option-2-detail ul.option-ul li{
+width: 31%;
+padding: 15px 10px;
+box-sizing: border-box;
+text-align: center;
+background: #eeeeee;
+border-radius: 10px;
+margin-bottom: 15px;
+}
+div.form-plan-option-2-detail ul.option-ul li .title{
+font-size: 1.5rem;
+line-height: 2.0rem;
+margin-bottom: 15px;
+}
+div.form-plan-option-2-detail ul.option-ul li img{
+height: 50px;
+width: auto;
+}
+
+@media screen and (max-width: 767px){
+  div.form-plan-option-detail-button,
+  div.form-plan-option-2-detail-button,
+  div.form-plan-option-detail-2-button,
+  div.form-plan-option-detail-button-cloud,
+  div.form-plan-option-detail-button-insurance{
+    width: 100%;
+    line-height: 1.2em;
+  }
+  div.form-plan-option-detail-button.option,
+  div.form-plan-option-2-detail-button.option{
+    margin-top: 10px;
+  }
+  div.form-plan-option-2-detail ul.option-ul li{
+    width: 31%;
+    padding: 10px 5px;
+    margin-bottom: 10px;
+  }
+  div.form-plan-option-2-detail ul.option-ul li .title{
+    font-size: 1.1rem;
+    line-height: 1.6rem;
+    margin-bottom: 10px;
+  }
+  div.form-plan-option-2-detail ul.option-ul li img{
+    height: 30px;
+    width: auto;
+  }
+}
+.relief-item-select{
+  width: 100%;
+  height: 92.78px;
+  background-color: #FFFFFF;
+  border-radius: 0.75em;
+  position: relative;
+}
+.relief-item-select p {
+  font-size: 1.6rem;
+  font-weight: bold;
+  padding-left: 60px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  width: 100%;
+  box-sizing: border-box;
+  text-align: center;
+}
+.relief-item-select p.relief-item-select-option-title {
+  font-size: 1.5rem;
+}
+.relief-item-select-price {
+  font-size: 1.3rem;
+  font-weight: normal;
+  margin-top: 14px;
+  display: block;
+}
+.relief-option-ckeckbox {
+  position: relative;
+  left: 14px;
+  bottom: 75%;
+  pointer-events: none;
+}
+
+@media screen and (max-width: 767px){
+  .relief-item-select {
+    width: 100%;
+    height: 57px;
+  }
+  .entry-option.sp{
+    display: none;
+  }
+  .relief-item-select,
+  .relief-3-item-select {
+    width: 100%;
+    height: 57px;
+  }
+  div.relief-flex-entry-option {
+    display: block;
+    height: auto;
+  }
+  div.relief-entry-option01{
+    margin: -70px 0 0 0;
+  }
+  div.relief-entry-option02{
+    margin: -40px 0 0 0;
+  }
+  div.entry-option-right-option-2{
+    margin: 20px 0 0 0;
+  }
+  div.form-plan-option-detail-2-description{
+    border-radius: 0.75em;
+    margin-top: 20px;
+  }
+  div.entry-form-title {
+    margin-top: 20px;
+  }
+}
+div.price-topping-2-body-right-row{
+  width: 95%;
+  text-align: center;
+  line-height: 15px;
+}
+div.price-topping-2-body-right-row.adjust{
+  width: 100%;
+  border-top: none;
+  border-bottom: solid 1px #878787;
+}
+div.price-topping-2-body-right-column.adjust.text-left p{
+  text-align: left;
+}
+div.price-topping-2-body-right-column.adjust:last-child{
+  border-left: solid 1px #878787;
+
+}
+div.price-topping-2-body-right-column ul{
+  padding-inline-start: 20px;
+  margin: 0;
+}
+div.price-topping-2-body-right-column ul li{
+  margin: 5px 0;
+}
+@media (max-width: 728px) {
+  div.form-plan-option-detail-description-button,
+  div.form-plan-option-detail-description-button-pink {
+    top: -75px;
+  }
+}
+
+@media screen and (max-width: 767px){
+  
+  div.entry-form-sub-title h3{
+    font-size: 1.5em;
+    margin: 1.5em 0 0.8em;
+  }
+  div.entry-option-attention{
+    justify-content: center;
+    margin: 0 0 20px;
+  }
+  div.form-plan-option-detail-description,
+  div.form-plan-option-detail-description-cloud{
+    border-radius: 0.75em;
+    margin: 20px 0 30px;
+  }
+}
+@media screen and (max-width: 767px){
+
+  div.plan-total-summary-area-table-detail{
+    width: 100%;
+  }
+  div.plan-total-summary-area-table-change{
+    width: 100%;
+  }
+  p.campaign-price-change.pc{
+    display: none;
+  }
+  p.campaign-price-change.sp{
+    display: flex;
+    margin: 20px 0;
+  }
+  span.form-sub-title{
+    line-height: 0.8rem;
+  }
+  div.entry-option-attention-image{
+    margin: 0 5px;
+  }
+}
+
+/*入力情報画面*/
+div.mypage-container{
+  padding: 0;
+  width: 100%;
+  margin-top: -1px;
+  position: relative;
+  overflow: hidden;
+  background: #f2f5f5;
+}
+div.mypage-confirm-hidden-form {
+  display: none;
+}
+div.mypage-user-container{
+  max-width: 750px;
+  margin: 0 auto;
+  text-align: left;
+  z-index: 2;
+}
+div.mypage-user-container-contact{
+  padding-bottom: unset;
+  margin-top: 50px;
+}
+.mypage-user-info-detail-hidden{
+  display: none;
+}
+.mypage-payment-info-detail-deferred,
+.mypage-payment-info-detail-card{
+  display: block;
+}
+.mypage-delivery-info-detail-hidden{
+  display: none;
+}
+div.box-hidden{
+  display: none;
+}
+
+
+div.flex-form-title{
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+  align-items: center;
+}
+div.content-box-inner-title{
+  font-size: 3.0rem;
+  padding: 0;
+  margin: 25px 0;
+  font-weight: bold;
+  text-align: center;
+}
+h2.form-h2{
+  font-size: 2.0rem;
+  max-width: 750px;
+  margin: 0 0 10px;
+  border: none;
+  line-height: 2.7rem;
+}
+h2.form-h2.atone-draft{
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 2.0rem;
+  max-width: 750px;
+  margin: 0 0 30px;
+}
+
+h2.form-h2-2.atone-draft{
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 2.0rem;
+  max-width: 750px;
+  margin: 70px 0 30px;
+}
+
+h2.form-h2.confirm {
+  margin: 0;
+  background: #00bfbf;
+  color: #fff;
+  padding: 10px;
+}
+
+div.form-black-background,
+div.form-black-background-credit-card-name {
+  position: fixed;
+  background-color: black;
+  opacity: 0.4;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 100001;
+  display: none;
+}
+
+div.form-black-background {
+  z-index: 1000000000001;
+}
+
+@media (max-width: 767px) {
+  div.edit-partial-plan,
+  div.edit-partial-plan-topping1,
+  div.edit-partial-device-option,
+  div.edit-partial-device-option-cloud,
+  div.edit-partial-contractor,
+  div.edit-partial-address,
+  div.edit-partial-user,
+  div.edit-partial-corp-contact,
+  div.edit-partial-delivery {
+    top: 0;
+  }
+  h2.form-h2-2.atone-draft{
+    margin: 50px 0 30px;
+  }
+}
+
+div.edit-partial-plan,
+div.edit-partial-plan-topping1,
+div.edit-partial-device-option,
+div.edit-partial-device-option-cloud,
+div.edit-partial-contractor,
+div.edit-partial-address, 
+div.edit-partial-user,
+div.edit-partial-corp-contact,
+div.edit-partial-delivery {
+  position: fixed;
+  max-height: 90vh;
+  max-width: 1100px;
+  margin: auto;
+  z-index: 1000000000002;
+  top: 10vh;
+  left: 0;
+  right: 0;
+  bottom: 10vh;
+  display: none;
+}
+
+div.edit-partial-plan form,
+div.edit-partial-plan-topping1 form,
+div.edit-partial-device-option form,
+div.edit-partial-device-option-cloud form,
+div.edit-partial-other-options form,
+div.edit-partial-contractor form,
+div.edit-partial-address form,
+div.edit-partial-user form,
+div.edit-partial-corp-contact form,
+div.edit-partial-delivery form {
+  width: 100%;
+  max-height: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  background-color: white;
+  overflow-y: auto;
+}
+
+div.edit-partial-plan form div.mypage-user-container,
+div.edit-partial-plan-topping1 form div.mypage-user-container,
+div.edit-partial-device-option form div.mypage-user-container,
+div.edit-partial-device-option-cloud form div.mypage-user-container,
+div.edit-partial-contractor form div.mypage-user-container,
+div.edit-partial-address form div.mypage-user-container,
+div.edit-partial-user form div.mypage-user-container,
+div.edit-partial-corp-contact form div.mypage-user-container,
+div.edit-partial-delivery form div.mypage-user-container {
+  width: 100%;
+}
+
+div.edit-partial-plan form div.row,
+div.edit-partial-plan-topping1 form div.row,
+div.edit-partial-device-option form div.row,
+div.edit-partial-device-option-cloud form div.row,
+div.edit-partial-contractor form div.row,
+div.edit-partial-address form div.row,
+div.edit-partial-user form div.row,
+div.edit-partial-corp-contact form div.row,
+div.edit-partial-delivery form div.row{
+  padding-bottom: 30px;
+}
+
+@media screen and (max-width: 1440px) and (min-width: 767px){
+  div.edit-partial-plan,
+  div.edit-partial-plan-topping1,
+  div.edit-partial-device-option,
+  div.edit-partial-device-option-cloud,
+  div.edit-partial-contractor,
+  div.edit-partial-address, 
+  div.edit-partial-user,
+  div.edit-partial-corp-contact,
+  div.edit-partial-delivery {
+    top: 5%;
+    bottom: calc(5% + 40px);
+  }
+  div.edit-partial-plan form,
+  div.edit-partial-plan-topping1 form,
+  div.edit-partial-device-option form,
+  div.edit-partial-device-option-cloud form,
+  div.edit-partial-contractor form,
+  div.edit-partial-address form,
+  div.edit-partial-user form,
+  div.edit-partial-corp-contact form,
+  div.edit-partial-delivery form {
+    max-height: 100%;
+  }
+}
+
+@media screen and (max-width: 767px){
+  div.edit-partial-plan,
+  div.edit-partial-plan-topping1,
+  div.edit-partial-device-option,
+  div.edit-partial-device-option-cloud,
+  div.edit-partial-contractor,
+  div.edit-partial-address,
+  div.edit-partial-user,
+  div.edit-partial-corp-contact,
+  div.edit-partial-delivery {
+    top: 0;
+    bottom: 0;
+  }
+
+  div.edit-partial-plan form,
+  div.edit-partial-plan-topping1 form,
+  div.edit-partial-device-option form,
+  div.edit-partial-device-option-cloud form,
+  div.edit-partial-contractor form,
+  div.edit-partial-address form,
+  div.edit-partial-user form,
+  div.edit-partial-corp-contact form,
+  div.edit-partial-delivery form {
+    width: 90%;
+    max-height: 100%;
+  }
+
+  div.edit-partial-plan form{
+    max-height: calc(90% - 40px);
+  }
+
+  div.edit-partial-plan-topping1 form div.mypage-user-container,
+  div.edit-partial-device-option form div.mypage-user-container,
+  div.edit-partial-device-option-cloud form div.mypage-user-container,
+  div.edit-partial-contractor form div.mypage-user-container,
+  div.edit-partial-address form div.mypage-user-container,
+  div.edit-partial-user form div.mypage-user-container,
+  div.edit-partial-corp-contact form div.mypage-user-container,
+  div.edit-partial-delivery form div.mypage-user-container {
+    width: 95%;
+    margin: auto;
+  }
+
+  div.edit-partial-plan form div.mypage-user-container{
+    width: 90%;
+    margin: auto;
+  }
+}
+/*変更のポップアップの中で余白調整*/
+div.mypage-confirm-hidden-form h2.form-h2 {
+  margin-top: 30px;
+}
+
+div.edit-partial-user form,
+div.edit-partial-delivery form{
+  overflow-y: scroll;
+}
+
+div.white-content-box-form{
+  background-color: white;
+  padding: 40px 30px;
+  margin: 50px 0 0;
+}
+
+div.white-content-box-form.payment{
+  margin: 15px auto;
+}
+
+div.white-content-box-form.space{
+  margin: 0;
+}
+
+div.white-content-box-form.form-padding{
+  padding: 25px 30px;
+}
+
+div.white-content-box-form.form-padding.atone-payment{
+  padding: 40px 30px;
+}
+
+table.form-table{
+  border-spacing: 7px;
+  margin: 0;
+  table-layout: fixed;
+}
+
+table.form-entry {
+  width: 100%;
+  max-width: 1000px;
+}
+
+div.setvice_set_complete_form{
+  margin-bottom: 150px;
+}
+
+@media screen and (max-width: 767px){
+  div.content-box-inner-title{
+    font-size: 2.2rem;
+  }
+  div.content-box-inner-title p{
+    line-height: 2.5rem;
+  }
+  div.setvice_set_complete_form{
+    margin: 0;
+  }
+}
+@media (max-width: 767px) {
+  label.custom-check-box span {
+    margin-right: 5px;
+  }
+  label.custom-check-box-contact span {
+    margin-right: unset;
+  }
+}
+table.form-table span{
+  color: #1E1E1E;
+}
+table.contact-display {
+  table-layout: unset;
+}
+table.contact-display span {
+  color: unset;
+}
+td.password-td span.field-icon {
+  position: absolute;
+  right: 10px;
+  top: 12px;
+}
+table.form-table tr{
+  height: 5rem;
+}
+table.form-table th{
+  width: 250px;
+  font-size: 1.4rem;
+  margin-bottom: 15px;
+  vertical-align: middle;
+  padding-top: 0;
+  text-align: left;
+}
+table.form-table th.credit-confirm-name-label{
+  line-height: 1.4;
+}
+table.form-table th.right-button{
+  text-align: right;
+  font-size: 1.4rem;
+  padding-top: 0;
+  margin-bottom: 13px;
+  margin-top: 7px;
+}
+table.form-table td{
+  vertical-align: top;
+  padding: 0;
+  text-align: left;
+  font-size: 1.5rem;
+}
+table.form-table-multi-column td{
+  position: relative;
+  font-size: 1.5rem;
+}
+td.password-td {
+  position: relative;
+}
+input.mypage-input-border{
+  margin: 0;
+  padding: 25px 8px;
+  background-color: #D9D9D9;
+  border: none;
+  border-radius: 8px;
+  box-sizing: border-box;
+  width: 100%;
+  letter-spacing: 1px;
+  height: 50px;
+  font-size: 1.5rem;
+  font-family: 'Roboto', 'Noto Sans JP', "游ゴシック", "メイリオ", sans-serif;
+}
+input.mypage-input-border-security-code {
+  width: 215px;
+}
+input.mypage-input-border:focus,
+td textarea.text-area-inquery:focus {
+  outline: none;
+  box-shadow: 0 0 5px 2px #ffe401;
+  border: none;
+}
+main.mypage-main select{
+  background-color: #D9D9D9;
+  border: none;
+  height: 50px;
+  margin: 0;
+  border-radius: 8px;
+  font-size: 1.5rem;
+  padding: 5px 0;
+  font-family: 'Roboto', 'Noto Sans JP', "游ゴシック", "メイリオ", sans-serif;
+}
+
+input.form-item-room {
+  width: 48%;
+}
+.js-building-room {
+  display: none;
+}
+.js-building-room.active {
+  display: table-row;
+}
+.js-building-mask {
+  display: none;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: transparent;
+  z-index: -1;
+}
+
+@media (max-width: 767px) {
+  main.mypage-main select {
+    font-size: 1.4rem;
+    width: 100%;
+  }
+  input.mypage-input-border-contact {
+    font-size: 1.4rem;
+  }
+}
+
+select[name="payment_due_date_type"].form-item-delivery-corp{
+  width: 35%;
+}
+select[name="prefecture"],
+select[name="add_corp_prefecture"] {
+  width: 47.5%;
+}
+select[name="user_prefecture"],
+select[name="delivery_prefecture"],
+select[name="deliverycorp_prefecture"],
+select[name="deliverycorp_order_time"],
+select[name="user_prefecture"] {
+  width: 48.1%;
+}
+
+select.form-item-address{
+  width: 48%;
+}
+
+select.form-item-delivery{
+  width: 50%;
+}
+
+main.mypage-main select.document-id-corporation{
+  margin-bottom: 11px;
+}
+
+table.credit-reference-name{
+  border-spacing: 0;
+  margin: 0;
+}
+
+table.credit-reference-name tr{
+  height: auto;
+}
+@media (min-width: 767px) {
+  select[name="payment_method"].payment_method,
+  main.mypage-main select[name="payment_due_date_type"].payment_method {
+    max-width: 142px;
+  }
+}
+
+@media (max-width: 767px) {
+  table.form-table {
+    width: 100%;
+  }
+  table.form-table th,
+  table.form-table td {
+    display: block;
+    text-align: left;
+    width: 100%;
+  }
+  table.selection-table td {
+    display: block;
+    text-align: left;
+    width: 100%;
+  }
+  select[name="payment_due_date_type"].form-item-delivery-corp {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 767px){
+  table.form-table td{
+    display: inline-block;
+  }
+  table.form-table th{
+    margin-top: 10px;
+  }
+  main.mypage-main select{
+    margin-bottom: 5px;
+  }
+  main.mypage-main select.payment-expire{
+    font-size: 1.4rem;
+    width: 80px;
+  }
+}
+
+textarea.mypage-input-border{
+  background-color: #D9D9D9;
+  border: none;
+  border-radius: 8px;
+  padding: 10px;
+  font-family: 'Roboto', 'Noto Sans JP', "游ゴシック", "メイリオ", sans-serif;
+}
+@media screen and (max-width: 767px){
+  textarea.mypage-input-border{
+    width: 93%;
+  }
+}
+.tag-title-required{
+  content: "";
+  position: absolute;
+  top: 0px;
+  right: 60px;
+  width: 0;
+  height: 0;
+  border-bottom: 15px solid transparent;
+  border-left: 15px solid #FF008F;
+}
+div.sub-info{
+  padding:0 10px;
+  font-weight: bold;
+}
+table.form-table td.flex-gender-area{
+  display: flex;
+  align-items: center;
+}
+div.gender-label-box{
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+  height: 25px;
+}
+div.gender-label-box-contact{
+  margin-bottom: unset;
+  height: unset;
+}
+@media (max-width: 767px){
+  div.gender-label-box {
+      margin-top: 0;
+      margin-bottom: 20px;
+  }
+}
+label.label-input{
+  display: inline-block;
+  margin: 5px 20px 0 0;
+  width: 50px;
+}
+label.custom-check-box{
+  position: relative;
+}
+label.custom-check-box.entry {
+  margin-left: 25px;
+}
+label.custom-check-box input[type="checkbox"],
+label.custom-check-box input[type="radio"] {
+  opacity: 0;
+}
+label.label-input label{
+  width: 200px;
+  margin-left: -5px;
+  position: absolute;
+}
+label.label-input label.label-wide{
+  width: 300px;
+}
+@media screen and (max-width: 767px) {
+  label.label-input label{
+    width: 150px;
+  }
+  label.label-input label.label-wide{
+    width: 300px;
+  }
+}
+label.custom-check-box-contact{
+  position: unset;
+  display: unset;
+  margin: unset;
+  width: unset;
+}
+label.custom-check-box-contact label{
+  width: unset;
+  margin-left: unset;
+  position: unset;
+}
+div.gender-label-box label.label-input{
+  margin-right: 55px;
+}
+div.edit-partial-contractor form div.mypage-user-container div.gender-label-box label.label-input{
+  margin-right: 69px;
+}
+div.gender-label-box label.label-input label{
+  top: 14px;
+  left: 50px;
+}
+td.flex-user-area{
+  height: 83px;
+}
+td.flex-user-area label.label-input:first-child{
+  margin: 0 0 19px;
+}
+td.flex-user-area label.label-input label{
+  top: 14px;
+  left: 50px;
+}
+tr.payment td.flex-user-area{
+  height: auto;
+}
+.atone-payment tr.payment td.flex-user-area{
+  height: 83px;
+}
+@media screen and (max-width: 767px){
+  td.flex-user-area.corp-user{
+    margin-bottom: 15px;
+  }
+  td.flex-user-area label.invoice-different-for.corp-bottom{
+    width: 200px;
+  }
+  tr.payment td.flex-user-area.atone-user-area{
+    height: 90px;
+  }
+}
+div.vaidation-error-area{
+  height: 0;
+  margin-top: 0;
+}
+label.validator-error{
+  color: red;
+  font-size: 1.2rem;
+  display: block;
+  margin-top: 3px;
+}
+table.form-table tr.attention-remark{
+  height: 1.5rem;
+}
+p.mypage-remark{
+  color: #909090;
+  margin-left: 260px;
+  font-size: 1.1rem;
+  line-height: 1.5rem;
+}
+p.mypage-remark-margin{
+  margin-left: 259px;
+}
+@media screen and (max-width: 767px){
+  p.mypage-remark{
+    margin-left: 0;
+  }
+  div.gender-label-box label.label-input{
+    margin-right: 38px;
+  }
+  div.edit-partial-contractor form div.mypage-user-container div.gender-label-box label.label-input{
+    margin-right: 38px;
+  }
+}
+span.form-sub-title{
+  font-size: 1.2rem;
+}
+i.fa-eye:before{
+  top: 8px;
+  position: relative;
+}
+i.fa-eye-slash:before{
+  top: 8px;
+  position: relative;
+}
+label.custom-check-box input[type="radio"]{
+  opacity: 0;
+}
+label.custom-check-box input[type="radio"] + span::before{
+  z-index: 0;
+  background-color: #D9D9D9;
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 8px;
+  position: absolute;
+  top: 1px;
+  left: 0;
+  content: '';
+  box-sizing: border-box;
+}
+label.custom-check-box input[type="radio"]:checked + span::before{
+  background-color:#D9D9D9;
+}
+
+label.custom-check-box input[type="radio"] + span::after{
+  z-index: 1;
+  margin: 4px 12px;
+  width: 15px;
+  height: 22px;
+  position: absolute;
+  top: 1px;
+  left: 0;
+  content: '';
+  box-sizing: border-box;
+}
+label.custom-check-box input[type="radio"]:checked + span::after{
+  border: 2px solid #000;
+  border-width: 0 2px 2px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+label.custom-check-box input[type="radio"] + span::after{
+  top: 2.5px;
+}
+table.confirm-table td {
+  padding-left: 5px;
+  padding-right: 5px;
+  height: 50px;
+  width: 590px;
+  text-align: left;
+  vertical-align: middle;
+  border:1px solid #acacac;
+}
+table.confirm-table.twitter-campaign td {
+  width: 100%;
+}
+
+@media screen and (max-width: 767px){
+  div.white-content-box-form{
+    padding: 30px 10px;
+    margin: 30px 0 0;
+  }
+  div.white-content-box-form.twitter-apply{
+    padding: 30px 10px;
+  }
+  div.white-content-box-form.form-padding{
+    padding: 10px 10px 0;
+  }
+  div.white-content-box-form.form-padding.transfer-payment{
+    padding: 10px 10px 30px;
+  }
+  div.white-content-box-form.form-padding.atone-payment{
+    padding: 30px 10px;
+  }
+  div.white-content-box-form.form-padding.corp{
+    padding: 10px;
+  }
+  div.white-content-box-form.space{
+    margin-top: 0;
+  }
+  select.form-user-select-sp{
+    width: 100%;
+  }
+  table.confirm-table th,
+  table.confirm-table td{
+    width: 50%;
+    vertical-align: middle;
+  }
+  table.confirm-table th{
+    height: 50px;
+  }
+  table.form-table tr.attention-remark.paper-attention > td{
+    margin-top: -1.1em;
+  }
+}
+
+table.form-confirm-info-table .confirm-price{
+  text-align: right;
+}
+p.confirm-attention{
+  padding: 0 5px;
+  font-size: 1.1rem;
+  line-height: 1.4rem;
+}
+p.confirm-attention.first-month-fee{
+  margin-top: 12px;
+  font-weight: bold;
+  font-size: 1.3rem;
+  line-height: 1.4;
+}
+div.user-link {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+div.user-link div {
+  text-align: right;
+}
+div.entry-user-link {
+  height: 70px;
+  align-items: center;
+}
+div.entry-confirm-plan-edit-links p {
+  line-height: 30px;
+}
+div.entry-user-link-margin div.entry-confirm-plan-edit-links p {
+  line-height: 20px;
+}
+p.leave-checkbox-box-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: 20px 0;
+}
+div.leave-checkbox-box-desciption {
+  font-size: 1.3rem;
+  text-align: left;
+  padding: 0 30px;
+  margin: 20px 0;
+}
+@media screen and (max-width: 767px){
+  div.leave-checkbox-box-desciption {
+    font-size: 1.4rem;
+  }
+  table.form-confirm-info-table.plan p{
+    vertical-align: middle;
+  }
+  table.form-confirm-info-table{
+    width: 100%;
+  }
+  table.form-confirm-info-table.plan th,
+  table.form-confirm-info-table.plan td{
+    height: auto;
+    box-sizing: border-box;
+    align-items: center;
+  }
+  table.form-confirm-info-table.plan th{
+    width: 100%;
+    display: inline-flex;
+  }
+  table.form-confirm-info-table.plan td{
+    width: 49.5%;
+    margin-top: 2.5px;
+    display: inline-flex;
+  }
+  table.form-confirm-info-table.plan td:last-child{
+    margin-left: 1%;
+  }
+  table.form-confirm-info-table.plan td.form-long-column{
+    width: 100%;
+    margin-left: 0;
+  }
+  table.form-confirm-info-table .confirm-price{
+    justify-content: flex-end;
+  }
+}
+/* Form complete */
+
+div.entry-complete-description{
+  text-align: left;
+  font-size: 1.5rem;
+  font-weight: normal;
+  margin-left: 40px;
+}
+div.entry-complete-description a {
+  text-decoration: underline;
+}
+div.entry-complete-description-inner {
+  display: inline-block;
+  vertical-align: top;
+}div.entry-complete-description-top p {
+  text-align: left;
+}
+div.entry-complete-description-top p + p {
+  margin-top: .5em;
+}
+div.entry-complete-description-top + div.entry-complete-description {
+  position: relative;
+  margin-top: 50px;
+}
+div.entry-complete-description-top + div.entry-complete-description::before {
+  display: block;
+  position: absolute;
+  top: -27px;
+  left: 25px;
+  right: 25px;
+  height: 1px;
+  content: '';
+  background-color: #ddd;
+}
+@media (max-width: 767px) {
+  div.entry-complete-description-top + div.entry-complete-description {
+    margin-top: 40px;
+  }
+  div.entry-complete-description-top + div.entry-complete-description::before {
+    top: -20px;
+    left: 0;
+    right: 0;
+  }
+}
+
+div#plan-id-error-message{
+  margin: 40px auto -5px;
+}
+
+div#mypage_rental_error_message label,
+div#mypage_rental_delivery_error_message label{
+  font-weight:bold;
+}
+
+
+div.not-inputted-items {
+  color: red;
+  background-color: white;
+  padding: 10px;
+  height: auto;
+  max-width: 750px;
+  margin: 0 auto;
+}
+div.not-inputted-items-hidden{
+  display: none;
+}
+
+table.corp-confirm-table th{
+  width: 40%;
+}
+
+select.long-select{
+  width:100%;
+}
+select.short-select{
+  width: 25%;
+}
+
+div.form-black-background-credit-card {
+  z-index: 10000;
+}
+div.form-black-background,
+div.form-black-background-credit-card {
+  position: fixed;
+  background-color: black;
+  opacity: 0.4;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: none;
+  z-index: 1000000000003;
+}
+@media (max-width: 767px) {
+  div.form-application-container div.complete-description.upload-comp{
+    margin-top: 50px;
+  }
+  div.credit-card-confirm-popup {
+    width: 80%;
+  }
+  div.credit-card-confirm-button {
+    padding: 0 10px;
+  }
+  div.credit-card-name-confirm-popup {
+    width: 80%;
+  }
+  div.credit-card-name-confirm-popup-body div.credit-card-name-flex p {
+    margin-top: 10px;
+  }
+  div.credit-card-name-confirm-popup-body #input-credit-card-kana,
+  div.credit-card-name-confirm-popup-body #input-credit-card-name {
+    margin-top: 2px;
+  }
+  div.credit-card-name-confirm-button {
+    padding: 0 10px;
+  }
+}
+div.credit-card-confirm-popup {
+  max-width: 480px;
+  height: 260px;
+  position: fixed;
+  background-color: white;
+  border: solid 20px #ffe401;
+  margin: auto;
+  z-index: 1000000000002;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: none;
+}
+div.credit-card-confirm-popup-title p {
+  margin: 10px 0;
+  color: red;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+}
+div.credit-card-confirm-popup-body {
+  margin: 10px 10px;
+}
+div.credit-card-confirm-buttons {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px auto;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+div.credit-card-confirm-button {
+  width: 150px;
+  height: 50px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.5s;
+  background-color: black;
+  color: #ffe401;
+}
+div.form-black-background-credit-card-name {
+  z-index: 10000;
+}
+div.credit-card-name-confirm-popup {
+  max-width: 480px;
+  height: 240px;
+  position: fixed;
+  background-color: white;
+  border: solid 20px #ffe401;
+  margin: auto;
+  z-index: 1000000000002;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: none;
+}
+div.credit-card-name-confirm-popup-title p {
+  margin: 10px 0;
+  color: red;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+}
+div.credit-card-name-confirm-popup-body {
+  margin: 10px 10px;
+}
+div.credit-card-name-confirm-popup-body div.credit-card-name-flex.credit-card-name-flex-top {
+  margin-bottom: 2px;
+}
+div.credit-card-name-confirm-popup-body div.credit-card-name-flex {
+  margin: 15px 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+div.credit-card-name-confirm-popup-body div.credit-card-name-flex p {
+  width: 50%;
+}
+div.credit-card-name-confirm-popup-body div.credit-card-name-flex.credit-card-name-flex-bottom {
+  margin-top: 2px;
+}
+div.credit-card-name-confirm-buttons {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px auto;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+div.credit-card-name-confirm-button {
+  width: 150px;
+  height: 50px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.5s;
+  background-color: black;
+  color: #ffe401;
+}
+select[name="expire_year"], 
+select[name="expire_month"] {
+  width: 80px !important;
+}
+
+@media screen and (max-width: 767px){
+  select.short-select{
+    width:100%;
+  }
+  div.credit-card-name-confirm-popup {
+    height: 340px;
+    border: solid 10px #ffe401;
+    width: 80%;
+  }
+  div.credit-card-name-confirm-popup-body div.credit-card-name-flex p{
+    width: 100%;
+    margin-top: 10px;
+  }
+  div.credit-card-name-confirm-button {
+    width: 100px;
+    height: 50px;
+  }
+  div.credit-card-confirm-popup {
+    height: 335px;
+    border: solid 10px #ffe401;
+    width: 80%;
+  }
+}
+table.estimate-table th{
+  width: 35%;
+}
+table.estimate-table td{
+  width: 65%;
+}
+div.edit-partial-device-option div.mypage-user-container,
+div.edit-partial-device-option-cloud div.mypage-user-container{
+  margin: 40px 0;
+}
+div.edit-partial-contractor form table.form-table .col20 ~ span,
+div.edit-partial-contractor form table.form-table .mypage-input-border.col20 ~ span,
+div.edit-partial-user form table.form-table .mypage-input-border.col20 ~ span,
+div.edit-partial-corp-contact form table.form-table .mypage-input-border.col20 ~ span,
+div.edit-partial-delivery form table.form-table .mypage-input-border.col20 ~ span{
+  margin: 0 0.1rem;
+}
+table.form-table span.mandatory{
+  background-color: #ff003c;
+  color: white;
+  border-radius: 8px;
+  position: relative;
+  text-align: center;
+  padding: 5px 15px;
+  font-size: 1.3rem;
+  margin-right: 5px;
+}
+
+table.form-table span.optional{
+  background-color: #00bfbf;
+  color: white;
+  border-radius: 8px;
+  position: relative;
+  text-align: center;
+  padding: 5px 15px;
+  font-size: 1.3rem;
+  margin-right: 5px;
+}
+@media screen and (max-width: 767px){
+  table.form-table span.mandatory{
+    font-size: 1.4rem;
+  }
+  table.form-table span.optional{
+    font-size: 1.4rem;
+  }
+  table.form-table .col20.form-item-contractor ~ span,
+  table.form-table .mypage-input-border.col20 ~ span{
+    font-size: 1.2rem;
+    margin: 0px -0.2rem;
+  }
+  input.col49 {
+    width: 49%;
+  }
+  div.edit-partial-device-option div.mypage-user-container,
+  div.edit-partial-device-option-cloud div.mypage-user-container{
+    margin: 0;
+  }
+
+}
+@media screen and (max-width: 320px){
+  span.mandatory,
+  span.optional{
+    width: 35px;
+    left: 3px;
+    font-size: 1.1rem;
+    text-align: center;
+  }
+}
+
+@media screen and (min-width: 767px){
+  td.password-td span.field-icon {
+    position: absolute;
+    top: 12px;
+    left: 185px;
+    right: 10px;
+  }
+  table.form-table th.two-select{
+    padding-bottom: 45px;
+  }
+  .form-user-background-entry table.form-table th.two-select{
+    padding-bottom: 65px;
+  }
+  tr.payment th.two-select{
+    padding-bottom: 10px;
+  }
+  .atone-payment table.form-table th.two-select{
+    padding-bottom: 45px;
+  }
+  td.flex-user-area label.custom-check-box.label-input{
+    margin-bottom: 23px;
+  }
+}
+input.mypage-input-border.form-item-password{
+  width: 50%;
+}
+p.terms-agree:nth-of-type(n+2):not(:last-of-type) {
+  margin-bottom: 10px;
+  text-indent: -1em;
+  padding-left: 2em;
+}
+p.terms-agree,
+p.terms-agree:last-child {
+  margin-bottom: 10px;
+  padding-left: 1em;
+}
+@media screen and (max-width: 767px){
+  input.mypage-input-border.form-item-password{
+    width: 100%;
+  }
+  table.form-table td.entry-name{
+    display: flex;
+    margin-right: 10px;
+  }
+  table.form-table td.entry-name input.mypage-input-border.form-item-contractor.first{
+    margin-right: 5px;
+  }
+  p.leave-checkbox-box-title{
+    padding: 20px 30px;
+    text-align: left;
+  }
+  div.leave-checkbox-box{
+    padding-bottom: 40px;
+  }
+  div.confirm-box{
+    margin-left: 100px;
+  }
+  p.terms-agree:nth-of-type(n+2):not(:last-of-type) {
+    padding-left: 1em;
+  }
+  p.terms-agree,
+  p.terms-agree:last-child {
+    padding-left: 0;
+  }
+}
+@media screen and (max-width: 320px){
+  div.confirm-box{
+    margin-left: 50px;
+  }
+}
+label.leave-checkbox{
+  margin-left: 10px;
+  cursor: pointer;
+}
+.leave-checkbox-text {
+  margin-left: 30px;
+}
+@media screen and (max-width: 767px) {
+  .leave-checkbox-text {
+    margin-left: 55px;
+  }
+}
+div.white-content-box-form.form-space{
+  margin-top: 10px;
+  padding-top: 10px;
+}
+div.white-content-box-form.form-space-company{
+  padding-top: 10px;
+  padding-bottom: 34px;
+}
+div.mypage-user-container h1.contact{
+  font-size: 3rem;
+  font-weight: bold;
+}
+@media screen and (max-width: 767px){
+  table.form-table td.two-flame{
+    width: 48%;
+  }
+  table.form-table td.two-flame.second{
+    margin-left: 5px;
+  }
+}
+div.multi-confirm p{
+  font-size: 3rem;
+  font-weight: bold;
+  margin-top: 20px;
+  text-align: left;
+  line-height: 1.2em;
+}
+div.mypage-description {
+  letter-spacing: -0.05rem;
+  font-size: 1.4rem;
+  text-align: left;
+  color: white;
+  position: relative;
+  z-index: 1;
+}
+div.corp-mypage-description {
+  max-width: 750px;
+  margin: 0 auto;
+  color: #000;
+}
+div.corp-mypage-description.space{
+  margin-top: 40px;
+}
+div.corp-mypage-description.company-file-upload-hint-margin{
+  margin: 0 auto;
+  padding-bottom: 20px;
+}
+label.custom-check-box span{
+  display: inline-block;
+}
+@media screen and (max-width: 767px){
+  div.corp-mypage-description.space{
+    margin-top: 20px;
+  }
+  label.custom-check-box span {
+      margin-bottom: 20px;
+  }
+}
+div.leave-checkbox-box-desciption p.terms-agree::before,
+div.leave-checkbox-box-desciption p.terms-agree::after{
+  display: none;
+}
+
+@media screen and (min-width: 767px){
+  div.corp-mypage-description.estimate {
+    margin-top: -15px;
+    margin-bottom: -35px;
+  }
+  .side-title.left {
+    z-index: 1;
+  }
+}
+@media screen and (max-width: 320px){
+  div.device-option-confirm-popup-body p{
+    font-size: 1.1rem;
+  }
+  div.credit-card-confirm-popup-body p{
+    font-size: 1.1rem;
+  }
+  div.credit-card-name-confirm-popup-body p{
+    font-size: 1.1rem;
+  }
+}
+
+img.yellow-notion-icon {
+  margin-left: 4px;
+}
+
+@media (max-width: 767px) {
+  div.device-option-confirm-button {
+      padding: 0 10px;
+  }
+}
+
+div.device-option-confirm-button,
+div.present-limit-confirm-button,
+div.present-pay-error-confirm-button {
+  text-align: center;
+}
+
+div.device-option-confirm-button {
+  width: 150px;
+  height: 50px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.5s;
+  background-color: #ffe401;
+  color: black;
+}
+div.credit-card-name-confirm-button {
+  background-color: #ffe401;
+  color: black;
+}
+
+div.device-option-confirm-button.device-option-confirm-button-back{
+  background-color: black;
+  color: #ffe401;
+}
+div.credit-card-confirm-button.credit-card-confirm-button-back{
+  background-color: black;
+  color: #ffe401;
+}
+div.credit-card-name-confirm-button.credit-card-name-confirm-button-back{
+  background-color: black;
+  color: #ffe401;
+}
+@media screen and (min-width: 767px){
+  p.select-plans{
+    font-size: 1.8rem;
+    margin-top: 35px;
+  }
+  p.corp-select-plans{
+    font-size: 1.8rem;
+    margin-top: 45px;
+  }
+}
+@media screen and (max-width: 767px){
+  p.select-plans{
+    margin-bottom: 5px;
+  }
+}
+div.mypage-icon img{
+  width: 100%;
+}
+div.complete-mypage-icon {
+  width: 320px;
+  height: 75px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  position: relative;
+}
+div.overseas-step-icon-box-image-pos{
+  position: absolute;
+  opacity: 0;
+}
+div.overseas-step-icon-box-image-neg{
+  position: static;
+  opacity: 1;
+}
+@media screen and (max-width: 767px){
+  div.complete-mypage-icon {
+    width: 300px;
+    display: block;
+    margin-top: 30px;
+  }
+  div.mypage-icon img{
+    height: 70px;
+  }
+}
+div.complete-mypage-icon.active div.overseas-step-icon-box-image-neg img {
+  opacity: 0;
+  transition: all 0.5s ease-out;
+}
+
+div.complete-mypage-icon.inactive div.overseas-step-icon-box-image-neg img {
+  opacity: 1;
+  transition: all 0.5s ease-out;
+}
+div.estimate-navigation{
+  position: absolute;
+  max-width: 980px;
+  top: 0px;
+  padding: 20px 0 0 0 !important;
+  margin: auto;
+}
+@media screen and (max-width: 767px){
+  div.estimate-navigation{
+    padding: 10px 20px 0 !important;
+  }
+}
+div.estimate-navigation.down{
+  top: 50px
+}
+@media screen and (max-width: 767px){
+  form[action*="estimate"] .mypage-section-container {
+    padding-top: 25px;
+  }
+  div.estimate-navigation.down{
+    padding-left: 0 !important;
+    top: 30px;
+  }
+}
+@media screen and (min-width: 767px){
+  div.flex-box-entry{
+    display: flex;
+    justify-content: space-between;
+  }
+}
+div.complete-description {
+  font-size: 1.3rem;
+  text-align: left;
+  background-color: white;
+}
+div.complete-description-title {
+  text-align: left;
+  font-size: 1.5rem;
+  margin: 0 0 20px 40px;
+  font-weight: bold;
+  line-height: 1.3;
+}
+div.complete-description-title-caution {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+div.complete-form-capacity-notice {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  margin: 20px auto 10px;
+}
+div.complete-form-capacity-notice div.form-capacity-notice-icon {
+  width: 30px;
+  margin-right: 5px;
+  display: flex;
+  align-items: center;
+}
+.complete-condo-text {
+  margin: 10px 0;
+  line-height: 1.5;
+}
+div.condo-entry-complete-description {
+  text-align: left;
+}
+div.condo-complete-description-title {
+  text-align: left;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  font-weight: bold;
+  line-height: 1.5;
+}
+div.form-application-container div.complete-description {
+  margin: 10px auto 0;
+  max-width: 750px;
+  padding: 20px;
+  box-sizing: border-box;
+}
+div.form-application-container div.complete-description.corp-margin-bottom{
+  margin: 50px auto 0;
+}
+div.complete-description-title-bottom {
+  margin-bottom: 0px;
+}
+.atone-pay-logo-margin {
+  margin: 30px auto;
+  display: block;
+  width: 50%;
+}
+.white-content-box-form-condo {
+  font-size: 1.4rem;
+}
+
+div.complete-mypage-icon.active div.overseas-step-icon-box-image-pos {
+  opacity: 1;
+  transition: all 0.5s ease-out;
+}
+div.complete-mypage-icon.active div.overseas-step-icon-box-image-neg {
+  opacity: 0;
+  transition: all 0.5s ease-out;
+}
+div.complete-mypage-icon.inactive div.overseas-step-icon-box-image-pos {
+  opacity: 0;
+  transition: all 0.5s ease-out;
+}
+div.complete-mypage-icon.inactive div.overseas-step-icon-box-image-neg {
+  opacity: 1;
+  transition: all 0.5s ease-out;
+}
+
+@media screen and (min-width: 767px){
+  div.complete-description.corp p{
+    margin-left: 40px;
+  }
+}
+select.payment_method{
+  width: 100%;
+}
+
+.form-item-delivery-corp [name="payment_due_date_type"]{
+  width: 34%;
+}
+div.form-capacity-notice.payment{
+  margin: 30px auto;
+  padding-top: 15px;
+}
+div.form-capacity-notice.payment span.strong{
+  color: #ff003c;
+  font-size: 1.7rem;
+  font-weight: 600;
+}
+@media screen and (max-width: 320px){
+  div.form-capacity-notice.payment span.strong{
+    font-size: 1.5rem;
+  }
+}
+div.flex-box.payment{
+  display: flex;
+}
+div.payment-block.right{
+  line-height: 1.3;
+}
+@media screen and (max-width: 767px){
+  div.form-capacity-notice.payment{
+    margin-bottom: 20px;
+  }
+  div.payment-block.left{
+    width: 22%;
+  }
+  div.complete-description {
+    font-size: 1.2rem;
+  }
+}
+@media screen and (max-width: 320px){
+  div.payment-block.left{
+    width: 24%;
+  }
+}
+p.select-plan{
+  font-size: 1.6rem;
+  margin: 30px auto;
+}
+@media screen and (max-width: 767px){
+  p.select-plan{
+    font-size: 1.6rem;
+    margin: 20px auto;
+  }
+}
+div.flex-box-select{
+  display: flex;
+}
+div.flex-box-select.margin-down{
+  margin-bottom: 15px;
+}
+div.flex-box-select.total-price{
+  display: flex;
+}
+
+@media screen and (max-width: 767px){
+  div.flex-box-select{
+    display: block;
+    width: 100%;
+    margin: auto;
+  }
+
+  div.flex-box-select.total-price{
+    width: 96%;
+    margin-top: 2em;
+    justify-content: space-between;
+  }
+}
+@media screen and (max-width: 767px){
+  label.custom-check-box.entry{
+    margin-left: 60px;
+  }
+  label.leave-checkbox.entry p{
+    position: relative;
+    bottom: 19px;
+    font-size: 1.4rem;
+  }
+}
+div.form-step-footer-area{
+  width: 412px;
+  margin: 0 auto 30px;
+}
+@media screen and (max-width: 767px){
+  div.form-step-footer-area{
+    width: 90%;
+    margin: 0 auto;
+    margin-bottom: 30px;
+  }
+}
+div.left-plan-column{
+  width: 22%;
+}
+.entry-payment div.left-plan-column p{
+  padding: 0.3em 1.5em;
+  text-align: left;
+}
+@media screen and (max-width: 767px){
+  div.left-plan-column{
+    width: 40%;
+  }
+  div.left-plan-column.contract{
+    width: 20%;
+  }
+  div.left-plan-column.entry-payment{
+    width: 60%;
+  }
+  div.left-plan-column {
+    width: max-content;
+  }
+  .entry-payment div.left-plan-column p{
+    padding: 0.5em;
+    font-weight: bold;
+  }
+}
+
+@media screen and (max-width: 320px){
+  div.left-plan-column.contract{
+    width: 30%;
+  }
+  div.left-plan-column.entry-payment{
+    width: 70%;
+  }
+}
+
+div.flex-box-select.monthly-payment,
+div.flex-box-select.entry-payment{
+  margin: 40px 0;
+}
+tr.line{
+  border-top: 1px solid #00bfbf;
+}
+.monthly-pay span.campaign-attention,
+p#cancel_fee_attention,
+p.attention{
+  font-size: 1.2rem;
+}
+p.attention.margin-select{
+  margin-top: 8px;
+}
+.monthly-pay span.campaign-attention{
+  width: 96%;
+}
+@media screen and (max-width: 767px){
+  div.price-topping-2-body-right-column:first-child {
+    text-align: center;
+  }
+  div.flex-box-select.entry-payment{
+    margin: 30px auto;
+    padding-top: 20px;
+    border-top: 1px solid #00bfbf;
+  }
+  .monthly-pay span.campaign-attention,
+  p#cancel_fee_attention,
+  p.attention{
+    font-size: 1rem;
+  }
+}
+
+div.summary-table-column span.plan-tax,
+div.summary-table-column-right span.plan-tax{
+  font-size: 1.4rem;
+  font-weight: normal;
+}
+span.text-small{
+  font-size: 1.3rem;
+}
+
+span.pink-link {
+  text-decoration: underline;
+  color: #E43E5A;
+  cursor: pointer;
+}
+.entry-confirm-plan-edit-links a.pink-link,
+div.user-link a.pink-link{
+  font-weight: bold;
+}
+
+.document-id {
+  width:250px;
+}
+.document-id-corporation {
+  width: 100%;
+}
+table.form-table td.right-button{
+  text-align: right;
+  padding-top: 6px;
+}
+p.invalid-feedback.text-red{
+  font-size: 1.2rem;
+}
+
+table.form-table td.credit-confirm-name{
+  vertical-align: middle;
+  font-size: 1.6rem;
+}
+
+@media screen and (max-width: 767px){
+  table.form-table th.credit-confirm-name-label{
+    margin-top: 0;
+    line-height: 2rem;
+  }
+  div.user-link{
+    font-size: 1.4rem;
+  }
+}
+
+div.entry-user-link-margin{
+  margin-top: 40px;
+}
+
+p.remark{
+  color: #909090;
+  font-size: 1.1rem;
+  line-height: 1.5rem;
+}
+
+/*申込フォームオプションポップアップ*/
+div.form-black-background-device-option{
+  z-index: 10000;
+  position: fixed;
+  background-color: black;
+  opacity: 0.4;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: none;
+}
+@media (max-width: 767px) {
+  div.device-option-confirm-popup {
+      width: 80%;
+  }
+}
+div.device-option-confirm-popup {
+  max-width: 400px;
+  height: 200px;
+  position: fixed;
+  background-color: white;
+  border: solid 20px #ffe401;
+  margin: auto;
+  z-index: 1000000000002;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: none;
+}
+div.device-option-confirm-popup-title p {
+  margin: 10px 0;
+  color: red;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+}
+div.device-option-confirm-popup-body {
+  margin: 10px 10px;
+  text-align: center;
+}
+div.device-option-confirm-buttons {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px auto;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+/*申込フォームクレジットカード注意ポップアップ*/
+div.credit-card-confirm-popup-title,
+div.credit-card-name-confirm-popup-title{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5px 0;
+}
+
+/*申込フォーム 端末あんしんオプションのアラート*/
+div.white-content-box-alart-notion{
+  max-height: auto;
+  max-width: 35%;
+  top: 7%;
+  background-color: transparent;
+  padding: 0;
+  transform: none;
+}
+
+div.alart-popup-close-button {
+  background-color: #F3F3F3;
+  width: 35px;
+  height: 35px;
+  position: absolute;
+  right: -15px;
+  top: -15px;
+  text-align: center;
+  border-radius: 17px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 767px){
+  div.white-content-box-alart-notion {
+    height: auto;
+    max-width: 90%;
+  }
+}
+
+/*アラートのチェックがついたら色を変える*/
+.option-check > label:hover,
+label.check-option{
+  border:2.5px solid #ffe401;
+  background-color: #ffe401;
+}
+label.check-option {
+  width: 46%;
+  font-size: 1.65rem;
+  border: 2.5px solid #ffe401;
+  background-color: #ffe401;
+  padding: 23px 0 16px;
+  margin: 15px 0;
+}
+
+.btn-option-close{
+  width: 40%;
+  height: auto;
+  padding: 20px 0;
+  margin: auto;
+  letter-spacing: 0.25em;
+  font-size: 1.6rem;
+  background-color: #FFFFFF;
+  color: #000000;
+  border: none;
+  text-indent: 0px;
+}
+img.device-alart {
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.option-check label.custom-check-box-v2 input[type="radio"]{
+  display: none;
+ }
+.option-check label.custom-check-box-v2 input[type="radio"] + span::before,
+.option-check label.custom-check-box-v2 input[type="radio"] + span::after{
+  position: absolute;
+  top: 20%;
+  left: 15%;
+  display: inline-block;
+  content: '';
+  box-sizing: border-box;
+  z-index: 3;
+}
+
+label.custom-check-box-v2.check-option input[type="radio"] + span::before,
+label.custom-check-box-v2.check-option input[type="radio"] + span::after{
+  top: 25%;
+}
+.option-check label.custom-check-box-v2 span::after{
+  content: '';
+  border: none;
+}
+
+.option-check label.custom-check-box-v2 input[type="radio"] + span::before{
+  z-index: 2;
+  background-color: #e3e3e3;
+  border-radius: 0.5em;
+  width: 2em;
+  height: 2em;
+  margin: 0;
+  display: inline-block;
+  content: '';
+  box-sizing: border-box;
+}
+.option-check label.custom-check-box-v2 input[type="radio"] + span::after{
+  margin: 4px 10px;
+  width: 8px;
+  height: 13px;
+}
+
+label.custom-check-box-v2.check-option input[type="radio"] + span::after{
+  margin: 5px 13px;
+  height: 16px;
+}
+
+label.custom-check-box-v2.option-checkbox-true input[type="radio"]:checked + span::after,
+label.custom-check-box-v2.option-checkbox-false input[type="radio"]:checked + span::after{
+  border: 1.5px solid #000000;
+  display: block;
+  content: '';
+  border-width: 0 15px 15px 0;
+  left: 25%;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+@media screen and (max-width: 1440px) {
+  .option-check{
+    height: 55px;
+  }
+  .option-check > label{
+    margin: 10px 0;
+    padding: 9px 0 14px;
+    font-size: 1.3rem;
+  }
+  label.check-option {
+    margin: 6px 0;
+    padding: 13px 0 14px;
+  }
+  .btn-option-close{
+    padding: 13px 0;
+    font-size: 1.2rem;
+    height: auto;
+  }
+  label.option-check{
+    letter-spacing: 0;
+  }
+  img.device-alart {
+    max-width: 100%;
+    display: block;
+  }
+  .option-check label.custom-check-box-v2 input[type="radio"] + span::before,
+  .option-check label.custom-check-box-v2 input[type="radio"] + span::after{
+    top: 17%;
+    left: 11%;
+  }
+  .option-check label.custom-check-box-v2 input[type="radio"] + span::before{
+    width: 1.7em;
+    height: 1.7em;
+  }
+  .option-check label.custom-check-box-v2 input[type="radio"] + span::after{
+    margin: 2px 8px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .option-check{
+    width: 90%;
+    height: 100px;
+  }
+
+  .option-check > label,
+  .btn-option-close {
+    padding: 15px 0;
+    margin: 26px 0;
+    font-size: 1.3rem;
+    text-indent: 2em;
+  }
+  label.check-option{
+    width: 48%;
+    font-size: 1.4rem;
+    padding: 23px 0;
+    margin: 17px 0 19px;
+  }
+  .btn-option-close {
+    width: 48%;
+    height: auto;
+    padding: 20px 0;
+    margin: 0px auto;
+    text-indent: 0;
+  }
+
+  .option-check label.custom-check-box-v2 input[type="radio"] + span::before,
+  .option-check label.custom-check-box-v2 input[type="radio"] + span::after{
+    left: 6%;
+  }
+  label.custom-check-box-v2.check-option input[type="radio"] + span::before,
+  label.custom-check-box-v2.check-option input[type="radio"] + span::after{
+    top: 29%;
+  }
+  .option-check label.custom-check-box-v2 input[type="radio"] + span::after{
+    margin: 3px 9px;
+    width: 8px;
+    height: 13px;
+  }
+  div.edit-partial-contractor form div.mypage-user-container table.form-table .col20 ~ span{
+    margin: 0 -0.1rem;
+    font-size: 1.3rem;
+  }
+  div.edit-partial-user form div.mypage-user-container table.form-table .col20 ~ span,
+  div.edit-partial-delivery form div.mypage-user-container table.form-table .col20 ~ span{
+    margin: 0 -0.15rem;
+    font-size: 1.3rem;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  label.option-check{
+    text-indent: 40px;
+    font-size: 1.2rem;
+  }
+  div.white-contet-box-alart-notion div.white-content-box-title-notion p{
+    font-size: 1.9rem;
+  }
+  label.custom-check-box-v2.option-check input[type="radio"] + span::before,
+  label.custom-check-box-v2.option-check input[type="radio"] + span::after{
+    left: 5%;
+  }
+}
+
+
+#error_confirm_doc_key {
+  display: block;
+  margin-top: 3px;
+  width: 250%;
+}
+
+#error_identity_verification_key {
+  display: block;
+  margin-top: 3px;
+  width: 250%;
+}
+
+#error_enrollment_verification_key {
+  display: block;
+  margin-top: 3px;
+  width: 250%;
+}
+
+#error_reupload_auxiliary_key {
+  display: block;
+  margin-top: 3px;
+  width: 250%;
+}
+
+#error_auxiliary_key {
+  display: block;
+  margin-top: 3px;
+  width: 250%;
+}
+
+.company-file-margin {
+  width: 561px;
+  font-weight: normal;
+  margin-bottom: -12px;
+}
+
+.company-text-size {
+  font-size: 1.5rem;
+}
+
+.company-file-note {
+  margin-top: 5px;
+  color: #909090;
+  font-size: 1.0rem;
+  width: 250px;
+}
+
+table.form-table th.file-name-margin {
+  margin-top: -50px;
+  vertical-align: top;
+  padding-left: 67px;
+  padding-top: 8px;
+}
+
+.close {
+  position: absolute;
+  right: 5%;
+  top: 6%;
+  z-index: 1;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 767px) {
+  .close{
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    width: 25px;
+    height: 25px;
+  }
+  table.form-table th.file-name-margin {
+    margin-top: -50px;
+    vertical-align: top;
+    padding-left: 0px;
+    padding-top: 8px;
+    font-size: 1.4rem;
+  }
+}
+
+.upload_doc_file_corporation_delete-margin {
+  margin-left: -30px;
+}
+
+table.form-table tr.company-classification-margin {
+  height: 0px;
+}
+
+table.form-entry-company {
+  width: 100%;
+  max-width: 700px;
+  padding-left: 33px;
+  padding-right: 33px;
+  padding-top: 20px;
+}
+
+table.form-table tr.company-crack-margin-1,
+table.form-table tr.company-crack-margin-2,
+table.form-table tr.company-crack-margin-3 {
+  height: 0px;
+}
+
+table.form-table tr.company-classification-margin-1,
+table.form-table tr.company-classification-margin-2,
+table.form-table tr.company-classification-margin-3,
+table.form-table tr.company-classification-margin-4 {
+  height: 4rem;
+}
+
+@media screen and (max-width: 767px){
+  .company-file-margin {
+    display: contents;
+    padding-left: 0px;
+    font-weight: normal;
+    margin-bottom: -12px;
+  }
+  table.form-entry-company {
+    width: 100%;
+    max-width: 700px;
+    padding-left: 0px;
+    padding-top: 0px;
+  }
+  table.form-table th.right-button {
+    width: 100%;
+    margin-bottom: -15px;
+    margin-top: -9px;
+  }
+  table.form-table th.file-name-margin {
+    margin-top: 0px;
+    margin-bottom: 6px;
+  }
+  main.mypage-main select.document-id-corporation {
+    margin-bottom: 0px;
+  }
+  .business-file {
+    font-size: 1.2rem;
+    width: 100%;
+  }
+  div.corp-mypage-description.company-file-upload-hint-margin {
+    margin-top: -6px;
+    padding-bottom: 0px;
+  }
+  table.form-entry-company {
+    width: 100%;
+    max-width: 700px;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-top: 20px;
+  }
+  table.form-table tr.company-classification-margin-1,
+  table.form-table tr.company-classification-margin-2,
+  table.form-table tr.company-classification-margin-3,
+  table.form-table tr.company-classification-margin-4 {
+    height: 1rem;
+  }
+  .company-file-note {
+    width: 100%;
+  }
+}
+
+div.company-file-upload-hint-margin img {
+  width: 13px;
+  position: relative;
+  z-index: 1;
+  margin: 0 5px;
+  filter: brightness(0);
+}
+div.form-capacity-description-body-left-company.hidden{
+  display: none;
+}
+div.form-capacity-description-body-left-company,
+div.form-capacity-description-body-right-company {
+  display: block;
+  border-radius: 0.75em;
+  max-height: none;
+  margin-top: -20px;
+  margin-bottom: 60px;
+}
+div.form-capacity-description-company {
+  padding: 32px;
+}
+
+p.confirmation-document-hint-margin {
+  margin-bottom: 28px;
+}
+
+
+div.form-capacity-description-body-left table th.form-capacity-description-company-1,
+div.form-capacity-description-body-right table th.form-capacity-description-company-1 {
+  width: 19%;
+  text-align: center;
+}
+
+div.form-capacity-description-body-left table th.form-capacity-description-company-2,
+div.form-capacity-description-body-left table td.form-capacity-description-company-2 {
+  width: 27%;
+}
+
+@media screen and (max-width: 767px){
+  div.white-content-box-form.form-space-company {
+    padding-top: 0px;
+    padding-bottom: 30px;
+  }
+  div.form-capacity-description-body-left-company,
+  div.form-capacity-description-body-right-company {
+    display: block;
+    border-radius: 0.75em;
+    max-height: none;
+    font-size: 1.2rem;
+    margin-top: 0px;
+  }
+  div.form-capacity-description-company {
+    padding: 19px;
+    font-size: 1.2rem;
+  }
+  p.confirmation-document-hint-margin {
+    margin-bottom: 0px;
+  }
+  div.form-capacity-description-body-left-company table th,
+  div.form-capacity-description-body-left-company table td,
+  div.form-capacity-description-body-right-company table th,
+  div.form-capacity-description-body-right-company table td {
+    font-size: 1.2rem;
+  }
+  div.form-capacity-description-body-left-company table,
+  div.form-capacity-description-body-right-company table {
+    margin-top: 5px;
+  }
+  #error_identity_verification_key {
+    width: 256px;
+  }
+  #error_confirm_doc_key {
+    width: 256px;
+  }
+  #error_enrollment_verification_key {
+    width: 256px;
+  }
+}
+
+
+table.form-table .document {
+  width: 50%;
+  font-size:1.3rem;
+  padding-bottom: 9px;
+}
+table.form-table .document-td {
+  width: 40%;
+}
+table.form-table .file-name-delete-margin {
+  width: 10%;
+  text-align: right;
+}
+@media screen and (max-width: 767px){
+  table.form-table{
+    table-layout: auto;
+  }
+  table.form-table .document {
+    width: 100%;
+  }
+  table.form-table .document-td {
+    width: 78%;
+  }
+  table.form-table .file-name-delete-margin {
+    width: 20%;
+  }
+  div.login-decoration-row-width .form-next-button span {
+    background-position-x: 94%;
+  }
+}
+
+div.form-capacity-select-image img.standard-plan-w-cp-20gb-mark {
+  position: absolute;
+  width: 50px;
+  right: -32px;
+  top: -27px;
+}
+div.form-capacity-select-image img.standard-plan-w-cp-40gb-mark {
+  position: absolute;
+  width: 50px;
+  right: -32px;
+  top: -27px;
+}
+@media screen and (max-width: 767px){
+  div.form-capacity-select-image img.standard-plan-w-cp-20gb-mark {
+    position: absolute;
+    width: 39px;
+    right: -14px;
+    top: -15px;
+  }
+  div.form-capacity-select-image img.standard-plan-w-cp-40gb-mark {
+    position: absolute;
+    width: 39px;
+    right: -14px;
+    top: -15px;
+  }
+}
+
+section.other-first,
+section.other-second, 
+section.other-second.guide, 
+section.other-third, 
+section.other-fourth, 
+section.other-fifth, 
+section.other-sixth, 
+section.other-seventh {
+  background-color: #F3F3F3;
+  background-repeat: no-repeat;
+  padding: 110px 30px 40px;
+  position: relative;
+  z-index: 0;
+}
+
+section.other-first {
+  background-image: unset;
+  padding: 0 30px 100px;
+  overflow: hidden;
+}
+@media screen and (max-width: 767px) {
+  section.other-first {
+    padding-bottom: 50px;
+  }
+}
+.side-title {
+  z-index: -1;
+  position: absolute;
+  filter: blur(0.5px) brightness(105%);
+  writing-mode: vertical-rl;
+  font-size: 5.5em;
+  font-weight: bolder;
+  text-orientation: mixed;
+  -webkit-text-orientation: sideways;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: #ffffff;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: 1.05rem;
+  word-break: break-all;
+  line-height: 1.05em;
+  overflow: hidden;
+}
+
+.side-title.left{
+  left: -7px;
+  top: 110px;
+}
+
+/*ポップアップ閉じるボタン*/
+div.document-popup-close-button{
+  width: 35px;
+  height: 35px;
+  position: absolute;
+  right: -15px;
+  top: -15px;
+  text-align: center;
+  background-color: #000000;
+  border-radius: 17px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+div.document-popup-close-button img{
+  width: 50%;
+}
+/*ポップアップの背景を暗くする*/
+div.document-notion-black-background{
+  position: fixed;
+  background-color: #000000;
+  opacity: 0.4;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000000000001;
+}
+div.white-content-box-document-notion{
+  position: fixed;
+  max-height: calc(100% - 150px - 35px - 200px);
+  max-width: 1100px;
+  top: 50%;
+  left: 0;
+  right: 0;
+  transform: translateY(-50%);
+  padding: 50px 0;
+  margin: auto;
+  z-index: 1000000000002;
+  background-color: #F3F3F3;
+}
+div.white-content-box-document-notion{
+  height: calc(100% - 150px - 35px - 200px);
+  max-height: initial;
+}
+div.white-content-box-document-notion div.white-content-box-inner-document{
+  width: 70%;
+  height: 90%;
+  overflow-x: hidden;
+  margin: 30px auto 0;
+}
+/*ポップアップ内タイトル*/
+div.white-content-box-document-notion div.white-content-box-title-notion{
+  padding: 0;
+  text-align: center;
+}
+@media screen and (min-width: 768px) {
+  div.popup-required-documents.white-content-box-document-notion {
+    transform: translateY(-49.96%);
+  }
+  div.popup-required-documents.white-content-box-document-notion .white-content-box-inner-document {
+    margin-top: 20px;
+    width: 100%;
+  }
+  div.popup-required-documents.white-content-box-document-notion .white-content-box-body {
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+  div.popup-required-documents.white-content-box-document-notion .white-content-box-body table {
+    border-collapse: collapse;
+    border-width: 3px;
+  }
+  div.popup-required-documents.white-content-box-document-notion .white-content-box-body table th,
+  div.popup-required-documents.white-content-box-document-notion .white-content-box-body table td {
+    border-width: 1px;
+  }
+}

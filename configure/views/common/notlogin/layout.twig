@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ja">
+{% include 'common/mypage/head.twig' %}
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WZXDLNM"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NMBMMBV"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MFVGW35"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<header class="mypage-header popup-html">
+    <div class="header-wrapper">
+        <nav class="header-item">
+            <div>
+                <p class="header-logo">
+                    <a href="{{ top_url }}">{{ asset_cdn_img('mypage-logo-zeus_t.png',{'width': 129, 'height': 40, 'alt':'格安モバイルWiFiならゼウスWiFi'}) }}</a>
+                </p>
+            </div>
+            <div class="header-title">
+                <div class="current-tab-name-box">
+                    <p class="current-tab-name">
+                        {% block current_tab %}
+                        {% endblock %}
+                    </p>
+                </div>
+            </div>
+        </nav>
+    </div>
+</header>
+<main class="mypage-main" role="main">
+    <div id="container">
+        <div class="mypage-container bg-plain-dark-gray bg-login {% block bg_class %}{% endblock %} mypage-container-subsc">
+            <div class="mypage-section-container">
+                <div class="mypage-title-area">
+                    <div class="mypage-title-area-icon">
+                        {% block header_icon %}{% endblock %}
+                    </div>
+                    <div class="mypage-titile-area-text">
+                        <h1 class="mypage-titile-area-title">
+                            {% block title %}{% endblock %}
+                        </h1>
+                        <div class="div-sp">
+                            <p class="mypage-titile-area-title-sub">
+                                {% block sub_title %}{% endblock %}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                {% include 'common/message.twig' %}
+                {% block description %}{% endblock %}
+                {% block content %}{% endblock %}
+            </div>
+        </div>
+        {% block content_bottom %}{% endblock %}
+    </div>
+</main>
+{% include 'common/footer_entry.twig' %}
+
+</body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PQMB32G"
+                  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+</html>

@@ -1,0 +1,30 @@
+@charset "utf-8";
+
+.breadcrumb-line {
+  position: relative;
+  min-width: 1500px;
+  background: #444;
+  color: #ffffff;
+  margin-bottom: 30px;
+}
+
+.breadcrumb {
+  padding: 11px 15px;
+  list-style: none;
+  background: #444;
+  border-radius: 4px;
+}
+
+.breadcrumb > li {
+  display: inline-block;
+}
+
+.breadcrumb > li+li:before {
+  padding: 0 5px;
+  color: #ccc;
+  content: ">";
+}
+
+.breadcrumb > .active {
+  color: #999;
+}

@@ -1,0 +1,13 @@
+User-agent: *
+
+Disallow: /mypage/
+Disallow: /entry/
+Disallow: /password/
+Disallow: /login/
+Disallow: /logout/
+Disallow: /error/
+Disallow: /tags/
+Disallow: /categories/
+
+Sitemap: https://zeus-wifi.jpsitemap.xml
+

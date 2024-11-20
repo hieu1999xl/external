@@ -1,0 +1,72 @@
+{% extends 'common/notlogin/layout_prepaid.twig' %}
+{% block current_tab %}LOGIN{% endblock %}
+{% block header_icon %}{{ asset_cdn_img('mypage-icon-top.svg',{'aria-hidden': 'true', 'alt': 'ログインアイコン', 'width': 104, 'height': 88}) }}{% endblock %}
+{% block title %}ZEUS WiFi <br class="sp">CHARGE ログイン{% endblock %}
+{% block bg_class %}login-top-content{% endblock %}
+{% block description %}
+<div class="mypage-description-flex-left">
+    <p>現在ご登録されている<br class="sp">メールアドレス・パスワードをご入力ください。</p>
+</div>
+{% endblock %}
+{% block content %}
+    <div class="div-pc">
+        <div class="vertical-characters" aria-hidden="true">
+            LOGIN
+        </div>
+    </div>
+    <form action="{{ post_login_url }}" method="POST" id="login-form">
+        <div class="mypage-content-box-inner">
+            <div>
+                <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+                <p>
+                    <input class="mypage-login-input-border" type="email" name="email" placeholder="（例）zeus-wifi@example.com" aria-label="メールアドレスを入力してください。"/>
+                </p>
+                <p class="input-gap">
+                    <input class="mypage-login-input-border" type="password" name="password" placeholder="パスワード" aria-label="パスワードを入力してください。"/>
+                    <span class="field-icon field-icon-mypage input-eye">
+                        <i tabindex="0" aria-label="パスワードの表示" toggle="password-field" class="fas fa-eye toggle-password js-tabindex"></i>
+                    </span>
+                </p>
+            </div>
+            <div class="password-forget-button">
+                {# 一旦会員ID忘れの処理はコメントアウト。使用する場合は復活させる #}
+                {# 会員IDを忘れた方は<a class="yellow-link" href="/loginid/forget">パスワード再設定へ</a><br /><br /> #}
+                パスワードを忘れた方は<a class="yellow-link" href="/prepaid/password/forget">パスワード再設定へ</a>
+            </div>
+        </div>
+        <div class="button right">
+            <input id="button-submit" type="submit" style="display: none;">
+            <label for="button-submit">
+                <div class="button-body yellow-link js-tabindex" tabindex="0">
+                    <div class="button-next">
+                        {{ asset_cdn_img('mypage-button-login.svg',{'aria-hidden': 'true', 'alt': 'ログインアイコン', 'width': 26, 'height': 35}) }}
+                    </div>
+                    <!--ボタン　テキスト-->
+                    <p>ログイン</p>
+                    <!--ボタン　三角マーク-->
+                    <span class="button-triangle" aria-hidden="true">▶</span>
+                </div>
+            </label>
+        </div>
+        <input type="hidden" name="fuel_csrf_token" value="{{ csrf_token }}">
+        <input type="hidden" name="plan_type" value="{{ constant('PLAN_TYPE_INTERNATIONAL_PREPAID') }}">
+        {% if next != '' %}
+        <input type="hidden" name="next" value="{{ next }}">
+        {% endif %}
+    </form>
+{% endblock %}
+{% block content_bottom %}
+    <div class="login-bottom-content">
+        <div class="mypage-section-container">
+            <div class="mypage-description-flex-left">
+                <p class="another-plan-text">
+                    ZEUS WiFiはサービスごとにログインページが異なります。<br>
+                    ZEUS WiFiの他サービスをご契約されている場合、それぞれのログインページからログインください。<br>
+                    <br>
+                    <a href="{{ mypage_top_url }}" class="another-plan-a yellow-link"><span aria-hidden="true">▶</span> ZEUS WiFi（月々お支払いいただくプラン）ログイン</a><br>
+                    <a href="{{ login_rental_url }}" class="another-plan-a yellow-link"><span aria-hidden="true">▶</span> ZEUS WiFi for GLOBAL（海外専用プラン）ログイン</a>
+                </p>
+            </div>
+        </div>
+    </div>
+{% endblock %}

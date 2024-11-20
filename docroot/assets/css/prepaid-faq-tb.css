@@ -1,0 +1,25 @@
+/* プリペイドプラン よくあるご質問ページ（/prepaid/faq）　タブレット用 */
+@media (min-width: 768px) and (max-width: 1280px) {
+	div.faq-content {
+		max-width: 680px;
+    padding: 0;
+	}
+	.faq-header-wrap {
+    padding: 25px 10px;
+
+	}
+	#faq-content .faq-nav-icons .nav-box .nav-box-text p {
+    font-size: 1.6rem;
+	}
+	div.faq-nav-icons div.nav-box {
+		height: 70px;
+		margin-bottom: 10px;
+	}
+	#faq-content div.content-box-title p {
+		font-size: 3rem;
+	}
+	#faq-content .tab_content dt {
+    padding: 25px 65px 25px 65px;
+    font-size: 1.8rem;
+	}
+}

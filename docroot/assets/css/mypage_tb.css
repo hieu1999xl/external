@@ -1,0 +1,475 @@
+@media screen and (min-width: 1281px) {
+  /* pc共通 */
+  .tb {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  /* sp共通 */
+  .tb {
+    display: none;
+  }
+  .tb.sp {
+    display: block;
+}
+  .sp {
+    display: block;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1280px) {
+  body {
+    min-width: 768px;
+    overflow-x: hidden;
+  }
+
+  /* tb共通 */
+  .tb {
+    display: block;
+  }
+  .hide-tb.pc {
+    display: none;
+  }
+  /* 共通END */
+
+  /* マイページログインとTOP */
+  div.mypage-section-container {
+    width: 90%;
+  }
+
+  div.mypage-content-box {
+    margin: 20px 0;
+  }
+  .button-contract{
+    margin-top: 0;
+  }
+
+  div.mypage-footer-main ul {
+    margin: 15px 150px 15px 70px;
+  }
+
+  div.header-wrapper {
+    max-width: 740px;
+  }
+
+  div.prepaid-content-area{
+    max-width: 700px;
+  }
+
+  .mypage-nav-item p{
+    font-size: 1.2rem;
+  }
+
+  .mypage-section-container div.mypage-user-container a.button-text p{
+    font-size: 1.5rem;
+  }
+
+  div.mypage-section-container div.mypage-user-container div.rental-button-body p{
+    font-size: 1.2rem;
+  }
+
+  div.subsc-mypage-top a.button-text .title-body p.btn-ttl {
+    font-size: 1.6rem;
+  }
+  div.subsc-mypage-top a.button-text .title-body p.btn-desc {
+    font-size: 1.2rem;
+  }
+  .subsc-mypage-top .nav-flex .button-body {
+    height: 110px;
+    padding: 20px 0;
+  }
+
+  span.button-triangle.tab-open-main{
+    width: 25px;
+  }
+
+  .subsc-mypage-top a.button-text .title-body p.btn-desc {
+    padding-left: 0;
+  }
+
+  .subsc-mypage-top .button-subsc-top {
+    width: 90px;
+  }
+
+  .subsc-mypage-top a.button-text.saison-menu-btn .title-body {
+    padding-right: 10px;
+    width: calc(100% - 90px);
+  }
+  .subsc-mypage-top a.button-text.saison-menu-btn .title-body p.btn-desc {
+    width: auto;
+    line-height: 1.5;
+  }
+
+  /* セゾンカード受付番号入力 */
+  .saison-wrap div.mypage-content-box-inner {
+    margin: auto 40px;
+  }
+
+  /* マイページ現在の利用状況・データ利用料ページ */
+  div.recharge .travel-table .overseas-travel-period table.data-usage-table tr:not(.caption-area) td:nth-of-type(1),
+  div.recharge .travel-table .overseas-travel-period table.data-usage-table tr:not(.caption-area) td:nth-of-type(3),
+  div.recharge .travel-table table.data-usage-table tr:not(.caption-area) td:nth-of-type(1),
+  div.recharge .travel-table table.data-usage-table tr:not(.caption-area) td:nth-of-type(3){
+    font-size: 1.7rem;
+  }
+
+  div.recharge table.recharge-remaining tr.data-flow-1 td.data-label::before {
+    left: 0;
+  }
+
+  div.recharge table.recharge-remaining tr.data-flow-2 td {
+    vertical-align: middle;
+  }
+
+  /* ご利用明細・領収書発行ページ */
+  div.mypage-global-payment-list-inner .application span + span {
+    margin-left: 0;
+  }
+
+  .mypage-global-payment-date.application{
+    margin-right: 20px;
+  }
+
+  p.mypage-global-payment-date span + span {
+    margin-left: 20px;
+  }
+
+  p.mypage-global-payment-date .pc{
+    margin: 0;
+  }
+
+  li.mypage-global-payment-list{
+    padding: 0;
+    font-size: 1.8rem;
+  }
+
+  .mypage-content-box-inner.mypage-global-payment-box-inner {
+    margin: auto 50px;
+  }
+
+  /* 会員情報 */
+  div.subsc-user-edit-container-wrap {
+    margin: 0 auto;
+  }
+  /* お申し込み情報 */
+  main.mypage-contract .mypage-global-contract-box span.imei-select-img img {
+    left: 115px;
+    top: 0;
+    transform: unset;
+  }
+
+  table.table-base.user-edit-table th {
+    width: 37%;
+  }
+
+  table.table-base.user-input.subsc-edit-table tr td input.mypage-tel-col-30 {
+    width: 30%;
+  }
+
+  div.mypage-section-container div.button {
+    margin-top: 0;
+  }
+
+  .mypage-container div.mypage-section-container div.login_button_center {
+    margin-top: 50px;
+  }
+
+  /* お客様情報の変更 */
+  div.entry-insurance-option-text{
+    width: 90%;
+  }
+  div.mypage-content-box-title p.edit-ttl,
+  .mypage-content-box-inner table.table-mini,
+  table.table-mini{
+    width: 100%;
+  }
+
+  /* お支払い方法の変更 */
+  #user-payment-edit-form div.form-capacity-notice.payment-select-caution.subsc-coution {
+    width: 100%;
+  }
+
+  /* ご契約情報画面 */
+  .mypage-contract #option_cancel_area table.table-base th {
+    width: 60%;
+  }
+  .mypage-contract #option_cancel_area tr.allcheck td {
+    text-align: center;
+    padding: 0;
+  }
+  .mypage-contract .insurance-option-request.table-mini {
+    margin: 0.7em 0 0.7em auto;
+  }
+  .mypage-contract div.insurance-option-inquiry {
+    width: 100%;
+  }
+  .mypage-contract .option-cancel-all.option-cancel-caution {
+    width: 100%;
+    margin: 0.7em 0 0 0;
+  }
+  .mypage-contract .option-cancel-all.option-cancel-caution p.option-cancel-caution-pc {
+    max-width: 400px;
+  }
+  .mypage-contract button.js-copybtn {
+    height: auto;
+    font-size: 1.2rem;
+  }
+  .mypage-contract .insurance-option-request.insurance-option-request-after {
+    margin: 0;
+    max-width: 140px;
+  }
+  /* 初期契約解除について */
+  .subsc-contract-initial-cancel div.guide-nav-icon-box {
+    width: 220px;
+  }
+  div.guide-nav-icon-box div.sub-dir-nav-box div.nav-box-text {
+    left: 35px;
+  }
+  div.nav-icon-box-initial-cancel div.sub-dir-nav-box div.nav-box-icon {
+    width: 45px;
+    left: 130px;
+  }
+  #guide-section-1 div.white-content-box-inner-flex-left-width {
+    width: 65%;
+  }
+  #guide-section-1 div.white-content-box-inner-flex-left-width div.white-content-box-inner-cancel,
+  #guide-section-2 div.white-content-box-inner-flex-left-width div.white-content-box-inner-cancel {
+    padding: 15px 60px;
+  }
+  div.white-content-box-body {
+    margin: 0;
+  }
+  #guide-section-2 div.white-content-box-inner-flex-left {
+    width: 60%;
+  }
+  #guide-section-3 div.white-content-box-inner-flex-left {
+    width: 100%;
+  }
+  #guide-section-3 div.cancel-flexbox div.white-content-box-inner-flex-right {
+    width: 100%;
+  }
+  .white-content-box-image-box {
+    width: 50%;
+    min-width: 340px;
+    margin: 40px auto 0;
+  }
+
+  /* ご契約情報 > デジタルライフサポート加入 */
+  div.mypage-insurance-option-select div.insurance-option-plan-name {
+    width: 50%;
+  }
+  div.mypage-insurance-option-select div.insurance-option-plan-name p:nth-child(1) {
+    font-size: 2.2rem;
+  }
+  div.mypage-insurance-option-select div.insurance-option-plan-name p:nth-child(2) {
+    font-size: 1.5rem;
+  }
+  div.mypage-insurance-option-select .mypage-plan-opt-recommend-mark {
+    width: 70px;
+    margin-right: 10px;
+  }
+  div.mypage-insurance-option-select .insurance-option-plan-price {
+    font-size: 1.8rem;
+  }
+
+  /* 海外データプランの購入 */
+  .search-by-area img.worldmap-img {
+    width: 100%;
+    max-width: 690px;
+    top: 90px;
+  }
+
+  /* 渡航期間の延長 */
+  .overseas-add-area .overseas-day,
+  .overseas-add-area .overseas-country-select {
+    flex-wrap: wrap;
+  }
+  .overseas-add-area .overseas-day .overseas-title,
+  .overseas-add-area .overseas-country-select .overseas-title {
+    width: 100%;
+    padding-bottom: 5px;
+  }
+  .overseas-add-area .overseas-country-select .overseas-content {
+    width: 100%;
+    padding: 10px 0 10px;
+  }
+  .overseas-add-area .overseas-start, 
+  .overseas-add-area .overseas-end {
+    width: 175px;
+  }
+  .overseas-add-area .form-control {
+    width: 150px;
+  }
+  .overseas-add-area .overseas-end .form-control {
+    width: 150px;
+  }
+  .overseas-add-area .overseas-term {
+    margin-left: 25px;
+  }
+  .overseas-add-area .overseas-country .overseas-title {
+    width: 210px;
+  }
+  .overseas-add-area .overseas-country .overseas-title.hide-tb {
+    display: none;
+  }
+  main.mypage-rental-add .form-user-background {
+    z-index: 1;
+    position: relative;
+  }
+  .overseas-add-area .input-daterange input#datepicker_start {
+    width: 150px;
+  }
+  .overseas-add-area #overseas-add .other-sub-ttl {
+    padding-left: 0;
+    font-size: 1.6rem;
+  }
+  main.mypage-contents .overseas-add-area .overseas-country select.form-control-country {
+    width: 160px;
+  }
+  .overseas-add-area .overseas-country .overseas-area-add, 
+  .overseas-add-area .overseas-country .overseas-country-add, 
+  .overseas-add-area .overseas-country .overseas-plan-add {
+    width: 170px;
+  }
+  .fav-country-container .country-single p {
+    font-size: 1.2rem;
+    line-height: 1.4;
+  }
+  #popup-overseas-edit.option-popup-block .entry-option-popup .popup-contents {
+    max-width: 680px;
+    padding: 45px 35px;
+  }
+  div.mypage-content-box.mypage-global-content-box.mypage-global-contract-box {
+    position: relative;
+    z-index: 1;
+  }
+  div.mypage-user-container-cancel {
+    position: relative;
+    z-index: 1;
+  }
+  .mypage-initial_contract_cancellation table.form-table-multi-column_cancel th {
+    width: 190px;
+  }
+
+  /* prepaid */
+  /* ご利用明細 */
+  div.mypage-content-box-inner.prepaid-mypage-narrow {
+    margin: auto 50px;
+  }
+
+  /* お申し込み情報 */
+  div.prepaid-btn-adjustment {
+    margin: 0 5px;
+  }
+
+  .edit-btns-container.contract-rental-btn-3column {
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .prepaid-btn-container-wrap p.desc-reset {
+    padding: 0;
+  }
+  /* セゾンカード受付番号入力 */
+  .saison-wrap .saison-banner .banner-btn-wrap {
+    right: 10px;
+    bottom: 10px;
+  }
+  /* 国内データ　ギガチャージ */
+  .giga-menu-area div.prepaid-charge-btn{
+    position: static;
+  }
+
+  div.prepaid-btn-editpop {
+    margin: 0;
+  }
+
+  div.mypage-content-box div.mypage-content-box-inner.inner-prepaid {
+    margin: 0;
+  }
+
+  div.form-capacity-selects-prepaid .plan-price {
+    margin-left: 5px;
+  }
+
+  .form-capacity-selects-prepaid .datacharge-1gb-price {
+    font-size: 1.4rem;
+  }
+
+  /* 海外ギガチャージ */
+  .prepaid-content-area div.mypage-content-box.prepaid-giga-overseas-add.mypage-content-box {
+    margin-top: 0;
+  }
+
+  div.prepaid-btn-container .data-create-button-text {
+    margin-top: 45px;
+  }
+
+  div.prepaid-giga-overseas-add .popular > div{
+    width: calc((100% / 3) - 7px);
+  }
+
+  .prepaid-giga-overseas-add .add-data-table th {
+    width: 100%;
+    display: block;
+    font-size: 1.7rem;
+  }
+
+  div.prepaid-btn-container {
+    margin: 0;
+  }
+
+  .prepaid-giga-overseas-add .add-data-table td {
+    display: block;
+    padding: 0 0 30px;
+  }
+
+  div.prepaid-giga-overseas-add .input-daterange input:last-child,
+  div.prepaid-giga-overseas-add div.usage-period div.form-control {
+    width: 150px;
+  }
+
+  div.prepaid-giga-overseas-add div.usage-period {
+    margin-left: 10px;
+  }
+
+  /* 海外データ　期間延長 */
+  .usage-start-create .form-control {
+    width: 120px;
+  }
+  div.prepaid-giga-overseas-add .input-daterange input:last-child {
+    width: 120px;
+  }
+
+  div.prepaid-giga-overseas-add div.usage-period div.form-control {
+    width: 105px;
+  }
+
+  div.prepaid-giga-overseas-extension div.usage-period div.form-control {
+    min-width: 100px;
+  }
+
+  /* おかわりGIGA */
+  .prepaid-content-area div.mypage-content-box-title {
+    font-size: 1rem;
+  }
+
+  a.button-has{
+    margin-left: 60px;
+  }
+
+  div.form-select-space {
+    margin: 0 10px;
+  }
+
+  /* お客様情報の変更 */
+  input.mypage-tel-col-30 {
+    width: 31%;
+  }
+
+  /* 海外データ */
+  .edit-btns-container .create-left-css{
+    margin-left: 9%;
+  }
+}

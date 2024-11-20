@@ -1,0 +1,3746 @@
+/* ************************************* */
+/* プリペイドプラン 申し込みフォーム専用CSS */
+/* ************************************* */
+
+/*----------------------
+共通要素
+-----------------------*/
+*{
+  --overseas-green: #00B79C;
+  --overseas-gray: #E8E8E8;
+  --overseas-black: #000000;
+  --overseas-yellow: #FFDE00;
+  --overseas-purple: #9E00FF;
+
+  --font-24: 2.4rem;
+  --font-18: 1.8rem;
+  --font-16: 1.6rem;
+  --font-13: 1.3rem;
+  --font-12: 1.2rem;
+
+  --space-80: 80px;
+  --space-60: 60px;
+  --space-40: 40px;
+  --space-20: 20px;
+}
+/* ヘッダーロゴ */
+header.mypage-header p.header-logo.logo-prepaid a img {
+  height: 40px;
+  padding: 4px 5px 0;
+}
+@media screen and (max-width: 767px) {
+  header.mypage-header p.header-logo.logo-prepaid a img {
+    padding: 4px 10px 0 5px;
+  }
+  header.mypage-header p.header-logo {
+    padding-left: 0;
+  }
+  header.mypage-header.mypage-header-prepaid p.current-tab-name {
+    font-size: 1.4rem;
+    margin-left: 5px;
+  }
+}
+
+select {
+  -webkit-appearance: none;
+  appearance: none;
+  background-image: url(https://d1q08lkutgkcx2.cloudfront.net/image/arrow-select.webp);
+  background-repeat: no-repeat;
+  background-size: 10px auto;
+  background-position: right 6px center;
+  color: #000;
+}
+
+a.postal-btn-wrap button,
+option {
+  color: #000;
+}
+
+/*----------------------
+STEP1（一部、STEP3共有）
+-----------------------*/
+.prepaid-form-select div#plan-id-error-message {
+  margin: 20px auto 10px;
+}
+.prepaid-plan-form div.form-step-title p {
+  margin: 20px auto 0;
+}
+.cp-banner {
+  margin-top: 50px;
+}
+.cp-banner .mypage-user-container img {
+  width: 100%;
+}
+form.prepaid-form-select div.form-step-title-wrapper {
+  padding: 10px 0;
+}
+form.sub-select div.form-step-title-wrapper {
+  display: none;
+}
+form.prepaid-form-select div.form-step-title p.first-title {
+  top: 10px;
+}
+.sub-campaign-text {
+  text-align: center;
+  font-weight: bold;
+  font-size: 3rem;
+  line-height: 1.5;
+  margin-top: 65px;
+}
+.sub-campaign-text span {
+  color: #9E00FF;
+}
+form.prepaid-form-select .sub-select-plan p.first-title {
+  margin-top: 65px;
+}
+form.prepaid-form-select p.first-title {
+  font-size: 4.0rem;
+  font-weight: bold;
+  letter-spacing: 0.1em;
+  line-height: 1;
+  margin: 90px 0 25px;
+  -webkit-text-stroke: 0.5px black;
+  position: relative;
+  padding-left: 30px;
+}
+form.prepaid-form-select p.first-title::before {
+  content: "";
+  width: 10px;
+  height: calc(100% + 10px);
+  background-color: #9E00FF;
+  position: absolute;
+  left: 0px;
+  top: -5px;
+}
+form.prepaid-form-select div.sub-select-device p.first-title {
+  padding-left: 0;
+}
+form.prepaid-form-select div.sub-select-device p.first-title::before {
+  content: unset;
+}
+form.prepaid-form-select div.form-step-title p.first-title {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  width: 100%;
+  margin-top: 25px;
+  box-sizing: border-box;
+}
+form.prepaid-form-select span.mandatory, form.prepaid-form-select span.optional {
+  padding: 0 9px 0 13px;
+  border-radius: 8px;
+  font-size: var(--font-13);
+  text-align: center;
+  color: white;
+  background-color: #ea338d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30px;
+}
+form.prepaid-form-select .select-plan-inner,
+.sub-confirm .select-plan-inner {
+  position: relative;
+}
+form.prepaid-form-select p.select-plan {
+  font-size: 1.6rem;
+  margin: 48px auto 40px 30px;
+}
+.prepaid-option-area .prepaid-option-area-inner {
+  margin: 30px auto 30px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.prepaid-option-area .prepaid-option-area-inner p.select-plan,
+.prepaid-option-area .prepaid-option-area-inner .prepaid-popup-area {
+  margin: 0;
+}
+.prepaid-option-area .prepaid-option-area-inner .prepaid-popup-area {
+  border-bottom: none;
+}
+.prepaid-option-area .prepaid-option-area-inner .prepaid-device-option-popup {
+  font-weight: bold;
+  padding: 0;
+}
+form.prepaid-form-select span.select-recommend,
+.sub-confirm  span.select-recommend {
+  max-width: 130px;
+  position: absolute;
+  right: 20px;
+  top: -80px;
+
+}
+form.prepaid-form-select span.select-recommend img.select-recommend-image,
+.sub-confirm span.select-recommend img.select-recommend-image {
+  width: 100%;
+}
+form.prepaid-form-select div.entry-plan-select-detail {
+  margin: 0;
+}
+form.prepaid-form-select div.form-capacity-select-area {
+  margin: 0;
+}
+form.prepaid-form-select .entry-plan-select {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  margin: 0 0 110px;
+}
+form.prepaid-form-select div.form-capacity-select {
+  height: auto;
+}
+.prepaid-plan-area {
+  box-sizing: border-box;
+  margin-bottom: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.prepaid-column div {
+  background-color: #383838;
+  color: #FFFFFF;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+}
+.prepaid-plan-area > div {
+  display: flex;
+  flex-direction: column;
+  width: calc(100% / 3 - 5px);
+  text-align: center;
+  align-items: center;
+  margin-bottom: 15px;
+}
+.prepaid-plan-area > div:last-of-type {
+  margin-bottom: 0;
+}
+.prepaid-plan-area > div.prepaid-column {
+  justify-content: end;
+  background-color: unset;
+}
+.prepaid-plan-area .prepaid-plan span.prepaid-plan-thumb {
+  display: block;
+  position: relative;
+  border-radius: 10px;
+  box-shadow: 0 0 8px rgb(0,0,0,20%);
+}
+.prepaid-plan-area .prepaid-plan.selected span.prepaid-plan-thumb {
+  outline: 5px solid #9E00FF;
+  outline-offset: -5px;
+}
+.prepaid-plan-area .prepaid-plan:focus-visible {
+  outline: none;
+}
+.prepaid-plan-area .prepaid-plan:focus-visible span.prepaid-plan-thumb img.prepaid-plan-thumb-img {
+  outline: 2px solid #000;
+  outline-offset: 2px;
+  border-radius: 8px;
+}
+.prepaid-plan-area .prepaid-plan span.prepaid-plan-thumb img.prepaid-plan-thumb-img {
+  width: 100%;
+}
+.prepaid-plan-area .prepaid-plan span.prepaid-plan-thumb img.prepaid-plan-thumb-recommend {
+  position: absolute;
+  top: -16px;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+.prepaid-plan-area .prepaid-plan span.prepaid-plan-thumb img.prepaid-plan-thumb-recommend1 {
+  width: 120px;
+}
+.prepaid-plan-area .prepaid-plan span.prepaid-plan-thumb img.prepaid-plan-thumb-recommend2 {
+  width: 150px;
+}
+div.prepaid-plan-check {
+  position: static;
+  width: 13%;
+  margin: 0;
+  align-items: center;
+  margin-bottom: 6px;
+}
+.sub-select div.prepaid-plan-check {
+  margin-bottom: 0;
+}
+div.prepaid-plan-check label.custom-check-box-v2.plan input[type="radio"] + span::before,
+label.custom-check-box-v2.option input[type="radio"] + span::before {
+  border-radius: 6px;
+}
+.prepaid-plan-gb,
+.prepaid-plan-day,
+.prepaid-plan-price,
+.prepaid-column div {
+  width: 29%;
+}
+.prepaid-plan-day {
+  width: 24%;
+}
+.prepaid-column div.prepaid-column-2 {
+  width: 24%;
+}
+.prepaid-column div.prepaid-column-3 {
+  width: 36%;
+}
+.prepaid-plan-gb-none {
+  width: 53%;
+  font-size: 2rem;
+  font-weight: bold;
+}
+div.prepaid-plan-check label.custom-check-box-v2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 0 14px 0;
+}
+div.prepaid-plan-check p.custom-check-box-v2-select-text.text-size {
+  margin: 0;
+  padding: 0;
+  margin-left: -5px;
+}
+.prepaid-plan {
+  border-radius: 10px;
+  cursor: pointer;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.prepaid-plan-gb {
+  font-size: 2.5rem;
+  font-weight: bold;
+  width: 27%;
+}
+.prepaid-plan-gb p {
+  font-size: 1.7rem;
+  color: #000;
+}
+.prepaid-plan-gb span {
+  font-size: 4rem;
+}
+.prepaid-plan-day {
+  font-size: 2rem;
+  border-right: 1px solid #000000;
+  border-left: 1px solid #000000;
+}
+.prepaid-plan-day p {
+  font-size: 1.7rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.prepaid-plan-day span {
+  font-size: 3rem;
+}
+.prepaid-plan-price {
+  font-weight: bold;
+  width: 36%;
+  padding-right: 36px;
+  box-sizing: border-box;
+  text-align: right;
+}
+.prepaid-plan-price span {
+  font-size: 4rem;
+}
+.prepaid-plan-price p {
+  font-weight: normal;
+  margin-right: 8px;
+}
+.prepaid-column div.prepaid-column-1 {
+  width: 27%;
+}
+.prepaid-column-2 {
+  border-right: 1px solid #FFFFFF;
+  border-left: 1px solid #FFFFFF;
+}
+.prepaid-plan-100 .prepaid-plan-price span {
+  color: #DB00A3;
+}
+.prepaid-plan-10 .prepaid-plan-price span {
+  color: #FFA100;
+}
+.prepaid-plan-price-zero {
+  padding-right: 87px;
+  position: relative;
+}
+.prepaid-plan-price-zero::before {
+  content: "";
+  width: 1px;
+  height: 60px;
+  background-color: #000;
+  position: absolute;
+  left: -5px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.prepaid-recom {
+  position: absolute;
+  top: 50%;
+  right: -10px;
+  width: 75px;
+  transform: translateY(-50%) translateX(50%);
+  -webkit-transform: translateY(-50%) translateX(50%);
+}
+label.custom-check-box-v2 input[type="radio"] + span::after {
+  top: 17px;
+  left: 0px;
+}
+.prepaid-device-area {
+  width: 50%;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #FFFFFF;
+  position: relative;
+  height: 220px;
+}
+.prepaid-device-area.selected {
+  border: solid 5px #00B79C;
+}
+.prepaid-device-img {
+  width: 250px;
+  padding-left: 40px;
+}
+.sub-select .prepaid-device-img {
+  width: 100%;
+}
+.sub-select .prepaid-device-img {
+  padding-left: 0;
+}
+div.prepaid-device-area div.form-capacity-select-checkbox-area {
+  margin-top: 0;
+}
+div.prepaid-device-area label.custom-check-box-v2 input[type="radio"] + span::after {
+  top: 17px;
+  left: 3px;
+}
+div.prepaid-device-area p.custom-check-box-v2-select-text.text-size {
+  margin-left: 4px;
+}
+div.prepaid-device-detail {
+  width: 50%;
+  padding: 10px 0 10px 20px;
+  box-sizing: border-box;
+}
+div.sub-select div.prepaid-device-detail {
+  width: 55%;
+  padding: 0 0 0 25px;
+  box-sizing: border-box;
+}
+div.prepaid-device-detail table {
+  border-collapse: collapse;
+  width: 100%;
+}
+div.sub-select div.prepaid-device-detail table {
+  border-top: 1px solid #000;
+}
+div.prepaid-device-detail table th,
+div.prepaid-device-detail table td {
+  border-bottom: 1px solid #000;
+  padding: 15px 10px;
+}
+div.sub-select div.prepaid-device-detail table th,
+div.sub-select div.prepaid-device-detail table td {
+  border-bottom: 1px solid #000;
+  padding: 10px 10px 10px 0;
+}
+div.prepaid-device-detail .prepaid-popup-area {
+  margin: 10px 0 0;
+}
+.entry-option-select {
+  flex: unset;
+  justify-content: space-between;
+}
+.entry-option-select div.relief-item-select-area-box .title {
+  font-size: 2.1rem;
+}
+.entry-option-tanmatsu-anshin .relief-option-ckeckbox {
+  top: calc(50% - 40px);
+}
+.entry-option-service-group {
+  margin-top: 0;
+}
+div.prepaid-option-area .entry-option-select div.relief-item-select-area-box {
+  width: 100%;
+  max-width: 330px;
+  box-sizing: border-box;
+  height: fit-content;
+  padding: 30px 0 30px 75px;
+}
+div.prepaid-option-area .entry-option-select div.relief-item-select-area-box .yen,
+div.prepaid-option-area .entry-option-select div.relief-item-select-area-box .tax-included {
+  font-size: 1.4rem;
+}
+div.prepaid-option-area .entry-option-unselect div.relief-item-select-area-box {
+  width: 235px;
+  box-sizing: border-box;
+}
+div.prepaid-option-area .entry-option-tanmatsu-anshin .entry-option-select {
+  width: 50%;
+}
+div.prepaid-option-area .entry-option-service-prepaid.entry-option-tanmatsu-anshin .entry-option-select {
+  width: 100%;
+}
+div.prepaid-option-area .entry-option-service-prepaid .entry-option-select div.relief-item-select-area-box {
+  max-width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
+  padding: 20px 20px 20px 75px;
+}
+div.prepaid-option-area .entry-option-service-prepaid .entry-option-select div.relief-item-select-area-box img.recommend {
+  position: absolute;
+  right: -10px;
+  top: -20px;
+  width: 60px;
+  height: auto;
+}
+div.prepaid-option-area .entry-option-service-prepaid .relief-option-ckeckbox {
+  top: calc(50% - 14px);
+}
+div.prepaid-option-area .entry-option-service-prepaid .entry-option-service-prepaid-img {
+  display: block;
+  max-width: 70px;
+  margin: 0 20px 0 10px;
+}
+div.prepaid-option-area .entry-option-service-prepaid .entry-option-service-prepaid-img img {
+  width: 100%;
+}
+div.prepaid-option-area .entry-option-service-prepaid .title {
+  font-size: 2.4rem;
+}
+div.prepaid-option-area .entry-option-service-prepaid .title span.small {
+  font-size: 1.6rem;
+}
+div.prepaid-option-area .entry-option-service-prepaid p.entry-option-service-prepaid-text {
+  margin-top: 10px;
+  font-size: 1.6rem;
+}
+div.prepaid-option-area p.prepaid-option-area-attention {
+  margin-top: 10px;
+}
+div.prepaid-option-area .entry-option-select-detail {
+  width: 52%;
+  padding: 10px 0 0 20px;
+}
+div.prepaid-option-area .entry-option-select-detail p {
+  font-size: 1.4rem;
+  font-weight: 600;
+  line-height: 1.5;
+  margin-bottom: 15px;
+}
+div.prepaid-option-area .entry-option-select-detail p.attention {
+  font-size: 1.2rem;
+}
+div.prepaid-option-area  .prepaid-popup-area {
+  margin: 15px 0 0;
+}
+div.prepaid-option-area .entry-option-select div.relief-item-select-area-box .group {
+  position: relative;
+}
+div.prepaid-option-area .entry-option-select div.relief-item-select-area-box .group img {
+  position: absolute;
+  right: -10px;
+  top: -45px;
+  width: 60px;
+  height: auto;
+}
+.entry-option-tanmatsu-anshin div.relief-item-select-area-box .price {
+  text-align: left;
+}
+.entry-option-tanmatsu-anshin div.relief-item-select-area-box .price.price-paid {
+  margin-top: 10px;
+}
+.entry-option-tanmatsu-anshin div.relief-item-select-area-box .sub-title {
+  margin-top: 10px;
+}
+.js-option-popup {
+  font-family: "Montserrat", "Noto Sans JP", sans-serif;
+  font-size: 1.5rem;
+  border: 1px solid transparent;
+  background-color: transparent;
+  cursor: pointer;
+  color: #e6006b;
+}
+.prepaid-popup-area {
+  border-bottom: 1px solid #e6006b;
+  width: fit-content;
+  margin: 25px auto 0;
+  cursor: pointer;
+}
+.entry-option-unselect div.relief-item-select-area-box .price {
+  margin: 33px 0 23px;
+}
+div.topping-2-select-area.active, 
+div.topping-2-select-area.selected, 
+div.topping-2-select-area-2.active, 
+div.topping-2-select-area-2.selected
+div.topping-2-select-area-relief-option.active, 
+div.topping-2-select-area-relief-option.selected, 
+.relief-item-select-area3.selected {
+  border: solid 5px #ffe700;
+}
+.sub-entry-prepaid div.topping-2-select-area.active, 
+.sub-entry-prepaid div.topping-2-select-area.selected, 
+.sub-entry-prepaid div.topping-2-select-area-2.active, 
+.sub-entry-prepaid div.topping-2-select-area-2.selected
+.sub-entry-prepaid div.topping-2-select-area-relief-option.active, 
+.sub-entry-prepaid div.topping-2-select-area-relief-option.selected, 
+.sub-entry-prepaid .relief-item-select-area3.selected {
+  border: solid 5px #9E00FF;
+}
+label.custom-check-box-v2.option input[type="checkbox"] + span::after, 
+label.custom-check-box-v2.option input[type="radio"] + span::after, 
+label.custom-check-box-v2-2.option input[type="checkbox"] + span::after, 
+label.custom-check-box-v2-2.option input[type="radio"] + span::after {
+  left: 2px;
+}
+div.your-plan-area div.summary-table-row,
+div.your-plan-area div.sub-select-opt {
+  line-height: 1.6;
+  width: 70%;
+}
+div.your-plan-area.sub-select div.summary-table-row,
+div.your-plan-area.sub-select div.sub-select-opt {
+  width: 78%;
+}
+div.form-application-container div.sub-select div.mypage-user-container.mt-50 {
+  margin-bottom: 0;
+}
+#your_plan {
+  width: 100%;
+  z-index: 10000;
+  margin-top: 0;
+  box-shadow: 0 0 5px rgba(0,0,0,0.2);
+  border-radius: 15px;
+}
+.your-plan-area.your-plan-area-prepaid .detail-more {
+  max-height: 100%;
+  background: #fff;
+  border-radius: 0 0px 20px 20px;
+}
+.your-plan-area.your-plan-area-prepaid div.plan-summary-area-table {
+  background: #fff;
+}
+div.entry-form-option-select {
+  margin-bottom: 60px;
+}
+.total{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  background-color: #d400ff;
+  padding: 1.3em 1.3em 0.8em 1.3em;
+  border-radius: 15px 15px 0 0;
+  font-size: var(--font-16);
+  color: #fff;
+  box-sizing: border-box;
+}
+.sub-select .total{
+  background-color: #9E00FF;
+}
+.detail{
+  position: relative;
+}
+.detail > p{
+  display: block;
+  width: 100%;
+  text-align: center;
+  padding: 0.5em 0;
+  color: #000;
+  font-size: var(--font-16);
+  font-weight: bold;
+  background-color: #d9d9d9;
+  border-radius: 0 0 15px 15px;
+}
+.detail > p::after {
+  content: "▼";
+  left: 55%;
+  position: absolute;
+  font-size: var(--font-18);
+}
+.detail > p.your-plan-open::after {
+  content: "▲";
+}
+.big-num {
+  font-size: var(--font-24);
+  font-weight: bold;
+}
+.detail-more {
+  background: #fff;
+  border-radius: 0 0px 20px 20px;
+  padding: 15px 0 30px;
+}
+div.plan-summary-table-row-wide div.summary-table-column-left.sp-line {
+  width: 30%;
+  margin-left: 10px;
+}
+.sub-select div.plan-summary-table-row-wide div.summary-table-column-left.sp-line {
+  width: 22%;
+}
+div.summary-table-column-left.double {
+  padding: 1.8em 0;
+}
+div.plan-summary-area-table {
+  background-color: #FFF;
+}
+.sub-select .flex-box-select div.plan-summary-area-table {
+  width: 100%;
+}
+div.plan-summary-area-table .attention-prepaid {
+  text-align: right;
+  margin: 10px 10px 0 0;
+}
+div.plan-summary-area-table.plan-confirm {
+  margin: 0 0 1em;
+}
+.plan-table div.plan-summary-area-table.plan-summary-area-table-prepaid.plan-confirm div.plan-summary-table-row {
+  background: unset;
+}
+.plan-table div.plan-summary-area-table.plan-summary-area-table-prepaid.plan-confirm div.summary-table-column-left {
+  width: 22%;
+}
+.plan-table div.plan-summary-area-table.plan-summary-area-table-prepaid.plan-confirm div.summary-table-row {
+  flex-grow: 1;
+}
+.red-text {
+  color: red;
+}
+.summary-price-text {
+  font-weight: bold;
+  font-size: 1.35em;
+}
+.plan-summary-area-table-prepaid .summary-price-text,
+.plan-table .plan-summary-area-table-prepaid div.summary-table-column.summary-table-column-right.adjust p,
+.plan-table .plan-summary-area-table-prepaid div.summary-table-column-right.adjust p {
+  position: relative;
+  padding-right: 20px;
+  font-weight: lighter;
+  font-size: 1.35em;
+}
+.plan-summary-area-table-prepaid .summary-price-text {
+  padding-right: 0;
+}
+.plan-summary-area-table-prepaid .summary-price-text.overseas-your-all-price,
+.plan-table .plan-summary-area-table-prepaid div.summary-table-column.summary-table-column-right.adjust p.your-all-price {
+  position: relative;
+  font-weight: bold;
+}
+.plan-summary-area-table-prepaid .atten-sub {
+  position: absolute;
+  top: 1px;
+  transform: translateX(2px);
+}
+.summary-table-column-right {
+  text-align: right;
+}
+.summary-table-price {
+  position: relative;
+}
+.summary-table-price .atten-sub {
+  position: absolute;
+  top: 1px;
+  transform: translateX(2px);
+}
+.attention-wrapper {
+  width: 95%;
+  margin: 20px auto 0;
+}
+.attention-wrapper h3.attention-hdg {
+  margin: 0;
+  padding-bottom: 10px;
+}
+.attention-wrapper p.attention {
+  font-size: 1.3rem;
+}
+.attention-wrapper p.attention.sub-camp {
+  padding-left: 2.5em;
+  text-indent: -2.5em;
+}
+.attention-wrapper p.attention + p.attention:not(.sub-camp) {
+  margin-top: 10px;
+}
+.attention-wrapper p.attention.sub-margin {
+  margin-top: 10px;
+}
+.marginTp1{
+  margin: 10px 0 0px;
+}
+.marginBt1{
+  margin: 5px 0 35px;
+}
+.marginTp2{
+  margin: 0 0 5px;
+}
+.marginBt2{
+  margin-right: 51.5px;
+}
+.summary-text-postage {
+  margin-right: 52px;
+}
+div.plan-summary-table-row-wide {
+  width: 100%;
+  padding: 0;
+}
+.sp-flex {
+  display: flex;
+  justify-content: flex-end;
+  align-items: baseline;
+}
+.sp-flex-yen {
+  display: flex;
+  margin-left: 4px;
+}
+.summary-price-text-nomal {
+  font-weight: normal;
+}
+.overseas-your-all-price,
+.plan-total-price,
+.plan-device-price,
+.option-total-price,
+div.summary-table-column-right p.marginBt2,
+.summary-text-postage {
+  font-weight: bold;
+}
+.prepaid-device-area .device-name {
+  font-size: 2.4rem;
+  text-align: center;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+.prepaid-device-area .price {
+  font-size: 3.2rem;
+  line-height: 1;
+  font-weight: bold;
+  margin-top: 10px;
+  margin-left: 45px;
+}
+.prepaid-device-area .yen, 
+.prepaid-device-area .tax-included {
+  font-size: 0.5em;
+}
+.prepaid-device-area .yen {
+  margin-left: 0.2em;
+}
+form.prepaid-form-select p.first-title .ttl-icon {
+  margin-right: 15px;
+  font-size: 50px;
+}
+/* ポップアップ　端末サポートオプションとは */
+#popup-tanmatsu-anshin.option-popup-block .popup-body h3 {
+  padding-left: 0;
+  text-align: center;
+}
+.prepaid-popup-block .popup-body {
+  padding: 0 40px;
+}
+.prepaid-popup-block .popup-body.popup-body-table {
+  padding: 0;
+}
+.prepaid-popup-block .popup-body.popup-body-table table.suport-opt-table {
+  width: 95%;
+}
+.prepaid-popup-block .popup-container {
+  display: flex;
+}
+.prepaid-popup-block .popup-container .item-img {
+  width: 18%;
+  text-align: center;
+}
+.prepaid-popup-block .popup-container .item-content {
+  padding-top: 10px;
+  width: 80%;
+}
+.prepaid-popup-block .popup-container .item-content p {
+  font-size: 2rem;
+  font-weight: bold;
+  line-height: 1.6;
+}
+.prepaid-popup-block .popup-container .item-content .color-pink {
+  color: #e6006b;
+  word-break: break-all;
+}
+.entry-option-popup .popup-header .group .text strong {
+  border-bottom: none;
+}
+.prepaid-popup-block .popup-container .item-content .item-content-bottom {
+  margin-top: 10px;
+}
+.prepaid-popup-block .popup-container .item-content .item-content-bottom > p.attention {
+  font-size: 1.2rem;
+  font-weight: lighter;
+  text-indent: -1em;
+  padding-left: 1em;
+  text-align: left;
+}
+.prepaid-popup-block .popup-body table.suport-opt-table {
+  margin: 20px auto;
+}
+.prepaid-popup-block table.suport-opt-table th {
+  border: 1px solid #909090;
+  min-width: 140px;
+  text-align: left;
+  padding: 10px 10px 10px 25px;
+  box-sizing: border-box;
+  font-weight: 400;
+}
+.prepaid-popup-block .popup-body table.suport-opt-table td {
+  font-size: 1.4rem;
+  font-weight: 400;
+}
+.prepaid-popup-block table.suport-opt-table td ul {
+  padding-left: 0;
+  margin: 0;
+}
+.prepaid-popup-block table.suport-opt-table td ul li {
+  list-style: none;
+}
+.prepaid-opt-block .popup-container {
+  justify-content: center;
+  margin: 20px auto 0;
+}
+.prepaid-opt-block .popup-container .item {
+  height: 117px;
+}
+.prepaid-opt-block .popup-container img {
+  width: 120px;
+  height: auto;
+}
+.option-popup-block.prepaid-opt-block .popup-body h3 {
+  margin: 0;
+  line-height: 1.5;
+}
+.option-popup-block.prepaid-opt-block .popup-body h3 span {
+  font-size: 2rem;
+}
+.prepaid-opt-block .popup-body h3 .color-pink {
+  color: #e6006b;
+}
+.option-popup-block.prepaid-opt-block .popup-body .desc {
+  width: 90%;
+  margin: 15px auto 0;
+  font-weight: 400;
+  text-align: center;
+}
+/* ポップアップ端末スペック */
+.prepaid-popup-spec .spec-content {
+  padding: 0;
+}
+.prepaid-popup-spec .spec-content table {
+  width: 100%;
+  margin: auto;
+  border-collapse: collapse;
+}
+.prepaid-popup-spec .spec-content table td {
+  text-align: left;
+  font-size: 1.3rem;
+  padding: 0.7em 0 0.7em 2em;
+  border: 1px solid #ddd;
+  word-break: break-all;
+  background-color: #2E2E2E;
+  color: #fff;
+}
+.prepaid-popup-spec .spec-content table td:first-of-type {
+  width: 35%;
+  border-bottom: 1px solid #ddd;
+  color: #fff;
+  background: #424242;
+  font-size: 1.3rem;
+}
+.prepaid-popup-spec .spec-content table tr:last-of-type td:first-of-type {
+  border-color: #ddd;
+}
+.prepaid-popup-spec .spec-content table td.td-sub {
+  width: 20%;
+  background: #424242;
+  color: #fff;
+  border: 1px solid #ddd;
+}
+.prepaid-popup-spec .option-popup-block .popup-body tbody td {
+  padding: 10px 10px 10px 20px;
+  font-size: 1.4rem;
+  font-weight: bold;
+  border: 1px solid #fff;
+  line-height: 1.2;
+}
+.prepaid-popup-spec.option-popup-block .popup-body tbody td {
+  font-size: 1.3rem;
+  border: 1px solid #fff;
+  font-weight: 400;
+}
+
+@media screen and (min-width: 768px) {
+  .option-check label.custom-check-box-v2 input[type="radio"] + span::before, 
+  .option-check label.custom-check-box-v2 input[type="radio"] + span::after {
+    left: 10%;
+    top: 18%;
+  }
+  .scroll-text {
+    margin-bottom: 15px;
+    display: block;
+    color: red;
+    text-align: right;
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+  .sub-select .prepaid-plan-area > div {
+    margin-bottom: 0;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .prepaid-option-area .prepaid-option-area-inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .prepaid-option-area .prepaid-option-area-inner .prepaid-popup-area {
+    margin-top: 10px;
+  }
+  div.your-plan-area.sub-select div.summary-table-row,
+  div.your-plan-area.sub-select div.sub-select-opt {
+    width: 100%;
+  }
+  div.sub-select div.prepaid-device-detail {
+    width: 100%;
+    padding: 25px 0 0px;
+    box-sizing: border-box;
+    margin: 0;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1280px) {
+  div.prepaid-option-area .entry-option-service-prepaid p.entry-option-service-prepaid-text {
+    font-size: 1.4rem;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  form.prepaid-form-select div.form-step-title {
+    height: 0;
+  }
+  div.form-application-container div.mypage-user-container.sub-select {
+    margin: 0 auto;
+  }
+  form.prepaid-form-select span.select-recommend,
+  .sub-confirm span.select-recommend {
+    max-width: 100px;
+    right: -15px;
+    top: -90px;
+  }
+  .sub-confirm span.select-recommend {
+    top: -95px;
+  }
+  .prepaid-plan-area {
+    margin-bottom: 0;
+  }
+  div.prepaid-option-area .entry-option-select div.relief-item-select-area-box .group img {
+    bottom: -25px;
+    width: 60px;
+  }
+  div.prepaid-option-area .entry-option-tanmatsu-anshin .entry-option-select {
+    width: 100%;
+  }
+  div.prepaid-option-area .entry-option-select-detail {
+    width: 100%;
+    padding: 10px 0 0 0px;
+  }
+  div.prepaid-option-area .entry-option-service-prepaid .entry-option-select div.relief-item-select-area-box {
+    flex-direction: column;
+    padding: 15px;
+  }
+  div.prepaid-option-area .entry-option-service-prepaid .entry-option-select div.relief-item-select-area-box img.recommend {
+    top: -40px;
+  }
+  div.prepaid-option-area .entry-option-service-prepaid .entry-option-service-prepaid-img {
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    margin: 0;
+  }
+  div.prepaid-option-area .entry-option-service-prepaid .relief-option-ckeckbox {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+  }
+  div.prepaid-option-area .entry-option-service-prepaid .title {
+    margin-left: 50px;
+    font-size: 2rem;
+  }
+  div.prepaid-option-area .entry-option-service-prepaid p.entry-option-service-prepaid-text {
+    font-size: 1.4rem;
+  }
+  .prepaid-popup-spec .spec-content table {
+    width: 100%;
+  }
+  .prepaid-popup-spec .spec-content table td {
+      font-size: 1.2rem;
+      padding: 0.7em 0 0.7em 0.5em;
+  }
+  .cp-banner {
+    margin-top: 0px;
+  }
+  .option-check label.custom-check-box-v2 input[type="radio"] + span::before, 
+  .option-check label.custom-check-box-v2 input[type="radio"] + span::after {
+    top: 25%;
+  }
+  label.custom-check-box-v2.check-option input[type="radio"] + span::before, 
+  label.custom-check-box-v2.check-option input[type="radio"] + span::after {
+    top: 30%;
+  }
+  div.your-plan-area div.summary-table-row {
+    width: 100%;
+  }
+  div.your-plan-area div.summary-table-row.opt-service-sp {
+    flex-direction: unset;
+    display: flex;
+    justify-content: space-between;
+  }
+  div.your-plan-area #your_plan div.summary-table-row.opt-service-sp .summary-table-column-center {
+    width: 100%;
+  }
+  div.your-plan-area #your_plan div.summary-table-row.opt-service-sp .summary-table-column-center .summary-group-option-1,
+  div.your-plan-area #your_plan div.summary-table-row.opt-service-sp .summary-table-column-center .summary-group-option-2,
+  div.your-plan-area #your_plan div.summary-table-row.opt-service-sp .summary-table-column-center .summary-group-option-3,
+  div.your-plan-area #your_plan div.summary-table-row.opt-service-sp .summary-table-column-center .summary-group-option-4 {
+    display: flex;
+    justify-content: space-between;
+  }
+  div.your-plan-area #your_plan div.summary-table-row.opt-service-sp .summary-table-column-right {
+    width: 100%;
+    text-align: right;
+    padding-top: 5px;
+  }
+  div.your-plan-area #your_plan div.summary-table-row.opt-service-sp .summary-table-column-right .option-total-price .tax {
+    font-size: 1.3rem;
+  }
+  div.your-plan-area #your_plan div.summary-table-row.opt-service-sp .summary-table-column-center {
+    width: auto;
+    margin-right: 3%;
+    max-width: 240px;
+  }
+  div.your-plan-area #your_plan div.summary-table-row.opt-service-sp .summary-table-column-center .summary-group-option-1,
+  div.your-plan-area #your_plan div.summary-table-row.opt-service-sp .summary-table-column-center .summary-group-option-2,
+  div.your-plan-area #your_plan div.summary-table-row.opt-service-sp .summary-table-column-center .summary-group-option-3,
+  div.your-plan-area #your_plan div.summary-table-row.opt-service-sp .summary-table-column-center .summary-group-option-4 {
+    display: flex;
+    justify-content: space-between;
+  }
+  div.your-plan-area #your_plan div.summary-table-row.opt-service-sp .summary-table-column-right {
+    width: auto;
+    text-align: right;
+    padding-top: 5px;
+  }
+  div.your-plan-area #your_plan div.summary-table-row.opt-service-sp .summary-table-column-right .option-total-price .tax {
+    font-size: 1.3rem;
+  }
+  .plan-table div.plan-summary-area-table.plan-summary-area-table-prepaid.plan-confirm div.summary-table-column-left {
+    width: 100%;
+  }
+  .total {
+    padding: 0.8em 25px 0.5em 15px;
+  }
+  .detail > p::after {
+    left: 57%;
+  }
+  .detail-more {
+    padding: 15px;
+    box-sizing: border-box;
+  }
+  div.plan-summary-table-row:first-of-type {
+    margin-top: 10px;
+    border-top: none;
+  }
+  div.plan-summary-table-row-wide div.summary-table-column-left.sp-line,
+  .summary-table-column-left.adjust.sp-line p::after {
+    width: 100%;
+    margin: 0;
+  }
+  .summary-price-text {
+    font-size: 1.2em;
+  }
+  form.prepaid-form-select p.first-title {
+    font-size: 24px;
+    letter-spacing: 0.06em;
+    justify-content: flex-start;
+    margin: 0 0 18px;
+    padding-left: 20px;
+    width: 100%;
+    line-height: 1.2;
+  }
+  div.mypage-section-container.select-title-mt.prepaid-option-area {
+    margin: 50px 0 0;
+  }
+  form.prepaid-form-select div.form-step-title p.first-title {
+    font-size: 24px;
+    letter-spacing: 0.06em;
+    justify-content: flex-start;
+    margin: 10px 0 0;
+  }
+  form.prepaid-form-select p.first-title .ttl-icon {
+    margin-right: 10px;
+    font-size: 28px;
+  }
+  form.prepaid-form-select span.mandatory, form.prepaid-form-select span.optional {
+    padding: 0 13px;
+  }
+  form.prepaid-form-select p.select-plan {
+    margin: 50px auto 30px 30px;
+    text-align: left;
+  }
+  .prepaid-column div {
+    font-size: 12px;
+    line-height: 1.2;
+    height: 44px;
+  }
+  div.form-capacity-select-checkbox-area {
+    flex-direction: column;
+  }
+  label.custom-check-box-v2.plan input[type="checkbox"] + span::before, 
+  label.custom-check-box-v2.plan input[type="radio"] + span::before, 
+  label.custom-check-box-v2.option input[type="checkbox"] + span::before, 
+  label.custom-check-box-v2.option input[type="radio"] + span::before, 
+  label.custom-check-box-v2-2.plan input[type="checkbox"] + span::before, 
+  label.custom-check-box-v2-2.plan input[type="radio"] + span::before, 
+  label.custom-check-box-v2-2.option input[type="checkbox"] + span::before, 
+  label.custom-check-box-v2-2.option input[type="radio"] + span::before {
+    z-index: 0;
+    background-color: lightgray;
+    width: 22px;
+    height: 22px;
+    margin-left: 35%;
+    position: relative;
+    left: -20px;
+    top: 12px;
+  }
+  p.custom-check-box-v2-select-text {
+    right: -2px;
+    top: 0;
+  }
+  label.custom-check-box-v2 input[type="radio"] + span::after {
+    top: 14px;
+    left: 8px;
+  }
+  .prepaid-plan-area .prepaid-plan {
+    width: calc(100% / 2 - 8px);
+  }
+  .prepaid-plan-area .prepaid-plan.selected span.prepaid-plan-thumb {
+    outline-offset: -2px;
+  }
+  .prepaid-plan::before {
+    width: 15px;
+    left: calc(20% - 20px);
+    top: 0px;
+    border-radius: 5px 0 0 5px;
+  }
+  div.prepaid-plan-check {
+    width: 20%;
+  }
+  div.prepaid-plan-check label.custom-check-box-v2.plan input[type="radio"] + span::before {
+    left: 0;
+    margin: 0;
+  }
+  div.prepaid-plan-check label.custom-check-box-v2 input[type="radio"]:checked + span::after {
+    left: 20px;
+  }
+  .prepaid-plan-gb p {
+    font-size: 1.2rem;
+  }
+  .prepaid-plan-day p {
+    font-size: 1.2rem;
+    margin-bottom: 2px;
+  }
+  .prepaid-plan-gb span {
+    font-size: 2.4rem;
+  }
+  .prepaid-plan-gb {
+    font-size: 2rem;
+  }
+  .prepaid-plan-day span {
+    font-size: 2.1rem;
+  }
+  .prepaid-plan-price span {
+    font-size: 2.4rem;
+    position: relative;
+    right: -15px;
+  }
+  .prepaid-plan-price {
+    width: 34%;
+    padding-right: 0;
+    font-size: 1.2rem;
+  }
+  .prepaid-plan-price-zero::before {
+    height: 43px;
+    left: -7px;
+  }
+  .sp-flex {
+    display: flex;
+    margin: 0 3px 3px 0;
+  }
+  .sub-select .sp-flex,
+  .sub-confirm .sp-flex {
+    margin: 0;
+  }
+  .sp-flex-yen {
+    flex-direction: column;
+    gap: 3px 0;
+    margin-left: 0;
+    margin-right: 5px;
+  }
+  .sp-flex-yen .sp {
+    min-width: 3em;
+  }
+  .prepaid-plan-day {
+    font-size: 1.6rem;
+  }
+  .prepaid-plan-day {
+    width: 19%;
+  }
+  .prepaid-plan-price p {
+    position: absolute;
+    width: 180px;
+    bottom: 0;
+    right: 5px;
+    text-align: right;
+    margin-right: 0;
+  }
+  .prepaid-plan-gb-none {
+    font-size: 1.5rem;
+    line-height: 1.5;
+  }
+  .prepaid-plan-price-zero {
+    padding-right: 35px;
+  }
+  .overseas-your-all-price {
+    font-size: 1.5rem;
+  }
+  .big-num {
+    font-size: 2rem;
+  }
+  .prepaid-device-area {
+    height: 225px;
+    width: 100%;
+    box-sizing: border-box;
+    padding-left: 10%;
+  }
+  .prepaid-device-img {
+    width: 80%;
+    padding-left: 0px;
+    max-width: 280px;
+  }
+  div.prepaid-device-area p.custom-check-box-v2-select-text.text-size {
+    padding: 4px 3px;
+  }
+  div.prepaid-device-area label.custom-check-box-v2.plan input[type="radio"] + span::before {
+    left: -19px;
+    top: 13px;
+  }
+  div.prepaid-device-area label.custom-check-box-v2 input[type="radio"] + span::after {
+    top: 15px;
+    left: 12px;
+  }
+  p.custom-check-box-v2-select-text {
+    top: -5px;
+  }
+  form.prepaid-form-select .entry-plan-select {
+    margin: 30px 0;
+    flex-direction: column;
+  }
+  div.prepaid-device-detail {
+    width: 100%;
+    padding: 10px 0 0px;
+  }
+  .entry-option-tanmatsu-anshin .relief-option-ckeckbox {
+    top: calc(50% - 33px);
+    left: 7px;
+  }
+  .entry-option-select .relief-option-ckeckbox label.custom-check-box-v2.option input[type=checkbox] + span::after {
+    top: 4px;
+    left: 11px;
+  }
+  div.prepaid-plan-check p.custom-check-box-v2-select-text.text-size {
+    margin-left: -4px;
+    top: -1px;
+  }
+  div.prepaid-plan-check label.custom-check-box-v2 {
+    left: -11px;
+  }
+  .entry-option-select p.custom-check-box-v2-select-text {
+    left: -17px;
+    bottom: -3px;
+  }
+  .entry-option-unselect div.relief-item-select-area-box .price {
+    margin: 0;
+  }
+  .prepaid-popup-area {
+    margin: 20px auto 0;
+  }
+  p.entry-privacy {
+    margin: 0 auto 30px;
+  }
+  div.plan-summary-table-row-wide {
+    width: 100%;
+  }
+  .scroll-text {
+    margin-bottom: 5px;
+    display: block;
+    color: red;
+    text-align: right;
+    font-size: 1.2rem;
+  }
+  .detail-more div.plan-summary-area-table.contract {
+    margin: 0;
+  }
+  div.summary-table-column.summary-table-column-right p, div.summary-table-column-right p {
+    font-size: 1em;
+    font-weight: normal;
+  }
+  div.summary-table-row {
+    margin: 10px 0 20px;
+  }
+  #your_plan {
+    left: unset;
+    transform: translateZ(0);
+    -webkit-transform: translateZ(0);
+  }
+  .your-plan-area-prepaid {
+    margin: 0 0 50px;
+  }
+  .your-plan-area-prepaid.sub-select {
+    margin: 65px 0 50px;
+  }
+  .prepaid-recom-sp,
+  .prepaid-recom2-sp {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    color: #FFFFFF;
+    border-radius: 10px;
+    padding: 2px 10px;
+    top: 1px;
+    font-size: 11px;
+    left: 16.5vw;
+  }
+  .prepaid-recom-sp {
+    background-color: #9E00FF;
+  }
+  .prepaid-recom2-sp {
+    background-color: #FF7800;
+  }
+  .marginBt1 {
+    margin: 5px 0 27px;
+  }
+  .prepaid-device-area .device-name {
+    font-size: 2rem;
+    margin-bottom: 5px;
+  }
+  .prepaid-device-area .price {
+    font-size: 3rem;
+    line-height: 1;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-left: 15px;
+    font-size: 3rem;
+  }
+  .prepaid-column div.prepaid-column-1 {
+    width: 27%;
+  }
+  .prepaid-column div.prepaid-column-2 {
+    width: 19%;
+  }
+  .prepaid-column div.prepaid-column-3 {
+    width: 34%;
+  }
+  #form-entry-edit-plan .prepaid-recom-sp, 
+  #form-entry-edit-plan .prepaid-recom2-sp {
+    left: 51px;
+  }
+  .entry-option-tanmatsu-anshin div.relief-item-select-area-box .price {
+    font-size: 3rem;
+  }
+  .entry-option-select div.relief-item-select-area-box .group.no-opt {
+    flex-direction: row;
+  }
+  .entry-option-select div.relief-item-select-area-box .group.no-opt .title {
+    margin-right: 20px;
+  }
+  .prepaid-popup-block .popup-body {
+    padding: 0;
+  }
+  #popup-tanmatsu-anshin.option-popup-block.prepaid-popup-block .popup-body h3 {
+    font-size: 2.1rem;
+    padding-left: 0px;
+  }
+  .prepaid-popup-block .popup-container .item-content p {
+    font-size: 1.4rem;
+  }
+  .prepaid-popup-block .popup-container .item-content {
+    padding-top: 5px;
+    text-align: left;
+  }
+  .prepaid-popup-block .popup-container .item-content .item-content-bottom {
+    width: 80%;
+    margin: 10px auto 0;
+  }
+  .prepaid-popup-block .popup-container .item-img img {
+    width: 90%;
+  }
+  .prepaid-popup-block .popup-container .item-img {
+    min-width: 90px;
+  }
+  .prepaid-popup-block table.suport-opt-table th {
+    min-width: 80px;
+    padding: 10px 5px 10px 5px;
+  }
+  .prepaid-popup-block .popup-body table.suport-opt-table td {
+    font-size: 1.2rem;
+  }
+  .prepaid-opt-block .popup-container img {
+    width: 80px;
+  }
+  .prepaid-opt-block .popup-container .item {
+    height: auto;
+  }
+  .option-popup-block.prepaid-opt-block .popup-body h3 span {
+    font-size: 1.4rem;
+  }
+  .option-popup-block.prepaid-opt-block .popup-body .desc {
+    width: 100%;
+    font-size: 1.3rem;
+  }
+  .prepaid-plan-none div.prepaid-plan-check label.custom-check-box-v2 {
+    left: -9px;
+  }
+  .prepaid-plan-none .prepaid-plan-price-zero {
+    padding-right: 8px;
+  }
+  .prepaid-plan-none .prepaid-plan-price span {
+    right: 6px;
+  }
+  .your-plan-area .marginBt2 {
+    margin-right: 10px;
+  }
+  .plan-summary-area-table.contract div.summary-table-row {
+    align-items: center;
+  }
+  div.summary-table-column-left.double {
+    padding: 0.25em 0;
+  }
+  div.prepaid-device-detail table th {
+    min-width: 80px;
+  }
+  div.prepaid-device-detail table td {
+    line-height: 1.5;
+  }
+  label.custom-check-box-v2.option.prepaid-option-box input[type="radio"] + span::after {
+    left: 12px;
+    top: 5px;
+  }
+  label.custom-check-box-v2.option.prepaid-option-box.prepaid-option-box-confirm input[type="radio"] + span::after {
+    left: 11px;
+  }
+  .leave-checkbox-pointer.leave-checkbox-pointer-prepaid label {
+    margin: 0;
+    width: 22px;
+    height: 22px;
+    display: inline-block;
+    left: 14px;
+    top: 10px;
+  }
+  .leave-checkbox-pointer.leave-checkbox-pointer-prepaid label.custom-check-box-v2 span {
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  .leave-checkbox-pointer.leave-checkbox-pointer-prepaid label.custom-check-box-v2.option input[type="radio"] + span::before,
+  .leave-checkbox-pointer.leave-checkbox-pointer-prepaid label.custom-check-box-v2.option.prepaid-option-box input[type="radio"] + span::after {
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+  }
+}
+
+/*----------------------
+STEP2
+-----------------------*/
+form.prepaid-form-user .attention-remark .entry-rental-device-title {
+  margin: 5px auto 10px 260px;
+  width: 212px;
+  font-size: 1.3rem;
+  color: #909090;
+  font-weight: normal;
+  border-bottom: 1px solid #909090;
+}
+form.prepaid-form-user .attention-remark .entry-rental-device-title img {
+  opacity: 0.5;
+}
+form.prepaid-form-user .entry-rental-device-title div {
+  width: 210px;
+}
+form.prepaid-form-user .attention-remark .entry-rental-device-flex {
+  filter: none;
+  margin: 0;
+}
+form.prepaid-form-user label.custom-check-box input[type="radio"] + span::after {
+  top: 2.5px;
+}
+
+form.prepaid-form-user table.form-table th {
+  padding-bottom: 0;
+}
+form.prepaid-form-user table.form-table.form-entry a.postal-btn-wrap {
+  vertical-align: top;
+}
+form.prepaid-form-user table.form-table.form-entry a.postal-btn-wrap button {
+  padding: 13.5px 15px;
+}
+form.prepaid-form-user table.form-table tr.attention-remark td .mypage-remark:last-child {
+  padding-bottom: 15px;
+}
+form.prepaid-form-user div.gender-label-box label.label-input {
+  width: 40px;
+  height: 40px;
+  margin: 25px 66px 0 0;
+}
+
+@media screen and (min-width: 768px) {
+  form.prepaid-form-user select.form-item-delivery-time.wide {
+    width: 48.5%;
+  }
+  form.prepaid-form-user select.form-item-address {
+    width: 48.5%;
+  }
+}
+@media screen and (max-width: 767px) {
+  form.prepaid-form-user div.white-content-box-form {
+    padding: 30px 10px 25px;
+    margin: 30px 0 0;
+  }
+  form.prepaid-form-user div.form-step-title-wrapper {
+    padding-bottom: 40px;
+  }
+  form.prepaid-form-user table.form-table {
+    table-layout: fixed;
+  }
+  main.mypage-main form.prepaid-form-user select {
+    font-size: 1.4rem;
+    padding: 5px;
+    min-width: 70px;
+  }
+  form.prepaid-form-user input.mypage-input-border {
+    min-width: 70px;
+  }
+  form.prepaid-form-user .attention-remark .entry-rental-device-title {
+    margin-left: 0;
+  }
+  form.prepaid-form-user div.entry-button-container {
+    padding-top: 40px;
+  }
+  form.prepaid-form-user table.form-table tr.attention-remark td .mypage-remark:last-child {
+    padding-bottom: 8px;
+  }
+}
+
+/*----------------------
+STEP3
+-----------------------*/
+div.summary-table-row.double {
+  padding: 10px 0;
+}
+.plan-table div.summary-table-column.summary-table-column-right.adjust.confirm-pay {
+  width: 30%;
+}
+div.edit-partial-device-option .edit-partial-device-option {
+  margin-bottom: 0;
+}
+div.prepaid-entry-pay {
+  display: block;
+}
+span.total-padd {
+  margin-right: 52px;
+}
+.prepaid-form-confirm .attention-prepaid {
+  text-align: right;
+  position: relative;
+  top: -10px;
+}
+.prepaid-form-confirm div.flex-box-select.total-price {
+  margin-bottom: 0;
+}
+.prepaid-form-select h2.form-h2.your-plan-hdg,
+.prepaid-form-confirm h2.form-h2.your-plan-hdg,
+.prepaid-form-payment h2.form-h2.your-plan-hdg {
+  margin: 0;
+  padding: 12px;
+  background: #757575;
+  color: #fff;
+}
+.edit-plan-prepaid .prepaid-plan-none div.prepaid-plan-check label.custom-check-box-v2 {
+  left: -15px;
+}
+.edit-plan-prepaid .prepaid-plan-none div.prepaid-plan-check p.custom-check-box-v2-select-text.text-size {
+  margin-left: -30px;
+}
+
+.edit-plan-prepaid #form-entry-edit-plan .prepaid-recom-sp,
+.edit-plan-prepaid #form-entry-edit-plan .prepaid-recom2-sp {
+  left: 16.5vw;
+}
+
+div.entry-confirm-plan-edit-links p {
+  text-align: left;
+}
+
+/* アンケート */
+span.mandatory {
+  padding: 0.5em 1em;
+  margin-right: 20px;
+  border-radius: 8px;
+  font-size: var(--font-13);
+  text-align: center;
+  color: white;
+}
+.prepaid-questionnaire .form-h2 {
+  margin-bottom: 30px;
+}
+.prepaid-questionnaire table.form-table tr {
+  height: auto;
+}
+.prepaid-questionnaire table.form-table span.sub-ttl {
+  font-size: 1.8rem;
+}
+.prepaid-questionnaire table.form-table td.flex-questionnaire-area {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+.prepaid-questionnaire div.questionnaire-label-box {
+  display: flex;
+  align-items: flex-start;
+  height: auto;
+}
+.prepaid-questionnaire td.flex-questionnaire-area label.label-input {
+  margin: 0 5px 0 0;
+}
+.prepaid-questionnaire label.custom-check-box input[type="checkbox"] + span::before {
+  z-index: 0;
+  background-color: #D9D9D9;
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 8px;
+  position: absolute;
+  top: 1px;
+  left: 0;
+  content: '';
+  box-sizing: border-box;
+}
+.prepaid-questionnaire label.custom-check-box input[type="checkbox"] + span::after {
+  z-index: 1;
+  margin: 4px 12px;
+  width: 15px;
+  height: 22px;
+  position: absolute;
+  top: 2px;
+  left: 0;
+  content: '';
+  box-sizing: border-box;
+}
+.prepaid-questionnaire label.custom-check-box input[type="checkbox"]:checked + span::after {
+  border: 2px solid #000;
+  border-width: 0 2px 2px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.prepaid-questionnaire .question-label {
+  padding-top: 11px;
+}
+.total-price.monthly-pay div.plan-summary-table-row.back-white.prices {
+  margin: 0 0 0px auto;
+  padding: 0 0 0% 3%;
+}
+div.monthly-pay div.plan-summary-area-table div.summary-table-column-right.total-payment {
+  width: auto;
+}
+.total-price .prices .monthly-payment p:last-child {
+  margin-right: 13px;
+}
+#form-entry-edit-device-option div.entry-form-option-select {
+  margin-bottom: 60px;
+}
+div.form-application-container div.mypage-user-container {
+  margin: 40px auto 60px;
+}
+form.prepaid-form-confirm div.form-application-container form div.mypage-user-container {
+  margin: 40px 0;
+}
+div.summary-table-column span.plan-tax, 
+div.breakdown-list p:last-child span.plan-tax, 
+div.summary-table-column-right span.plan-tax {
+  font-weight: bold;
+}
+.plan-table div.summary-table-column-right.adjust p.marginTp2,
+.plan-table div.summary-table-column-right.adjust p.marginTp2 span.plan-tax {
+  font-weight: normal;
+}
+.prepaid-form-confirm .plan-table div.summary-table-column-right.adjust p.marginTp2,
+.prepaid-form-confirm .plan-table div.summary-table-column-right.adjust p.marginTp2 span.plan-tax {
+  font-weight: bold;
+}
+.prepaid-questionnaire .question-label-form {
+  padding: 8px;
+  width: 545px;
+  height: 40px;
+  resize: vertical;
+  box-sizing: border-box;
+  margin-left: 31px;
+  background-color: #D9D9D9;
+  border: none;
+  border-radius: 8px;
+}
+div.questionnaire-label-box label.custom-check-box input[type="radio"] + span::after {
+  top: 2px;
+}
+p.leave-checkbox-box-title {
+  text-align: center;
+}
+.prepaid-form-confirm .leave-checkbox-box-desciption {
+  padding: 0 30px;
+  margin: 0 0 20px;
+}
+p.terms-agree-no-indent {
+  margin-bottom: 10px;
+}
+.prepaid-questionnaire table.form-table th {
+  padding-bottom: 15px;
+}
+table.form-table th.credit-confirm-name-label {
+  padding-bottom: 0;
+}
+.prepaid-questionnaire .question-label-form:focus {
+  outline: none;
+  box-shadow: 0 0 5px 2px #ffeb00;
+}
+.mypage-global-confirm .leave-checkbox-box-desciption p {
+  margin-bottom: 10px;
+}
+p.terms-agree:nth-of-type(n+2):not(:last-of-type) {
+  margin-bottom: 0;
+  margin-left: 0;
+  padding-left: 0;
+  text-indent: initial;
+}
+p.terms-agree.personal-info,
+p.terms-agree.terms-social {
+  margin-top: 10px;
+}
+p.terms-agree:last-of-type {
+  text-indent: unset;
+  margin-left: unset;
+}
+
+@media screen and (min-width: 768px) {
+  .prepaid-questionnaire .question-label.sp {
+    display: none;
+  }
+  form.prepaid-form-confirm select.form-item-delivery-time.wide {
+    width: 48%;
+  }
+  form.prepaid-form-confirm select[name="prefecture"] {
+    width: 48%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  div.form-application-container div.mypage-user-container {
+    margin: 40px 0 0;
+  }
+  p.terms-agree:nth-of-type(n+2):not(:last-of-type) {
+    padding: 0;
+  }
+  div.summary-table-row.double {
+    padding: 0;
+  }
+  .plan-table div.summary-table-column-center {
+    width: 70%;
+    line-height: 1.4;
+  }
+  .edit-plan-prepaid div.prepaid-plan-check label.custom-check-box-v2 {
+    left: -9px;
+  }
+  .edit-plan-prepaid .prepaid-plan-gb span {
+    font-size: 2.2rem;
+  }
+  .edit-plan-prepaid .prepaid-plan-gb {
+    font-size: 1.8rem;
+  }
+  div.summary-table-block div.summary-table-column.summary-table-column-center.adjust {
+    width: 100%;
+  }
+  div.summary-table-block div.summary-table-column.summary-table-column-right.adjust.confirm-pay {
+    width: 50%;
+  }
+  div.summary-table-block div.summary-table-column.summary-table-column-right.adjust.confirm-pay.terminal {
+    width: 40%;
+  }
+  .plan-table div.summary-table-column.summary-table-column-right.adjust.confirm-pay {
+    width: 34%;
+  }
+  .plan-table .marginTp1 {
+    margin: 0;
+  }
+  .plan-table .marginBt1 {
+    margin: 8px 0 27px;
+  }
+  .plan-info .confirm-pay {
+    margin-top: 8px;
+  }
+  form.prepaid-form-confirm div.entry-button-container {
+    padding-top: 40px;
+  }
+  .edit-plan-prepaid .prepaid-plan-none div.prepaid-plan-check label.custom-check-box-v2 {
+    left: -7px;
+  }
+  .edit-plan-prepaid .prepaid-plan-none div.prepaid-plan-check p.custom-check-box-v2-select-text.text-size {
+    margin-left: -16px;
+  }
+
+  /* アンケート */
+  .prepaid-questionnaire .form-h2 {
+    margin-bottom: 20px;
+    font-size: 1.6rem;
+    text-indent: -3.5em;
+    padding-left: 3.5em;
+    line-height: 2.7rem;
+  }
+  .prepaid-questionnaire .form-h2 span.mandatory, span.optional {
+    padding: 0.3em 0.8em;
+    margin-right: 10px;
+  }
+  .prepaid-questionnaire table.form-table th {
+    margin: 0;
+  }
+  .prepaid-questionnaire table.form-table span.sub-ttl {
+    font-size: 1.6rem;
+  }
+  .prepaid-questionnaire table.form-table td.flex-questionnaire-area {
+    gap: 5px;
+    justify-content: space-between;
+  }
+  .prepaid-questionnaire div.questionnaire-label-box {
+    margin-top: 0;
+    margin-bottom: 20px;
+    flex-basis: calc(50% - 2.5px);
+  }
+  .prepaid-questionnaire div.questionnaire-label-box:last-of-type {
+    margin-bottom: 8px;
+  }
+  .prepaid-questionnaire .question-label {
+    padding: 0 0 0 6px;
+    width: 65%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+  }
+  .prepaid-questionnaire textarea.question-label {
+    padding: 8px;
+  }
+  .prepaid-questionnaire .question-label.pc {
+    display: none;
+  }
+  .prepaid-questionnaire td.flex-questionnaire-area label.label-input {
+    width: 40px;
+  }
+  div.flex-box-select.total-price.monthly-pay {
+    display: flex;
+  }
+  div.left-plan-column {
+    width: 40%;
+  }
+  .total-price .prices .monthly-payment p:last-child {
+    margin-right: 10px;
+  }
+  div.edit-partial-plan form {
+    width: 95%;
+  }
+  div.edit-partial-plan .prepaid-plan-gb {
+    width: 26%;
+  }
+  div.edit-partial-plan .prepaid-plan-price {
+    width: 42%;
+  }
+  div.edit-partial-plan .prepaid-column div.prepaid-column-1 {
+    width: 26%;
+  }
+  div.edit-partial-plan .prepaid-column div.prepaid-column-2 {
+    width: 19%;
+  }
+  div.edit-partial-plan .prepaid-column div.prepaid-column-3 {
+    width: 42%;
+  }
+  div.edit-partial-plan form div.form-capacity-select-checkbox-area label {
+    font-size: 1rem;
+  }
+  .prepaid-form-confirm form div.row {
+    margin: 30px auto 0;
+  }
+  div.entry-form-option-select {
+    margin-bottom: 40px;
+  }
+  #form-entry-edit-device-option div.entry-form-option-select {
+    margin-bottom: 40px;
+  }
+  .edit-partial-device-option.newoption #form-entry-edit-device-option .row {
+    margin-top: 40px;
+  }
+  div.edit-partial-device-option form div.mypage-user-container {
+    margin: 20px auto;
+  }
+  div.plan-summary-area-table.plan-confirm {
+    margin: 20px auto 0;
+  }
+  form.prepaid-form-confirm div.form-application-container form div.mypage-user-container {
+    margin: 20px auto;
+  }
+  form.prepaid-form-confirm div.your-plan div.summary-table-row {
+    margin: 10px 0 30px;
+  }
+  form.prepaid-form-confirm div.your-plan div.summary-table-option {
+    margin: 0;
+  }
+  .prepaid-questionnaire .question-label-form {
+    width: 100%;
+    margin: 0;
+  }
+  .prepaid-questionnaire div.questionnaire-label-box:has(.question-label-form){
+    width: 100%;
+    flex-basis: calc(100%);
+  }
+  .prepaid-questionnaire div.questionnaire-label-box:has(.question-label-form) .question-label{
+    width: max-content;
+  }
+  div.leave-checkbox-box-desciption,
+  .prepaid-form-confirm .leave-checkbox-box-desciption {
+    padding: 0 15px;
+  }
+  p.leave-checkbox-box-title {
+    padding: 20px 10px;
+  }
+}
+
+/*----------------------
+STEP4
+-----------------------*/
+h2.form-h2.form-h2-payment-method {
+  margin-bottom: 4px;
+}
+form.prepaid-form-payment label.custom-check-box input[type="radio"] + span::after {
+  top: 2.5px;
+}
+div.form-capacity-notice-icon {
+  width: 45px;
+}
+table.form-table th {
+  padding-bottom: 45px;
+}
+#payment_select_creditcard {
+  margin-top: 50px;
+}
+#payment_select_creditcard div.form-capacity-notice.payment-select-caution {
+  margin: 0;
+  padding: 15px 10px;
+  border: 1px solid #d6006b;
+}
+#payment_select_creditcard p.form-capacity-notice-text {
+  margin-top: 5px;
+}
+#payment_select_creditcard div.form-capacity-notice p {
+  letter-spacing: 0.1rem;
+}
+#payment_select_creditcard table.credit-reference-name {
+  margin-top: 20px;
+}
+span#payment_deferred_attention span {
+  text-indent: initial;
+  padding: 0;
+}
+#payment_select_paidy .payment-paidy-banner {
+  max-width: 400px;
+  margin: 0 auto;
+}
+#payment_select_paidy .payment-paidy-text {
+  margin-top: 30px;
+}
+#payment_select_paidy .payment-paidy-text a {
+  word-wrap: break-word;
+}
+#payment_select_paidy .payment-paidy-logo {
+  display: block;
+  box-shadow: 0 0 5px rgba(0,0,0,0.2);
+}
+#payment_select_paidy .payment-paidy-logo + .payment-paidy-logo {
+  margin-top: 20px;
+}
+#payment_select_paidy .payment-paidy-logo-img {
+  width: 100%;
+  vertical-align: middle;
+}
+@media screen and (min-width: 768px) {
+  table.form-table-multi-column td.flex-user-area-one {
+    height: 0;
+    vertical-align: bottom;
+  }
+  table.form-table.payment-three th {
+    padding-bottom: 95px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  h2.form-h2.form-h2-payment-method {
+    margin-bottom: 10px;
+  }
+  form.prepaid-form-payment div.entry-button-container {
+    padding-top: 40px;
+  }
+  table.form-table th {
+    padding-bottom: 0;
+  }
+  table.form-table.payment-three tr {
+    height: 18rem;
+  }
+  #payment_select_paidy .payment-paidy-banner {
+    width: 95%;
+  }
+}
+
+/*----------------------
+ポップアップ
+-----------------------*/
+.entry-option-popup .popup-header .group {
+  margin: 20px auto 0;
+}
+.entry-option-popup .popup-header .group .icon {
+  width: 60px;
+  height: 60px;
+}
+.entry-option-popup .popup-header .group .text {
+  font-size: 2rem;
+}
+.option-popup-block .popup-body h3 {
+  font-size: 2rem;
+}
+.option-popup-block .popup-body .desc {
+  font-size: 1.8rem;
+  font-weight: bold;
+  line-height: 1.5;
+}
+.option-popup-block .support-image {
+  text-align: center;
+}
+.option-popup-block .support-image img {
+  width: 80%;
+}
+.option-popup-block .popup-body table {
+  margin: 0 auto;
+  border-collapse: collapse;
+}
+.option-popup-block .popup-body thead th {
+  background-color: #000;
+  color: #fff;
+  width: 50%;
+  padding: 15px 10px;
+  font-size: 1.6rem;
+  font-weight: 400;
+  border: 1px solid #000;
+}
+.option-popup-block .popup-body tbody td {
+  padding: 10px 10px 10px 20px;
+  font-size: 1.7rem;
+  font-weight: bold;
+  border: 1px solid #909090;
+  line-height: 1.2;
+}
+.option-popup-block .popup-body tbody td span {
+  text-align: center;
+  display: inline-block;
+  margin-left: -0.5em;
+}
+.option-popup-block .color-red {
+  color: red;
+}
+.option-popup-block .prepaid-notice {
+  text-align: left;
+  width: 100%;
+  margin: 20px auto 10px;
+}
+.option-popup-block .prepaid-notice p {
+  font-size: 1.8rem;
+  line-height: 1.3;
+  font-weight: bold;
+}
+.option-popup-block .popup-body .popup-container {
+  display: flex;
+  align-items: center;
+  gap: 0 30px;
+  padding: 10px;
+  border: 5px solid #FFDE00;
+  border-radius: 20px;
+}
+.option-popup-block .popup-tanmatsu-anshin .popup-body .popup-container {
+  gap: 0 60px;
+  border: none;
+  padding: 0;
+}
+.option-popup-block .popup-body .popup-container .support-image {
+  width: 50%;
+  margin: 0;
+}
+.option-popup-block .popup-body .popup-container table {
+  width: 50%;
+}
+.option-popup-block .entry-option-popup .entry-option-popup-body {
+  width: 750px;
+}
+.entry-option-popup .popup-contents {
+  max-width: 750px;
+}
+.option-popup-block .entry-option-popup .popup-tanmatsu-anshin-notice .popup-body {
+  max-width: 600px;
+}
+.option-popup-block .entry-option-popup .popup-bottom {
+  margin-top: 12px;
+}
+
+.option-popup-block .entry-option-popup .popup-bottom .option-check {
+  width: 70%;
+  height: 50px;
+  align-items: center;
+}
+.option-popup-block .entry-option-popup .popup-bottom .option-check > label {
+  padding: 14px 0;
+  font-size: 1.6rem;
+}
+.option-popup-block .entry-option-popup .popup-bottom .option-check > label.check-option {
+  padding: 18px 0;
+  margin: 0;
+}
+.option-popup-block .entry-option-popup .popup-bottom .option-check > label span::before {
+  top: 20%;
+}
+.option-popup-block .entry-option-popup .popup-bottom .option-check > label.check-option span::before {
+  top: 25%;
+}
+.option-popup-block .entry-option-popup .popup-bottom .option-check > label.check-option span::after {
+  top: 28%;
+  left: 10.5%;
+}
+.option-popup-block .entry-option-popup .popup-bottom .btn-option-close {
+  width: 35%;
+  height: auto;
+  margin-top: 20px;
+  font-size: 1.6rem;
+}
+
+div.alart-popup-close-button {
+  background: unset;
+}
+
+div.alart-popup-close-button .fas {
+  width: 15px;
+  height: 15px;
+  background: url(https://d1q08lkutgkcx2.cloudfront.net/image/close-black.svg) no-repeat left center;
+  font-family: unset;
+}
+
+div.alart-popup-close-button .fa-times:before {
+  content: '';
+}
+
+#popup-tanmatsu-anshin.option-popup-block .popup-body h3 {
+  font-size: 3.4rem;
+  margin: 20px auto 40px;
+  width: 100%;
+  padding-left: 15px;
+}
+#popup-tanmatsu-anshin.option-popup-block .popup-body .desc {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: lighter;
+}
+#popup-tanmatsu-anshin .entry-option-popup .popup-header .group .text {
+  font-size: 2rem;
+  text-align: center;
+}
+#popup-tanmatsu-anshin.option-popup-block .popup-body .popup-container {
+  margin: 15px auto;
+}
+#popup-tanmatsu-anshin.option-popup-block .prepaid-notice {
+  padding-left: 15px;
+}
+
+@media screen and (max-width: 767px) {
+  .option-popup-block .entry-option-popup .entry-option-popup-body {
+    width: auto;
+  }
+  .entry-option-popup .popup-contents {
+    max-width: 90vw;
+  }
+  .entry-option-popup .popup-header .group .icon {
+    width: 40px;
+    height: 40px;
+  }
+  .entry-option-popup .popup-header .group .text {
+    font-size: 1.4rem;
+  }
+  .entry-option-popup .popup-header .group {
+    gap: 5px;
+    margin: 10px auto 0;
+  }
+  .option-popup-block .popup-body h3 {
+    font-size: 1.34rem;
+    margin: 10px 0 10px;
+  }
+  .option-popup-block .popup-body .desc {
+    font-size: 1.4rem;
+  }
+  .option-popup-block .popup-body .popup-container {
+    margin: 15px 0;
+    flex-direction: column;
+    gap: 5px 0;
+    text-align: center;
+    border: 3px solid #FFDE00;
+  }
+  .option-popup-block .popup-tanmatsu-anshin .popup-body .popup-container {
+    gap: 0 10px;
+    flex-direction: initial;
+  }
+  .option-popup-block .support-image {
+    margin: 20px 0;
+  }
+  .option-popup-block .support-image img {
+    width: 90%;
+  }
+  .option-popup-block .popup-body table {
+    width: 100%;
+  }
+  .option-popup-block .popup-body thead th {
+    padding: 8px 0px;
+    font-size: 1.1rem;
+    line-height: 1.2;
+  }
+  .option-popup-block .popup-body tbody td {
+    padding: 5px 0px 5px 5px;
+    font-size: 1.1rem;
+  }
+  .option-popup-block .prepaid-notice {
+    width: 100%;
+    margin: 20px auto 0;
+  }
+  .option-popup-block .prepaid-notice p {
+    font-size: 1.3rem;
+    line-height: 1.5;
+  }
+  .entry-option-popup .popup-bottom {
+    margin-top: 0px;
+  }
+  .option-popup-block .entry-option-popup .popup-bottom {
+    margin-top: 15px;
+  }
+  .option-popup-block .entry-option-popup .popup-bottom .option-check {
+    width: 100%;
+    height: auto;
+  }
+  .option-popup-block .entry-option-popup .popup-bottom .option-check > label {
+    width: 40%;
+    margin: 0 auto;
+    font-size: 1.4rem;
+  }
+  .option-popup-block .entry-option-popup .popup-bottom .option-check > label.check-option {
+    width: 45%;
+    margin: 0 auto;
+  }
+  .option-popup-block .entry-option-popup .popup-bottom .option-check > label span::before {
+    top: 22%;
+  }
+  .option-popup-block .entry-option-popup .popup-bottom .option-check > label.check-option span::before {
+    top: 25%;
+    width: 1.6em;
+    height: 1.6em;
+  }
+  .option-popup-block .entry-option-popup .popup-bottom .option-check > label.check-option span::after {
+    top: 26%;
+    left: 5%;
+  }
+  .option-popup-block .entry-option-popup .popup-bottom .btn-option-close {
+    width: 65%;
+    margin-top: 15px;
+    padding: 14px 0;
+    font-size: 1.4rem;
+  }
+
+  #popup-tanmatsu-anshin .entry-option-popup .popup-header .group .text {
+    font-size: 1.3rem;
+  }
+  #popup-tanmatsu-anshin.option-popup-block .popup-body h3 {
+    font-size: 2.2rem;
+    margin: 20px auto 10px;
+    width: 100%;
+  }
+  #popup-tanmatsu-anshin.option-popup-block .popup-body .desc {
+    margin: 0 auto 20px;
+    text-align: left;
+    font-size: 1.4rem;
+  }
+}
+
+/*----------------------
+会員登録フォームSTEP1　端末情報確認・修正
+-----------------------*/
+.prepaid-member-form div.white-content-box-form {
+  background-color: unset;
+  padding: 20px 0 30px;
+}
+.prepaid-member-form .customer-imei {
+  margin-top: 15px;
+}
+.prepaid-member-form .customer-imei .imei-number {
+  border: 1px solid #787878;
+  border-radius: 15px;
+  padding: 25px 50px;
+  display: inline-block;
+  font-size: 3rem;
+  font-weight: bold;
+}
+.prepaid-member-form .customer-imei .imei-number span {
+  margin-right: 10px;
+  letter-spacing: 2px;
+}
+.prepaid-member-form div.row {
+  justify-content: space-between;
+}
+.prepaid-member-form div.form-next-button {
+  width: 340px;
+}
+.prepaid-member-form div.form-next-button span {
+  background: url(https://d1q08lkutgkcx2.cloudfront.net/image/okawari-button-arrow.svg) no-repeat 305px center;
+  background-size: 8px;
+}
+.prepaid-member-form .form-entry-user-submit .desc {
+  font-size: 1.75rem;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+.prepaid-member-form .form-entry-user-submit .desc span {
+  font-weight: bold;
+  text-decoration: underline;
+}
+.prepaid-member-form div.form-capacity-notice-icon {
+  width: 50px;
+}
+.prepaid-member-form div.form-capacity-notice.payment span.strong {
+  font-size: 1.8rem;
+}
+.prepaid-member-form .form-entry-user-submit:nth-child(2) div.form-next-button {
+  outline: 3px solid #FFE300;
+  outline-offset: -3px;
+  background: #fff;
+}
+.prepaid-member-form .form-next-button-left a {
+  color: #000;
+}
+.prepaid-member-form div.form-next-button:hover a {
+  color: #fff;
+}
+/* 端末情報修正 */
+.prepaid-imei-edit-form.prepaid-member-form .customer-imei .imei-number {
+  border: none;
+}
+.prepaid-imei-edit-form.prepaid-member-form .customer-imei .imei-number {
+  display: flex;
+  width: 500px;
+  box-sizing: border-box;
+  padding: 15px 25px 15px 0px;
+}
+.prepaid-imei-edit-form.prepaid-member-form .customer-imei .imei-number .edit_number {
+  width: calc(100% - 80px);
+}
+.prepaid-imei-edit-form.prepaid-member-form .customer-imei .imei-number span {
+  padding-top: 9px;
+}
+
+@media screen and (max-width: 767px) {
+  .prepaid-member-form .customer-imei .imei-number {
+    padding: 20px 10px;
+    font-size: 2rem;
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+    max-width: 400px;
+  }
+  .prepaid-member-form h2.form-h2 {
+    font-size: 1.6rem;
+  }
+  .prepaid-member-form.prepaid-imei-edit-form h2.form-h2 {
+    line-height: 1.5;
+  }
+  .prepaid-member-form .customer-imei {
+    margin-top: 0;
+  }
+  .prepaid-member-form div.row {
+    flex-direction: column;
+    width: 320px;
+  }
+  .prepaid-member-form div.white-content-box-form {
+    padding: 20px 0 40px;
+  }
+  .prepaid-member-form .form-entry-user-submit {
+    margin-bottom: 30px;
+  }
+  .prepaid-member-form .form-entry-user-submit .desc {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+  .prepaid-member-form div.form-next-button {
+    width: 320px;
+  }
+  .prepaid-member-form div.form-next-button span {
+    background: url(https://d1q08lkutgkcx2.cloudfront.net/image/okawari-button-arrow.svg) no-repeat 290px center;
+    background-size: 8px;
+  }
+  .prepaid-member-form div.form-capacity-notice.payment-select-caution {
+    margin: 10px auto 30px;
+    max-width: 340px;
+  }
+  .prepaid-member-form div.form-capacity-notice-icon {
+    margin: 0 auto;
+    width: 45px;
+  }
+  div.form-capacity-notice-icon {
+    margin: 0;
+    width: 70px;
+  }
+  .prepaid-member-form div.form-capacity-notice.payment span.strong {
+    font-size: 1.5rem;
+  }
+  /* 端末情報修正 */
+  .prepaid-imei-edit-form.prepaid-member-form .customer-imei .imei-number {
+    width: 100%;
+    padding: 10px 15px 10px 0px;
+  }
+  .prepaid-imei-edit-form.prepaid-member-form .customer-imei .imei-number .edit_number {
+    width: 100%;
+  }
+  .prepaid-imei-edit-form.prepaid-member-form .customer-imei .imei-number span {
+    padding-top: 14px;
+    font-size: 2.2rem;
+  }
+  .prepaid-imei-edit-form.prepaid-member-form div.white-content-box-form {
+    padding: 30px 0 45px;
+  }
+  .prepaid-imei-edit-form.prepaid-member-form div.row {
+    flex-direction: column-reverse;
+  }
+  div.form-step-footer-area {
+    width: 100%;
+  }
+  div.mypage-footer-main {
+    padding: 8px 0;
+  }
+}
+/* /sub/selectページ start（一部/confirm画面と共通要素あり） */
+form.prepaid-form-select .sub-select p.select-plan.select-subtitle,
+.sub-confirm p.select-plan.select-subtitle {
+  font-size: 3rem;
+  font-weight: bold;
+  text-align: center;
+  margin: 50px auto 25px;
+  color: red;
+  line-height: 1;
+}
+form.prepaid-form-select .sub-select p.select-plan.select-text {
+  margin: 10px auto 15px 30px;
+}
+.sub-confirm p.select-plan.select-text {
+  margin: 30px auto 30px 30px;
+}
+.sub-select .entry-option-select div.relief-item-select-area-box .price,
+.sub-confirm .entry-option-select div.relief-item-select-area-box .price {
+  font-size: 3.0rem;
+}
+.sub-select .entry-option-select div.relief-item-select-area-box .cp-price,
+.sub-confirm .entry-option-select div.relief-item-select-area-box .cp-price {
+  font-size: 4.2rem;
+  line-height: 0.5em;
+  letter-spacing: -.4rem;
+  position: absolute;
+  right: 30px;
+  bottom: -2px;
+}
+.sub-select .entry-option-select div.relief-item-select-area-box .cp-price > .yen,
+.sub-confirm .entry-option-select div.relief-item-select-area-box .cp-price > .yen {
+  font-size: 0.4em;
+}
+.sub-select .entry-option-select div.relief-item-select-area-box .cp-price > .tax,
+.sub-confirm .entry-option-select div.relief-item-select-area-box .cp-price > .tax {
+  color: #e6006b;
+}
+.sub-select .entry-option-select div.relief-item-select-area-box .cp-price > .yen:first-child,
+.sub-confirm .entry-option-select div.relief-item-select-area-box .cp-price > .yen:first-child {
+  display: inline-block;
+}
+.sub-select div.prepaid-plan-check label.custom-check-box-v2.plan input[type="radio"] + span::before,
+.sub-confirm div.prepaid-plan-check label.custom-check-box-v2.plan input[type="radio"] + span::before {
+  border-radius: initial;
+  background-color: #FFF;
+  border: 1px solid #1E1E1E;
+}
+.sub-select .prepaid-plan-price .prepaid-plan-price-inner + .prepaid-plan-price-inner,
+.sub-confirm .prepaid-plan-price .prepaid-plan-price-inner + .prepaid-plan-price-inner {
+  margin-top: 10px;
+}
+.sub-select .prepaid-plan-price .prepaid-plan-price-inner,
+.sub-confirm .prepaid-plan-price .prepaid-plan-price-inner {
+  justify-content: space-between;
+}
+
+.sub-select .prepaid-plan-price .sp-flex.prepaid-plan-price-top .sp-flex-period,
+.sub-confirm .prepaid-plan-price .sp-flex.prepaid-plan-price-top .sp-flex-period {
+  transform: translateY(-8px);
+}
+.sub-select .prepaid-plan-price .sp-flex.prepaid-plan-price-bottom .sp-flex-period,
+.sub-confirm .prepaid-plan-price .sp-flex.prepaid-plan-price-bottom .sp-flex-period {
+  transform: translateY(-3px);
+}
+
+.sub-select .prepaid-plan-price,
+.sub-confirm .prepaid-plan-price {
+  width: auto;
+  padding: 0;
+  z-index: 15;
+}
+.sub-select .prepaid-plan-price p,
+.sub-confirm .prepaid-plan-price p{
+  font-size: 1.2rem;
+  margin: 3px 0 0 5px;
+  text-align: start;
+}
+.sub-select .prepaid-plan-price span,
+.sub-confirm .prepaid-plan-price p {
+  color: #000;
+}
+.sub-select .prepaid-plan-price .prepaid-plan-price-top span,
+.sub-confirm .prepaid-plan-price .prepaid-plan-price-top p {
+  color: #e6006b;
+}
+.sub-select .entry-plan-select .selected .form-capacity-select-checkbox-area{
+  left: 5px;
+}
+.sub-select .prepaid-plan-check label.custom-check-box-v2,.sub-select .prepaid-plan-check .custom-check-box-v2-select-text.text-size{
+  margin-left: 0;
+  left: 0;
+}
+.sub-select .prepaid-plan.prepaid-plan-20::before,.sub-select .prepaid-plan.prepaid-plan-50::before,.sub-select .prepaid-plan.prepaid-plan-100::before{
+  background: none;
+  width: 0;
+}
+.sub-select.prepaid-option-area .entry-form-option-select {
+  margin-bottom: 40px;
+}
+.sub-select.prepaid-option-area .entry-option-select div.relief-item-select-area-box{
+  width: auto;
+  max-width: initial;
+}
+.sub-select .entry-option-select{
+  flex: 0 1 380px;
+}
+.sub-select.prepaid-option-area .entry-option-select-detail{
+  width: 45%;
+  position: relative;
+  flex: 0 1 350px;
+  align-items: center;
+  background-color: var(--zeus-po-white);
+  padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+.entry-privacy-area{
+  margin-top: 40px;
+}
+.sub-select .entry-option-detail,
+.sub-confirm .entry-option-detail {
+  display: flex;
+  flex-direction: column;
+}
+.sub-select.prepaid-option-area .entry-option-select-detail:before{
+  display: block;
+  position: absolute;
+  top: calc(50% - 12px);
+  left: -12px;
+  content: "";
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 12px 12px 12px 0;
+  border-color: transparent #fff transparent transparent;
+}
+.sub-select.prepaid-option-area .entry-option-select-detail p{
+  font-size: 1.4rem;
+  margin: 0;
+}
+.sub-select.prepaid-option-area .entry-option-select-detail p:nth-of-type(2){
+  margin: 10px 0 0 0;
+}
+.sub-select.prepaid-option-area .entry-option-select-detail .prepaid-popup-area{
+  border: 0;
+  margin: 10px 0 0 0;
+}
+.sub-select.prepaid-option-area .entry-option-select-detail .prepaid-popup-area .js-option-popup{
+  padding: 0;
+}
+.sub-select .entry-option-tanmatsu-anshin .relief-option-ckeckbox{
+  top: calc(50% - 65px);
+}
+.sub-select .entry-option-service-group,
+.sub-confirm .entry-option-service-group{
+  gap: 30px;
+}
+.sub-select .entry-option-digital-life .relief-item-select-area3 + .relief-option-ckeckbox{
+  top: calc(50% - 15px);
+}
+.sub-select .entry-option-marugoto-anshin .relief-option-ckeckbox{
+  top: calc(50% - 25px);
+}
+.sub-select.prepaid-option-area .entry-option-select-detail .js-option-popup{
+  font-weight: 600;
+  border: 0;
+}
+.sub-select .prepaid-plan-50 .prepaid-plan-gb,
+.sub-confirm .prepaid-plan-50 .prepaid-plan-gb {
+  color: #FF2F00;
+}
+.sub-select .prepaid-plan-20 .prepaid-plan-gb,
+.sub-confirm .prepaid-plan-20 .prepaid-plan-gb {
+  color: #FFA100;
+}
+.sub-select .prepaid-plan-gb,
+.sub-confirm .prepaid-plan-gb {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  max-width: 180px;
+  width: 100%;
+  color: #DB00A3;
+}
+.sub-select .prepaid-plan-gb p,
+.sub-confirm .prepaid-plan-gb p {
+  font-size: 1.5rem;
+}
+.sub-select .prepaid-plan-gb span.sub-gb,
+.sub-confirm .prepaid-plan-gb span.sub-gb {
+  font-size: 3rem;
+}
+.sub-select .prepaid-plan-gb span,
+.sub-confirm .prepaid-plan-gb span {
+  font-size: 5.2rem;
+}
+.sub-select .prepaid-plan-price span,
+.sub-confirm .prepaid-plan-price span {
+  font-size: 4.2rem;
+  margin-left: 20px;
+}
+.sub-select .prepaid-plan-price .sp-flex-period,
+.sub-select .prepaid-plan-price .sp-flex-yen,
+.sub-confirm .prepaid-plan-price .sp-flex-period,
+.sub-confirm .prepaid-plan-price .sp-flex-yen {
+  font-size: 1.6rem;
+}
+.sub-select .prepaid-plan-price .prepaid-plan-price-top .sp-flex-yen,
+.sub-confirm .prepaid-plan-price .prepaid-plan-price-top .sp-flex-yen {
+  margin-left: 0;
+}
+.sub-select .prepaid-plan-price .prepaid-plan-price-bottom span,
+.sub-confirm .prepaid-plan-price .prepaid-plan-price-bottom span {
+  font-size: 2.6rem;
+  font-weight: lighter;
+  margin-left: 80px;
+}
+.sub-select .entry-option-marugoto-anshin .banner{
+  width: 150px;
+  height: auto;
+  position: absolute;
+  right: 20px;
+  top: -11px;
+  z-index: 2;
+}
+form.prepaid-form-select .sub-select .entry-plan-select{
+  flex-wrap: wrap;
+  margin: 0 0 90px 0;
+  padding: 40px;
+  background-color: #FFF;
+  align-items: flex-start;
+}
+.sub-select .prepaid-device-area{
+  width: 45%;
+  margin: 0;
+  box-sizing: border-box;
+  border: unset;
+  height: auto;
+}
+.sub-select .flex-box-select{
+  margin-bottom: 20px;
+  display: block;
+}
+.sub-select .your-plan div.plan-summary-table-row:first-child {
+  border-top: none;
+}
+.sub-select.your-plan-area .digital-life div.summary-table-row,
+.sub-select.your-plan-area .marugoto div.summary-table-row{
+  width: 100%;
+}
+.sub-select .summary-table-column-left p,.sub-select .summary-table-column-center.adjust{
+  font-size: 1.2rem;
+}
+.sub-select .summary-price-text{
+  font-size: 1.3rem;
+}
+.sub-select .marginBt2{
+  margin-right: 0px;
+}
+.sub-select #your_plan {
+  box-shadow: unset;
+}
+.sub-select .detail > p {
+  color: #FFFFFF;
+  background-color: var(--overseas-black);
+}
+.sub-select div.plan-summary-table-row{
+  justify-content:inherit;
+}
+.sub-select .summary-table-column-left p{
+  width: 130px;
+}
+.mypage-main:has(.sub-select) ~ #popup-tanmatsu-anshin.option-popup-block .popup-body h3{
+  font-size: 3.0rem;
+}
+.mypage-main:has(.sub-select) ~ #popup-tanmatsu-anshin.option-popup-block .popup-body .desc{
+  font-size: 1.8rem;
+}
+.mypage-main:has(.sub-select) ~ .prepaid-popup-block .popup-container .item-content p,.mypage-main:has(.sub-select) ~ .option-popup-block .entry-option-popup .popup-header .group .text{
+  font-size: 2.0rem;
+}
+.mypage-main:has(.sub-select) ~ .prepaid-popup-block .popup-container .item-content .item-content-bottom > p.attention{
+  font-size: 1.2rem;
+}
+.mypage-main:has(.sub-select) ~ .option-popup-block .popup-body tbody td span{
+  margin-left: 0;
+}
+.add-contents .subhead {
+  color: var(--zeus-po-red);
+  font-size: 2.3rem;
+  line-height: 1.3;
+  text-align: center;
+  font-weight: bold;
+  margin-top: 25px;
+}
+.option-popup-block .add-contents.popup-body tbody td{
+  font-weight: normal;
+}
+.sub-select div.summary-table-column-left.double{
+  padding: 1em 0;
+}
+.sub-anshin img{
+  height: 70px;
+  width: 70px;
+  margin-right: 15px;
+}
+.sub-select .summary-table-column-right{
+  width: 85px;
+  font-weight: bold;
+}
+.sub-select .summary-price-text{
+  font-size: 1.5rem;
+}
+.sub-select .sub-data-charge-camp .summary-price-text,
+.sub-confirm .sub-data-charge-camp .summary-price-text {
+  font-size: 1.2rem;
+  font-weight: lighter;
+}
+.sub-select .atten-sub{
+  font-size: 1.3rem;
+}
+.sub-select .sub-text-adj{
+  margin: 0 25px 0 0;
+}
+.sub-select .summary-price-text-nomal{
+  font-weight: bold;
+}
+.entry-option-digital-life.flex-entry-option .relief-option-ckeckbox {
+  left: 0;
+  top: 0;
+}
+.entry-option-digital-life.flex-entry-option-sp label.custom-check-box-v2 span {
+  width: 42px;
+  height: 40px;
+  position: relative;
+}
+.entry-option-digital-life.flex-entry-option .entry-option-left:last-of-type label.custom-check-box-v2.option input[type=radio] + span::before,
+.entry-option-digital-life.flex-entry-option .entry-option-left label.custom-check-box-v2.option input[type=radio] + span::before {
+  margin: 0;
+  top: 0;
+}
+.entry-option-digital-life.flex-entry-option .entry-option-left label.custom-check-box-v2.option input[type=radio] + span::after,
+.entry-option-digital-life.flex-entry-option .entry-option-left:last-of-type label.custom-check-box-v2.option input[type=radio] + span::after {
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+}
+
+@media screen and (min-width: 768px) {
+  .sub-select .plan-summary-option.digital-life {
+    border-bottom: 1px solid #909090;
+  }
+  .sub-select .plan-summary-option.digital-life,
+  .sub-select .plan-summary-option.marugoto {
+    padding: 13px 0;
+  }
+  .sub-select .prepaid-plan-area {
+    margin-bottom: 90px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .sub-select div.summary-table-column-left.double{
+    padding: 0.25em 0;
+  }
+  .sub-campaign-text {
+    font-size: 2.2rem;
+    margin-top: 40px;
+  }
+  form.prepaid-form-select .sub-select p.select-plan.select-subtitle,
+  .sub-confirm p.select-plan.select-subtitle {
+    font-size: 2rem;
+    margin: 40px auto 20px;
+    line-height: 1.3;
+  }
+  .sub-confirm p.select-plan.select-subtitle.confirm-subttl {
+    margin: 20px auto;
+  }
+  form.prepaid-form-select .sub-select p.select-plan.select-text,
+  .sub-confirm p.select-plan.select-text {
+    font-size: 1.4rem;
+  }
+  .sub-select .summary-table-column-left p,.sub-select .summary-table-column-center.adjust{
+    font-size: 1.4rem;
+  }
+  .sub-select .prepaid-plan-gb {
+    margin-left: 20px;
+  }
+  .sub-confirm .prepaid-plan-gb {
+    margin-left: 28px;
+  }
+  .sub-select .prepaid-plan-gb span {
+    font-size: 3rem;
+  }
+  .sub-confirm .prepaid-plan-gb span {
+    font-size: 2.8rem;
+  }
+  .sub-select .prepaid-plan-gb span.sub-gb,
+  .sub-confirm .prepaid-plan-gb span.sub-gb {
+    font-size: 2rem;
+  }
+  .sub-select .prepaid-plan,
+  .sub-confirm .prepaid-plan {
+    width: 100%;
+  }
+  .sub-select .prepaid-plan-price .prepaid-plan-price-inner,
+  .sub-confirm .prepaid-plan-price .prepaid-plan-price-inner {
+    padding: 0 10px 0 0;
+  }
+  .sub-select .prepaid-plan-price .prepaid-plan-price-inner + .prepaid-plan-price-inner,
+  .sub-confirm .prepaid-plan-price .prepaid-plan-price-inner + .prepaid-plan-price-inner {
+    margin-top: 5px;
+  }
+  .sub-select div.prepaid-plan-check {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    position: absolute;
+    left: 10px;
+    margin: 14px 0 0;
+    pointer-events: none;
+    width: auto;
+  }
+  .sub-confirm div.prepaid-plan-check {
+    left: 28px;
+  }
+  .sub-select div.prepaid-plan-check label.custom-check-box-v2.plan input[type="radio"] + span::before,
+  .sub-confirm div.prepaid-plan-check label.custom-check-box-v2.plan input[type="radio"] + span::before {
+    margin-left: 35%;
+    left: -20px;
+  }
+  .sub-select div.prepaid-plan-check label.custom-check-box-v2.plan input[type="radio"]:checked + span::after,
+  .sub-confirm div.prepaid-plan-check label.custom-check-box-v2.plan input[type="radio"]:checked + span::after {
+    left: 7px;
+    top: 13px;
+  }
+  .sub-confirm.edit-plan-prepaid div.prepaid-plan-check p.custom-check-box-v2-select-text.text-size {
+    margin-left: -10px;
+  }
+  .sub-select .prepaid-plan-price,
+  .sub-confirm .prepaid-plan-price {
+    width: 85%;
+    max-width: 200px;
+  }
+  .sub-select .prepaid-plan-price .sp-flex.prepaid-plan-price-top,
+  .sub-confirm .prepaid-plan-price .sp-flex.prepaid-plan-price-top {
+    padding: 0 10px 0 0;
+  }
+  .sub-select .prepaid-plan-price .prepaid-plan-price-bottom span,
+  .sub-select .prepaid-plan-price span,
+  .sub-confirm .prepaid-plan-price .prepaid-plan-price-bottom span,
+  .sub-confirm .prepaid-plan-price span {
+    margin-left: 0;
+  }
+  .sub-select .sp-flex-yen,
+  .sub-confirm .sp-flex-yen,
+  .sub-select .prepaid-plan-price .prepaid-plan-price-top .sp-flex-yen,
+  .sub-confirm .prepaid-plan-price .prepaid-plan-price-top .sp-flex-yen {
+    flex-direction: row;
+    margin: 0 0 0 15px;
+    font-size: 1rem;
+    white-space: nowrap;
+  }
+  .sub-select .prepaid-plan-price .sp-flex-period,
+  .sub-select .prepaid-plan-price .sp-flex-yen,
+  .sub-confirm .prepaid-plan-price .sp-flex-period,
+  .sub-confirm .prepaid-plan-price .sp-flex-yen {
+    font-size: 1rem;
+  }
+  .sub-select .prepaid-plan-price span {
+    font-size: 3rem;
+    flex-grow: 1;
+  }
+  .sub-confirm .prepaid-plan-price span {
+    font-size: 2.8rem;
+    flex-grow: 1;
+  }
+  .sub-select .prepaid-plan-price .prepaid-plan-price-bottom span,
+  .sub-confirm .prepaid-plan-price .prepaid-plan-price-bottom span {
+    font-size: 2.3rem;
+  }
+  .sub-select .prepaid-plan-price .sp-flex.prepaid-plan-price-top .sp-flex-period,
+  .sub-select .prepaid-plan-price .sp-flex.prepaid-plan-price-bottom .sp-flex-period,
+  .sub-confirm .prepaid-plan-price .sp-flex.prepaid-plan-price-top .sp-flex-period,
+  .sub-confirm .prepaid-plan-price .sp-flex.prepaid-plan-price-bottom .sp-flex-period {
+    transform: translateX(10px);
+    white-space: nowrap;
+  }
+  form.prepaid-form-select .sub-select .entry-plan-select{
+    margin: 0;
+    padding: 30px 20px;
+  }
+  .sub-select .prepaid-device-area{
+    width: 100%;
+    margin: 0;
+    padding-left: 0;
+  }
+  .sub-select div.prepaid-device-detail{
+    padding: 0;
+    margin: 0 0 40px 0;
+  }
+  .sub-select .entry-option-tanmatsu-anshin .relief-option-ckeckbox{
+    top: calc(50% - 25px);
+    left: 13px;
+  }
+  form.prepaid-form-select .sub-select p.first-title{
+    margin: 45px 0 25px;
+  }
+  form.prepaid-form-select .sub-select-device p.first-title{
+    margin: 65px 0 25px;
+  }
+  .sub-select .entry-option-select{
+    flex: 0 1;
+  }
+  .sub-select .entry-option-select div.relief-item-select-area-box .cp-price {
+    bottom: -20px;
+    right: 15px;
+  }
+  .sub-confirm .entry-option-select div.relief-item-select-area-box .cp-price {
+    bottom: -30px;
+    right: 10px;
+  }
+  .sub-select.prepaid-option-area .entry-option-select-detail{
+    width: 100%;
+    flex: 0 1;
+  }
+  .entry-option-digital-life.flex-entry-option .relief-option-ckeckbox {
+    top: auto;
+  }
+  .entry-option-digital-life.flex-entry-option-sp label.custom-check-box-v2 span {
+    width: 28px;
+    height: 28px;
+  }
+  .entry-option-digital-life.flex-entry-option .entry-option-left label.custom-check-box-v2.option input[type=radio] + span::after,
+  .entry-option-digital-life.flex-entry-option .entry-option-left:last-of-type label.custom-check-box-v2.option input[type=radio] + span::after {
+    width: 18px;
+    height: 18px;
+  }
+  .mypage-main:has(.sub-select) ~ #popup-tanmatsu-anshin.option-popup-block .popup-body h3,.mypage-main:has(.sub-select) ~ .option-popup-block  .entry-option-popup .popup-header .title{
+    font-size: 2.0rem;
+  }
+  .entry-option-popup .popup-header .title {
+    font-size: 2.1rem;
+  }
+  .mypage-main:has(.sub-select) ~ .prepaid-popup-block .popup-container .item-content p, .mypage-main:has(.sub-select) ~ .option-popup-block .entry-option-popup .popup-header .group .text,.mypage-main:has(.sub-select) ~ #popup-tanmatsu-anshin.option-popup-block .popup-body .desc{
+    font-size: 1.4rem;
+  }
+  .mypage-main:has(.sub-select) ~ .prepaid-popup-block .popup-container .item-content .item-content-bottom{
+    width: auto;
+  }
+  .sub-select div.left-plan-column{
+    width: max-content
+  }
+  .sub-select .summary-price-text{
+    font-size: 1.55rem;
+    font-weight: bold;
+  }
+  .sub-select div.summary-table-column-right p{
+    font-size: 1.3rem;
+    font-weight: bold;    
+  }
+  .sub-select .summary-table-column-center.adjust{
+    font-size: 1.3rem;
+  }
+  .sub-select .left-plan-column p{
+    margin: 0 0 1em 0;
+  }
+  .sub-select .detail-more .attention{
+    font-size: 1.3rem;
+  }
+  .sub-select.prepaid-option-area .entry-option-select-detail:before{
+    top: -12px;
+    left: calc(50% - 12px);
+    border-width: 0 12px 12px 12px;
+    border-color: transparent transparent #fff transparent;
+  }
+  .sub-select .flex-box-select.your-plan{
+    margin-bottom: 40px;
+  }
+  .add-contents .subhead {
+    font-size: 1.8rem;
+  }
+  .sub-select .prepaid-device-img{
+    width: 90%;
+  }
+  .sub-select div.prepaid-device-area div.form-capacity-select-checkbox-area{
+    left: 5px;
+  }
+  .sub-select div.prepaid-device-area.selected .form-capacity-select-checkbox-area{
+    left: 0;
+  }
+  .sub-select div.plan-summary-table-row-wide div.summary-table-column-left.sp-line{
+    width: 100%;
+  }
+  .sub-select.your-plan-area div.summary-table-row{
+    width: 100%;
+  }
+  form.prepaid-form-select .sub-select p.select-plan.select-text {
+    margin: 10px auto 15px 22px;
+  }
+  .sub-confirm div.summary-table-column-left p {
+    padding: 0.25em 0;
+  }
+}
+
+/*端末売り切れ用*/
+.sub-select .prepaid-device-area#soldout{
+  position: relative;
+  pointer-events: none;
+}
+
+.sub-select .prepaid-device-area#soldout::before{
+  content: "SOLD OUT";
+  position: absolute;
+  width: fit-content;
+  height: auto;
+  text-align: center;
+  font-size: 2.2em;
+  padding: 0.5em;
+  background: red;
+  font-weight: bold;
+  color: white;
+  top: 50%;
+  transform: translate(10%, -65%) rotate(-10deg);
+  z-index: 11;
+}
+.sub-select .prepaid-device-area#soldout::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 10;
+}
+
+@media screen and (max-width: 767px){
+  .sub-select .prepaid-device-area#soldout{
+    padding-left: 0;
+  }
+  .sub-select .prepaid-device-area#soldout .prepaid-device-img{
+    padding-left: 40px;
+  }
+}
+
+/* /sub/selectページ（一部/confirm画面と共通要素あり） end */
+
+/* /sub/confirmページ start */
+.sub-confirm .plan-table div.plan-summary-table-row .summary-table-row .confirm-sub-campaign {
+  padding: 1em 0;
+}
+.sub-confirm .plan-table div.summary-table-column-right.adjust.confirm-pay p{
+  font-size: 1.8rem;
+}
+.sub-confirm .plan-table div.plan-summary-table-row{
+  background: none;
+}
+.sub-confirm p.select-plan.select-subtitle {
+  margin-top: 45px;
+}
+.sub-confirm .prepaid-plan-price span{
+  color: #000;
+}
+.sub-confirm .prepaid-plan.prepaid-plan-20::before,
+.sub-confirm .prepaid-plan.prepaid-plan-50::before,
+.sub-confirm .prepaid-plan.prepaid-plan-100::before{
+  background: none;
+  width: 0;
+}
+.sub-confirm.prepaid-option-area .entry-option-select div.relief-item-select-area-box{
+  width: auto;
+  max-width: 375px;
+}
+.sub-confirm .entry-option-select{
+  flex: 0 1 380px;
+}
+.sub-confirm.prepaid-option-area .entry-option-select-detail{
+  width: 45%;
+  position: relative;
+  flex: 0 1 350px;
+  align-items: center;
+  background-color: var(--zeus-po-white);
+  padding: 20px;
+  box-sizing: border-box;
+}
+.sub-confirm.prepaid-option-area .entry-option-select-detail:before{
+  display: block;
+  position: absolute;
+  top: calc(50% - 12px);
+  left: -12px;
+  content: "";
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 12px 12px 12px 0;
+  border-color: transparent #fff transparent transparent;
+}
+.sub-confirm.prepaid-option-area .entry-option-select-detail p{
+  font-size: 1.4rem;
+  margin: 0;
+}
+.sub-confirm.prepaid-option-area .entry-option-select-detail p:nth-of-type(2){
+  margin: 10px 0 0 0;
+}
+.sub-confirm.prepaid-option-area .entry-option-select-detail .prepaid-popup-area{
+  border: 0;
+  margin: 0 0 0 80px;
+}
+.sub-confirm .entry-option-service-group{
+  gap: 30px;
+}
+.sub-confirm .entry-option-digital-life .relief-item-select-area3 + .relief-option-ckeckbox{
+  top: calc(50% - 20px);
+}
+.sub-confirm .entry-option-marugoto-anshin .relief-option-ckeckbox{
+  top: calc(50% - 15px);
+}
+.sub-confirm.prepaid-option-area .entry-option-select-detail .js-option-popup{
+  font-weight: 600;
+  border: 0;
+}
+.sub-confirm .entry-plan-select .selected .form-capacity-select-checkbox-area{
+  left: 5px;
+}
+.sub-confirm form .form-user-background .entry-plan-select{
+  flex-wrap: wrap;
+  margin:0 0 90px 0;
+}
+.sub-confirm .prepaid-device-area{
+  width: 48%;
+  margin: 20px 0;
+  box-sizing: border-box;
+}
+.sub-confirm #form-entry-edit-device p.first-title,.sub-confirm form.prepaid-form-select p.first-title,.sub-confirm.edit-partial-plan.edit-plan-prepaid p.first-title{
+  font-size: 3.0rem;
+  font-weight: bold;
+  letter-spacing: 0.1em;
+  line-height: 1;
+  margin: 20px 0 25px;
+  -webkit-text-stroke: 0.5px black;
+  position: relative;
+  padding-left: 30px;
+}
+.sub-confirm #form-entry-edit-plan{
+  padding: 0px;
+}
+.sub-confirm.edit-partial-plan.edit-plan-prepaid p.first-title::before{
+  content: "";
+  width: 10px;
+  height: calc(100% + 10px);
+  background-color: #9E00FF;
+  position: absolute;
+  left: 0px;
+  top: -5px;
+}
+.sub-confirm #form-entry-edit-device p.first-title::before {
+  content: "";
+  width: 10px;
+  height: calc(100% + 10px);
+  background-color: #9E00FF;
+  position: absolute;
+  left: 0px;
+  top: -5px;
+}
+.plan-summary-table-row .sub-opt-title{
+  display: none;
+}
+.plan-summary-table-row:nth-of-type(2) .sub-opt-title{
+  display: block;
+}
+.plan-summary-table-row:nth-of-type(2) .summary-table-column-left:has(.sub-opt-title){
+  margin: 0;
+}
+.summary-table-column:has(.sub-opt-title){
+  margin: 1em 0;
+}
+.sub-confirm .entry-user-link{
+  margin: 15px 0 0 0;
+}
+h2.form-h2.sub-confirm{
+  font-size: 2.0rem;
+  max-width: 750px;
+  margin: 0 0 10px;
+  border: none;
+}
+.sub-confirm .plan-table div.summary-table-column-right.adjust.confirm-pay .marginBt2{
+  margin: 0;
+  font-size: 1.3rem;
+}
+.sub-confirm .plan-table div.summary-table-column-right.adjust.confirm-pay .marginBt2 .summary-price-text{
+  font-size: 1.8rem;
+}
+.sub-anshin img{
+  height: 70px;
+  width: 70px;
+  margin-right: 15px;
+}
+.sub-confirm.prepaid-option-area .entry-option-select-detail{
+  width: 45%;
+  position: relative;
+  flex: 0 1 350px;
+  align-items: center;
+  background-color: var(--zeus-po-white);
+  padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+.sub-confirm.prepaid-option-area .entry-option-select-detail:before{
+  display: block;
+  position: absolute;
+  top: calc(50% - 12px);
+  left: -12px;
+  content: "";
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 12px 12px 12px 0;
+  border-color: transparent #fff transparent transparent;
+}
+.sub-confirm.prepaid-option-area .entry-option-select-detail .prepaid-popup-area{
+  border: 0;
+  margin: 10px 0 0 0;
+}
+.sub-confirm.prepaid-option-area .entry-option-select-detail .prepaid-popup-area .js-option-popup{
+  padding: 0;
+}
+.sub-confirm ~ #popup-tanmatsu-anshin.option-popup-block .popup-body h3{
+  font-size: 3.0rem;
+}
+.sub-confirm ~ #popup-tanmatsu-anshin.option-popup-block .popup-body .desc{
+  font-size: 1.8rem;
+}
+.sub-confirm ~ .option-popup-block.prepaid-opt-block .popup-body .desc{
+  font-size: 1.5rem
+}
+.sub-confirm ~ .prepaid-popup-block .popup-container .item-content p,.sub-confirm ~ .option-popup-block .entry-option-popup .popup-header .group .text{
+  font-size: 2.0rem;
+}
+.sub-confirm ~ .prepaid-popup-block .popup-container .item-content .item-content-bottom > p.attention{
+  font-size: 1.2rem;
+}
+.sub-confirm ~ .option-popup-block .popup-body tbody td span{
+  margin-left: 0;
+}
+.sub-confirm .entry-option-marugoto-anshin .banner{
+  width: 150px;
+  height: auto;
+  position: absolute;
+  right: 20px;
+  top: -11px;
+  z-index: 2;
+}
+.sub-confirm ~ .edit-partial-contractor #form-entry-edit-contractor .mypage-user-container,.sub-confirm ~ .edit-partial-address #form-entry-edit-address .mypage-user-container{
+  margin: 0 auto;
+}
+.sub-confirm ~ .edit-partial-contractor #form-entry-edit-contractor .mypage-user-container table.form-table th,.sub-confirm ~ .edit-partial-address #form-entry-edit-address .mypage-user-container table.form-table th{
+  padding: 0;
+  font-size: 1.4rem;
+  width: 220px;
+}
+.add-contents .subhead {
+  color: var(--zeus-po-red);
+  font-size: 2.3rem;
+  line-height: 1.3;
+  text-align: center;
+  font-weight: bold;
+  margin-top: 25px;
+}
+.subsc-mail-caution-area.confirm {
+  margin: 0 0 10px 230px;
+}
+.option-popup-block .add-contents.popup-body tbody td{
+  font-weight: normal;
+}
+.sub-confirm ~ .edit-partial-contractor p.mypage-remark{
+  margin-left: 230px;
+}
+.sub-confirm ~ .edit-partial-contractor form .attention-remark .entry-rental-device-title{
+  margin: 5px auto 10px 230px;
+  width: 212px;
+  font-size: 1.3rem;
+  color: #909090;
+  font-weight: normal;
+  border-bottom: 1px solid #909090;
+}
+.sub-confirm #form-entry-edit-device{
+	background-color:#f3f3f3;
+}
+.sub-confirm .prepaid-plan-20 .prepaid-plan-gb{
+  color: #FFA100;
+}
+.sub-confirm .sub-camp{
+  margin: 5px 0;
+}
+.prepaid-form-confirm .sub-confirm .flex-box-select.total-price{
+  margin-bottom: 10px;
+}
+.sub-confirm .summary-table-row{
+  width: 100%;
+  min-width: 509px;
+}
+.sub-confirm .sub-text-adj{
+  margin: 0 15px 0 0;
+}
+.atten-sub{
+  font-size: 1.1rem;
+}
+.sub-confirm-opt{
+  padding: 1em 0;
+}
+.sub-confirm .plan-summary-option:has(.sub-confirm-opt){
+  display: none;
+}
+.sub-confirm .plan-summary-option:has(.sub-confirm-opt .summary-table-row){
+  display: flex;
+}
+.sub-confirm:not(.summary-table-row .f36) .sub-anshin-camp,.sub-confirm:not(.summary-table-row .f37) .sub-dezilife-camp,.sub-confirm:not(.summary-table-row .f38) .sub-dezisapo-camp{
+  display:none;
+}
+.sub-confirm:has(.summary-table-row .f36) .sub-anshin-camp,.sub-confirm:has(.summary-table-row .f37) .sub-dezilife-camp,.sub-confirm:has(.summary-table-row .f38) .sub-dezisapo-camp{
+  display:block;
+}
+.sub-confirm .prepaid-device-area{
+  cursor: pointer;
+}
+.sub-confirm-opt-monthly {
+  flex-direction: column-reverse;
+  display: flex;
+}
+.sub-plan-box {
+  font-size: 1.2rem;
+}
+
+@media screen and (min-width: 768px) {
+  .edit-partial-plan.edit-plan-prepaid.sub-confirm{
+    top: 19vh;
+  }
+  .edit-partial-plan.edit-plan-prepaid.sub-confirm #form-entry-edit-plan{
+    margin: 0 auto;
+  }
+  .sub-confirm .entry-option-tanmatsu-anshin .relief-option-ckeckbox{
+    top: calc(50% - 80px);
+  }
+  .sub-plan-box .plan-table div.summary-table-column.summary-table-column-right.adjust.confirm-pay {
+    width: 18%;
+  }
+  .sub-plan-box .plan-table div.summary-table-column-left {
+    width: 20%;
+  }
+  .sub-confirm .sub-plan-box .plan-summary-table-row > .summary-table-row,
+  .sub-confirm .sub-confirm-opt {
+    width: 80%;
+  }
+  .sub-confirm .sub-text-adj {
+    margin: 0 21.5px 0 0;
+  }
+  .sub-confirm .prepaid-plan-area {
+    margin-bottom: 90px;
+  }
+  .sub-confirm .prepaid-plan{
+    margin-bottom: 0;
+  }
+}
+@media screen and (max-width: 767px) {
+  .sub-confirm ~ #popup-tanmatsu-anshin.option-popup-block .popup-body h3{
+    font-size: 1.8rem;
+  }
+  .sub-confirm ~ .prepaid-popup-block .popup-container .item-content p, .sub-confirm ~ .option-popup-block .entry-option-popup .popup-header .group .text,.sub-confirm ~ #popup-tanmatsu-anshin.option-popup-block .popup-body .desc{
+    font-size: 1.6rem;
+  }
+  .sub-confirm form .entry-plan-select{
+    margin: 0;
+  }
+  .sub-confirm .prepaid-device-area{
+    width: 100%;
+    margin: 0;
+  }
+  .sub-confirm .summary-table-column-left p,.sub-confirm .summary-table-column-center.adjust{
+    font-size: 1.4rem;
+  }
+  .subsc-mail-caution-area.confirm {
+    margin: 0;
+  }
+  form.prepaid-form-select .sub-confirm .entry-plan-select{
+    margin: 0;
+  }
+  .sub-confirm .prepaid-device-area{
+    width: 100%;
+    margin: 0;
+  }
+  .sub-confirm div.prepaid-device-detail{
+    padding: 0;
+    margin: 0 0 40px 0;
+  }
+  .sub-confirm .entry-option-tanmatsu-anshin .relief-option-ckeckbox{
+    top: calc(50% - 25px);
+    left: 13px;
+  }
+  form.prepaid-form-select .sub-confirm p.first-title,.sub-confirm.edit-partial-plan.edit-plan-prepaid p.first-title{
+    margin:70px 0 25px;
+  }
+  .sub-confirm .entry-option-select{
+    flex: 0 1;
+  }
+  .sub-confirm.prepaid-option-area .entry-option-select-detail{
+    width: 100%;
+    flex: 0 1;
+  }
+  .mypage-main:has(.sub-confirm) ~ #popup-tanmatsu-anshin.option-popup-block .popup-body h3,.mypage-main:has(.sub-confirm) ~ .option-popup-block  .entry-option-popup .popup-header .title{
+    font-size: 2.0rem;
+  }
+  .mypage-main:has(.sub-confirm) ~ .prepaid-popup-block .popup-container .item-content p, .mypage-main:has(.sub-confirm) ~ .option-popup-block .entry-option-popup .popup-header .group .text,.mypage-main:has(.sub-confirm) ~ #popup-tanmatsu-anshin.option-popup-block .popup-body .desc{
+    font-size: 1.5rem;
+  }
+  .mypage-main:has(.sub-confirm) ~ .prepaid-popup-block .popup-container .item-content .item-content-bottom{
+    width: auto;
+  }
+  .sub-confirm .summary-price-text{
+    font-size: 1.55rem;
+    font-weight: bold;
+  }
+  .sub-confirm div.summary-table-column-right p{
+    font-size: 1.3rem;
+    font-weight: bold;    
+  }
+  .sub-confirm .summary-table-column-center.adjust{
+    font-size: 1.3rem;
+  }
+  .sub-confirm .left-plan-column p{
+    margin: 0 0 1em 0;
+  }
+  .sub-confirm .detail-more .attention{
+    font-size: 1.3rem;
+  }
+  .sub-confirm.your-plan-area div.summary-table-row{
+    width: 100%;
+  }
+  .sub-confirm.your-plan-area #your_plan div.summary-table-row.opt-service-sp .summary-table-column-right{
+    width: 25%;
+  }
+  .sub-confirm.prepaid-option-area .entry-option-select-detail:before{
+    top: -12px;
+    left: calc(50% - 12px);
+    border-width: 0 12px 12px 12px;
+    border-color: transparent transparent #fff transparent;
+  }
+  .sub-confirm .flex-box-select.your-plan{
+    margin-bottom: 40px;
+  }
+  .add-contents .subhead {
+    font-size: 1.8rem;
+  }
+  .sub-confirm form.prepaid-form-select p.first-title,.sub-confirm #form-entry-edit-device p.first-title,.sub-confirm.edit-partial-plan.edit-plan-prepaid p.first-title{
+    margin-top: 20px;
+    font-size: 2.5rem;
+    width: auto;
+  }
+  .sub-confirm .prepaid-device-img{
+    width: 220px;
+  }
+  .sub-confirm .entry-option-select div.relief-item-select-area-box .price,.sub-confirm .entry-option-digital-life.flex-entry-option .price{
+    font-size: 3.3rem;
+  }
+  .sub-confirm ~ div.prepaid-option-area .entry-option-select div.relief-item-select-area-box{
+    padding: 15px 0 40px 60px;
+  }
+  .sub-confirm ~ div.prepaid-option-area .entry-option-select div.relief-item-select-area-box .group img{
+    bottom: -10px;
+  }
+  .sub-confirm ~ .edit-partial-contractor form .attention-remark .entry-rental-device-title{
+    margin: 5px auto 10px 0;
+  }
+  .sub-confirm ~ .edit-partial-contractor p.mypage-remark{
+    margin-left: 0;
+  }
+  .sub-confirm.edit-partial-plan .prepaid-plan-price{
+    width: auto;
+  }
+  .sub-confirm .plan-summary-option:has(.sub-confirm-opt .summary-table-row){
+    display: block;
+  }
+  .sub-confirm .summary-table-row{
+    min-width: 298px;
+  }
+  .sub-confirm .entry-option-marugoto-anshin .relief-option-ckeckbox {
+    top: calc(50% - 30px);
+  }
+  .sub-confirm .entry-option-digital-life .relief-item-select-area3 + .relief-option-ckeckbox{
+    top: calc(50% - 15px);
+  }
+  .sub-confirm div.summary-table-block div.summary-table-column.summary-table-column-right.adjust.confirm-pay{
+    width: 40%;
+  }
+  .sub-confirm-opt {
+    padding: 0;
+  }
+  .sub-confirm-opt-monthly {
+    padding: 10px 0 30px;
+  }
+  .sub-confirm .sub-text-adj {
+    margin: 0 20px 0 0;
+  }
+}
+/* /sub/confirmページ end */
+
+/*端末売り切れ用*/
+.sub-confirm .prepaid-device-area#soldout{
+  position: relative;
+  pointer-events: none;
+}
+.sub-confirm .prepaid-device-area#soldout::before{
+  content: "SOLD OUT";
+  position: absolute;
+  width: fit-content;
+  height: auto;
+  text-align: center;
+  font-size: 2.2em;
+  padding: 0.5em;
+  background: red;
+  font-weight: bold;
+  color: white;
+  top: 50%;
+  transform: translate(10%, -65%) rotate(-10deg);
+  z-index: 11;
+}
+.sub-confirm .prepaid-device-area#soldout::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 10;
+}
+@media screen and (max-width: 767px){
+  .sub-confirm .prepaid-device-area#soldout{
+    padding-left: 0;
+  }
+  .sub-confirm .prepaid-device-area#soldout .prepaid-device-img{
+    padding-left: 40px;
+  }
+  .pre-subsc-entry-draft div.sub-confirm-opt-monthly div.summary-table-option {
+    margin: 0;
+  }
+}
+.span.mandatory {
+  background-color: unset;
+  color: #ea338d;
+  border: 1px solid #ea338d;
+  border-radius: 5px;
+  padding: 2px 5px;
+  font-size: 1.2rem;
+  font-weight: normal;
+}
+.span.optional {
+  background-color: unset;
+  color: #3c3c3c;
+  border: 1px solid #3c3c3c;
+  border-radius: 5px;
+  padding: 2px 5px;
+  font-size: 1.2rem;
+  font-weight: normal;
+}
+@media screen and (min-width: 768px){
+  #entry-user-form .attention-remark .entry-rental-device-title{
+    margin: 5px auto 10px 260px;
+  }
+  #entry-user-form.prepaid-form-confirm .attention-remark .entry-rental-device-title{
+    margin: 5px auto 10px 227px;
+  }
+  #entry-user-form.prepaid-form-confirm .prepaid-confirm-edit-popup .attention-remark td {
+    padding-bottom: 5px;
+  }
+  #entry-user-form.prepaid-form-confirm .prepaid-confirm-edit-popup .attention-remark .entry-rental-device-title {
+    margin: 0 auto 10px 260px;
+  }
+  #entry-user-form.prepaid-form-confirm .prepaid-confirm-edit-popup table.form-table th {
+    padding: 0;
+  }
+}

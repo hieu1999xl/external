@@ -1,0 +1,76 @@
+/* プリペイドプラン　タブレット用 */
+@media (min-width: 768px) and (max-width: 1280px) {
+/* 共通---------------------------------------------------------- */
+	body {
+		min-width: 768px;
+		overflow-x: hidden;
+	}
+	.inner {
+		max-width: 680px;
+	}
+	.prepaid-main div.main {
+		margin-top: 102px;
+	}
+	/* ヘッダー */
+	header.prepaid-lp-header .header-description.pc {
+		display: none;
+	}
+	header.prepaid-lp-header .header-description.tb {
+		display: block;
+	}
+	header.prepaid-lp-header {
+		height: auto;
+	}
+	header.prepaid-lp-header .inner {
+		flex-wrap: wrap;
+		padding: 0 5% 0 2.5%;
+	}
+	header.prepaid-lp-header .logo-lp {
+		padding: 10px 0 10px 15px;
+	}
+	header.prepaid-lp-header .inner .header-description {
+		width: 100%;
+		padding: 10px 0 0 20px;
+		margin: 0;
+		font-size: 1.2rem;
+		text-align: left;
+		line-height: 1;
+	}
+	/* フッター */
+	footer.prepaid-lp-footer .ft_logo img {
+		max-width: 250px;
+	}
+	#page_top {
+		bottom: 70px;
+		right: 10px;
+	}
+	#page_top a {
+		width: 30px;
+		height: 30px;
+	}
+	/* 共通ここまで---------------------------------------------------------- */
+}
+@media screen and (min-width: 1281px) {
+	/* pc共通 */
+	.tb {
+		display: none;
+	}
+}
+@media screen and (max-width: 767px) {
+	/* sp共通 */
+	.tb {
+		display: none;
+	}
+	.sp {
+		display: block;
+	}
+}
+@media (min-width: 768px) and (max-width: 1280px) {
+	/* tb共通 */
+	.tb {
+		display: block;
+	}
+	.hide-tb.pc {
+		display: none;
+	}
+}

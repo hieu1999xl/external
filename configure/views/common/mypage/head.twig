@@ -1,0 +1,96 @@
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title> {{title}} </title>
+    <meta name="description" content="{{description}}">
+    <meta name="keywords" content="ZEUS WiFi,ゼウスWiFi,モバイルWiFi,ワイファイ,月額,安い,格安,海外,動画,キャンペーン,ガンバレルーヤ">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    <meta name="robots" content="noindex, nofollow">
+    <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-WZXDLNM');</script>
+<!-- End Google Tag Manager -->
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-PQMB32G');</script>
+  <!-- End Google Tag Manager -->
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NMBMMBV');</script>
+<!-- End Google Tag Manager -->
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-MFVGW35');</script>
+<!-- End Google Tag Manager -->
+    <script src="//statics.a8.net/a8sales/a8sales.js"></script>
+    <script src="//statics.a8.net/a8sales/a8crossDomain.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:500,700|Noto+Sans+JP:400,700|&display=swap&subset=japanese" rel="stylesheet">
+
+    <!-- 常に読み込みたいファイル -->
+    {% if cssfile is defined %}
+      {% for file in cssfile %}
+        {{ asset_css(file) }}
+      {% endfor %}
+    {% else %}
+      {{ asset_css('common.css') }}
+      {{ asset_css('style.css') }}
+      {{ asset_css('planselect.css') }}
+      {{ asset_css('buttons.css') }}
+      {% if add_css_files is defined %}
+        {% for add_css_file in add_css_files %}
+          {{ asset_css(add_css_file) }}
+        {% endfor %}
+      {% endif %}
+      {{ asset_css('mypage.css') }}
+      {{ asset_css('mypage_tb.css') }}
+      {{ asset_css('mypage-button.css') }}
+      {{ asset_css('news.css') }}
+      {{ asset_css('mypage-overseas.css') }}
+    {% endif %}
+
+    {{ asset_css('popup-common.css') }}
+
+    <link rel="icon" href="/assets/favicon.ico">
+    <link rel="canonical" href='{{canonical}}'>
+    <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.1/dist/jquery.validate.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jQuery-rwdImageMaps/1.6/jquery.rwdImageMaps.min.js"></script>
+    <script src="https://ajaxzip3.github.io/ajaxzip3.js" charset="UTF-8"></script>
+    {{ asset_js('countries.js') }}
+    {{ asset_js('script.js') }}
+    {{ asset_js('val.js') }}
+    {{ asset_js('buttons.js') }}
+    {{ asset_js('select_overseas.js') }}
+    {{ asset_js('form.js') }}
+    {{ asset_js('mypage_overseas.js') }}
+    {{ asset_js('popup-common.js') }}
+    {{ asset_js('change-link.js') }}
+    {{ asset_js('questionnaire.js') }}
+    {{ asset_js('accessibility.js') }}
+    {{ asset_js('form_usability.js') }}
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/css/select2.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/js/select2.min.js"></script>
+    <!--ToDO ページにより出し分け-->
+    <script src="{{ config('external.np.atone_script_pass') }}" charset="UTF-8"></script>
+    <script src="{{ config('external.np.atone_regist_script_pass') }}" charset="UTF-8"></script>
+    {% if is_contact_form %}
+        {% include 'common/og_contact.twig' %}
+    {% else %}
+        {% include 'common/og.twig' %}
+    {% endif %}
+</head>

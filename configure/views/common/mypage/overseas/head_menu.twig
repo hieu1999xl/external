@@ -1,0 +1,124 @@
+<div class="mypage-nav">
+    {% if constant('INACCESSIBLE_MYPAGE_DATA_FLOW') not in not_available_list %}
+        <a href="{{ mypage_overseas_rental_data_flow_url }}" class="first-half">
+            <div class="mypage-nav-item" id="mypage-nav-item-1">
+                <p>
+                    現在の利用状況
+                    <br>
+                    データ利用量
+                </p>
+            </div>
+        </a>
+    {% endif %}
+    <a href="{{ mypage_overseas_rental_payment_history_url }}" class="first-half">
+        <div class="mypage-nav-item" id="mypage-nav-item-2">
+            <p>
+                ご利用明細・
+                <br>
+                領収書発行
+            </p>
+        </div>
+    </a>
+    {# スマホ用のレイアウト崩れ用ヘッダメニュー #}
+    {% if is_need_fake_header_menu %}
+        <a href="{{ show_user_url }}" class="sp first-half">
+            <div class="mypage-nav-item" id="mypage-nav-item-5">
+                <p>
+                    会員情報確認・
+                    <br>
+                    変更
+                </p>
+            </div>
+        </a>
+    {% endif %}
+    <a href="{{ show_user_url }}" class="first-half">
+        <div class="mypage-nav-item" id="mypage-nav-item-3">
+            <p>
+                会員情報確認・
+                <br>
+                変更
+            </p>
+        </div>
+    </a>
+
+    <div class="mypage-nav-arrow mypage-nav-arrow-left js-tabindex" tabindex="0">
+        {{ asset_cdn_img('button-arrow-left_t.png',{'aria-hidden':'true', 'width': 40, 'height': 40, 'alt':'矢印'}) }}
+    </div>
+    <div class="mypage-nav-arrow mypage-nav-arrow-right js-tabindex" tabindex="0">
+        {{ asset_cdn_img('button-arrow-right_t.png',{'aria-hidden':'true', 'width': 40, 'height': 40, 'alt':'矢印'}) }}
+    </div>
+
+    <a href="{{ mypage_overseas_rental_contract_url }}" class="second-half">
+        <div class="mypage-nav-item" id="mypage-nav-item-4">
+            <p>
+                申込内容確認
+                <br>
+                過去情報
+            </p>
+        </div>
+    </a>
+    <a href="https://zeuswifi-global.jp/#global-faq" target="_blank" class="second-half">
+        <div class="mypage-nav-item" id="mypage-nav-item-5">
+            <p>
+                よくあるご質問
+            </p>
+            <span class="button-triangle tab-open"></span>
+        </div>
+    </a>
+    {% if is_rental_import_imei == false %}
+        {# 利用開始前（申込～imei連携前） #}
+        <a class="button-disabled js-option-popup overseas-caution-popup js-tabindex focus-target-1 ac-popup-open second-half" data-popup="popup-overseas-caution" data-focusmove="focus-target-1" tabindex="0">
+            <div class="mypage-nav-item" id="mypage-nav-item-6">
+                <p>
+                    プラン変更・追加・
+                    <br>
+                    期間延長
+                </p>
+            </div>
+        </a>
+    {% elseif is_rental_import_imei and is_rental_unbind_device == false %}
+        {# imei連携中 #}
+        <a class="js-option-popup overseas-edit-popup js-tabindex focus-target-1 ac-popup-open second-half" data-popup="popup-overseas-edit" data-focusmove="focus-target-1" tabindex="0">
+            <div class="mypage-nav-item" id="mypage-nav-item-6">
+                <p>
+                    プラン変更・追加・
+                    <br>
+                    期間延長
+                </p>
+            </div>
+        </a>
+    {% elseif is_rental_unbind_device %}
+        {# ステータスが発送済みかつimei連携解除後 #}
+        <a class="button-disabled js-tabindex second-half" tabindex="0">
+            <div class="mypage-nav-item" id="mypage-nav-item-6">
+                <p>
+                    プラン変更・追加・
+                    <br>
+                    期間延長
+                </p>
+            </div>
+        </a>
+    {% else %}
+        {# その他 #}
+        <a class="button-disabled js-tabindex second-half" tabindex="0">
+            <div class="mypage-nav-item" id="mypage-nav-item-6">
+                <p>
+                    プラン変更・追加・
+                    <br>
+                    期間延長
+                </p>
+            </div>
+        </a>
+    {% endif %}
+    {# 再申し込みのボタンstart #}
+{# <a class="overseas-edit-popup" href="{{ overseas_entry_select_url }}">
+    <div class="mypage-nav-item" id="mypage-nav-item-6">
+      <p>海外プランの<br>レンタル再申し込み</p>
+    </div>
+  </a> #}
+    {# 再申し込みのボタン start #}
+</div>
+{% include 'common/mypage/overseas/popup-overseas-edit.twig' %}
+{% include 'common/mypage/overseas/popup-overseas-caution.twig' %}
+{% include 'common/mypage/overseas/popup-overseas-entry-cancel.twig' %}
+{% include 'common/mypage/overseas/popup-common.twig' %}

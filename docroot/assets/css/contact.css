@@ -1,0 +1,1240 @@
+/*限定的に使用中のCSS*/
+/*-------------------------------------------
+    Column
+-------------------------------------------*/
+@media screen and (min-width: 1281px) {
+  /* pc共通 */
+  .tb {
+    display: none;
+  }
+}
+@media screen and (max-width: 767px) {
+  /* sp共通 */
+  .tb {
+    display: none;
+  }
+}
+@media (min-width: 768px) and (max-width: 1280px) {
+  /* tb共通 */
+  .tb {
+    display: block;
+  }
+}
+section.other-first{
+  background: none;
+  background-size: none;
+}
+select {
+  -webkit-appearance: none;
+  appearance: none;
+  background-image: url(https://d1q08lkutgkcx2.cloudfront.net/image/arrow-select.webp);
+  background-repeat: no-repeat;
+  background-size: 10px auto;
+  background-position: right 6px center;
+  color: #000;
+}
+.wimax-contact-body footer:not(.exclusion) .ft_logo{
+  width: 345px;
+}
+@media (min-width: 768px) and (max-width: 1280px) {
+  .wimax-contact-body footer:not(.exclusion) .ft_logo{
+    margin: 0 120px 0 40px;
+  }
+}
+/*目次 ボタン*/
+div.btn_box02.column{
+  margin: 40px 0 0;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+div.btn_box02.column a{
+  margin: 0;
+}
+.btn_box02.column img{
+  width: 130px;
+  margin-left: 50px;
+}
+
+/*詳細ページ*/
+.column-title {
+  padding-top: 10px;
+  width: 100%;
+  margin: 50px auto 30px;
+}
+.column-title p {
+  font-size: 3.8rem;
+  font-weight: bold;
+  text-align: center;
+}
+.content-box-inner p.column-title-paragraph{
+  font-size: 1.8rem;
+  padding-bottom: 20px;
+}
+.column-paragraph{
+  padding-bottom: 30px;
+}
+.column-chapater-paragraph{
+  padding-bottom: 50px;
+}
+.content-box-title.column{
+  padding-bottom: 30px;
+  font-weight: bold;
+}
+.content-box-sub-title.column p{
+  font-size: 2.5rem;
+  text-align: center;
+}
+.content-box-sub-title p{
+  font-size: 2.8rem;
+  line-height: 3rem;
+}
+
+/*詳しく見るボタン TOPと同じ仕組み*/
+#hint_wrap{
+  position: relative;
+}
+#price_fix{
+  width: 80px;
+  position: fixed;
+  right: 0;
+  top: 200px;
+  background: #323232;
+  z-index: 5;
+  transition: .3s all;
+  visibility: hidden;
+  opacity: 0;
+  cursor: pointer;
+}
+
+div#price_fix.column-fix{
+  top:43vh;
+}
+
+div#price_fix.column-fix.faq-btn{
+  width: 40px;
+  position: fixed;
+  background:transparent;
+  z-index: 5;
+  transition: .3s all;
+  visibility: hidden;
+  opacity: 0;
+  cursor: pointer;
+  margin-right: 9%;
+  filter: drop-shadow(0px 3px 6px rgb(0,0,0,20%));
+  transform: translateZ(0);
+  border-radius: 20px;
+  top: calc(100vh - 175px);
+  }
+
+#price_fix.column-fix.show,
+#price_fix.column-fix.faq-btn.show{
+  visibility: visible;
+  opacity: 1;
+}
+
+@media screen and (min-width:767px){
+  section.other-first.column.narrow{
+    background-position: left bottom;
+    padding: 0 30px 70px;
+  }
+  section.other-second.column.narrow{
+    background-image: url(https://d1q08lkutgkcx2.cloudfront.net/image/devise_para02_t.png);
+    background-position: right bottom;
+    background-size: 680px;
+    padding: 110px 30px 70px;
+  }
+
+}
+
+@media screen and (max-width: 767px) {
+  div.btn_box02.column{
+    margin: 0;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+  }
+  .btn_box02.column img{
+    margin-left: -20px;
+    margin-bottom: 15px;
+    padding: 0;
+  }
+  .btn_box02.column a{
+    width: 100%;
+  }
+  .btn_box02.column a span{
+    background-position: 93% center;
+  }
+
+  .column-title{
+    margin: 30px auto;
+  }
+  .column-title p {
+    font-size: 2.6rem;
+    line-height: 30px;
+    text-align: left;
+  }
+  .content-box-sub-title p{
+    font-size: 2rem;
+    margin-bottom: 0;
+  }
+  .white-content-box-inner.sp-margin-less{
+    margin: 0;
+  }
+  section.other-second.column{
+    background-position: right -1%;
+    padding: 70px 0 30px;
+  }
+  .white-content-box-inner.column p{
+    padding-bottom: 30px;
+  }
+  .content-box-sub-title.column p{
+    font-size: 2.2rem;
+    text-align: left;
+    padding-bottom: 30px;
+  }
+  #price_fix.column-fix{
+    top:45vh;
+  }
+  #price_fix {
+    width: 35px;
+    top: 100px;
+  }
+  #price_fix.active img{
+    opacity: 0;
+  }
+  #price_fix.faq-btn.active img{
+    opacity:1;
+  }
+  div#price_fix.column-fix.faq-btn{
+    margin-right: 1%;
+    width: 25px;
+    top: auto;
+    bottom: 95px;
+  }
+  div.white-content-box-body table{
+    margin:10px 0 auto;
+  }
+}
+@media screen and (max-width:320px){
+  .btn_box02.column img{
+    height: 102px;
+    margin-left: 0;
+  }
+}
+
+/*-------------------------------------------
+   お問い合わせ
+-------------------------------------------*/
+.callcenter-area div.content-box-inner{
+  position: relative;
+}
+.callcenter-area div.content-box-inner.contact-box-area {
+  max-width: 750px;
+}
+#contact-form-box + div.white-content-box-form.support-contact{
+  margin: 10px auto 0;
+  width: 81%;
+}
+.contact-box-area #contact-form-box + div.white-content-box-form.support-contact{
+  width: 100%;
+  box-sizing: border-box;
+}
+div.white-content-box-form.support-contact.support-contact-separate{
+  margin: 10px auto 0;
+  width: 81%;
+}
+.contact-box-area div.white-content-box-form.support-contact.support-contact-separate{
+  width: 100%;
+  box-sizing: border-box;
+}
+div.white-content-box-form.support-contact.support-contact-separate.support-contact-separate-2{
+  margin: 50px auto 0;
+}
+textarea.text-area-inquery:focus {
+  outline: none;
+  box-shadow: 0 0 5px 2px #ffeb00;
+  border: none;
+}
+div.white-content-box-form{
+  margin-top: 30px;
+}
+img.callcenter-before{
+  position: absolute;
+  width: 10%;
+  bottom: 0px;
+  right: 5%;
+  transform: translateX(-50%);
+}
+div.white-content-box-contact div.white-content-box-inner {
+  padding: 0 75px;
+}
+.other-first.wimax-contact {
+  background: #F3F3F3;
+} 
+.other-first.wimax-contact div.content-box-title h1 p {
+  font-size: 3.8rem;
+  line-height: 40px;
+  text-align: center;
+}
+.other-first.wimax-contact div.gender-label-box label.label-input {
+  margin-right: 43px;
+  margin-left: 28px;
+  margin-top: 17px;
+}
+
+/*入力表*/
+table.contact tr {
+  height: 5rem;
+}
+table.contact th,
+table.contact td {
+  text-align: left;
+}
+table.contact td {
+  position: relative;
+}
+div.support-contact-container table.contact td{
+  vertical-align: middle;
+  padding-bottom: 5px;
+}
+td.text-area-size{
+  height: 100px;
+}
+.attention-remark .subsc-mail-caution-area {
+  margin: 0;
+}
+
+/*個人/法人チェック*/
+label.custom-check-box input[type="checkbox"],
+label.custom-check-box input[type="radio"]{
+  opacity: 0;
+}
+label.custom-check-box span{
+  display: inline-block;
+}
+label.custom-check-box input[type="radio"] + span::before,
+label.custom-check-box input[type="radio"] + span::after{
+  position: absolute;
+  top: 5px;
+  left: 0;
+  display: inline-block;
+  content: "";
+  box-sizing: border-box;
+}
+label.custom-check-box input[type="radio"] + span.business::before,
+label.custom-check-box input[type="radio"] + span.business::after{
+  left:125px;
+}
+div.gender-label-box label.label-input{
+  margin-left: 15px;
+  margin-top: 13px;
+}
+div.gender-label-box label.label-input label{
+  font-size: 1.5rem;
+}
+input.contact-input-border {
+  box-sizing: border-box;
+  width: 100%;
+  letter-spacing: 1px;
+  height: 50px;
+  font-size: 1.5rem;
+}
+input.contact-input-border::-webkit-inner-spin-button,
+input.contact-input-border::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none
+}
+p.remark-text{
+  line-height: 1.1rem;
+  margin-left: 242px;
+  color: #909090;
+}
+span.mypage-remark{
+  font-size: 1.1rem;
+}
+div.question-mark img{
+  position: absolute;
+  width: 20px;
+  top: 15px;
+  right: 475px;
+  transform: translateX(-50%);
+}
+section.wimax-contact .support-contact div.question-mark img{
+  top: 17px;
+}
+
+/* imei-balloon */
+div.contact-imei-attention {
+  position: relative;
+}
+div.contact-imei-attention.contact {
+  top: -50px;
+}
+div.contact-imei-attention:hover span.imei-balloon{
+  display: inline;
+}
+span.imei-balloon{
+  display: none;
+  position: absolute;
+  margin: 1.5em 0;
+  padding: 0;
+  width: 240px;
+  right: 455px;
+  bottom: -20px;
+  font-size: 16px;
+  background: #ebebeb;
+  border: 1px solid #000000;
+}
+span.imei-balloon.wimax-imei {
+  background: #3c3c3c;
+}
+span.imei-balloon:before {
+  border-top: 12px solid #000000;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  bottom: -13px;
+  left : 30%;
+  content: "";
+  position: absolute;
+}
+span.imei-balloon:after {
+  border-top: 12px solid #ebebeb;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  bottom: -12px;
+  left : 30%;
+  content: "";
+  position: absolute;
+}
+span.imei-balloon.wimax-imei:after {
+  border-top-color: #3c3c3c;
+}
+div.mypage-user-container{
+  max-width: 750px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+table.contact select {
+  background-color: #D9D9D9;
+  border: none;
+  height: 50px;
+  margin: 0;
+  padding-left: 8px;
+  width: 100%;
+  font-size: 1.5rem;
+  font-family: "Montserrat", "Noto Sans JP", sans-serif;
+  border-radius: 8px;
+}
+textarea.contact-input-border.text-area-inquery,
+select.mypage-input-border,
+select.contact_type_company{
+  background-color: #D9D9D9;
+  border: none;
+  border-radius: 8px;
+  padding: 10px;
+  font-size: 1.5rem;
+}
+textarea.text-area-inquery {
+  width: 100%;
+  height: 100%;
+  resize: vertical;
+  box-sizing: border-box;
+}
+textarea.contact-input-border.text-area-inquery::placeholder {
+  font-size: 1.5rem;
+}
+/*ボタン*/
+div.row.login-decoration-row {
+  margin: 20px 0 40px;
+}
+.other-first.wimax-contact div.form-next-button {
+  background: #0080c6;
+  color: #fff;
+}
+.other-first.wimax-contact  div.form-next-button span {
+  background: url(/assets/img/wimax-button-arrow.svg) no-repeat 290px center;
+  background-size: 8px;
+}
+.other-first.wimax-contact  div.form-back-button span {
+  background: url(/assets/img/wimax-back-button-arrow.svg) no-repeat 25px center;
+  background-size: 8px;
+}
+
+@media (min-width: 767px) {
+  table.form-table.form-entry.contact th.tag-required{
+    width: 35%;
+  }
+  table.form-table th.contact-text-form {
+    vertical-align: top;
+    padding-top: 19px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1280px) {
+
+  #contact-form-box + div.white-content-box-form.support-contact,
+  div.white-content-box-form.support-contact.support-contact-separate{
+    width: 620px;
+  }
+
+  table.form-table th span.imei{
+    display: flex;
+    align-items: center;
+    line-height: 1.5;
+  }
+
+  table.form-table span.optional{
+    line-height: 1;
+  }
+
+  div.question-mark img{
+    top: 24px;
+    right: 470px;
+  }
+
+  span.imei-balloon{
+    right: 330px;
+    bottom: -15px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  #contact-form-box + div.white-content-box-form.support-contact{
+    margin: 20px auto 0;
+    width: 90%;
+  }
+  div.white-content-box-form.support-contact.support-contact-separate{
+    margin: 20px auto 0;
+    width: 90%;
+  }
+  div.white-content-box-contact div.white-content-box-inner {
+    padding: 0 10px;
+  }
+  table.contact {
+    width: 100%;
+    margin-bottom: 40px;
+  }
+  table.contact th,
+  table.contact td {
+    display: block;
+    text-align: left;
+    width: 100%;
+  }
+  label.custom-check-box input[type="radio"] + span.business::before,
+  label.custom-check-box input[type="radio"] + span.business::after{
+    left: 113px;
+  }
+  table.contact td.flex-gender-area{
+    width: 100%;
+  }
+  table.form-table.contact th {
+    margin-top: 15px;
+  }
+  div.gender-label-box label.label-input label{
+    font-size:1.4rem;
+  }
+  table.contact div.gender-label-box label.label-input{
+    margin: 10px 41px 0 15px;
+    width: 100%;
+  }
+  input.contact-input-border {
+    font-size: 1.4rem;
+    margin: 0;
+  }
+  p.remark-text{
+    margin-left: 0;
+  }
+  table.form-table.contact .attention-remark-mail-contact th.tag-required {
+    margin: 0;
+  }
+  div.contact-imei-attention.contact {
+    top: auto;
+  }
+  span.imei-balloon{
+    left: 1px;
+    bottom: 75px;
+  }
+  input.imei-under{
+    margin-bottom: -13px;
+  }
+  div.question-mark img{
+    position: absolute;
+    width: 20px;
+    top: -82px;
+    left: 180px;
+    transform: translateX(-50%);
+  }
+  section.wimax-contact .support-contact div.question-mark img{
+    top: -82px;
+  }
+
+  table.contact select {
+    height: 50px;
+    font-size: 1.4rem;
+    margin: 0;
+  }
+  .other-first.wimax-contact div.content-box-title h1 p {
+    font-size: 2.6rem;
+    line-height: 30px;
+    text-align: left;
+  }
+  .other-first.wimax-contact div.gender-label-box label.label-input {
+    margin-top: 10px;
+  }
+  .other-first.wimax-contact div.form-next-button span {
+    background-position-x: 93%
+  }
+  img.callcenter-before {
+    width: 55px;
+    bottom: 120px;
+    right: -10px;
+  }
+}
+
+/*確認画面*/
+div.content-box-title p{
+  font-size: 40px;
+}
+div.content-box-title h1 p{
+  text-align: center;
+}
+div.content-box-title.support-title h1 p{
+  text-align: left;
+}
+table.contact-table{
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+  line-height: 1.3;
+}
+table.contact-table tr {
+  border-top: 1px solid #909090;
+}
+table.contact-table tr:last-child {
+  border-bottom: 1px solid #909090;
+}
+table.contact-table th {
+  width: 30%;
+  height: 39px;
+  padding: 5px 15px;
+  text-align: left;
+  background-color: #D9D9D9;
+}
+table.contact-table td {
+  padding-left: 10px;
+  width: 70%;
+  height: 39px;
+  vertical-align: middle;
+  margin: 0;
+  background-color: #FFFFFF;
+  border: none;
+}
+
+@media (max-width: 767px) {
+  table.sp-table {
+    width: 95%;
+  }
+  table.contact-table tr{
+    border: none;
+  }
+  table.sp-table th,
+  table.sp-table td {
+    height: auto;
+    word-break: break-all;
+    border: none;
+    display: block;
+  }
+  table.sp-table th{
+    width: unset;
+    background-color: #FFFFFF;
+    border-bottom: 1px solid #909090;
+    padding: 5px;
+    margin: 12px auto 3px;
+  }
+  table.contact-table td {
+    width: initial;
+    vertical-align: initial;
+    margin: initial;
+    border: none;
+    word-break: break-all;
+    height: auto;
+    padding: 10px 5px;
+  }
+  table.contact-table tr:last-child{
+    border: none;
+  }
+  .support-confirm div.white-content-box-form,
+  .support-complete div.white-content-box-form{
+    margin: 30px 0;
+  }
+
+}
+
+div.complete-description-title{
+  text-align: center;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  font-weight: bold;
+  line-height: 1.4;
+}
+
+/*-------------------------------------------
+    Invoice
+-------------------------------------------*/
+div.payment-title{
+  font-size: 2.5rem;
+  line-height: 40px;
+  margin:0 auto;
+}
+div.invoice{
+  margin: auto;
+  width: 100%;
+}
+div.invoice table{
+  width:100%;
+  border-collapse: separate;
+}
+div.invoice th{
+  color: #000000;
+  background-color: #FFEB00;
+  text-align: center;
+  vertical-align: middle;
+  height: 40px;
+}
+div.invoice td{
+  background-color: #EFEFEF;
+  text-align: center;
+  vertical-align: middle;
+  height: 60px;
+}
+div.invoice table tbody tr td:first-child{
+  color: #FFFFFF;
+  background-color: #000000;
+}
+p.invoice-subtitle{
+  padding-bottom: 10px;
+}
+div.application-flow-button-close.hidden {
+  max-height: 0;
+  transition: max-height 0.1s;
+  width: 100%;
+  display: none;
+}
+div.application-flow-button-close.hidden div.application-flow-right img {
+  width: 0;
+  position: absolute;
+  margin-top: -2px;
+  margin-left: 8px;
+}
+div.application-flow-button{
+  display: flex;
+  justify-content: space-between;
+  width: 99%;
+  height: 45px;
+  border:solid;
+  margin-top: 1%;
+  margin-bottom: 2%;
+}
+div.application-flow-left,
+div.application-flow-right{
+  width: 65%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+div.application-flow-right{
+  width: 35%;
+  background-color: #000000;
+  color: #FFFFFF;
+  cursor:pointer;
+}
+div.application-flow-right img {
+  width: 20px;
+  position: absolute;
+  margin-top: -2px;
+  margin-left: 8px;
+}
+div.application-flow-img-title{
+  width: 100%;
+  text-align: center;
+}
+div.application-flow-description-body{
+  background-color: #EFEFEF;
+  padding: 30px 50px 50px 50px;
+}
+div.application-flow-img{
+  width: 100%;
+}
+div.application-flow-button-close{
+  width: 17%;
+  background-color: #000000;
+  padding: 12px;
+  color: #FFFFFF;
+  text-align: center;
+  margin-left: 80%;
+  margin-top: 2%;
+  cursor: pointer;
+}
+div.application-flow-button-close span.lp-faq-question-label{
+  margin-right: 10px;
+  float: right;
+  margin-top: -18px;
+}
+@media screen and (max-width: 767px) {
+  div.white-content-box-title-sub-dir p.sub-title {
+    font-size: 1.5rem;
+    margin-top: 0;
+  }
+  div.payment-title{
+    font-size: 1.3rem;
+  }
+  h3.subtitle-invoice{
+    margin-block-start: 0.5em;
+  }
+  div.invoice-table{
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+    width: 100%;
+  }
+  div.invoice-table::-webkit-scrollbar{
+    height: 10px;
+    width: 100%;
+  }
+  div.invoice-table::-webkit-scrollbar-track-piece{
+    background: #ccc;
+    border-radius: 50px;
+  }
+  div.invoice-table::-webkit-scrollbar-thumb{
+    background: #666;
+    border-radius: 50px;
+    height: 10px;
+  }
+  div.invoice table th{
+    padding: 10px;
+    font-size: 1.1rem;
+  }
+  div.invoice table th:first-child{
+    position: sticky;
+    left:0;
+  }
+  div.invoice table tr td:first-child{
+    padding: 10px;
+    font-size: 1.1rem;
+    position: sticky;
+    left:0;
+  }
+  div.invoice table td{
+    padding: 10px;
+    font-size: 1.2rem;
+  }
+  td.diverted-space-sp p{
+    padding: 3px 0;
+  }
+  div.application-flow-right{
+    width: 66%;
+  }
+  div.application-flow-right img {
+    width: 15px;
+    position: absolute;
+    margin-left: 2%;
+  }
+  div.application-flow-description-body{
+    padding: 10px 15px 15px 15px;
+  }
+  div.application-flow-img-title {
+    font-size: 0.6rem;
+    padding-bottom: 0;
+  }
+  div.application-flow-button-close{
+    margin-left: 70%;
+    width: 92%;
+    margin-left:0;
+  }
+  div.application-flow-button-close span.lp-faq-question-label img{
+    width: 15px;
+    position: relative;
+    right: 55px;
+    bottom: -6px;
+  }
+  div.application-flow-button-close span.lp-faq-question-label {
+    margin-top: -26px;
+  }
+  div.business-campaign-content{
+    overflow: hidden;
+  }
+  div.section-container div.btn-area02.business-btn{
+    margin-top: 30px;
+  }
+}
+
+/*-------------------------------------------
+    Business Guide
+-------------------------------------------*/
+div.white-content-box-business-guide{
+  margin-bottom: 0;
+}
+div.white-content-box-business-guide-title {
+  width: 100%;
+  text-align: center;
+  padding-top: 50px;
+}
+div.white-content-box-business-guide-title p {
+  font-size: 3.8rem;
+  line-height: 30px;
+}
+div.white-content-box-body-business-guide{
+  width: 100%;
+}
+div.white-content-box-image-box-business-guide{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: -40px;
+}
+div.business-guide-1 img{
+  width: 7%;
+  position: relative;
+  right: 33%;
+  bottom: 75px;
+}
+div.business-guide-2 img{
+  width: 9%;
+  position: relative;
+  right: 32%;
+  bottom: 70px;
+}
+div.business-guide-3 img{
+  width: 6%;
+  position: relative;
+  right: 32%;
+  bottom: 75px;
+}
+div.business-guide-4 img{
+  width: 10%;
+  position: relative;
+  right: 32%;
+  bottom: 88px;
+}
+div.business-guide-5 img{
+  width: 9%;
+  position: relative;
+  right: 32%;
+  bottom: 75px;
+}
+
+div.white-content-box-inner-flex-left-business-guide,
+div.white-content-box-inner-flex-right-business-guide{
+  margin: 0 auto;
+}
+
+div.white-content-box-inner-flex-left{
+  margin-bottom: 20px;
+}
+
+div.business-guide-invoice-link{
+  margin: 20px 0 40px;
+  font-size: 2.0rem;
+}
+table.business-guide-table{
+  width: 100%;
+}
+
+#price_fix_column {
+  width: 80px;
+  position: fixed;
+  left: 0;
+  top: 200px;
+  background: #323232;
+  z-index: 5;
+  transition: .3s all;
+  visibility: hidden;
+  opacity: 0;
+  cursor: pointer;
+  box-shadow: 8px 8px 8px rgb(0 0 0 / 20%);
+}
+
+div#price_fix_column.column-fix {
+  top: 45%;
+}
+
+#price_fix_column.column-fix.show, #price_fix_column.column-fix.faq-btn.show {
+  visibility: visible;
+  opacity: 1;
+}
+
+div#price_fix.column-fix.column-return {
+  margin-right: 9px;
+}
+
+@media (min-width: 768px) and (max-width: 1280px) {
+  div#price_fix.column-fix.column-return {
+    margin-right: 2px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+
+  div.white-content-box-business-guide-title {
+    padding-top: 50px;
+    padding-left: 10px;
+  }
+  div.white-content-box-business-guide-title p {
+    font-size: 2.0rem;
+  }
+
+  div.business-guide-invoice-link{
+    text-align: center;
+    font-size:1.8rem;
+    margin:20px 0;
+  }
+  div.white-content-box-image-box-business-guide img{
+    width: 40px;
+    position: absolute;
+    left: 35px;
+    top: 60px;
+  }
+  div.white-content-box-image-box-business-guide{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  div.white-content-box-inner-flex-business-guide{
+    margin-bottom: 20px;
+  }
+  div.white-content-box-inner-flex-left-business-guide{
+    width: 100%;
+    padding-top: 50px;
+  }
+  div.white-content-box-body-business-guide{
+    width: 100%;
+  }
+  div.business-guide-1 img{
+    width: 45px;
+    position: absolute;
+    left: 26px;
+    top: 60px;
+  }
+  div.business-guide-2 img{
+    width: 57px;
+    position: absolute;
+    left: 26px;
+    top: 58px;
+  }
+  div.business-guide-4 img{
+    width: 60px;
+    position: absolute;
+    left: 26px;
+    top: 52px;
+  }
+  div.business-guide-5 img{
+    width: 60px;
+    position: absolute;
+    left: 26px;
+    top: 52px;
+  }
+  div.application-form-button-area{
+    text-align: center;
+  }
+  div.row.login-decoration-row-width {
+    width: 100%;
+    margin: 30px 0 20px;
+  }
+  div.login-decoration-row-width .decoration-button-wrapper-center {
+    width: 100%;
+  }
+  #price_fix_column {
+    width: 35px;
+    top: 43vh;
+    right: 0;
+    left: auto;
+  }
+  div#price_fix.column-fix.column-return {
+    margin-right: 1%;
+    width: 25px;
+    top: auto;
+    bottom: 75px;
+  }
+  div#price_fix_column.column-fix {
+    top: 100px;
+  }
+}
+
+/* 注意書き start */
+table.form-table tr.contact-caution-area {
+  position: relative;
+  height: 100px;
+}
+table.form-table tr.contact-caution-area-anshin {
+  position: relative;
+  height: 90px;
+}
+table.form-table tr.contact-caution-area th,
+table.form-table tr.contact-caution-area-anshin th {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  height: inherit;
+  border: 1px solid #ea338d;
+  box-sizing: border-box;
+}
+table.form-table tr.contact-caution-area th {
+  position: absolute;
+}
+table.form-table tr.contact-caution-area th img,
+table.form-table tr.contact-caution-area-anshin th img {
+  width: 6%;
+  margin-right: 15px;
+}
+table.form-table tr.contact-caution-area th p,
+table.form-table tr.contact-caution-area-anshin th p {
+  width: 81%;
+  color: #000000;
+  font-size: 1.4rem;
+}
+/* 注意書き end */
+
+/* お問い合わせフォーム　FAQ表示用ポップアップ start */
+.support .entry-option-popup .popup-header .title {
+  font-size: 3rem;
+  line-height: 1.3;
+  text-align: center;
+  margin: 0 0 30px;
+  text-align: center;
+}
+.support .entry-option-popup .popup-contents {
+  min-width: unset;
+  max-width: unset;
+  max-height: 90vh;
+  padding: 40px 30px;
+  margin: 0 auto;
+  overflow-y: auto;
+  box-sizing: border-box;
+  width: 750px;
+}
+.support .entry-option-popup .popup-body {
+  margin: 0px 30px;
+}
+.qtext {
+  display: flex;
+  margin-bottom: 20px;
+  position: relative;
+}
+.qtext:last-of-type {
+  margin-bottom: 0;
+}
+.qtext .q-icon {
+  position: absolute;
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  line-height: 24px;
+  border-radius: 50%;
+  background-color: #b0b0b0;
+  text-align: center;
+}
+.qtext .q-icon p {
+  display: inline-block;
+  font-size: 16px;
+  color: #FFFFFF;
+}
+.qtext > a {
+  flex: 1;
+  position: relative;
+  display: inline-block;
+  padding-left: 35px;
+  font-size: 16px;
+  line-height: 1.5em;
+  cursor: pointer;
+}
+.qtext > a:hover {
+  text-decoration: underline;
+}
+.popup-close-wrapper {
+  text-align: right;
+  margin-top: 50px;
+}
+.popup-close-text {
+  display: inline-block;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+}
+.popup-close-text:hover {
+  text-decoration: underline;
+}
+.popup-footer {
+  font-weight: bold;
+  margin-top: 30px;
+}
+.popup-footer p.popup-footer-title {
+  font-size: 1.6rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 7px;
+}
+.popup-footer p.popup-footer-title span {
+  margin: 0 5px;
+}
+.yellow-notion-icon-contact {
+  width: 2.3rem;
+  height: 2.3rem;
+  padding-bottom: 0px;
+}
+#contact-faq-popup-anshin table.contact-display {
+  border-spacing: 0;
+  margin-top: 20px;
+}
+#contact-faq-popup-anshin .popup-body p {
+  line-height: 1.7;
+  font-size: 14px;
+}
+.contact-faq-popup-underline {
+  text-decoration: underline;
+}
+#contact-faq-popup-anshin .contact-faq-popup {
+  font-weight: bold;
+}
+
+@media (max-width: 767px){
+  .support .entry-option-popup .entry-option-popup-body {
+    width: 90%;
+  }
+  .support .entry-option-popup .popup-contents {
+    width: 100%;
+    padding: 40px 5%;
+  }
+  .support .entry-option-popup .popup-header .title {
+    font-size: 2.5rem;
+  }
+  .support #contact-faq-popup-anshin .entry-option-popup .popup-header .title {
+    font-size: 2rem;
+  }
+  .support .entry-option-popup .popup-body {
+    margin: 0;
+  }
+  table.form-table tr.contact-caution-area {
+    height: 150px;
+  }
+  table.form-table tr.contact-caution-area-anshin {
+    height: 115px;
+  }
+  table.form-table tr.contact-caution-area th img,
+  table.form-table tr.contact-caution-area-anshin th img {
+    width: 10%;
+    margin-right: 9px;
+  }
+  #contact-faq-popup-anshin .popup-body p.popup-close-text {
+    text-align: left;
+  }
+  #contact-faq-popup-anshin .popup-close-wrapper {
+    margin-top: 40px;
+  }
+}
+/* お問い合わせフォーム　FAQ表示用ポップアップ end */

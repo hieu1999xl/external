@@ -1,0 +1,156 @@
+@charset "utf-8";
+/*-------------------------------------------
+  2024/04~
+  一括前払いプラン申し込み
+-------------------------------------------*/
+a{
+  cursor: pointer;
+}
+div.bulk-notion-black-background {
+  position: fixed;
+  background-color: #000000;
+  opacity: 0.4;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000000000001;
+}
+/* 特別プランプランポップアップ start */
+.white-content-box-bulk-notion-special {
+  position: fixed;
+  margin: 0 auto;
+  padding: 40px 0;
+  max-width: 750px;
+  height: auto;
+  max-height: 80vh;
+  top: 50%;
+  left: 0;
+  right: 0;
+  background: #FFFFFF;
+  transform: translateY(-50%);
+  z-index: 1000000000002;
+  overflow: auto;
+  box-sizing: content-box;
+}
+.white-content-box-bulk-notion-special-inner {
+  width: 90%;
+  height: 90%;
+  margin: 0 auto;
+}
+.bulk-special-body{
+  font-size: 1.4rem;
+  line-height: 1.25;
+}
+.bulk-special-body p{
+  margin: 0.75em 0;
+}
+.bulk-special-body h2{
+  font-size: 2.4rem;
+  font-weight: bold;
+  text-align: center;
+  padding-bottom: 1rem;
+  margin: 0;
+  color: #9F00FF;
+}
+.bulk-special-body img{
+  width: 80%;
+  height: auto;
+  margin: auto 10%;
+}
+.bulk-special-body p.auto-charge-point{
+  width: 80%;
+  margin: 1.5rem auto;
+  font-size: 1.8rem;
+  line-height: 1.75;
+  text-align: center;
+  text-decoration: underline;
+  text-underline-offset: 5px;
+  text-decoration-thickness: 3px;
+  font-weight: bold;
+  color: #e6006b;
+}
+div.entry-button-container {
+  max-width: 750px;
+  margin: 0 auto 50px;
+} 
+div.entry-button-container div.row {
+  margin: 20px auto 40px;
+  display: flex;
+  align-items: center;
+}
+div.entry-button-container div.row:last-of-type,
+div.entry-button-container:last-of-type{
+  margin-bottom: 0;
+}
+div.form-next-button {
+  background: linear-gradient(to right, #FFC600, #FFE300);
+  width: 320px;
+  display: block;
+  margin: 0 auto;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #000;
+  letter-spacing: 0.02em;
+  position: relative;
+  text-align: center;
+  transition: .3s all;
+  cursor: pointer;
+}
+div.form-next-button span {
+  background: url(https://d1q08lkutgkcx2.cloudfront.net/image/okawari-button-arrow.svg) no-repeat 290px center;
+  background-size: 8px;
+  display: block;
+  padding: 12px 60px 12px 0;
+  position: relative;
+  z-index: 10;
+}
+div.form-next-button::after {
+  content: "";
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 60px;
+  background: #1E1E1E;
+  transition: .3s all;
+}
+
+@media screen and (max-width: 767px){
+  .white-content-box-bulk-notion-special{
+    max-width: 90%;
+  }
+  .white-content-box-bulk-notion-special-inner {
+    width: 90%;
+    height: 100%;
+    overflow: hidden;
+  }
+  .white-content-box-bulk-notion-special{
+    padding: 25px 0;
+  }
+  .bulk-special-body h2{
+    margin-top: 20px;
+    font-size: 1.8rem;
+  }
+  .bulk-special-body p.auto-charge-point{
+    margin-top: 1.5rem;
+    padding: 0;
+  }
+  .bulk-special-body img{
+    width: 100%;
+    margin: auto;
+  }
+  div.row {
+    width: 300px;
+    margin: 0 auto;
+  }
+  div.form-next-button {
+    width: 300px;
+  }
+  div.form-next-button span{
+    padding: 10px 60px 10px 0;
+    background: url(https://d1q08lkutgkcx2.cloudfront.net/image/okawari-button-arrow.svg) no-repeat 270px center;
+    background-size: 8px;
+  }
+}

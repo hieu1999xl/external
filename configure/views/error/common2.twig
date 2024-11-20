@@ -1,0 +1,29 @@
+{% extends is_oversea == constant('FLG_ON') ? 'common/notlogin/timeout_oversea.twig' : 'common/notlogin/timeout.twig' %}
+{% block header_icon %}{{ asset_cdn_img('error-icon-top_t.png',{'width': 128, 'height': 107}) }}{% endblock %}
+{% block title %}{{ summary }}{% endblock %}
+{% block sub_title %}{{ sub_summary }}{% endblock %}
+{% block content %}
+<div class="mypage-content-box upper-box timeout">
+    <div class="mypage-content-box-inner">
+            {% for detail in details %}
+                <p>{{ detail | raw}}</p>
+            {% endfor %}
+    </div>
+</div>
+
+<div class="mypage-user-container">
+  <div class="form-user-back-button-sp">
+        <div class="row">
+            <a href="{{back_url}}" class="button-text">
+                <div class="decoration-button-area-form-v2">
+                    <div class="form-back-button">
+                        <div class="form-next-button-right">
+                            <p><span class="text-step-body">前へ戻る</span></p>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+
+{% endblock %}

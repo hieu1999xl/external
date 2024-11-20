@@ -1,0 +1,70 @@
+version: '3.8'
+
+networks:
+  sample:
+    driver: bridge
+
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - 8000:8000
+    volumes:
+      - ./:/app
+    depends_on:
+      - mysql_zues
+      - redis_zues
+      - mailhog
+    networks:
+      - sample
+
+  redis_zues:
+    container_name: redis_zues
+    restart: 'unless-stopped'
+    image: redis:latest
+    command: redis-server --requirepass "sample_123"
+    networks:
+      - sample
+    ports:
+      - '6379:6379'
+    logging:
+      driver: 'json-file'
+      options:
+        tag: '{{.ImageName}}|{{.Name}}|{{.ImageFullID}}|{{.FullID}}'
+        max-size: '50m'
+    volumes:
+      - ./Services_Data/sample/redis_data:/data
+    deploy:
+      resources:
+        limits:
+          memory: '256m'
+
+  mysql_zues:
+    platform: linux/amd64
+    image: mysql:8.0
+    container_name: mysql_zues
+    environment:
+        MYSQL_DATABASE: human_life
+        MYSQL_ROOT_PASSWORD: root
+        MYSQL_USER: user29
+        MYSQL_PASSWORD: user29
+        TZ: 'Asia/Tokyo'
+    volumes:
+        - ./Services_Data/sample/mysql_data:/var/lib/mysql
+    ports:
+        - 3306:3306
+    networks:
+        - sample
+
+  mailhog:
+    image: mailhog/mailhog
+    ports:
+      - 1025:1025
+      - 8025:8025
+    networks:
+      - sample
+
+volumes:
+  mysql_data:

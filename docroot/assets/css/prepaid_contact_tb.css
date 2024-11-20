@@ -1,0 +1,142 @@
+/* 海外レンタル問い合わせフォーム タブレット用 */
+@media (min-width: 768px) and (max-width: 1280px) {
+/* 共通---------------------------------------------------------- */
+
+  body {
+    min-width: 768px;
+    overflow-x: hidden;
+  }
+  .inner {
+    max-width: 680px;
+  }
+  div.section-container {
+    max-width: 680px;
+  }
+  /* ヘッダー */
+  header.prepaid-lp-header.exclusion {
+    height: 95px;
+  }
+  header.prepaid-lp-header .inner {
+    flex-wrap: wrap;
+    padding: 0 5% 0 2.5%;
+  }
+  header.prepaid-lp-header .inner .header-description {
+    width: 100%;
+    padding: 10px 0 0 20px;
+    margin: 0;
+    font-size: 1.2rem;
+    text-align: left;
+    line-height: 1;
+  }
+  header.prepaid-lp-header .header-description.tb {
+    display: block;
+  }
+  header.prepaid-lp-header .logo.logo-lp {
+    padding: 9px 0 0px 15px;
+  }
+  header.prepaid-lp-header ul li.nav_type03 a {
+    flex-direction: column;
+  }
+  header.prepaid-lp-header ul li.nav_type03.mypage a {
+    padding: 6px 0;
+    height: 50px;
+    box-sizing: border-box;
+  }
+  header.prepaid-lp-header ul li.nav_type03.mypage a img {
+    width: 10px;
+    margin: 0 auto 2px;
+  }
+  header.prepaid-lp-header ul li.nav_type03.mypage a span {
+    font-size: 1.1rem;
+    padding: 3px 0 0;
+  }
+  header.prepaid-lp-header ul li.nav_type03.faq {
+    width: 110px;
+  }
+  header.prepaid-lp-header ul li.nav_type03.mypage {
+    width: 110px;
+  }
+  header.prepaid-lp-header ul li.nav_type03.global-request {
+    width: 95px;
+  }
+  header.prepaid-lp-header ul li.nav_type03.global-request a span {
+    font-size: 1.1rem;
+    padding-top: 5px;
+    padding-left: 0px;
+    text-align: center;
+    line-height: 1.1;
+  }
+  header.prepaid-lp-header ul li.nav_type03 a {
+    min-height: 32px;
+    margin: 0px 5px 0;
+    width: 100px;
+  }
+  header.prepaid-lp-header ul li.nav_type03.global-request a {
+    padding: 6px 0 5px;
+    height: 50px;
+    box-sizing: border-box;
+    width: 100px;
+  }
+  header.prepaid-lp-header ul li.nav_type03.global-request a img {
+    width: 36px;
+    padding-top: 0px;
+    margin: 0 auto 2px;
+    height: auto;
+  }
+  header.prepaid-lp-header ul li.nav_type03 a img {
+    max-width: 36px;
+  }
+  header.prepaid-lp-header ul li.nav_type03.faq a img {
+    width: 17px;
+    margin: 0 auto;
+    padding-top: 0;
+  }
+  header.prepaid-lp-header ul li.nav_type03.faq a span {
+    padding-top: 0;
+    font-size: 1.1rem;
+  }
+  header.prepaid-lp-header ul li.nav_type03.faq a {
+    box-sizing: border-box;
+  }
+  header.prepaid-lp-header .logo-lp img {
+    width: 150px;
+  }
+  /* フッター */
+  footer .inner {
+    flex-direction: column;
+  }
+/* 共通ここまで---------------------------------------------------------- */
+  div.question-mark img {
+    right: 360px;
+  }
+  .prepaid-support-contact-inner .attention-remark .entry-rental-device-title {
+    margin: 5px auto 10px 205px;
+  }
+  p.remark-text {
+    margin-left: 210px;
+  }
+  .support .faq-chatbot-main-categories {
+    width: 90%;
+  }
+  .support .faq-chatbot-main-categories .category-btn{
+    width: 47%;
+    margin: auto;
+  }
+  #faq-chatbot-content .faq-chatbot-main-categories .category-btn a, 
+  .support .faq-chatbot-main-categories .category-btn a {
+    width: 330px;
+  }
+  .support .faq-chatbot-main-categories .category-btn a {
+    width: 100%;
+    min-width: 250px;
+  }
+  #_ul-chat-widget #_ul-chat-widget-chat-log .chat-log .chat-bot {
+    max-width: calc(100% - 124px);
+  }
+  .inquiries .category-faqlist .category-item .category-header {
+    width: calc(100% - 0.5em);
+  }
+  #prepaid-contact-form-area .callcenter-area .content-box-inner .under-kv-notion {
+    max-width: 640px;
+  }
+}
